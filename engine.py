@@ -4,6 +4,7 @@ Gera: video.mp4, capa.jpg, legenda.txt
 """
 import json, math, os, random, subprocess, sys, wave
 import numpy as np
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 W, H = 1080, 1920
@@ -648,24 +649,90 @@ def synth_audio(total, cuts, hooks, end_t, mood="suspense", seed=1):
 
 
 # ---------------------------------------------------------------- render
+def speaker_tag(name, color):
+    key = ("tag", name, tuple(color))
+    if key in _cap_cache:
+        return _cap_cache[key]
+    f = font(ANTON, 54)
+    tw = int(f.getlength(name.upper()))
+    im = Image.new("RGBA", (tw + 60, 84), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    d.rounded_rectangle([0, 0, tw + 59, 83], 40, fill=tuple(color) + (235,), outline=(0, 0, 0), width=5)
+    d.text(((tw + 60) / 2, 42), name.upper(), font=f, fill=(255, 255, 255), anchor="mm", stroke_width=4, stroke_fill=(0, 0, 0))
+    _cap_cache[key] = im
+    return im
+
+
+def build_timeline(meta, scenes):
+    """Retorna (timeline, voz_track, t_fim). timeline: [(si, start, dur, eventos)]
+    eventos: [(palavras, inicio, dur, nome_falante, cor)]."""
+    use_voice = not meta.get("sem_voz")
+    vozes = meta.get("vozes", {})
+    nomes = meta.get("nomes", {})
+    cores = meta.get("cores", {})
+    narr = meta.get("narrador")
+    clips = []
+    timeline = []
+    t = 0.0
+    for i, sc in enumerate(scenes):
+        lines = sc.get("linhas") or [{"voz": narr, "texto": sc["text"]}]
+        start = t
+        pos = t + 0.15
+        events = []
+        for ln in lines:
+            who = ln.get("voz") or narr
+            chunks = split_chunks(ln["texto"])
+            if use_voice:
+                import tts
+                spec = vozes.get(who) or {"voz": "kokoro:pm_alex"}
+                a = tts.synth(spec, ln["texto"])
+                ldur = len(a) / SR
+                clips.append((pos, a))
+                w = [sum(len(x.strip("*")) for x in c) + 2 for c, _ in chunks]
+                tot = sum(w)
+                cs = pos
+                for (c, _), wi in zip(chunks, w):
+                    cd = ldur * wi / tot
+                    label = nomes.get(who) if who and who != narr else None
+                    events.append((c, cs, cd, label, cores.get(who, (200, 20, 40))))
+                    cs += cd
+                pos += ldur + 0.28
+            else:
+                for c, cd in chunks:
+                    label = nomes.get(who) if who and who != narr else None
+                    events.append((c, pos, cd, label, cores.get(who, (200, 20, 40))))
+                    pos += cd
+        dur = max(1.6, pos - start + sc.get("hold", 0.15))
+        timeline.append((i, start, dur, events))
+        t = start + dur
+    voice = np.zeros(int((t + 6) * SR), dtype=np.float32)
+    for st, a in clips:
+        i0 = int(st * SR)
+        voice[i0:i0 + len(a)] += a[: len(voice) - i0]
+    return timeline, voice, t
+
+
 def render(script, out_dir):
     os.makedirs(out_dir, exist_ok=True)
     meta = script["meta"]
     scenes = script["scenes"]
-    timeline = []  # (scene_idx, start, dur, chunks)
-    t = 0.0
-    for i, sc in enumerate(scenes):
-        chunks = split_chunks(sc["text"])
-        dur = sum(dc for _, dc in chunks) + sc.get("hold", 0.25)
-        timeline.append((i, t, dur, chunks))
-        t += dur
+    timeline, voice, t = build_timeline(meta, scenes)
     end_len = 4.5 if meta.get("vote") else 3.0
     total = t + end_len
     imgs = [build_scene(sc) for sc in scenes]
     over = overlay_static(meta)
     cuts = [st for _, st, _, _ in timeline[1:]]
     hooks = [st for i, st, _, _ in timeline if scenes[i].get("hook")]
-    audio = synth_audio(total, cuts, hooks, t, meta.get("mood", "suspense"), seed=meta.get("part", 1))
+    bg = synth_audio(total, cuts, hooks, t, meta.get("mood", "suspense"), seed=meta.get("part", 1)).astype(np.float32) / 32767
+    n = bg.shape[0]
+    v = voice[:n]
+    if len(v) < n:
+        v = np.pad(v, (0, n - len(v)))
+    has_voice = np.max(np.abs(v)) > 0.01
+    gain = 0.32 if has_voice else 1.0
+    mix = bg * gain + v[:, None] * 0.95
+    mix = mix / max(1.0, float(np.max(np.abs(mix))) / 0.97)
+    audio = (mix * 32767).astype(np.int16)
     wav = os.path.join(out_dir, "audio.wav")
     with wave.open(wav, "wb") as wf:
         wf.setnchannels(2)
@@ -685,28 +752,28 @@ def render(script, out_dir):
         if ft >= t:
             if last_frame is None:
                 continue
-            ec = end_card(meta, last_frame)
-            proc.stdin.write(ec.tobytes())
+            proc.stdin.write(end_card(meta, last_frame).tobytes())
             continue
         k = max(j for j, (_, st, _, _) in enumerate(timeline) if st <= ft)
-        si, st, dur, chunks = timeline[k]
+        si, st, dur, events = timeline[k]
         sc = scenes[si]
         frame = camera(imgs[si], sc.get("cam", "in"), (ft - st) / dur).convert("RGBA")
-        if ft - st < 0.12 and k > 0:  # flash de corte
+        if ft - st < 0.12 and k > 0:
             frame.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, int(110 * (1 - (ft - st) / 0.12)))))
         frame.alpha_composite(over)
-        # legenda
-        acc = st
-        for words, cd in chunks:
-            if acc <= ft < acc + cd:
+        for words, es, ed, label, col in events:
+            if es <= ft < es + ed:
                 ci = caption_img(words)
-                age = ft - acc
+                age = ft - es
                 sc_ = 1.0 + max(0.0, 0.18 * (1 - age / 0.12))
                 if sc_ > 1.001:
                     ci = ci.resize((int(ci.width * sc_), int(ci.height * sc_)), Image.BILINEAR)
-                frame.alpha_composite(ci, (int(W / 2 - ci.width / 2), int(1450 - ci.height / 2)))
+                cy = int(1450 - ci.height / 2)
+                frame.alpha_composite(ci, (int(W / 2 - ci.width / 2), cy))
+                if label:
+                    tg = speaker_tag(label, col)
+                    frame.alpha_composite(tg, (int(W / 2 - tg.width / 2), cy - 70))
                 break
-            acc += cd
         rgb = frame.convert("RGB")
         last_frame = rgb
         if sc.get("cover") and cover_frame is None and ft - st > dur * 0.5:

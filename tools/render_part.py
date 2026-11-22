@@ -24,6 +24,8 @@ def resolve(story, part):
         for c in sc.get("chars", []):
             base = dict(chars.get(c.get("ref"), {})) if c.get("ref") else {}
             base.update({k: v for k, v in c.items() if k != "ref"})
+            for k in ("voz", "pitch", "speed", "nome"):
+                base.pop(k, None)
             res.append(base)
         sc["chars"] = res
         scenes.append(sc)
@@ -37,6 +39,11 @@ def resolve(story, part):
         "vote": story["tipo"] == "votacao" and n < total,
         "options": script.get("opcoes", []),
         "mood": script.get("mood", "suspense"),
+        "narrador": story.get("narrador"),
+        "vozes": {k: {kk: v[kk] for kk in ("voz", "pitch", "speed") if kk in v} for k, v in chars.items() if "voz" in v},
+        "nomes": {k: v.get("nome", k.title()) for k, v in chars.items()},
+        "cores": {k: v.get("cloth", [200, 20, 40]) for k, v in chars.items()},
+        "sem_voz": story.get("sem_voz", False),
     }
     caption = script["caption"].strip()
     if "#" not in caption:

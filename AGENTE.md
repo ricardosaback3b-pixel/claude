@@ -7,6 +7,7 @@ O dono da conta autorizou a publicação sem aprovação prévia.
 ## Arquivos
 
 - `engine.py`: motor de vídeo (1080x1920, legenda grande, trilha sintetizada, capa). Não altere sem necessidade.
+- `tts.py`: vozes grátis em português (Kokoro e Piper), uma por personagem. Antes de renderizar: `pip install --break-system-packages kokoro-onnx piper-tts soundfile` (os modelos baixam sozinhos do HuggingFace na 1ª vez).
 - `tools/render_part.py <slug> <n>`: renderiza a parte `n` e gera `videos/<slug>/parte<n>.mp4` e `capa<n>.jpg`.
 - `historias/<slug>/historia.json`: uma história (bíblia, personagens, roteiro de cada parte, status, votos).
 - `estado.json`: o que está ativo, qual tipo vem agora e o histórico de posts.
@@ -80,6 +81,16 @@ Antes de escrever qualquer parte, leia a `biblia` e o texto de **todas** as part
 - `prop.type`: `lista`/`carta` (title + lines; linha começando com `!` fica vermelha), `bilhete` (lines), `celular` (title + lines), `placa` (title). Use em cenas sem personagens.
 - Personagens: defina em `personagens` com `skin`, `cloth`, `hair` (RGB), `hairstyle` (`curto`, `longo`, `coque`, `bone` + `cap`, `careca`, `capuz`), opcionais `age`, `uniform`, `shadow_face`. Na cena use `ref` + `x` (0–1), `scale` (0.3–1.15), `y` (padrão 0.86), `eyes` (`normal`, `arregalado`, `fechado`), `mouth` (`neutra`, `o`, `sorriso`, `triste`), `look` (-1/0/1), `flip`, `prop: "papel"`. No máximo 2 personagens por cena.
 - `tint`: [r,g,b] opcional para clima (ex.: vermelho no clímax).
+
+### Vozes e falas (cada personagem tem a sua voz)
+
+- No `historia.json`, defina `narrador` (o `ref` de quem conta a história em 1ª pessoa) e, em cada personagem, `nome` (aparece na etiqueta da fala), `voz`, `pitch` e `speed`.
+- Vozes disponíveis: `kokoro:pf_dora` (feminina), `kokoro:pm_alex` (masculina), `kokoro:pm_santa` (masculina grave), `piper:faber`, `piper:cadu`, `piper:jeff` (masculinas). Use `pitch` para diferenciar: criança 1.18–1.25, jovem 1.0–1.1, adulto 0.95–1.0, idoso 0.86–0.92; `speed` 0.88–1.08.
+- **Duas personagens da mesma história nunca podem ter a mesma combinação de voz + pitch** (diferença mínima de 0.08 no pitch se usarem a mesma voz). Prefira vozes base diferentes para os homens.
+- Na cena, use `text` para narração simples (voz do narrador) ou `linhas` para misturar narração e diálogo:
+  `"linhas": [{"voz": "LIA", "texto": "Ele me olhou e disse:"}, {"voz": "IVO", "texto": "Você não devia estar aqui."}]`
+  Toda parte deve ter **pelo menos 2 falas de personagens** além da narração. As falas aparecem com o nome do personagem acima da legenda.
+- Escreva números e siglas por extenso quando forem falados ("parada quatro", "meia-noite").
 
 ## Legenda do post
 

@@ -21,7 +21,11 @@
     20,
     16
    ],
-   "hairstyle": "longo"
+   "hairstyle": "longo",
+   "nome": "Lia",
+   "voz": "kokoro:pf_dora",
+   "pitch": 1.0,
+   "speed": 1.0
   },
   "IVO": {
    "skin": [
@@ -40,7 +44,11 @@
     54,
     38
    ],
-   "age": true
+   "age": true,
+   "nome": "Seu Ivo",
+   "voz": "kokoro:pm_santa",
+   "pitch": 0.94,
+   "speed": 0.92
   },
   "MOTORISTA": {
    "cloth": [
@@ -49,7 +57,11 @@
     30
    ],
    "hairstyle": "capuz",
-   "shadow_face": true
+   "shadow_face": true,
+   "nome": "Motorista",
+   "voz": "kokoro:pm_santa",
+   "pitch": 0.85,
+   "speed": 0.9
   },
   "LIA_VELHA": {
    "skin": [
@@ -68,7 +80,11 @@
     170
    ],
    "hairstyle": "longo",
-   "age": true
+   "age": true,
+   "nome": "Lia mais velha",
+   "voz": "kokoro:pf_dora",
+   "pitch": 0.86,
+   "speed": 0.9
   },
   "MENINA": {
    "skin": [
@@ -87,7 +103,11 @@
     20
    ],
    "hairstyle": "coque",
-   "uniform": true
+   "uniform": true,
+   "nome": "Menina",
+   "voz": "kokoro:pf_dora",
+   "pitch": 1.22,
+   "speed": 1.05
   },
   "BIA": {
    "skin": [
@@ -105,7 +125,11 @@
     46,
     20
    ],
-   "hairstyle": "curto"
+   "hairstyle": "curto",
+   "nome": "Bia",
+   "voz": "kokoro:pf_dora",
+   "pitch": 1.1,
+   "speed": 1.05
   }
  },
  "partes": [
@@ -206,7 +230,17 @@
         "eyes": "arregalado"
        }
       ],
-      "text": "Ele me olhou e disse: *Você não devia estar aqui.* *Ainda.*"
+      "text": "Ele me olhou e disse: *Você não devia estar aqui.* *Ainda.*",
+      "linhas": [
+       {
+        "voz": "LIA",
+        "texto": "Ele me olhou e disse:"
+       },
+       {
+        "voz": "IVO",
+        "texto": "Você não devia estar aqui. *Ainda.*"
+       }
+      ]
      }
     ],
     "caption": "Toda noite à meia-noite passa um ônibus sem número na Rua 9... e ninguém entra. 🚌\n\nVocê entraria? 👇\n\nParte 2 em breve. Segue @mundoemhistorias 🔔\n\n#historia #misterio #suspense #terror #historiasempartes #contos"
@@ -231,7 +265,17 @@
         "y": 0.88
        }
       ],
-      "text": "Seu Ivo explicou: esse ônibus para onde você *escondeu alguma coisa*."
+      "text": "Seu Ivo explicou: esse ônibus para onde você *escondeu alguma coisa*.",
+      "linhas": [
+       {
+        "voz": "LIA",
+        "texto": "Seu Ivo explicou:"
+       },
+       {
+        "voz": "IVO",
+        "texto": "Esse ônibus para onde você *escondeu alguma coisa*."
+       }
+      ]
      },
      {
       "bg": "escuro",
@@ -292,7 +336,17 @@
         "look": -1
        }
       ],
-      "text": "Seu Ivo disse que a última parada é onde *ninguém desce*. E me deu um papel."
+      "text": "Seu Ivo disse que a última parada é onde *ninguém desce*. E me deu um papel.",
+      "linhas": [
+       {
+        "voz": "IVO",
+        "texto": "A última parada é onde *ninguém desce*."
+       },
+       {
+        "voz": "LIA",
+        "texto": "E me deu um papel."
+       }
+      ]
      },
      {
       "bg": "escuro",
@@ -369,7 +423,13 @@
         "!Não conta pra ele."
        ]
       },
-      "text": "*Desce na parada 4.* É a única porta que abre. *Não conta pra ele.*"
+      "text": "*Desce na parada 4.* É a única porta que abre. *Não conta pra ele.*",
+      "linhas": [
+       {
+        "voz": "MENINA",
+        "texto": "*Desce na parada 4.* É a única porta que abre. *Não conta pra ele.*"
+       }
+      ]
      },
      {
       "bg": "escuro",
@@ -439,7 +499,17 @@
         "look": -1
        }
       ],
-      "text": "Eu chamei: *Bia!* Ela olhou pra mim... como se nunca tivesse me visto."
+      "text": "Eu chamei: *Bia!* Ela olhou pra mim... como se nunca tivesse me visto.",
+      "linhas": [
+       {
+        "voz": "LIA",
+        "texto": "*Bia!*"
+       },
+       {
+        "voz": "LIA",
+        "texto": "Ela olhou pra mim... como se nunca tivesse me visto."
+       }
+      ]
      },
      {
       "bg": "onibus_dentro",
@@ -452,7 +522,13 @@
         "y": 0.84
        }
       ],
-      "text": "Seu Ivo cochichou: quem chega na última parada *esquece tudo*. E vira passageiro pra sempre."
+      "text": "Seu Ivo cochichou: quem chega na última parada *esquece tudo*. E vira passageiro pra sempre.",
+      "linhas": [
+       {
+        "voz": "IVO",
+        "texto": "Quem chega na última parada *esquece tudo*. E vira passageiro pra sempre."
+       }
+      ]
      },
      {
       "bg": "escuro",
@@ -529,7 +605,13 @@
         "y": 0.9
        }
       ],
-      "text": "Ela disse: *eu sou você*, se continuar fugindo do que escondeu."
+      "text": "Ela disse: *eu sou você*, se continuar fugindo do que escondeu.",
+      "linhas": [
+       {
+        "voz": "LIA_VELHA",
+        "texto": "*Eu sou você*. Se continuar fugindo do que escondeu."
+       }
+      ]
      },
      {
       "bg": "onibus_dentro",
@@ -548,13 +630,25 @@
         "look": -1
        }
       ],
-      "text": "Esse ônibus é feito de *coisas não ditas*. Cada passageiro guardou um segredo até o fim."
+      "text": "Esse ônibus é feito de *coisas não ditas*. Cada passageiro guardou um segredo até o fim.",
+      "linhas": [
+       {
+        "voz": "LIA_VELHA",
+        "texto": "Esse ônibus é feito de *coisas não ditas*. Cada passageiro guardou um segredo até o fim."
+       }
+      ]
      },
      {
       "bg": "escuro",
       "cam": "zoom_forte",
       "hook": true,
-      "text": "Pra sair, alguém tem que dizer a verdade *em voz alta*. Antes da última parada."
+      "text": "Pra sair, alguém tem que dizer a verdade *em voz alta*. Antes da última parada.",
+      "linhas": [
+       {
+        "voz": "LIA_VELHA",
+        "texto": "Pra sair, alguém tem que dizer a verdade *em voz alta*. Antes da última parada."
+       }
+      ]
      },
      {
       "bg": "escuro",
@@ -656,7 +750,13 @@
         "look": -1
        }
       ],
-      "text": "Ela disse: *eu sonhei com você*. Num ônibus. E você me contou da carta."
+      "text": "Ela disse: *eu sonhei com você*. Num ônibus. E você me contou da carta.",
+      "linhas": [
+       {
+        "voz": "BIA",
+        "texto": "*Eu sonhei com você*. Num ônibus. E você me contou da carta."
+       }
+      ]
      },
      {
       "bg": "casa_noite",
@@ -691,5 +791,6 @@
    }
   }
  ],
- "genero": "suspense sobrenatural"
+ "genero": "suspense sobrenatural",
+ "narrador": "LIA"
 }

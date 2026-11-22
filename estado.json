@@ -13,6 +13,14 @@
   {
    "slug": "cidade-sirene",
    "tipo": "votacao"
+  },
+  {
+   "slug": "o-sombra-da-sala-12",
+   "tipo": "continua"
+  },
+  {
+   "slug": "a-ponte-caida",
+   "tipo": "votacao"
   }
  ],
  "historico": []

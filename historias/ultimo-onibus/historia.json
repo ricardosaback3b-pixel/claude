@@ -839,5 +839,133 @@
   }
  ],
  "genero": "suspense sobrenatural",
- "narrador": "LIA"
+ "narrador": "LIA",
+ "personagens_travados": {
+  "LIA": {
+   "skin": [
+    198,
+    140,
+    105
+   ],
+   "cloth": [
+    96,
+    44,
+    130
+   ],
+   "hair": [
+    30,
+    20,
+    16
+   ],
+   "hairstyle": "longo",
+   "nome": "Lia",
+   "voz": "kokoro:pf_dora",
+   "pitch": 1.0,
+   "speed": 1.0
+  },
+  "IVO": {
+   "skin": [
+    160,
+    112,
+    84
+   ],
+   "cloth": [
+    58,
+    84,
+    62
+   ],
+   "hairstyle": "bone",
+   "cap": [
+    26,
+    54,
+    38
+   ],
+   "age": true,
+   "nome": "Seu Ivo",
+   "voz": "kokoro:pm_santa",
+   "pitch": 0.94,
+   "speed": 0.92
+  },
+  "MOTORISTA": {
+   "cloth": [
+    24,
+    24,
+    30
+   ],
+   "hairstyle": "capuz",
+   "shadow_face": true,
+   "nome": "Motorista",
+   "voz": "kokoro:pm_santa",
+   "pitch": 0.85,
+   "speed": 0.9
+  },
+  "LIA_VELHA": {
+   "skin": [
+    190,
+    135,
+    105
+   ],
+   "cloth": [
+    40,
+    40,
+    48
+   ],
+   "hair": [
+    170,
+    170,
+    170
+   ],
+   "hairstyle": "longo",
+   "age": true,
+   "nome": "Lia mais velha",
+   "voz": "kokoro:pf_dora",
+   "pitch": 0.86,
+   "speed": 0.9
+  },
+  "MENINA": {
+   "skin": [
+    236,
+    188,
+    150
+   ],
+   "cloth": [
+    36,
+    58,
+    140
+   ],
+   "hair": [
+    60,
+    34,
+    20
+   ],
+   "hairstyle": "coque",
+   "uniform": true,
+   "nome": "Menina",
+   "voz": "kokoro:pf_dora",
+   "pitch": 1.22,
+   "speed": 1.05
+  },
+  "BIA": {
+   "skin": [
+    198,
+    140,
+    105
+   ],
+   "cloth": [
+    214,
+    128,
+    40
+   ],
+   "hair": [
+    80,
+    46,
+    20
+   ],
+   "hairstyle": "curto",
+   "nome": "Bia",
+   "voz": "kokoro:pf_dora",
+   "pitch": 1.1,
+   "speed": 1.05
+  }
+ }
 }

@@ -1,0 +1,1275 @@
+{
+ "slug": "o-sombra-da-sala-12",
+ "titulo": "O Sombra da Sala 12",
+ "tipo": "continua",
+ "genero": "comédia de mistério escolar",
+ "status": "ativa",
+ "narrador": "TEO",
+ "biblia": "Gênero: comédia de mistério escolar, sem sobrenatural. Teo (narrador, 1ª pessoa, aluno da turma da sala 12, tem medo do escuro) é acusado de ser 'O Sombra', que toda manhã escreve na lousa da sala 12 (trancada) um segredo bobo de alguém, com a letra igual à do Teo. A Diretora Marta dá 6 dias (até sexta) para ele provar a inocência. Nina (melhor amiga, caderno verde, detetive) ajuda. Pistas: chaves do zelador Seu Bento somem (P2); giz azul do professor Rui (P2, Rui é inocente, P3); pegada de tênis com estrela na sola (P3); ladrilho solto sob a placa 'SALA 12' com chave pequena e foto da turma de 1996 onde está Marta criança (P4); a sala 12 será demolida no mês que vem e a turma dividida (P4); Caio tem tênis de estrela e copia o caderno do Teo o ano inteiro (P5). Segredos: Caio = O Sombra; entra pela porta do armário do fundo, que tem alçapão para o porão. Motivo: ouviu sobre a demolição e quis que todos olhassem para a sala; usou a letra do Teo porque todos escutam o Teo. Final (P6, sexta 19h): luz apaga, Teo não foge do escuro, Caio confessa, devolve chaves e giz; a chave abre a cápsula do tempo atrás da lousa com carta da Marta aos 12 anos; a sala vira patrimônio, a turma não é dividida, Teo não é suspenso; Caio ajuda o Seu Bento por um mês. Última lousa: 'Obrigado, turma. O Sombra, aposentado'. Teo dorme de luz apagada.",
+ "personagens": {
+  "TEO": {
+   "skin": [
+    222,
+    170,
+    130
+   ],
+   "cloth": [
+    230,
+    120,
+    30
+   ],
+   "hair": [
+    40,
+    26,
+    18
+   ],
+   "hairstyle": "curto",
+   "nome": "Teo",
+   "voz": "kokoro:pm_alex",
+   "pitch": 1.12,
+   "speed": 1.04
+  },
+  "NINA": {
+   "skin": [
+    120,
+    80,
+    56
+   ],
+   "cloth": [
+    40,
+    150,
+    90
+   ],
+   "hair": [
+    20,
+    14,
+    10
+   ],
+   "hairstyle": "coque",
+   "nome": "Nina",
+   "voz": "kokoro:pf_dora",
+   "pitch": 1.14,
+   "speed": 1.05
+  },
+  "CAIO": {
+   "skin": [
+    240,
+    200,
+    170
+   ],
+   "cloth": [
+    200,
+    40,
+    50
+   ],
+   "hairstyle": "bone",
+   "cap": [
+    30,
+    40,
+    130
+   ],
+   "nome": "Caio",
+   "voz": "piper:faber",
+   "pitch": 1.1,
+   "speed": 1.04
+  },
+  "BENTO": {
+   "skin": [
+    150,
+    100,
+    70
+   ],
+   "cloth": [
+    70,
+    90,
+    110
+   ],
+   "hairstyle": "careca",
+   "age": true,
+   "nome": "Seu Bento",
+   "voz": "kokoro:pm_santa",
+   "pitch": 0.9,
+   "speed": 0.92
+  },
+  "RUI": {
+   "skin": [
+    200,
+    150,
+    110
+   ],
+   "cloth": [
+    60,
+    60,
+    70
+   ],
+   "hair": [
+    90,
+    90,
+    90
+   ],
+   "hairstyle": "curto",
+   "nome": "Prof. Rui",
+   "voz": "piper:jeff",
+   "pitch": 0.98,
+   "speed": 1.0
+  },
+  "MARTA": {
+   "skin": [
+    180,
+    120,
+    90
+   ],
+   "cloth": [
+    120,
+    30,
+    60
+   ],
+   "hair": [
+    50,
+    30,
+    30
+   ],
+   "hairstyle": "coque",
+   "age": true,
+   "nome": "Diretora Marta",
+   "voz": "kokoro:pf_dora",
+   "pitch": 0.92,
+   "speed": 0.95
+  }
+ },
+ "partes": [
+  {
+   "n": 1,
+   "status": "pronta",
+   "script": {
+    "cover_text": "A lousa que fala",
+    "scenes": [
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "TEO TEM MEDO"
+      },
+      "cam": "zoom_forte",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Toda manhã, a lousa da *sala doze* amanhece com um segredo escrito. Hoje, o segredo era *meu*."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "O SOMBRA"
+      },
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.35,
+        "scale": 0.85,
+        "look": 1
+       }
+      ],
+      "text": "Começou na segunda. Alguém escreve de madrugada, em giz, e assina sempre igual: *O Sombra*. Ninguém sabe como entra na sala trancada."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "???"
+      },
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.62,
+        "scale": 0.85,
+        "mouth": "triste",
+        "look": -1
+       }
+      ],
+      "text": "Primeiro foi o Caio, que ainda dorme de pijama de dinossauro. Depois a professora de artes, que canta no carro. A turma inteira ria. Até chegar a minha vez."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "bilhete",
+       "lines": [
+        "TEO TEM MEDO",
+        "DO ESCURO.",
+        "- O SOMBRA"
+       ]
+      },
+      "text": "Teo tem *medo do escuro*. E o pior não foi o segredo. Foi a letra. Era a *minha letra*. Igualzinha."
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "MARTA",
+        "x": 0.3,
+        "scale": 0.9,
+        "eyes": "normal",
+        "mouth": "neutra"
+       },
+       {
+        "ref": "TEO",
+        "x": 0.72,
+        "scale": 0.8,
+        "eyes": "arregalado",
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MARTA",
+        "texto": "Teodoro. Na minha sala. *Agora*."
+       },
+       {
+        "voz": "TEO",
+        "texto": "Diretora, eu juro que não fui eu!"
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "shake",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "MARTA",
+        "x": 0.5,
+        "scale": 1.05,
+        "eyes": "normal",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MARTA",
+        "texto": "Você tem *seis dias* pra me provar isso. Na sexta, ou eu descubro o Sombra, ou eu suspendo o dono dessa letra."
+       }
+      ]
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "SEIS DIAS"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.3,
+        "scale": 0.85,
+        "mouth": "sorriso"
+       },
+       {
+        "ref": "TEO",
+        "x": 0.7,
+        "scale": 0.85,
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "TEO",
+        "texto": "Na saída, a Nina sentou do meu lado com um caderno de capa verde."
+       },
+       {
+        "voz": "NINA",
+        "texto": "Eu sei que não foi você. Você escreve o *a* torto. O Sombra escreve torto *de propósito*."
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "celular",
+       "title": "NINA",
+       "lines": [
+        "Volta na escola.",
+        "Agora.",
+        "A lousa mudou."
+       ]
+      },
+      "text": "Às oito da noite, meu celular vibrou. A Nina tinha ficado pra ajudar o Seu Bento a fechar a biblioteca."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "A CHAVE"
+      },
+      "cam": "shake",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 1.0,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Na foto dela, a lousa já tinha um recado novo: amanhã, *alguém vai perder a chave*. E a sala estava *trancada por fora*. A Parte Dois fica no perfil."
+     }
+    ],
+    "caption": "Toda manhã, a lousa da sala 12 amanhece com um segredo… e hoje era o meu. ✏️\n\nParte 1 — A lousa que fala\n\nQuem você acha que é o Sombra? Chuta aqui 👇\n\nA Parte 2 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#misterio #historiasempartes #escola #comedia #contos"
+   }
+  },
+  {
+   "n": 2,
+   "status": "pronta",
+   "script": {
+    "cover_text": "O giz azul",
+    "scenes": [
+     {
+      "bg": "corredor_predio",
+      "cam": "zoom_forte",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "BENTO",
+        "x": 0.5,
+        "scale": 0.95,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Às sete da manhã, o grito do *Seu Bento* ecoou no corredor. O molho de chaves da escola tinha *sumido*."
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "BENTO",
+        "x": 0.3,
+        "scale": 0.9,
+        "mouth": "triste"
+       },
+       {
+        "ref": "TEO",
+        "x": 0.72,
+        "scale": 0.8,
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "BENTO",
+        "texto": "Trinta anos nessa escola e eu nunca perdi uma chave. Nunca!"
+       },
+       {
+        "voz": "TEO",
+        "texto": "O senhor emprestou pra alguém, Seu Bento?"
+       },
+       {
+        "voz": "BENTO",
+        "texto": "Só pra quem pede *por favor*. E ontem muita gente pediu."
+       }
+      ]
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "CHAVE?"
+      },
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.35,
+        "scale": 0.85,
+        "look": 1
+       }
+      ],
+      "text": "Na lousa, o Sombra tinha escrito: *eu avisei*. Mas dessa vez a Nina notou um detalhe que ninguém mais viu. A turma inteira ficou olhando pra mim de novo."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "AZUL"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "sorriso"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "NINA",
+        "texto": "Olha a cor, Teo. O giz é *azul*. Na escola inteira, só um professor usa giz azul."
+       }
+      ]
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "2 + 2 = ?"
+      },
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "RUI",
+        "x": 0.3,
+        "scale": 0.9,
+        "mouth": "neutra"
+       },
+       {
+        "ref": "TEO",
+        "x": 0.72,
+        "scale": 0.8,
+        "eyes": "normal",
+        "look": -1
+       }
+      ],
+      "text": "O *professor Rui*. Chegou esse ano, ensina matemática, e guarda o giz azul trancado na gaveta como se fosse ouro. Ele sempre chega antes de todo mundo e sai por último."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "2 + 2 = ?"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "RUI",
+        "x": 0.5,
+        "scale": 1.0,
+        "eyes": "normal",
+        "mouth": "triste",
+        "look": 1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "RUI",
+        "texto": "Alguém mexeu na minha gaveta, eu sei. Faltam três caixas. E vocês dois estão me olhando muito estranho."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.3,
+        "scale": 0.8,
+        "look": 1
+       },
+       {
+        "ref": "TEO",
+        "x": 0.68,
+        "scale": 0.8,
+        "look": -1
+       }
+      ],
+      "text": "No intervalo, a gente voltou escondido pra sala dele. A gaveta estava *aberta*. Sem cadeado. Sem giz. Eu senti o estômago gelar. Se alguém visse a gente ali, era o fim."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "bilhete",
+       "lines": [
+        "FRIO.",
+        "TENTA DE NOVO,",
+        "TEO.",
+        "- O SOMBRA"
+       ]
+      },
+      "text": "No fundo, dobrado, tinha um bilhete. Escrito na *minha letra*."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "FRIO"
+      },
+      "cam": "shake",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 1.0,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "O Sombra sabia que a gente vinha. Sabia *antes* da gente. Ou seja: ele estava perto. Muito perto. A Parte Três fica no perfil."
+     }
+    ],
+    "caption": "O giz era azul… e só um professor usa giz azul. 🔵\n\nParte 2 — O giz azul\n\nVocê confiaria no professor Rui? Comenta 👇\n\nA Parte 3 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#misterio #escola #historiasempartes #detetive #contos #suspense"
+   }
+  },
+  {
+   "n": 3,
+   "status": "pronta",
+   "script": {
+    "cover_text": "A noite na escola",
+    "scenes": [
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "hook": true,
+      "cover": true,
+      "prop": {
+       "type": "placa",
+       "title": "19:00"
+      },
+      "text": "Pra pegar o Sombra, eu tinha que fazer a coisa que eu *mais odeio*: ficar no escuro."
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "BENTO",
+        "x": 0.3,
+        "scale": 0.9,
+        "mouth": "sorriso"
+       },
+       {
+        "ref": "NINA",
+        "x": 0.72,
+        "scale": 0.8,
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "TEO",
+        "texto": "O Seu Bento topou ficar com a gente depois da aula, desde que os nossos pais soubessem."
+       },
+       {
+        "voz": "BENTO",
+        "texto": "Eu quero minhas chaves de volta. Ninguém sai do meu lado."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.85,
+        "eyes": "arregalado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "Às sete em ponto, a luz do corredor *apagou*. Disjuntor desligado. Eu fiquei paralisado, contando a minha respiração."
+     },
+     {
+      "bg": "escuro",
+      "cam": "shake",
+      "hook": true,
+      "prop": {
+       "type": "placa",
+       "title": "TAC. TAC. TAC."
+      },
+      "text": "Passos. Lá no fundo, perto da sala doze. Devagar. E a lanterna da Nina mostrou uma pegada no chão: um tênis com uma *estrela* na sola."
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "RUI",
+        "x": 0.3,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "o"
+       },
+       {
+        "ref": "NINA",
+        "x": 0.72,
+        "scale": 0.8,
+        "eyes": "arregalado",
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "NINA",
+        "texto": "Professor Rui?!"
+       },
+       {
+        "voz": "RUI",
+        "texto": "Calma! Eu vim atrás do meu giz! Achei que o ladrão voltava hoje."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "RUI",
+        "x": 0.5,
+        "scale": 0.9,
+        "mouth": "triste"
+       }
+      ],
+      "text": "O professor usava *sapato social*. Nada de estrela. Ele não era o Sombra. Era só mais um enganado, igual a mim."
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "BENTO",
+        "x": 0.3,
+        "scale": 0.85,
+        "mouth": "neutra"
+       },
+       {
+        "ref": "TEO",
+        "x": 0.7,
+        "scale": 0.85,
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "BENTO",
+        "texto": "Teo, você ficou no escuro e não saiu correndo."
+       },
+       {
+        "voz": "TEO",
+        "texto": "Eu nem percebi, Seu Bento. Tava ocupado demais com medo do Sombra."
+       }
+      ]
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "DEBAIXO DO 12"
+      },
+      "cam": "zoom_forte",
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Quando a luz voltou, a gente correu pra sala doze. A porta estava trancada. Mas a lousa tinha um recado *novo*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "shake",
+      "hook": true,
+      "prop": {
+       "type": "bilhete",
+       "lines": [
+        "DEBAIXO DO",
+        "NÚMERO 12 TEM",
+        "UMA HISTÓRIA."
+       ]
+      },
+      "text": "Debaixo do número doze tem uma história. Enquanto a gente vigiava o corredor, alguém escreveu lá dentro. *Como?* A Parte Quatro fica no perfil."
+     }
+    ],
+    "caption": "Pra pegar o Sombra, eu tive que encarar o escuro… 🔦\n\nParte 3 — A noite na escola\n\nComo alguém escreve numa sala trancada? Teoria aqui 👇\n\nA Parte 4 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#misterio #historiasempartes #escola #medodoescuro #contos"
+   }
+  },
+  {
+   "n": 4,
+   "status": "pronta",
+   "script": {
+    "cover_text": "Debaixo do número 12",
+    "scenes": [
+     {
+      "bg": "corredor_predio",
+      "cam": "zoom_forte",
+      "hook": true,
+      "cover": true,
+      "prop": {
+       "type": "placa",
+       "title": "SALA 12"
+      },
+      "text": "Debaixo da placa da *sala doze*, um ladrilho do chão estava *solto*. E fazia barulho de oco."
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.3,
+        "scale": 0.85,
+        "mouth": "o",
+        "eyes": "arregalado"
+       },
+       {
+        "ref": "TEO",
+        "x": 0.7,
+        "scale": 0.85,
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "NINA",
+        "texto": "Alguém já abriu isso antes. O rejunte tá raspado."
+       },
+       {
+        "voz": "TEO",
+        "texto": "Então o Sombra queria que a gente achasse."
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "lista",
+       "title": "TURMA 12 - 1996",
+       "lines": [
+        "Foto antiga",
+        "Uma chave pequena",
+        "!Nomes apagados"
+       ]
+      },
+      "text": "Lá dentro tinha uma *chave pequena*, enferrujada, e uma foto de mil novecentos e noventa e seis. Uma turma inteira na frente da sala doze."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "1996"
+      },
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.4,
+        "scale": 0.85,
+        "eyes": "arregalado",
+        "look": 1
+       }
+      ],
+      "text": "Na primeira fila, de trança e aparelho, uma menina sorria. Eu conhecia aquele sorriso de bronca. Era a *Diretora Marta*. Os nomes embaixo estavam riscados com caneta, menos um."
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "MARTA",
+        "x": 0.3,
+        "scale": 0.9,
+        "mouth": "triste"
+       },
+       {
+        "ref": "TEO",
+        "x": 0.7,
+        "scale": 0.8,
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MARTA",
+        "texto": "Onde vocês acharam isso?"
+       },
+       {
+        "voz": "TEO",
+        "texto": "Debaixo da sala doze. A senhora estudou aqui?"
+       },
+       {
+        "voz": "MARTA",
+        "texto": "Estudei. E no mês que vem, essa sala vai ser *demolida*."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "MARTA",
+        "x": 0.5,
+        "scale": 0.95,
+        "eyes": "fechado",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MARTA",
+        "texto": "Vai virar estacionamento. E a turma de vocês vai ser *dividida* em três. Eu tentei impedir. Perdi."
+       }
+      ]
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "DIVIDIDA"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.3,
+        "scale": 0.8,
+        "mouth": "triste"
+       },
+       {
+        "ref": "TEO",
+        "x": 0.7,
+        "scale": 0.8,
+        "mouth": "triste",
+        "look": -1
+       }
+      ],
+      "text": "Dividida. Eu e a Nina em salas diferentes. Ninguém tinha contado isso pra gente. Só o Sombra parecia saber. A Nina apertou meu braço com força. Eu nem consegui falar nada."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "SAÍDA"
+      },
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "CAIO",
+        "x": 0.6,
+        "scale": 0.85,
+        "mouth": "sorriso",
+        "look": -1
+       }
+      ],
+      "text": "Na saída, o Caio passou correndo por mim, rindo, de mochila nas costas. E eu olhei pro chão. Sem querer. Ele nunca tinha tanta pressa."
+     },
+     {
+      "bg": "escuro",
+      "cam": "shake",
+      "hook": true,
+      "prop": {
+       "type": "placa",
+       "title": "★"
+      },
+      "text": "Na sola do tênis dele tinha uma *estrela*. A mesma da pegada no corredor. A Parte Cinco fica no perfil."
+     }
+    ],
+    "caption": "Debaixo da sala 12 tinha uma chave… e uma foto de 1996. 🗝️\n\nParte 4 — Debaixo do número 12\n\nO Caio é o Sombra ou é armação? Comenta 👇\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#misterio #historiasempartes #escola #plottwist #contos"
+   }
+  },
+  {
+   "n": 5,
+   "status": "pronta",
+   "script": {
+    "cover_text": "O tênis de estrela",
+    "scenes": [
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "CAIO?"
+      },
+      "cam": "zoom_forte",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "CAIO",
+        "x": 0.5,
+        "scale": 0.95,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "O *Caio*. O garoto do pijama de dinossauro. O primeiro segredo da lousa era *dele mesmo*."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "CAIO?"
+      },
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.3,
+        "scale": 0.85,
+        "look": 1
+       },
+       {
+        "ref": "TEO",
+        "x": 0.7,
+        "scale": 0.85,
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "NINA",
+        "texto": "Faz sentido. Quem desconfia de alguém que foi exposto primeiro?"
+       },
+       {
+        "voz": "TEO",
+        "texto": "E ele senta atrás de mim. Copia meu caderno o ano inteiro."
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "carta",
+       "title": "CADERNO DO CAIO",
+       "lines": [
+        "Lição de casa",
+        "na letra do Teo",
+        "!página por página"
+       ]
+      },
+      "text": "Foi assim que ele aprendeu a minha letra. *Copiando minha lição*. Todo dia. Eu emprestava achando que era favor."
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "CAIO",
+        "x": 0.3,
+        "scale": 0.85,
+        "mouth": "neutra"
+       },
+       {
+        "ref": "TEO",
+        "x": 0.7,
+        "scale": 0.85,
+        "eyes": "normal",
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "TEO",
+        "texto": "Caio, é você o Sombra?"
+       },
+       {
+        "voz": "CAIO",
+        "texto": "Eu? Tá maluco, Teo. Muita gente tem tênis de estrela."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "CAIO",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "fechado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "Ele falou rindo, mas não me olhou no olho. E saiu andando rápido. Rápido demais pra quem não tinha nada a esconder. A Nina anotou tudo no caderno verde, com a data e a hora."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "POR QUÊ?"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.5,
+        "scale": 0.9,
+        "mouth": "neutra",
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "NINA",
+        "texto": "Teo, pensa comigo. Os segredos eram vergonhosos, mas ninguém se machucou. E todo mundo voltou a prestar atenção na *sala doze*."
+       }
+      ]
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "POR QUÊ?"
+      },
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.4,
+        "scale": 0.85,
+        "eyes": "arregalado",
+        "look": 1
+       }
+      ],
+      "text": "E se o Sombra não quisesse me ferrar? E se ele quisesse que *a gente* descobrisse sobre a demolição? Faltava só um dia pra sexta. E eu ainda não tinha prova nenhuma pra mostrar."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "SEXTA 19H"
+      },
+      "cam": "zoom_forte",
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Na quinta de manhã, a lousa trazia o último recado. Sem segredo nenhum. Só um convite."
+     },
+     {
+      "bg": "escuro",
+      "cam": "shake",
+      "hook": true,
+      "prop": {
+       "type": "bilhete",
+       "lines": [
+        "SEXTA, SETE DA NOITE.",
+        "TRAGA A TURMA.",
+        "TRAGA A DIRETORA.",
+        "- O SOMBRA"
+       ]
+      },
+      "text": "Sexta, sete da noite. Traga a turma. Traga a diretora. Era o meu último dia pra provar a verdade. A Parte Seis, a final, fica no perfil."
+     }
+    ],
+    "caption": "O tênis tinha uma estrela… e o Caio não me olhou no olho. ⭐\n\nParte 5 — O tênis de estrela\n\nVocê iria nesse encontro de sexta? Responde 👇\n\nA Parte 6, a final, fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#misterio #historiasempartes #escola #amizade #contos"
+   }
+  },
+  {
+   "n": 6,
+   "status": "pronta",
+   "script": {
+    "cover_text": "Quem é o Sombra",
+    "final": true,
+    "mood": "suspense",
+    "scenes": [
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "SEXTA 19H"
+      },
+      "cam": "zoom_forte",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado"
+       }
+      ],
+      "text": "Sexta, sete da noite. A turma inteira dentro da sala doze. A diretora, o professor Rui, o Seu Bento. E as luzes *apagaram*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "shake",
+      "prop": {
+       "type": "placa",
+       "title": "CLIC"
+      },
+      "text": "Eu não corri. Respirei. Liguei a lanterna. E apontei pra porta do armário do fundo, que rangia sozinha."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "O SOMBRA"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "CAIO",
+        "x": 0.5,
+        "scale": 0.95,
+        "eyes": "normal",
+        "mouth": "triste",
+        "prop": "papel"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "CAIO",
+        "texto": "Tá bom. Fui eu. Eu sou o Sombra."
+       },
+       {
+        "voz": "TEO",
+        "texto": "O armário tinha um alçapão pro porão. Era assim que ele entrava na sala trancada."
+       }
+      ]
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "O SOMBRA"
+      },
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "CAIO",
+        "x": 0.3,
+        "scale": 0.85,
+        "mouth": "triste"
+       },
+       {
+        "ref": "BENTO",
+        "x": 0.72,
+        "scale": 0.85,
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "CAIO",
+        "texto": "Eu peguei as chaves do Seu Bento e o giz do professor. Desculpa. Eu ia devolver tudo hoje."
+       },
+       {
+        "voz": "BENTO",
+        "texto": "Com juros, menino. Com juros."
+       }
+      ]
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "POR QUÊ?"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "CAIO",
+        "x": 0.5,
+        "scale": 0.95,
+        "eyes": "fechado",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "CAIO",
+        "texto": "Eu ouvi a diretora no telefone falando da demolição. Ninguém ia ligar pra uma sala velha. Então eu fiz todo mundo olhar pra ela. E usei a letra do Teo porque todo mundo escuta o Teo."
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "carta",
+       "title": "CÁPSULA 1996",
+       "lines": [
+        "Para quem abrir:",
+        "a sala 12 é nossa.",
+        "Cuidem dela.",
+        "- Marta, 12 anos"
+       ]
+      },
+      "text": "A chave pequena abriu uma caixa atrás da lousa. Uma *cápsula do tempo*. E a primeira carta tinha a letra da diretora, com doze anos."
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "MARTA",
+        "x": 0.3,
+        "scale": 0.9,
+        "eyes": "fechado",
+        "mouth": "sorriso"
+       },
+       {
+        "ref": "TEO",
+        "x": 0.7,
+        "scale": 0.8,
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MARTA",
+        "texto": "Eu tinha esquecido que escrevi isso. Com essa carta, a sala vira *patrimônio* da escola. Ninguém derruba."
+       },
+       {
+        "voz": "TEO",
+        "texto": "E a suspensão, diretora?"
+       },
+       {
+        "voz": "MARTA",
+        "texto": "Suspensa. A suspensão."
+       }
+      ]
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "TURMA 12"
+      },
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.3,
+        "scale": 0.85,
+        "mouth": "sorriso"
+       },
+       {
+        "ref": "CAIO",
+        "x": 0.7,
+        "scale": 0.85,
+        "mouth": "sorriso",
+        "look": -1
+       }
+      ],
+      "text": "A turma não foi dividida. O Caio passou um mês ajudando o Seu Bento a varrer o pátio. E aprendeu a fazer a própria lição."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "OBRIGADO"
+      },
+      "cam": "in",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.95,
+        "mouth": "sorriso"
+       }
+      ],
+      "text": "Na segunda, a lousa tinha um último recado: *obrigado, turma*. Assinado: *O Sombra, aposentado*. E naquela noite, pela primeira vez, eu dormi com a luz apagada. Fim."
+     }
+    ],
+    "caption": "O Sombra finalmente apareceu… e o motivo ninguém esperava. 🖤✏️\n\nParte 6 — Quem é o Sombra (FINAL)\n\nVocê perdoaria o Caio? Conta aqui 👇\n\nFIM. Começa da Parte 1 no perfil. Nova história em breve.\n\n#misterio #historiasempartes #final #escola #contos #mundoemhistorias"
+   }
+  }
+ ]
+}

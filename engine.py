@@ -270,11 +270,11 @@ def bg_forest(seed=14):
     return img
 
 
-def bg_school(seed=15):
+def bg_school(seed=15, board="PROVA"):
     img = vgrad(BW, BH, (190, 170, 130), (150, 130, 100)).convert("RGBA")
     d = ImageDraw.Draw(img)
     d.rectangle([90, 300, BW - 90, 900], fill=(30, 60, 44), outline=(110, 70, 40), width=24)
-    d.text((BW // 2, 600), "PROVA", font=font(ANTON, 140), fill=(230, 230, 220), anchor="mm")
+    d.text((BW // 2, 600), board, font=font(ANTON, 140 if len(board) <= 8 else max(60, int(1100 / max(1, len(board)) * 1.6))), fill=(230, 230, 220), anchor="mm")
     d.rectangle([0, 1450, BW, BH], fill=(110, 80, 60))
     for x in (60, 640):
         d.rectangle([x, 1250, x + 480, 1320], fill=(150, 100, 60), outline=(60, 40, 20), width=8)
@@ -288,7 +288,7 @@ BACKGROUNDS.update({
     "elevador": lambda p: bg_elevator(p.get("floor", "-1")),
     "quarto_noite": lambda p: bg_bedroom(),
     "floresta_noite": lambda p: bg_forest(),
-    "sala_aula": lambda p: bg_school(),
+    "sala_aula": lambda p: bg_school(board=p.get("board", "PROVA")),
 })
 
 

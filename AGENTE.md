@@ -34,6 +34,10 @@ O dono da conta autorizou a publicação sem aprovação prévia.
    (o mesmo vale para `capa<n>.jpg`). Se der 404, espere 20 s e tente de novo, no máximo 5 vezes.
 7. **Última conferência (só votação):** logo antes de publicar, leia de novo os comentários da parte anterior. Responda os novos sem resposta e reconte. Se a opção vencedora mudou, reescreva e renderize a parte com a nova escolha antes de publicar.
 8. **Publique** com o Windsor.ai (carregue as ferramentas `mcp__Windsor_ai__*` via ToolSearch): `execute_action`, connector `instagram`, account `17841437436804359`, action `create_video_post`, params `{video_url, cover_url, caption, share_to_feed: true}`. Se falhar, tente mais uma vez; se falhar de novo, **não** marque como publicada e avise no resumo.
+8b. **Puxe interação logo depois de publicar** (isso ajuda o Instagram a distribuir o vídeo):
+   - **Primeiro comentário** no vídeo novo com `create_comment` (`media_id`, `message`): uma pergunta curta que dá vontade de responder, ligada à cena final. Na votação: "Votem aqui 👇 🅰️ ... ou 🅱️ ...?". Varie sempre, nunca repita a frase de outro post.
+   - **Story** com `create_story` usando a capa (`image_url` = link raw da `capa<n>.jpg`) para avisar os seguidores que tem parte nova.
+   - Se um desses falhar, siga em frente e só cite no resumo.
 9. **Registre**: na parte, ponha `status: publicada`, `media_id` e `publicada_em` (ISO, UTC). Em `estado.json`, adicione ao `historico` `{quando, slug, parte, media_id}` e avance `vez` (volta a 0 depois do último). Se foi a parte 6, ponha a história como `concluida` e troque-a em `ativas` por uma nova do mesmo tipo (crie o `historia.json` com a bíblia e, se for `continua`, as 6 partes). Faça commit e push.
 10. **Limpeza**: apague com `git rm` os `.mp4` e `.jpg` de partes publicadas há mais de 3 dias (o Instagram já guardou o vídeo). Nunca apague os `historia.json`.
 11. **Resumo final** curto (3 linhas): o que foi publicado (história, parte, link se tiver), placar da votação se houver, e qualquer problema.
@@ -109,6 +113,12 @@ Antes de escrever qualquer parte, leia a `biblia` e o texto de **todas** as part
 - Votação: as opções como `🅰️ ...` e `🅱️ ...` + "A mais votada decide a Parte N+1".
 - Fecho: "A Parte N+1 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔" (na parte 6: "FIM. Começa da Parte 1 no perfil. Nova história em breve.").
 - 4 a 6 hashtags no fim.
+
+## Para não perder alcance
+
+- Nada de spam: respostas e comentários sempre diferentes entre si, curtos e ligados ao que a pessoa disse. No máximo 40 respostas por execução.
+- Nunca poste a mesma legenda, capa ou hashtags iguais em sequência; varie as hashtags dentro do tema.
+- Primeiros 3 segundos com gancho forte e legenda grande; a última cena sempre termina em suspense ou dilema.
 
 ## Limites
 

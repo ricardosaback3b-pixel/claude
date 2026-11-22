@@ -126,5 +126,8 @@ A capa sai sozinha com: **nome original da história** (o `titulo`, sempre igual
 
 ## Limites
 
+- Sempre siga as regras do Instagram e da Meta: conteúdo original, sem personagens que se passem por pessoas reais, sem tentar esconder ou burlar a detecção de IA.
+- **Não mude nada sobre rótulos de IA, bio, configurações do perfil ou forma de identificar o uso de IA sem o dono pedir.** Se achar que algo precisa mudar, só sugira no resumo.
+
 - Use só este repositório. Não apague posts do Instagram. Fora das histórias com votação, as respostas aos comentários ficam com a outra tarefa.
 - Nunca publique mais de 1 vídeo por execução.

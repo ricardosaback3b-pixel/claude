@@ -7,6 +7,7 @@
   "PROTAGONISTA": {
    "nome": "Eu",
    "sprite": "protagonista",
+   "escuro": null,
    "voz": "piper:cadu",
    "pitch": 1.0,
    "speed": 1.0
@@ -14,6 +15,7 @@
   "OUTRO_EU": {
    "nome": "O outro eu",
    "sprite": "protagonista",
+   "escuro": true,
    "voz": "piper:cadu",
    "pitch": 0.88,
    "speed": 0.92
@@ -21,6 +23,7 @@
   "PREFEITO": {
    "nome": "Prefeito",
    "sprite": "prefeito",
+   "escuro": null,
    "voz": "kokoro:pm_santa",
    "pitch": 0.92,
    "speed": 0.9
@@ -28,6 +31,7 @@
   "POLICIAL": {
    "nome": "Policial",
    "sprite": "policial",
+   "escuro": null,
    "voz": "piper:jeff",
    "pitch": 0.97,
    "speed": 1.0

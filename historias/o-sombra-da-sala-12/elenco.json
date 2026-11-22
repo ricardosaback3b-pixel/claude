@@ -7,6 +7,7 @@
   "TEO": {
    "nome": "Teo",
    "sprite": "andar_menino",
+   "escuro": null,
    "voz": "kokoro:pm_alex",
    "pitch": 1.12,
    "speed": 1.04
@@ -14,6 +15,7 @@
   "NINA": {
    "nome": "Nina",
    "sprite": "andar_leitora",
+   "escuro": null,
    "voz": "kokoro:pf_dora",
    "pitch": 1.14,
    "speed": 1.05
@@ -21,6 +23,7 @@
   "CAIO": {
    "nome": "Caio",
    "sprite": "andar_rival",
+   "escuro": null,
    "voz": "piper:faber",
    "pitch": 1.1,
    "speed": 1.04
@@ -28,6 +31,7 @@
   "BENTO": {
    "nome": "Seu Bento",
    "sprite": "andar_zelador",
+   "escuro": null,
    "voz": "kokoro:pm_santa",
    "pitch": 0.9,
    "speed": 0.92
@@ -35,6 +39,7 @@
   "RUI": {
    "nome": "Prof. Rui",
    "sprite": "andar_professor",
+   "escuro": null,
    "voz": "piper:jeff",
    "pitch": 0.98,
    "speed": 1.0
@@ -42,6 +47,7 @@
   "MARTA": {
    "nome": "Diretora Marta",
    "sprite": "andar_jornalista",
+   "escuro": null,
    "voz": "kokoro:pf_dora",
    "pitch": 0.92,
    "speed": 0.95

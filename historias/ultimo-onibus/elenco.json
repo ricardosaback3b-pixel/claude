@@ -7,6 +7,7 @@
   "LIA": {
    "nome": "Lia",
    "sprite": "garota_moletom_roxo",
+   "escuro": null,
    "voz": "kokoro:pf_dora",
    "pitch": 1.0,
    "speed": 1.0
@@ -14,6 +15,7 @@
   "IVO": {
    "nome": "Seu Ivo",
    "sprite": "porteiro",
+   "escuro": null,
    "voz": "kokoro:pm_santa",
    "pitch": 0.94,
    "speed": 0.92
@@ -21,30 +23,34 @@
   "MOTORISTA": {
    "nome": "Motorista",
    "sprite": "motorista",
-   "voz": "kokoro:pm_santa",
-   "pitch": 0.85,
-   "speed": 0.9
+   "escuro": true,
+   "voz": "piper:jeff",
+   "pitch": 0.93,
+   "speed": 0.86
   },
   "LIA_VELHA": {
    "nome": "Lia mais velha",
    "sprite": "mulher_vestido_roxo",
-   "voz": "kokoro:pf_dora",
-   "pitch": 0.86,
-   "speed": 0.9
+   "escuro": null,
+   "voz": "kokoro:mix:pf_dora*0.8+pm_santa*0.2",
+   "pitch": 0.95,
+   "speed": 0.88
   },
   "MENINA": {
    "nome": "Menina",
    "sprite": "menina_laco_vermelho",
+   "escuro": null,
    "voz": "kokoro:pf_dora",
-   "pitch": 1.22,
-   "speed": 1.05
+   "pitch": 1.08,
+   "speed": 1.08
   },
   "BIA": {
    "nome": "Bia",
    "sprite": "menina_vestido_rosa",
-   "voz": "kokoro:pf_dora",
-   "pitch": 1.1,
-   "speed": 1.05
+   "escuro": null,
+   "voz": "kokoro:mix:pf_dora*0.85+pm_alex*0.15",
+   "pitch": 1.05,
+   "speed": 1.0
   }
  }
 }

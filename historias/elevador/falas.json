@@ -3,6 +3,7 @@
   "PROTAGONISTA": {
    "nome": "Você",
    "sprite": "andar_voce",
+   "escuro": null,
    "voz": "kokoro:pm_alex",
    "pitch": 1.04,
    "speed": 1.0
@@ -10,6 +11,7 @@
   "MEDICO": {
    "nome": "Médico",
    "sprite": "andar_medico",
+   "escuro": null,
    "voz": "piper:faber",
    "pitch": 0.95,
    "speed": 0.95
@@ -17,6 +19,7 @@
   "PORTEIRO": {
    "nome": "Porteiro",
    "sprite": "andar_porteiro",
+   "escuro": null,
    "voz": "kokoro:pm_santa",
    "pitch": 0.9,
    "speed": 0.92

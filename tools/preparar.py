@@ -56,7 +56,7 @@ def preparar(slug, n, salvar=True):
             erros.append(f"{ref}: desenho '{s}' não existe nos catálogos")
         elif sprites.familia(s) != story["estilo"]:
             erros.append(f"{ref}: '{s}' é de outro estilo (a história é '{story['estilo']}')")
-    usados = [v.get("sprite") for v in pers.values()]
+    usados = [v.get("sprite") for v in pers.values() if not v.get("escuro")]  # versão escurecida (ex.: "outro eu") pode repetir
     if len(usados) != len(set(usados)):
         erros.append("dois personagens usam o mesmo desenho")
     trav = story.get("personagens_travados")
@@ -78,10 +78,11 @@ def preparar(slug, n, salvar=True):
         if not v.get("voz"):
             erros.append(f"{ref}: sem voz definida")
             continue
-        key = (v["voz"], round(float(v.get("pitch", 1.0)), 2))
-        if key in combos:
-            avisos.append(f"{ref} e {combos[key]} têm a mesma voz; mude o pitch de um deles em pelo menos 0.05")
-        combos[key] = ref
+        pe = min(1.08, max(0.93, float(v.get("pitch", 1.0))))  # mesmo limite do tts.py
+        for (vz, pp), outro in combos.items():
+            if vz == v["voz"] and abs(pp - pe) < 0.04 and abs(float(pers[outro].get("speed", 1)) - float(v.get("speed", 1))) < 0.05:
+                erros.append(f"{ref} e {outro} ficam com a mesma voz; afaste o pitch (0.93–1.08) ou o speed")
+        combos[(v["voz"], pe)] = ref
     narr = story.get("narrador")
     if narr and narr not in pers:
         erros.append(f"narrador '{narr}' não está nos personagens")

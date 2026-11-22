@@ -10,9 +10,9 @@ from PIL import Image, ImageDraw, ImageFilter
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
 # estilo "cartela": corpo inteiro (assets/personagens); estilo "catalogo": busto (assets/catalogo)
-DIRS = {"cartela": os.path.join(ROOT, "personagens"), "catalogo": os.path.join(ROOT, "catalogo"),
-        "catalogo_corpo": os.path.join(ROOT, "catalogo_corpo")}
-# catalogo_corpo = mesmo estilo do catálogo ("O Andar que Não Existe"), mas de corpo inteiro
+# "cartela": cartelas chibi do dono. "andar": catálogo próprio no estilo de "O Andar que Não Existe"
+# (gerado por tools/catalogo_andar.py).
+DIRS = {"cartela": os.path.join(ROOT, "personagens"), "andar": os.path.join(ROOT, "andar")}
 OUT = (22, 16, 20)
 
 
@@ -24,12 +24,11 @@ def _meta_dir(estilo):
 
 def familia(name):
     """'cartela' ou 'catalogo' (busto e corpo inteiro do catálogo são o mesmo estilo)."""
-    e = estilo_de(name)
-    return "catalogo" if e.startswith("catalogo") else e
+    return estilo_de(name)
 
 
 def estilo_de(name):
-    for est in ("cartela", "catalogo", "catalogo_corpo"):
+    for est in DIRS:
         if name in _meta_dir(est):
             return est
     raise KeyError(f"personagem '{name}' não existe na cartela nem no catálogo")
@@ -81,6 +80,10 @@ def _base(name):
     est = estilo_de(name)
     im = Image.open(os.path.join(DIRS[est], f"{name}.png")).convert("RGBA")
     m = dict(_meta_dir(est)[name])
+    if m.get("exato"):  # catálogo próprio: posições do rosto conhecidas
+        m["pele"] = tuple(m["pele"])
+        m["frente"] = True
+        return im, m
     a = np.asarray(im).astype(int)
     m["olhos"] = [_full_eye(a, e) for e in m["olhos"]]
     (l0, t0, l1, b0), (r0, t1, r1, b1) = m["olhos"]
@@ -152,7 +155,7 @@ def _base(name):
 
 
 def enquadramento_padrao(name):
-    return "busto" if estilo_de(name) == "catalogo" else "corpo"
+    return "busto" if estilo_de(name) == "andar" else "corpo"
 
 
 def _cores_originais(im, pele=None):
@@ -259,29 +262,12 @@ def _gerar_corpo(im, m):
 
 @lru_cache(None)
 def _variante(name, modo):
-    """Mesmo personagem em close ('busto') ou de pé ('corpo').
-    Estilo catálogo: TODOS ficam no mesmo formato — cabeça e peito do desenho do dono + corpo gerado."""
+    """Mesmo personagem em close ('busto') ou de pé ('corpo')."""
     im, m = _base(name)
     m = dict(m)
-    est = estilo_de(name)
-    if est == "catalogo_corpo":
-        # parte de cima do desenho de corpo inteiro; guarda as cores originais para o corpo gerado
-        roupa, manga, calca = _cores_originais(im, m.get("pele"))
-        if roupa:
-            m["roupa"] = roupa
-        if calca:
-            m["calca"] = calca
-        if manga is not None:
-            if _parece_pele(manga):
-                m["manga_curta"] = True
-            else:
-                m["manga"] = manga
-        (l0, t0, l1, b0), (r0, t1, r1, b1) = m["olhos"]
-        ey = (t0 + b0 + t1 + b1) / 4
+    if estilo_de(name) == "andar" and modo == "busto":
+        ey = (m["olhos"][0][1] + m["olhos"][0][3]) / 2
         im = im.crop((0, 0, im.width, int(min(im.height, ey + m["dd"] * 3.4))))
-    if modo == "corpo" and est in ("catalogo", "catalogo_corpo"):
-        m["busto"] = False
-        return _gerar_corpo(im, m), m
     m["busto"] = modo == "busto"
     return im, m
 
@@ -313,11 +299,13 @@ def render(name, altura, eyes="normal", mouth="idle", brows=None, flip=False, mo
             d.ellipse([cx - pr, cy - pr, cx + pr, cy + pr], fill=OUT)
             d.ellipse([cx - pr * 0.2, cy - pr * 0.7, cx + pr * 0.25, cy - pr * 0.25], fill=(255, 255, 255))
     # sobrancelhas
+    if m.get("exato") and not brows:
+        brows = "neutro"
     if brows:
         for side, (x0, y0, x1, y1) in ((-1, (l0, t0, l1, b0)), (1, (r0, t1, r1, b1))):
             cx = (x0 + x1) / 2
             w = (x1 - x0) * 0.55
-            by = y0 - eh * 0.12
+            by = y0 - eh * (0.30 if m.get("exato") else 0.12)
             inner, outer = (cx + w, cx - w) if side < 0 else (cx - w, cx + w)
             dy = eh * 0.14
             if brows == "bravo":
@@ -328,7 +316,7 @@ def render(name, altura, eyes="normal", mouth="idle", brows=None, flip=False, mo
                 pts = [(outer, by - dy * 1.4), (inner, by - dy * 1.4)]
             else:
                 pts = [(outer, by), (inner, by)]
-            d.line(pts, fill=OUT, width=int(lw * 1.8))
+            d.line(pts, fill=OUT, width=int(lw * (3.2 if m.get("exato") else 1.8)))
     # boca
     if mouth != "idle":
         bx, by = m["boca"][0] * k, m["boca"][1] * k

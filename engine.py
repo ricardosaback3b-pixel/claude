@@ -300,7 +300,7 @@ def draw_char(spec, s=1.0, mouth_state=None, blink=False):
         eyes = "fechado" if blink else spec.get("eyes", "normal")
         mo = mouth_state or {"o": "o", "triste": "triste"}.get(spec.get("mouth", ""), "idle")
         modo = spec.get("enquadramento") or sprites.enquadramento_padrao(spec["sprite"])
-        alt = int((1400 if modo == "busto" else 900) * s)
+        alt = int((1150 if modo == "busto" else 900) * s)
         im = sprites.render(spec["sprite"], alt, eyes, mo, spec.get("brows"), spec.get("flip", False), modo)
         if spec.get("escuro"):
             r, g, b, a = im.split()
@@ -863,7 +863,7 @@ def render(script, out_dir):
                 import sprites as _sp
                 x = int(c.get("x", 0.5) * BW - spr.width / 2)
                 if _sp.e_busto(c["sprite"], c.get("enquadramento")):  # busto: encostado na base da tela, como nos vídeos originais
-                    y = int(BH * c.get("y", 0.17) + bob)  # topo do busto; rosto perto do meio da tela
+                    y = int(BH * c.get("y", 0.2) + bob)  # topo do busto; rosto perto do meio da tela
                 else:
                     y = int((c.get("y", 0.86) - 0.07) * BH - spr.height + bob)
                 src.paste(spr, (x, y), spr)

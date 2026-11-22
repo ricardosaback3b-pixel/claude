@@ -1,0 +1,1190 @@
+{
+ "andar_voce": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "protagonista estudante",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": false
+ },
+ "andar_medico": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "médico de jaleco",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": false
+ },
+ "andar_porteiro": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "porteiro de farda e quepe",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   400
+  ],
+  "boca_w": 76,
+  "pele": [
+   196,
+   138,
+   98
+  ],
+  "bigode": true
+ },
+ "andar_estudante_ana": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "estudante, cabelo longo",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": false
+ },
+ "andar_amigo_cacheado": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "amigo, cabelo cacheado",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   232,
+   178,
+   132
+  ],
+  "bigode": false
+ },
+ "andar_rival": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "rival de boné",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   232,
+   178,
+   132
+  ],
+  "bigode": false
+ },
+ "andar_professor": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "professor grisalho de óculos",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": false
+ },
+ "andar_medica": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "médica de coque",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   232,
+   178,
+   132
+  ],
+  "bigode": false
+ },
+ "andar_policial": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "policial",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   232,
+   178,
+   132
+  ],
+  "bigode": false
+ },
+ "andar_faxineira": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "faxineira",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   232,
+   178,
+   132
+  ],
+  "bigode": false
+ },
+ "andar_idoso": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "idoso de bigode",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   400
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": true
+ },
+ "andar_idosa": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "idosa de óculos",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": false
+ },
+ "andar_jornalista": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "jornalista",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": false
+ },
+ "andar_empresario": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "empresário de terno",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": false
+ },
+ "andar_mae": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "mãe",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   232,
+   178,
+   132
+  ],
+  "bigode": false
+ },
+ "andar_pai": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "pai de barba",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   232,
+   178,
+   132
+  ],
+  "bigode": false
+ },
+ "andar_menino": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "criança curiosa",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   232,
+   178,
+   132
+  ],
+  "bigode": false
+ },
+ "andar_menina": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "criança alegre",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": false
+ },
+ "andar_adolescente_fones": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "adolescente de fones",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   196,
+   138,
+   98
+  ],
+  "bigode": false
+ },
+ "andar_adolescente_menina": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "adolescente determinada",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   232,
+   178,
+   132
+  ],
+  "bigode": false
+ },
+ "andar_cientista": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "cientista de óculos",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": false
+ },
+ "andar_esportista": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "esportista",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   196,
+   138,
+   98
+  ],
+  "bigode": false
+ },
+ "andar_artista": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "artista de boina",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": false
+ },
+ "andar_gamer": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "gamer",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": false
+ },
+ "andar_leitora": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "leitora de óculos",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": false
+ },
+ "andar_motorista": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "motorista de ônibus",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   400
+  ],
+  "boca_w": 76,
+  "pele": [
+   140,
+   92,
+   64
+  ],
+  "bigode": true
+ },
+ "andar_seguranca": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "segurança",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   140,
+   92,
+   64
+  ],
+  "bigode": false
+ },
+ "andar_entregador": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "entregador",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   232,
+   178,
+   132
+  ],
+  "bigode": false
+ },
+ "andar_vizinha": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "vizinha de cabelo cacheado",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   196,
+   138,
+   98
+  ],
+  "bigode": false
+ },
+ "andar_vizinho": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "vizinho",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": false
+ },
+ "andar_prefeito": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "prefeito de faixa",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": false
+ },
+ "andar_zelador": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "zelador de macacão",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   400
+  ],
+  "boca_w": 76,
+  "pele": [
+   232,
+   178,
+   132
+  ],
+  "bigode": true
+ },
+ "andar_enfermeira": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "enfermeira",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   196,
+   138,
+   98
+  ],
+  "bigode": false
+ },
+ "andar_cozinheiro": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "cozinheiro",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   400
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": true
+ },
+ "andar_bombeiro": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "bombeiro",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   232,
+   178,
+   132
+  ],
+  "bigode": false
+ },
+ "andar_garota_loira": {
+  "w": 600,
+  "h": 1420,
+  "exato": true,
+  "desc": "garota loira",
+  "olhos": [
+   [
+    188,
+    260,
+    268,
+    340
+   ],
+   [
+    332,
+    260,
+    412,
+    340
+   ]
+  ],
+  "olho_h": 80,
+  "dd": 144,
+  "boca": [
+   300,
+   386
+  ],
+  "boca_w": 76,
+  "pele": [
+   246,
+   205,
+   170
+  ],
+  "bigode": false
+ }
+}

@@ -57,7 +57,7 @@ O dono da conta autorizou a publicação sem aprovação prévia.
 
 ## Elenco salvo de cada história
 
-Cada história tem `historias/<slug>/elenco.json` (estilo/catálogo + desenho e voz de cada personagem), `falas.json` (vozes e tudo o que cada personagem falou em cada parte) e o resumo geral em `ELENCOS.md`. Leia o elenco antes de escrever qualquer parte. Ao criar uma história nova ou um personagem novo, atualize `elenco.json`, `falas.json` e `ELENCOS.md` no mesmo commit (o `tools/preparar.py` já grava as falas).
+Cada história tem `historias/<slug>/elenco.json` (estilo/catálogo + desenho e voz de cada personagem), `falas.json` (vozes e tudo o que cada personagem falou em cada parte) e o resumo geral em `ELENCOS.md`. Leia o elenco antes de escrever qualquer parte. **Sempre:** toda vez que o `tools/preparar.py` roda (antes de cada vídeo), ele grava de novo o elenco de todas as histórias (`elenco.json`, `falas.json`, `ELENCOS.md`). Ao criar uma história nova ou um personagem novo, rode a preparação e faça commit desses arquivos junto com o vídeo.
 
 ## Estilos de personagens (obrigatório usar só estes desenhos)
 

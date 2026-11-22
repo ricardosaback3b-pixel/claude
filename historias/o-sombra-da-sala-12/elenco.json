@@ -3,6 +3,7 @@
  "titulo": "O Sombra da Sala 12",
  "estilo": "andar",
  "narrador": "TEO",
+ "status": "ativa",
  "personagens": {
   "TEO": {
    "nome": "Teo",

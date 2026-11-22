@@ -136,7 +136,37 @@ def preparar(slug, n, salvar=True):
         _save(hp, story)
         _save(fp, reg)
         _save(ep, estado)
+        salvar_elencos()
+        feito.append("elenco da história salvo (elenco.json, falas.json e ELENCOS.md)")
     return erros, avisos, feito
+
+
+def salvar_elencos():
+    """Grava elenco.json de cada história e o resumo ELENCOS.md (sempre, a cada preparação)."""
+    import glob
+    linhas = ["# Elencos salvos (catálogo e vozes de cada história)", "",
+              "O visual e a voz de cada personagem ficam travados até o fim da história.", ""]
+    for f in sorted(glob.glob(os.path.join(ROOT, "historias", "*", "historia.json"))):
+        h = _load(f)
+        pers = h.get("personagens", {})
+        el = {"slug": h["slug"], "titulo": h["titulo"], "estilo": h.get("estilo"), "narrador": h.get("narrador"),
+              "status": h.get("status"),
+              "personagens": {r: {k: v.get(k) for k in ("nome", "sprite", "escuro", "voz", "pitch", "speed")}
+                              for r, v in pers.items()}}
+        d = os.path.dirname(f)
+        _save(os.path.join(d, "elenco.json"), el)
+        fp = os.path.join(d, "falas.json")
+        reg = _load(fp, {"vozes": {}, "partes": {}})
+        reg["vozes"] = el["personagens"]
+        _save(fp, reg)
+        linhas.append(f"## {h['titulo']} (`{h['slug']}`) — estilo `{h.get('estilo')}`, {h.get('status', '')}")
+        for r, v in el["personagens"].items():
+            esc = " (escurecido)" if v.get("escuro") else ""
+            linhas.append(f"- **{v['nome']}** ({r}): desenho `{v['sprite']}`{esc}, voz `{v['voz']}` "
+                          f"pitch {v['pitch']} speed {v['speed']}")
+        linhas.append("")
+    with open(os.path.join(ROOT, "ELENCOS.md"), "w") as f:
+        f.write("\n".join(linhas))
 
 
 if __name__ == "__main__":

@@ -3,6 +3,7 @@
  "titulo": "O Último Ônibus",
  "estilo": "cartela",
  "narrador": "LIA",
+ "status": "ativa",
  "personagens": {
   "LIA": {
    "nome": "Lia",

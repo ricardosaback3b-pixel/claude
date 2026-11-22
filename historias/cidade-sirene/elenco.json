@@ -3,6 +3,7 @@
  "titulo": "Nessa Cidade, a Sirene Toca às 18h",
  "estilo": "cartela",
  "narrador": "PROTAGONISTA",
+ "status": "ativa",
  "personagens": {
   "PROTAGONISTA": {
    "nome": "Eu",

@@ -3,6 +3,7 @@
  "titulo": "O Andar que Não Existe",
  "estilo": "andar",
  "narrador": "PROTAGONISTA",
+ "status": "ativa",
  "personagens": {
   "PROTAGONISTA": {
    "nome": "Você",

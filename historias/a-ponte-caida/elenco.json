@@ -3,6 +3,7 @@
  "titulo": "A Ponte Caída",
  "estilo": "cartela",
  "narrador": "RAFA",
+ "status": "ativa",
  "personagens": {
   "RAFA": {
    "nome": "Rafa",

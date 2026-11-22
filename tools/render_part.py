@@ -9,6 +9,7 @@ import json, os, shutil, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 import engine  # noqa: E402
+sys.path.insert(0, os.path.join(ROOT, "tools"))
 
 TAGS = "#historia #misterio #suspense #historiasempartes #contos #mundoemhistorias"
 
@@ -93,6 +94,14 @@ def main(slug, n):
     with open(path) as f:
         story = json.load(f)
     checar_catalogos(story)
+    import preparar  # processo obrigatório: catálogo, falas e verificação
+    erros, avisos, feito = preparar.preparar(slug, n)
+    for x in feito + avisos:
+        print("preparação:", x, file=sys.stderr)
+    if erros:
+        sys.exit("ERRO na preparação: " + " | ".join(erros))
+    with open(path) as f:
+        story = json.load(f)
     part = next(p for p in story["partes"] if p["n"] == n)
     # Trava de personagens: na primeira renderização guarda uma cópia; depois, qualquer mudança
     # de visual ou voz de um personagem existente faz a renderização parar com erro.

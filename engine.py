@@ -603,20 +603,27 @@ def build_scene(sc):
     return img.convert("RGB")
 
 
-def camera(img, cam, t):
-    """t de 0 a 1 dentro da cena."""
+def camera(img, cam, t, foco=None, extra=1.0):
+    """t de 0 a 1 dentro da cena. foco = (x, y) no fundo para os zooms no rosto. extra = zoom adicional."""
     e = 0.5 - 0.5 * math.cos(math.pi * t)
-    z0, z1 = {"in": (1.0, 1.1), "out": (1.1, 1.0), "zoom_forte": (1.0, 1.3)}.get(cam, (1.03, 1.03))
-    z = z0 + (z1 - z0) * e
+    z0, z1 = {"in": (1.0, 1.1), "out": (1.1, 1.0), "zoom_forte": (1.0, 1.3),
+              "zoom_rosto": (1.05, 1.55), "zoom_tremido": (1.1, 1.5)}.get(cam, (1.03, 1.03))
+    if cam in ("zoom_rosto", "zoom_tremido"):
+        e = 1 - (1 - t) ** 3  # aproxima rápido e segura no rosto
+    z = (z0 + (z1 - z0) * e) * extra
     cw = W / z
     chh = H / z
     cx, cy = BW / 2, BH / 2
+    if foco and cam in ("zoom_rosto", "zoom_tremido", "zoom_forte"):
+        k = min(1.0, e * 1.4)
+        cx = BW / 2 + (foco[0] - BW / 2) * k
+        cy = BH / 2 + (foco[1] - BH / 2) * k
     mx = (BW - cw) / 2
     if cam == "pan_l":
         cx = BW / 2 + mx * (1 - 2 * e) * 0.9
     elif cam == "pan_r":
         cx = BW / 2 - mx * (1 - 2 * e) * 0.9
-    if cam == "shake":
+    if cam in ("shake", "zoom_tremido"):
         cx += math.sin(t * 90) * 14
         cy += math.cos(t * 70) * 10
     x0 = min(max(cx - cw / 2, 0), BW - cw)
@@ -947,6 +954,7 @@ def render(script, out_dir):
         si, st, dur, events = timeline[k]
         sc = scenes[si]
         src = imgs[si]
+        foco = None
         dyn = [c for c in sc.get("chars", []) if c.get("sprite")]
         if dyn:
             src = src.copy()
@@ -967,6 +975,8 @@ def render(script, out_dir):
                 import sprites as _sp
                 x = int(c.get("x", 0.5) * BW - spr.width / 2)
                 _md = c.get("enquadramento") or _sp.enquadramento_padrao(c["sprite"])
+                if _md not in ("medio", "busto"):
+                    _md = "corpo"
                 if _md == "medio":  # plano médio dos episódios: cabeça em ~31% da tela, pernas saem por baixo
                     y = int(BH * c.get("y", 0.325) + bob)
                 elif _sp.e_busto(c["sprite"], c.get("enquadramento")):  # busto: encostado na base da tela, como nos vídeos originais
@@ -974,7 +984,20 @@ def render(script, out_dir):
                 else:
                     y = int((c.get("y", 0.86) - 0.07) * BH - spr.height + bob)
                 src.paste(spr, (x, y), spr)
-        frame = camera(src, sc.get("cam", "in"), (ft - st) / dur).convert("RGBA")
+                quem = sc.get("foco_em")
+                if foco is None or (quem and c.get("_ref") == quem):
+                    foco = (x + spr.width / 2, y + spr.height * (0.17 if _md != "busto" else 0.2))
+        cam = sc.get("cam") or ("zoom_rosto" if (sc.get("tensao") or sc.get("hook")) and dyn else "in")
+        extra = 1.0
+        if ft < 0.6:  # gancho visual: entra com zoom forte e tremida que se acalmam
+            p = ft / 0.6
+            extra = 1.0 + 0.28 * (1 - p) ** 2
+        frame = camera(src, cam, (ft - st) / dur, foco, extra).convert("RGBA")
+        if ft < 0.6:
+            sh = (1 - ft / 0.6) * 18
+            frame = frame.transform(frame.size, Image.AFFINE, (1, 0, math.sin(ft * 80) * sh, 0, 1, math.cos(ft * 65) * sh))
+        if ft < 0.22:
+            frame.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, int(200 * (1 - ft / 0.22)))))
         if sc.get("filtro") == "tv":
             frame = filtro_tv(frame, ft)
         if ft - st < 0.12 and k > 0:

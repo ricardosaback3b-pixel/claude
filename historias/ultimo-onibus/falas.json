@@ -1,0 +1,99 @@
+{
+ "vozes": {
+  "LIA": {
+   "nome": "Lia",
+   "voz": "kokoro:pf_dora",
+   "pitch": 1.0,
+   "speed": 1.0
+  },
+  "IVO": {
+   "nome": "Seu Ivo",
+   "voz": "kokoro:pm_santa",
+   "pitch": 0.94,
+   "speed": 0.92
+  },
+  "MOTORISTA": {
+   "nome": "Motorista",
+   "voz": "kokoro:pm_santa",
+   "pitch": 0.85,
+   "speed": 0.9
+  },
+  "LIA_VELHA": {
+   "nome": "Lia mais velha",
+   "voz": "kokoro:pf_dora",
+   "pitch": 0.86,
+   "speed": 0.9
+  },
+  "MENINA": {
+   "nome": "Menina",
+   "voz": "kokoro:pf_dora",
+   "pitch": 1.22,
+   "speed": 1.05
+  },
+  "BIA": {
+   "nome": "Bia",
+   "voz": "kokoro:pf_dora",
+   "pitch": 1.1,
+   "speed": 1.05
+  }
+ },
+ "partes": {
+  "1": [
+   {
+    "cena": 1,
+    "personagem": "LIA",
+    "texto": "Toda noite, à *meia-noite*, passa um ônibus *sem número* na Rua Nove. E ninguém nunca entra."
+   },
+   {
+    "cena": 2,
+    "personagem": "LIA",
+    "texto": "Minha avó dizia que ele só para pra quem *guarda um segredo*. E que quem entra não volta igual. Eu sempre ri disso. Até hoje."
+   },
+   {
+    "cena": 3,
+    "personagem": "LIA",
+    "texto": "Hoje eu perdi o último ônibus normal. Celular *sem bateria*. Rua vazia. Só eu e um poste piscando, apagando e acendendo."
+   },
+   {
+    "cena": 4,
+    "personagem": "LIA",
+    "texto": "O relógio da farmácia virou *meia-noite*. E eu ouvi um motor chegando... *sem farol nenhum*."
+   },
+   {
+    "cena": 5,
+    "personagem": "LIA",
+    "texto": "Ele parou bem na minha frente. Sem número. Sem letreiro. Só as janelas embaçadas por dentro. E a porta abriu *sozinha*."
+   },
+   {
+    "cena": 6,
+    "personagem": "MOTORISTA",
+    "texto": "Sobe logo, moça. Ele *não espera* duas vezes."
+   },
+   {
+    "cena": 6,
+    "personagem": "LIA",
+    "texto": "Eu subi. Ele nem virou o rosto. E no espelho... *não tinha reflexo*."
+   },
+   {
+    "cena": 7,
+    "personagem": "LIA",
+    "texto": "No fundo, sentado, estava o *Seu Ivo*. O porteiro do meu prédio, com o mesmo boné verde de sempre. Ele morreu *ano passado*."
+   },
+   {
+    "cena": 8,
+    "personagem": "LIA",
+    "texto": "Eu consegui perguntar: Seu Ivo... como o senhor está aqui? Ele me olhou e disse:"
+   },
+   {
+    "cena": 8,
+    "personagem": "IVO",
+    "texto": "Lia, minha filha... você não devia estar aqui. *Ainda.*"
+   },
+   {
+    "cena": 9,
+    "personagem": "LIA",
+    "texto": "Atrás de mim, a porta *fechou*. E o ônibus começou a andar. O que ele quis dizer com *ainda*? A Parte Dois fica no perfil. Segue pra não perder."
+   }
+  ]
+ }
+}

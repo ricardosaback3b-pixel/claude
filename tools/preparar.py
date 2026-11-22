@@ -1,0 +1,154 @@
+"""Processo obrigatório antes de gerar qualquer vídeo.
+
+Uso: python3 tools/preparar.py <slug> <n>
+  1. ESTILO/CATÁLOGO: confere (ou, em história nova, escolhe e grava) o catálogo de personagens
+     da história e trava o visual de cada personagem.
+  2. FALAS: confere e grava as vozes de cada personagem e todas as falas da parte em
+     historias/<slug>/falas.json (o que cada um disse em cada parte).
+  3. VERIFICAÇÃO: confere se está tudo certo (catálogo, vozes iguais às travadas, quem fala existe,
+     gancho visual na 1ª cena, zoom nas cenas de tensão, tamanho da parte, opções de votação).
+Erros param o vídeo (código de saída 1). Avisos só aparecem no relatório.
+"""
+import json, os, sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
+
+
+def _load(p, default=None):
+    try:
+        with open(p) as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return default
+
+
+def _save(p, data):
+    with open(p, "w") as f:
+        json.dump(data, f, ensure_ascii=False, indent=1)
+
+
+def preparar(slug, n, salvar=True):
+    import sprites
+    erros, avisos, feito = [], [], []
+    hp = os.path.join(ROOT, "historias", slug, "historia.json")
+    ep = os.path.join(ROOT, "estado.json")
+    story = _load(hp)
+    estado = _load(ep, {})
+    part = next((p for p in story["partes"] if p["n"] == n), None)
+    if not part or not part.get("script"):
+        return [f"parte {n} sem roteiro"], avisos, feito
+    script = part["script"]
+    pers = story.get("personagens", {})
+
+    # ---------- 1. estilo / catálogo ----------
+    estilos = {sprites.familia(v["sprite"]) for v in pers.values() if v.get("sprite") and v["sprite"] in sprites.lista()}
+    if not story.get("estilo"):
+        if len(estilos) == 1:
+            story["estilo"] = estilos.pop()
+        else:
+            story["estilo"] = "andar" if estado.get("ultimo_estilo") == "cartela" else "cartela"
+        estado["ultimo_estilo"] = story["estilo"]
+        feito.append(f"história nova: estilo '{story['estilo']}' escolhido e gravado")
+    for ref, v in pers.items():
+        s = v.get("sprite")
+        if not s or s not in sprites.lista():
+            erros.append(f"{ref}: desenho '{s}' não existe nos catálogos")
+        elif sprites.familia(s) != story["estilo"]:
+            erros.append(f"{ref}: '{s}' é de outro estilo (a história é '{story['estilo']}')")
+    usados = [v.get("sprite") for v in pers.values()]
+    if len(usados) != len(set(usados)):
+        erros.append("dois personagens usam o mesmo desenho")
+    trav = story.get("personagens_travados")
+    if trav is None:
+        story["personagens_travados"] = json.loads(json.dumps(pers))
+        feito.append("visual e voz dos personagens travados")
+    else:
+        for ref, spec in trav.items():
+            if pers.get(ref) != spec:
+                erros.append(f"{ref} mudou de visual ou voz desde que foi travado")
+        for ref in pers:
+            if ref not in trav:
+                trav[ref] = json.loads(json.dumps(pers[ref]))
+                feito.append(f"personagem novo {ref} travado")
+
+    # ---------- 2. falas ----------
+    combos = {}
+    for ref, v in pers.items():
+        if not v.get("voz"):
+            erros.append(f"{ref}: sem voz definida")
+            continue
+        key = (v["voz"], round(float(v.get("pitch", 1.0)), 2))
+        if key in combos:
+            avisos.append(f"{ref} e {combos[key]} têm a mesma voz; mude o pitch de um deles em pelo menos 0.05")
+        combos[key] = ref
+    narr = story.get("narrador")
+    if narr and narr not in pers:
+        erros.append(f"narrador '{narr}' não está nos personagens")
+    falas = []
+    for i, sc in enumerate(script.get("scenes", [])):
+        for ln in sc.get("linhas") or [{"voz": narr, "texto": sc.get("text", "")}]:
+            quem = ln.get("voz") or narr
+            if quem and quem not in pers:
+                erros.append(f"cena {i + 1}: '{quem}' fala mas não existe nos personagens")
+            falas.append({"cena": i + 1, "personagem": quem, "texto": ln.get("texto", "")})
+        for c in sc.get("chars", []):
+            if c.get("ref") not in pers:
+                erros.append(f"cena {i + 1}: personagem em cena '{c.get('ref')}' não existe")
+    fp = os.path.join(ROOT, "historias", slug, "falas.json")
+    reg = _load(fp, {"vozes": {}, "partes": {}})
+    reg["vozes"] = {r: {k: v.get(k) for k in ("nome", "voz", "pitch", "speed")} for r, v in pers.items()}
+    reg["partes"][str(n)] = falas
+    falantes = {f["personagem"] for f in falas if f["personagem"] and f["personagem"] != narr}
+    feito.append(f"{len(falas)} falas da parte {n} gravadas ({len(falantes)} personagens falando)")
+
+    # ---------- 3. verificação ----------
+    scenes = script.get("scenes", [])
+    if not scenes:
+        erros.append("parte sem cenas")
+    else:
+        c1 = scenes[0]
+        if not c1.get("hook"):
+            erros.append("a 1ª cena precisa de gancho visual (\"hook\": true, imagem mais forte da parte)")
+        if not (c1.get("chars") or c1.get("prop")):
+            avisos.append("1ª cena sem personagem nem objeto: o gancho visual fica fraco")
+    tensas = [i + 1 for i, sc in enumerate(scenes)
+              if (sc.get("hook") or sc.get("tensao") or sc.get("tint")) and sc.get("chars")
+              and sc.get("cam") not in (None, "zoom_rosto", "zoom_tremido", "zoom_forte", "shake")]
+    if tensas:
+        avisos.append(f"cenas de tensão sem zoom no rosto: {tensas} (use cam zoom_rosto/zoom_tremido ou deixe sem cam)")
+    palavras = sum(len(f["texto"].split()) for f in falas)
+    if not 8 <= len(scenes) <= 10:
+        avisos.append(f"{len(scenes)} cenas (o ideal é 8 a 10)")
+    if not 190 <= palavras <= 240:
+        avisos.append(f"{palavras} palavras faladas (o ideal é 190 a 240)")
+    if len(falantes) < 1 or sum(1 for f in falas if f["personagem"] != narr) < 2:
+        avisos.append("menos de 2 falas de personagens além da narração")
+    if story["tipo"] == "votacao" and n < 6 and len(script.get("opcoes", [])) != 2:
+        erros.append("história com votação: a parte precisa de 2 opções em script.opcoes")
+    if story["tipo"] == "votacao" and n > 1:
+        ant = next((p for p in story["partes"] if p["n"] == n - 1), {})
+        if not ant.get("escolha"):
+            erros.append(f"a escolha da parte {n - 1} não foi registrada (conte os votos antes)")
+
+    if salvar and not erros:
+        _save(hp, story)
+        _save(fp, reg)
+        _save(ep, estado)
+    return erros, avisos, feito
+
+
+if __name__ == "__main__":
+    slug, n = sys.argv[1], int(sys.argv[2])
+    erros, avisos, feito = preparar(slug, n)
+    print("PREPARAÇÃO", slug, "parte", n)
+    for x in feito:
+        print("  ok:", x)
+    for x in avisos:
+        print("  aviso:", x)
+    for x in erros:
+        print("  ERRO:", x)
+    if erros:
+        print("NÃO GERAR O VÍDEO: corrija os erros e rode de novo.")
+        sys.exit(1)
+    print("Tudo certo: pode gerar o vídeo.")

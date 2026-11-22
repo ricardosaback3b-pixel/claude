@@ -63,7 +63,7 @@ def checar_catalogos(story):
             sys.exit(f"ERRO: o personagem {ref} não usa um desenho dos catálogos do dono (falta 'sprite'). "
                      f"Escolha um nome de sprites.lista().")
         try:
-            estilos.add(sprites.estilo_de(nome))
+            estilos.add(sprites.familia(nome))
         except KeyError:
             sys.exit(f"ERRO: '{nome}' (personagem {ref}) não existe nos catálogos do dono.")
     if len(estilos) > 1:

@@ -10,7 +10,9 @@ from PIL import Image, ImageDraw, ImageFilter
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
 # estilo "cartela": corpo inteiro (assets/personagens); estilo "catalogo": busto (assets/catalogo)
-DIRS = {"cartela": os.path.join(ROOT, "personagens"), "catalogo": os.path.join(ROOT, "catalogo")}
+DIRS = {"cartela": os.path.join(ROOT, "personagens"), "catalogo": os.path.join(ROOT, "catalogo"),
+        "catalogo_corpo": os.path.join(ROOT, "catalogo_corpo")}
+# catalogo_corpo = mesmo estilo do catálogo ("O Andar que Não Existe"), mas de corpo inteiro
 OUT = (22, 16, 20)
 
 
@@ -20,8 +22,14 @@ def _meta_dir(estilo):
         return json.load(f)
 
 
+def familia(name):
+    """'cartela' ou 'catalogo' (busto e corpo inteiro do catálogo são o mesmo estilo)."""
+    e = estilo_de(name)
+    return "catalogo" if e.startswith("catalogo") else e
+
+
 def estilo_de(name):
-    for est in ("cartela", "catalogo"):
+    for est in ("cartela", "catalogo", "catalogo_corpo"):
         if name in _meta_dir(est):
             return est
     raise KeyError(f"personagem '{name}' não existe na cartela nem no catálogo")
@@ -84,6 +92,8 @@ def _base(name):
     # boca: traço escuro entre os olhos, um pouco abaixo deles
     if est == "catalogo":
         y0, y1 = int(eb + dd * 0.32), int(eb + dd * 0.98)
+    elif est == "catalogo_corpo":
+        y0, y1 = int(eb + dd * 0.25), int(eb + dd * 0.72)
     else:
         y0, y1 = int(eb + eh * 0.05), int(eb + eh * 0.75)
     x0, x1 = int(ex0 + dd * 0.15), int(ex1 + dd * 0.05)
@@ -96,7 +106,7 @@ def _base(name):
         sel = ys >= yb - eh * 0.12
         m["boca"] = [float(xs[sel].mean() + x0), float(ys[sel].mean() + y0)]
         m["boca_w"] = float(max(6, xs[sel].max() - xs[sel].min() + 2))
-        if est == "catalogo":  # rosto de frente: boca no meio, altura = tinta perto do centro
+        if est in ("catalogo", "catalogo_corpo"):  # rosto de frente: boca no meio, altura = tinta perto do centro
             mid = (ex0 + ex1) / 2 - x0
             near = np.abs(xs - mid) < dd * 0.25
             if near.sum() > 2:
@@ -135,6 +145,7 @@ def _base(name):
     sk = sk[(sk[..., 3] > 0)]
     sk = sk[(sk[..., :3].max(axis=1) > 140) & (sk[..., :3].min(axis=1) < 235) & ((sk[..., 0] - sk[..., 2]) > 25)]
     m["busto"] = est == "catalogo"
+    m["frente"] = est in ("catalogo", "catalogo_corpo")
     m["dd"] = dd
     m["pele"] = tuple(int(v) for v in np.median(sk[:, :3], axis=0)) if len(sk) else (240, 200, 170)
     return im, m
@@ -187,7 +198,7 @@ def render(name, altura, eyes="normal", mouth="idle", brows=None, flip=False):
         bx, by = m["boca"][0] * k, m["boca"][1] * k
         bw = max(m["boca_w"] * k, eh * 0.55)
         # apaga a boca original
-        if m.get("busto"):
+        if m.get("frente"):
             dk = m["dd"] * k
             if m.get("bigode"):
                 d.ellipse([bx - dk * 0.22, by - dk * 0.03, bx + dk * 0.22, by + dk * 0.12], fill=pele)

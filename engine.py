@@ -1034,7 +1034,7 @@ def render(script, out_dir):
                 if ms is None and env is not None and fi < len(env) and float(env[max(0, fi - 2):fi + 3].max()) > 0.05:
                     ms = "fechada"
                 ph = (hash(ref or ci_) % 100) / 100 * 3.0
-                blink = ((ft + ph) % 3.6) < 0.12
+                blink = ft > 1.2 and ((ft + ph) % 3.6) < 0.12  # sem piscar no gancho inicial
                 key = (si, ci_, ms, blink)
                 if key not in sprite_cache:
                     sprite_cache[key] = draw_char(c, c.get("scale", 1.0), mouth_state=ms, blink=blink)

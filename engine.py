@@ -795,25 +795,30 @@ def render(script, out_dir):
 
 
 def make_cover(meta, base, path):
+    """Capa: título da história + frase da parte + PARTE N. Tudo dentro do recorte 3:4 do feed (y 240–1680)."""
     im = base.convert("RGBA")
     g = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     gd = ImageDraw.Draw(g)
-    for y in range(0, 1000):
-        gd.line([0, y, W, y], fill=(0, 0, 0, int(max(0, 210 - y / 4.8))))
+    for y in range(0, 1150):
+        gd.line([0, y, W, y], fill=(0, 0, 0, int(max(0, 215 - y / 5.4))))
     im.alpha_composite(g)
     d = ImageDraw.Draw(im)
-    f = font(ANTON, 160)
-    lines = wrap(meta["cover_text"].upper(), f, W - 120)
-    y = 380
-    for line in lines:
-        d.text((W / 2, y), line, font=f, fill=(255, 255, 255), anchor="mm", stroke_width=12, stroke_fill=(0, 0, 0))
-        y += 175
-    fp = font(ANTON, 90)
-    label = f"PARTE {meta['part']}"
-    tw = fp.getlength(label)
+    ft = font(ANTON, 118)
+    y = 330
+    for line in wrap(meta["title"].upper(), ft, W - 120):
+        d.text((W / 2, y), line, font=ft, fill=YELLOW, anchor="mm", stroke_width=10, stroke_fill=(0, 0, 0))
+        y += 128
     y += 10
-    d.rounded_rectangle([W / 2 - tw / 2 - 40, y - 65, W / 2 + tw / 2 + 40, y + 65], 55, fill=(200, 20, 40))
-    d.text((W / 2, y), label, font=fp, fill=YELLOW, anchor="mm")
+    fp = font(ANTON, 96)
+    label = f"PARTE {meta['part']}" + (" · FINAL" if meta.get("final") else "")
+    tw = fp.getlength(label)
+    d.rounded_rectangle([W / 2 - tw / 2 - 44, y - 62, W / 2 + tw / 2 + 44, y + 70], 60, fill=(200, 20, 40), outline=(0, 0, 0), width=6)
+    d.text((W / 2, y + 4), label, font=fp, fill=(255, 255, 255), anchor="mm")
+    y += 150
+    fc = font(ANTON, 92)
+    for line in wrap(meta["cover_text"].upper(), fc, W - 140):
+        d.text((W / 2, y), line, font=fc, fill=(255, 255, 255), anchor="mm", stroke_width=9, stroke_fill=(0, 0, 0))
+        y += 104
     im.convert("RGB").save(path, quality=90)
 
 

@@ -77,7 +77,7 @@ Antes de escrever qualquer parte, leia a `biblia` e o texto de **todas** as part
 
 ```json
 {
-  "cover_text": "Frase curta e chocante (até 5 palavras)",
+  "cover_text": "Título da parte, curto (até 5 palavras)",
   "opcoes": ["Só na votação"],
   "caption": "Legenda do post (veja abaixo)",
   "scenes": [
@@ -105,6 +105,10 @@ Antes de escrever qualquer parte, leia a `biblia` e o texto de **todas** as part
   `"linhas": [{"voz": "LIA", "texto": "Ele me olhou e disse:"}, {"voz": "IVO", "texto": "Você não devia estar aqui."}]`
   Toda parte deve ter **pelo menos 2 falas de personagens** além da narração. As falas aparecem com o nome do personagem acima da legenda.
 - Escreva números e siglas por extenso quando forem falados ("parada quatro", "meia-noite").
+
+## Capa
+
+A capa sai sozinha com: **nome original da história** (o `titulo`, sempre igual em todas as partes) em amarelo, **"PARTE N"** em destaque (na 6: "PARTE 6 · FINAL") e o título da parte (`cover_text`). Nunca mude o `titulo` de uma história depois da Parte 1.
 
 ## Legenda do post
 

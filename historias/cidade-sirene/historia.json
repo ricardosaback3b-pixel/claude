@@ -1,0 +1,121 @@
+{
+ "slug": "cidade-sirene",
+ "titulo": "Nessa Cidade, a Sirene Toca às 18h",
+ "tipo": "votacao",
+ "genero": "mistério distópico",
+ "status": "ativa",
+ "narrador": "PROTAGONISTA",
+ "biblia": "Série antiga retomada (partes 1 e 2 já publicadas no estilo anterior; da parte 3 em diante segue no estilo atual mantendo personagens e fatos). Premissa: numa cidade, às 18h toca uma sirene e todos têm 60 segundos pra entrar em casa; ninguém explica por quê. O Prefeito esconde um caderno que ninguém pode ler. Parte 1: o protagonista (narrador, 1ª pessoa) perde a chave, fica na rua depois da sirene; o Policial segura seu braço e diz pra não olhar pra cima; ele olha: o Prefeito sorri na janela, o relógio da praça tem um ponteiro vermelho andando ao contrário; no zero, todas as luzes apagam menos a dele. Parte 2: o público escolheu encarar o 'outro eu' (uma cópia do protagonista que aparece depois da sirene); descobre-se que pra viver alguém tem que sumir, e o nome escrito no caderno do Prefeito é quem some. Dilema: A) escrever o nome do prefeito ou B) rasgar o caderno. Votos: 0 a 0 até agora (se continuar empatado, escolha a mais dramática e diga na legenda). Final planejado: revelar o que a sirene esconde e o preço do caderno na parte 6.",
+ "personagens": {
+  "PROTAGONISTA": {
+   "nome": "Eu",
+   "skin": [
+    190,
+    130,
+    95
+   ],
+   "cloth": [
+    180,
+    60,
+    40
+   ],
+   "hair": [
+    25,
+    18,
+    14
+   ],
+   "hairstyle": "curto",
+   "voz": "piper:cadu",
+   "pitch": 1.0,
+   "speed": 1.0
+  },
+  "OUTRO_EU": {
+   "nome": "O outro eu",
+   "skin": [
+    190,
+    130,
+    95
+   ],
+   "cloth": [
+    180,
+    60,
+    40
+   ],
+   "hair": [
+    25,
+    18,
+    14
+   ],
+   "hairstyle": "curto",
+   "shadow_face": false,
+   "voz": "piper:cadu",
+   "pitch": 0.88,
+   "speed": 0.92
+  },
+  "PREFEITO": {
+   "nome": "Prefeito",
+   "skin": [
+    240,
+    200,
+    170
+   ],
+   "cloth": [
+    30,
+    30,
+    36
+   ],
+   "hair": [
+    200,
+    200,
+    200
+   ],
+   "hairstyle": "careca",
+   "age": true,
+   "voz": "kokoro:pm_santa",
+   "pitch": 0.92,
+   "speed": 0.9
+  },
+  "POLICIAL": {
+   "nome": "Policial",
+   "skin": [
+    120,
+    80,
+    60
+   ],
+   "cloth": [
+    20,
+    40,
+    90
+   ],
+   "hairstyle": "bone",
+   "cap": [
+    15,
+    25,
+    60
+   ],
+   "voz": "piper:jeff",
+   "pitch": 0.97,
+   "speed": 1.0
+  }
+ },
+ "partes": [
+  {
+   "n": 1,
+   "status": "publicada",
+   "media_id": "18139054078658808",
+   "publicada_em": "2026-11-21T16:30:59Z",
+   "resumo": "Sirene às 18h, 60 segundos; protagonista fica na rua; policial; prefeito sorri; ponteiro vermelho; luzes apagam menos a dele."
+  },
+  {
+   "n": 2,
+   "status": "publicada",
+   "media_id": "17961883587257936",
+   "publicada_em": "2026-11-21T23:57:51Z",
+   "opcoes": [
+    "Escrever o nome do prefeito",
+    "Rasgar o caderno"
+   ],
+   "resumo": "Encararam o outro eu; pra viver alguém tem que sumir; o caderno decide quem."
+  }
+ ]
+}

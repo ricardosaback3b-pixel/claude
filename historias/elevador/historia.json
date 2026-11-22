@@ -1,0 +1,103 @@
+{
+ "slug": "elevador",
+ "titulo": "O Andar que Não Existe",
+ "tipo": "votacao",
+ "genero": "terror psicológico em prédio",
+ "status": "ativa",
+ "narrador": "PROTAGONISTA",
+ "biblia": "Série antiga retomada (partes 1 e 2 já publicadas no estilo de desenho anterior; a partir da parte 3 continua no estilo atual, mantendo personagens e fatos). Premissa: num prédio de 20 andares, o elevador às vezes para num andar que não existe, o -1. Regra do prédio: nunca saia no andar que não existe. Protagonista (narrador, 1ª pessoa, jovem morador) fica preso no elevador com o Médico do 7º andar e o Porteiro fala pelo interfone. Parte 1: dilema A) sair no -1 com o médico ou B) ficar e confiar no porteiro. Venceu B (ficar). Parte 2: o médico tentou levar o protagonista pro -1 e acabou preso dentro do espelho do elevador; só um deles pode sair quando a porta abrir no 20º andar. Dilema: A) empurrar o médico de volta pro espelho ou B) correr pra porta primeiro. Votos até agora: B 2 x 0 A (nathalia_5003, kevin_12_zn). Ideias para o resto: o -1 guarda as pessoas que 'saíram' do prédio; o Porteiro sabe mais do que diz; o reflexo do espelho pode ser uma cópia do protagonista. Final planejado em aberto, decidido pelos votos, fechando o mistério do -1 na parte 6.",
+ "personagens": {
+  "PROTAGONISTA": {
+   "nome": "Eu",
+   "skin": [
+    214,
+    160,
+    120
+   ],
+   "cloth": [
+    40,
+    110,
+    160
+   ],
+   "hair": [
+    30,
+    24,
+    20
+   ],
+   "hairstyle": "curto",
+   "voz": "kokoro:pm_alex",
+   "pitch": 1.04,
+   "speed": 1.0
+  },
+  "MEDICO": {
+   "nome": "Médico",
+   "skin": [
+    236,
+    196,
+    160
+   ],
+   "cloth": [
+    235,
+    235,
+    240
+   ],
+   "hair": [
+    110,
+    110,
+    110
+   ],
+   "hairstyle": "careca",
+   "age": true,
+   "voz": "piper:faber",
+   "pitch": 0.95,
+   "speed": 0.95
+  },
+  "PORTEIRO": {
+   "nome": "Porteiro",
+   "skin": [
+    150,
+    100,
+    70
+   ],
+   "cloth": [
+    50,
+    60,
+    90
+   ],
+   "hairstyle": "bone",
+   "cap": [
+    30,
+    40,
+    70
+   ],
+   "voz": "kokoro:pm_santa",
+   "pitch": 0.9,
+   "speed": 0.92
+  }
+ },
+ "partes": [
+  {
+   "n": 1,
+   "status": "publicada",
+   "media_id": "18125470915985816",
+   "publicada_em": "2026-11-21T19:45:47Z",
+   "opcoes": [
+    "Sair no -1 com o médico",
+    "Ficar e confiar no porteiro"
+   ],
+   "escolha": "B",
+   "resumo": "Elevador para no -1; médico chama pra sair; porteiro manda ficar."
+  },
+  {
+   "n": 2,
+   "status": "publicada",
+   "media_id": "18094501607231847",
+   "publicada_em": "2026-11-22T13:55:28Z",
+   "opcoes": [
+    "Empurrar o médico de volta pro espelho",
+    "Correr pra porta primeiro"
+   ],
+   "resumo": "Escolheram ficar. Médico tenta levar o protagonista pro -1 e fica preso no espelho; só um sai no 20º andar."
+  }
+ ]
+}

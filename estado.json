@@ -5,6 +5,14 @@
   {
    "slug": "ultimo-onibus",
    "tipo": "continua"
+  },
+  {
+   "slug": "elevador",
+   "tipo": "votacao"
+  },
+  {
+   "slug": "cidade-sirene",
+   "tipo": "votacao"
   }
  ],
  "historico": []

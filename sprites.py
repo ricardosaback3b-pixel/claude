@@ -47,8 +47,8 @@ def lista(estilo=None):
     return sorted(k for e in ests for k, v in _meta_dir(e).items() if v)
 
 
-def e_busto(name):
-    return estilo_de(name) == "catalogo"
+def e_busto(name, modo=None):
+    return (modo or enquadramento_padrao(name)) == "busto"
 
 
 def _is_skinish(p):
@@ -151,9 +151,77 @@ def _base(name):
     return im, m
 
 
-def render(name, altura, eyes="normal", mouth="idle", brows=None, flip=False):
-    """Retorna RGBA com altura ~= altura px."""
+def enquadramento_padrao(name):
+    return "busto" if estilo_de(name) == "catalogo" else "corpo"
+
+
+@lru_cache(None)
+def _variante(name, modo):
+    """Mesmo personagem em close ('busto') ou de pé ('corpo').
+    corpo inteiro -> busto: recorta a parte de cima. busto -> corpo: desenha tronco, calça e sapatos."""
     im, m = _base(name)
+    m = dict(m)
+    est = estilo_de(name)
+    if modo == "busto" and est != "catalogo":
+        (l0, t0, l1, b0), (r0, t1, r1, b1) = m["olhos"]
+        ey = (t0 + b0 + t1 + b1) / 4
+        bottom = int(min(im.height, ey + m["dd"] * 3.4))
+        im = im.crop((0, 0, im.width, bottom))
+        m["busto"] = True
+        return im, m
+    if modo == "corpo" and est == "catalogo":
+        a = np.asarray(im).astype(np.uint8)
+        h, w = a.shape[:2]
+        row = a[h - 2]
+        xs = np.nonzero(row[:, 3] > 0)[0]
+        x0, x1 = int(xs.min()), int(xs.max())
+        cw = x1 - x0
+        tor = int(h * 0.30)
+        leg = int(h * 0.62)
+        ol = max(3, int(w * 0.013))
+        canvas = Image.new("RGBA", (w, h + tor + leg + 30), (0, 0, 0, 0))
+        d = ImageDraw.Draw(canvas)
+        pele = tuple(m.get("pele", (240, 200, 170)))
+        # cores tiradas da última linha do busto: mangas (laterais) e roupa (centro)
+        def cor(xf):
+            px = row[int(x0 + cw * xf)]
+            return tuple(int(v) for v in px[:3])
+        manga, roupa = cor(0.07), cor(0.5)
+        aw = cw * 0.15
+        ytop = h - 3
+        yw = h + tor  # cintura
+        # braços (mangas até o cotovelo, depois pele) e mãos
+        for xa in (x0, x1 - aw):
+            d.rounded_rectangle([xa, ytop, xa + aw, yw - tor * 0.05], radius=int(aw * 0.4), fill=manga, outline=OUT, width=ol)
+            d.ellipse([xa - aw * 0.05, yw - tor * 0.12, xa + aw * 1.05, yw + aw * 0.9], fill=pele, outline=OUT, width=ol)
+        # tronco
+        tx0, tx1 = x0 + aw * 0.95, x1 - aw * 0.95
+        d.rectangle([tx0, ytop, tx1, yw], fill=roupa, outline=OUT, width=ol)
+        canvas.alpha_composite(im, (0, 0))
+        d = ImageDraw.Draw(canvas)
+        # pernas
+        calca = tuple(m.get("calca", (46, 56, 92)))
+        lx0, lx1 = tx0 + cw * 0.03, tx1 - cw * 0.03
+        mid = (lx0 + lx1) / 2
+        gap = cw * 0.025
+        d.rectangle([tx0, yw - ol, tx1, yw + leg * 0.06], fill=(36, 30, 30), outline=OUT, width=ol)
+        for a_, b_ in ((lx0, mid - gap), (mid + gap, lx1)):
+            d.rectangle([a_, yw + leg * 0.06, b_, yw + leg * 0.9], fill=calca, outline=OUT, width=ol)
+            d.rounded_rectangle([a_ - cw * 0.03, yw + leg * 0.88, b_ + cw * 0.05, yw + leg],
+                                radius=int(cw * 0.05), fill=(250, 250, 250), outline=OUT, width=ol)
+            d.rectangle([a_ - cw * 0.02, yw + leg * 0.95, b_ + cw * 0.04, yw + leg - ol], fill=(44, 44, 50))
+        bb = canvas.getbbox()
+        canvas = canvas.crop((0, 0, canvas.width, bb[3]))  # corta só embaixo: coordenadas do rosto não mudam
+        m["busto"] = False
+        return canvas, m
+    m["busto"] = modo == "busto"
+    return im, m
+
+
+def render(name, altura, eyes="normal", mouth="idle", brows=None, flip=False, modo=None):
+    """Retorna RGBA com altura ~= altura px. modo: 'busto' (close) ou 'corpo' (de pé)."""
+    modo = modo or enquadramento_padrao(name)
+    im, m = _variante(name, modo)
     k = altura / im.height
     big = im.resize((max(1, int(im.width * k)), int(altura)), Image.LANCZOS)
     big = big.filter(ImageFilter.UnsharpMask(radius=2, percent=60, threshold=2))
@@ -225,7 +293,7 @@ def render(name, altura, eyes="normal", mouth="idle", brows=None, flip=False):
     oa = np.minimum(np.asarray(over.split()[3]), np.asarray(inner))
     over.putalpha(Image.fromarray(oa.astype(np.uint8)))
     big.alpha_composite(over)
-    if m.get("busto"):
+    if modo == "busto":
         # o busto continua até a base da tela: estica a última linha (roupa) para baixo
         ext = int(big.height * 0.6)
         row = big.crop((0, big.height - 2, big.width, big.height - 1)).resize((big.width, ext))

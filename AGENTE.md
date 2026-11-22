@@ -46,10 +46,12 @@ O dono da conta autorizou a publicação sem aprovação prévia.
 - Narração em **1ª pessoa**, frases curtas, um mistério central claro desde a parte 1 e uma pergunta que só se resolve na parte 6.
 - Escreva a `biblia`: premissa, regras do mundo, personagens (nome, papel, segredo), linha do tempo e **o final planejado** (para `votacao`, os dois finais possíveis e como as escolhas levam a eles).
 - `continua`: escreva **as 6 partes de uma vez** (status `pronta`), com começo, meio e fim. Cada parte termina num gancho que a próxima resolve.
-- `votacao`: escreva só a parte 1. Cada parte termina num dilema com duas opções (`script.opcoes`: ["texto A", "texto B"], curtas). As duas opções têm que fazer sentido na história.
+- `votacao`: escreva só a parte 1. Cada parte (1 a 5) termina num **dilema de verdade**: duas opções (`script.opcoes`: ["texto A", "texto B"], curtas) em que **as duas têm um preço** (salvar alguém x salvar a si mesmo, confiar x desconfiar, contar a verdade x proteger alguém). Nada de opção obviamente certa. As últimas 2 cenas montam a tensão da escolha (relógio, ameaça, alguém pedindo ajuda) e a última pergunta direto ao público: "E você, o que faria?". A parte seguinte começa mostrando a consequência da escolha da maioria.
 - Slug em minúsculas com hífens. Crie `historias/<slug>/historia.json` (campos: slug, titulo, tipo, genero, status, biblia, personagens, partes) e registre em `estado.json > ativas` como `{"slug": ..., "tipo": ...}`.
 
 ## Coerência entre partes (obrigatório)
+
+- **Personagens nunca mudam.** Depois que a Parte 1 sai, o bloco `personagens` daquela história fica congelado: mesma pele, roupa, cabelo, acessórios, nome, voz, pitch e speed em todas as partes. Na cena use sempre o `ref`; só mude expressão (`eyes`, `mouth`, `look`), posição e tamanho. Personagem novo no meio da história ganha uma entrada nova e também fica congelado.
 
 Antes de escrever qualquer parte, leia a `biblia` e o texto de **todas** as partes anteriores. Mantenha nomes, aparências (use sempre os mesmos `ref` de personagens), lugares, horários e fatos. Na `votacao`, depois de escrever a parte, acrescente à `biblia` uma linha com o que ficou decidido ("Parte 3: escolheram B, Lia abriu a porta e ..."). A parte 6 tem que fechar o mistério de verdade.
 

@@ -11,16 +11,18 @@ O dono da conta autorizou a publicação sem aprovação prévia.
 - `historias/<slug>/historia.json`: uma história (bíblia, personagens, roteiro de cada parte, status, votos).
 - `estado.json`: o que está ativo, qual tipo vem agora e o histórico de posts.
 
-## Ritmo e alternância
+## Várias histórias ao mesmo tempo
 
-- Ficam ativas **duas histórias ao mesmo tempo**: uma `continua` (sem votação) e uma `votacao` (A/B).
-- Os horários **alternam** entre as duas (`estado.json > proximo_tipo`). Assim cada história recebe uma parte a cada ~6h, o que dá tempo para os votos.
-- Toda história tem **exatamente 6 partes**. Quando a parte 6 sair, marque a história como `concluida` e crie uma nova do mesmo tipo na próxima vez que esse tipo for a vez.
+- Ficam ativas **4 histórias diferentes ao mesmo tempo**: 2 `continua` (sem votação) e 2 `votacao` (A/B), listadas em `estado.json > ativas`.
+- Cada horário publica a parte da **próxima história da fila** (`estado.json > vez` aponta o índice em `ativas`; depois de publicar, avance para o próximo, voltando ao início no fim). Assim o mesmo dia tem histórias variadas e nunca a mesma duas vezes seguidas.
+- As 4 precisam ser **bem distintas entre si**: gêneros diferentes (ex.: suspense sobrenatural, mistério policial, drama familiar, ficção científica, sobrevivência, comédia de mistério, romance com segredo), cenários diferentes e protagonistas diferentes (nome, aparência, cores de roupa).
+- Toda história tem **exatamente 6 partes**. Quando a parte 6 sair, marque a história como `concluida`, tire-a de `ativas` e, no mesmo lugar da fila, crie uma nova do mesmo tipo e de gênero diferente das outras 3 ativas. Ela entra com a Parte 1 na próxima vez que a fila chegar nela.
+- Se `ativas` tiver menos de 4 histórias, crie as que faltam (mantendo 2 de cada tipo) antes de publicar. A nova vai para o fim da fila.
 
 ## Passo a passo de cada execução
 
 1. **Evite post duplicado.** Se o último item de `estado.json > historico` foi publicado há menos de 90 minutos, pare e diga "Já publicado neste horário".
-2. **Escolha o tipo** em `proximo_tipo` e pegue a história ativa desse tipo em `ativas`. Se não houver, crie uma (veja "Criar história").
+2. **Escolha a história**: complete `ativas` até 4 se faltar (veja "Criar história") e pegue `ativas[vez]`.
 3. **Defina a parte** = a primeira com status diferente de `publicada`.
    - `continua`: o roteiro já está pronto (`status: pronta`).
    - `votacao`: se for a parte 2 a 6, apure os votos da parte anterior (veja "Votação") e escreva o roteiro desta parte seguindo a opção vencedora.
@@ -30,19 +32,20 @@ O dono da conta autorizou a publicação sem aprovação prévia.
    `https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/<slug>/parte<n>.mp4`
    (o mesmo vale para `capa<n>.jpg`). Se der 404, espere 20 s e tente de novo, no máximo 5 vezes.
 7. **Publique** com o Windsor.ai (carregue as ferramentas `mcp__Windsor_ai__*` via ToolSearch): `execute_action`, connector `instagram`, account `17841437436804359`, action `create_video_post`, params `{video_url, cover_url, caption, share_to_feed: true}`. Se falhar, tente mais uma vez; se falhar de novo, **não** marque como publicada e avise no resumo.
-8. **Registre**: na parte, ponha `status: publicada`, `media_id` e `publicada_em` (ISO, UTC). Em `estado.json`, adicione ao `historico` `{quando, slug, parte, media_id}` e troque `proximo_tipo` para o outro tipo. Se foi a parte 6, ponha a história como `concluida` e `ativas.<tipo> = null`. Faça commit e push.
+8. **Registre**: na parte, ponha `status: publicada`, `media_id` e `publicada_em` (ISO, UTC). Em `estado.json`, adicione ao `historico` `{quando, slug, parte, media_id}` e avance `vez` (volta a 0 depois do último). Se foi a parte 6, ponha a história como `concluida` e troque-a em `ativas` por uma nova do mesmo tipo (crie o `historia.json` com a bíblia e, se for `continua`, as 6 partes). Faça commit e push.
 9. **Limpeza**: apague com `git rm` os `.mp4` e `.jpg` de partes publicadas há mais de 3 dias (o Instagram já guardou o vídeo). Nunca apague os `historia.json`.
 10. **Resumo final** curto (3 linhas): o que foi publicado (história, parte, link se tiver), placar da votação se houver, e qualquer problema.
 
 ## Criar história
 
 - **Original**, em português do Brasil, suspense/mistério/drama que prende, classificação livre a 14 anos: sem gore, sem violência gráfica, sem pessoas reais, marcas ou personagens de terceiros.
-- Não repita cenário nem premissa das últimas 3 histórias (veja `historias/`). Se existir o caderno de aprendizados na memória (`/areas/aprendizados-instagram.md`), use o que ele diz que funciona.
+- Não repita gênero, cenário principal nem premissa das outras histórias ativas nem das últimas 4 concluídas (veja `historias/`). Personagens de histórias diferentes não podem ser iguais.
+- Se a história precisar de um cenário que não existe, você pode adicionar uma função `bg_...` em `engine.py` seguindo o padrão das outras (desenho com Pillow, tamanho BW x BH) e registrá-la em `BACKGROUNDS`. Teste renderizando um quadro antes de usar. Se existir o caderno de aprendizados na memória (`/areas/aprendizados-instagram.md`), use o que ele diz que funciona.
 - Narração em **1ª pessoa**, frases curtas, um mistério central claro desde a parte 1 e uma pergunta que só se resolve na parte 6.
 - Escreva a `biblia`: premissa, regras do mundo, personagens (nome, papel, segredo), linha do tempo e **o final planejado** (para `votacao`, os dois finais possíveis e como as escolhas levam a eles).
 - `continua`: escreva **as 6 partes de uma vez** (status `pronta`), com começo, meio e fim. Cada parte termina num gancho que a próxima resolve.
 - `votacao`: escreva só a parte 1. Cada parte termina num dilema com duas opções (`script.opcoes`: ["texto A", "texto B"], curtas). As duas opções têm que fazer sentido na história.
-- Slug em minúsculas com hífens. Crie `historias/<slug>/historia.json` e registre em `estado.json > ativas`.
+- Slug em minúsculas com hífens. Crie `historias/<slug>/historia.json` (campos: slug, titulo, tipo, genero, status, biblia, personagens, partes) e registre em `estado.json > ativas` como `{"slug": ..., "tipo": ...}`.
 
 ## Coerência entre partes (obrigatório)
 

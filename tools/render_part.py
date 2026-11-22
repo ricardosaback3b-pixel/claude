@@ -23,6 +23,25 @@ def _faixa(story, n, script):
     return f"PARTE {n} · {script.get('cover_text', story['titulo']).upper()}"
 
 
+def _rostos_voto(story, script, chars):
+    """Rosto de cada opção na tela de votos: script.opcoes_rostos ou os personagens da última cena."""
+    if story["tipo"] != "votacao":
+        return None
+    specs = script.get("opcoes_rostos")
+    if not specs:
+        ult = [c for c in script["scenes"][-1].get("chars", []) if c.get("ref")]
+        outros = [{"ref": r} for r in chars if r not in [c["ref"] for c in ult]]
+        specs = (ult + outros)[:2]
+    out = []
+    for s in specs[:2]:
+        base = dict(chars.get(s.get("ref"), {}))
+        base.update({k: v for k, v in s.items() if k in ("eyes", "brows", "mouth")})
+        out.append(base if base.get("sprite") else None)
+    while len(out) < 2:
+        out.append(None)
+    return out
+
+
 def resolve(story, part):
     chars = story.get("personagens", {})
     total = 6
@@ -57,6 +76,8 @@ def resolve(story, part):
         "cores": {k: v.get("cloth", [200, 20, 40]) for k, v in chars.items()},
         "sem_voz": story.get("sem_voz", False),
         "estilo": story.get("estilo"),
+        "voto_rostos": _rostos_voto(story, script, chars),
+        "voto_chamada": script.get("chamada"),
         "faixa": script.get("faixa") or _faixa(story, n, script),
     }
     caption = script["caption"].strip()

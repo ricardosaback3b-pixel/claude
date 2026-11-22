@@ -300,6 +300,8 @@ def draw_char(spec, s=1.0, mouth_state=None, blink=False):
         eyes = "fechado" if blink else spec.get("eyes", "normal")
         mo = mouth_state or {"o": "o", "triste": "triste"}.get(spec.get("mouth", ""), "idle")
         modo = spec.get("enquadramento") or sprites.enquadramento_padrao(spec["sprite"])
+        if modo == "medio":
+            s = 1.0  # plano médio: sempre o tamanho dos episódios
         alt = int({"busto": 1850, "medio": 1300}.get(modo, 900) * s)
         im = sprites.render(spec["sprite"], alt, eyes, mo, spec.get("brows"), spec.get("flip", False),
                             "corpo" if modo == "medio" else modo)
@@ -670,9 +672,9 @@ def overlay_static_ep(meta):
     """Topo dos episódios: @ no canto, faixa branca 'PARTE N · ...' e faixa amarela de votação."""
     lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(lay)
-    d.text((40, 200), HANDLE, font=font(MONT, 36, True), fill=(255, 255, 255, 235), anchor="lm",
+    d.text((40, 150), HANDLE, font=font(MONT, 36, True), fill=(255, 255, 255, 235), anchor="lm",
            stroke_width=3, stroke_fill=(0, 0, 0, 140))
-    y = 455
+    y = 250
     f1 = font(MONT, 46, True)
     t1 = meta.get("faixa") or f"PARTE {meta['part']} · {meta['title'].upper()}"
     while f1.getlength(t1) > W - 160 and f1.size > 30:
@@ -707,7 +709,73 @@ def overlay_static(meta):
     return lay
 
 
+def _rosto(spec, altura):
+    """Rosto (cabeça e ombros) de um personagem dos catálogos, com expressão."""
+    import sprites
+    nome = spec["sprite"]
+    im = sprites.render(nome, altura, spec.get("eyes", "normal"), {"o": "o", "triste": "triste", "aberta": "aberta"}.get(spec.get("mouth", ""), "idle"),
+                        spec.get("brows"), False, "corpo")
+    _, m = sprites._variante(nome, "corpo")
+    k = im.height / m.get("h", im.height) if m.get("h") else 1
+    (l0, t0, l1, b0), (r0, t1, r1, b1) = m["olhos"]
+    dd = ((r0 + r1) - (l0 + l1)) / 2
+    k = altura / sprites._base(nome)[0].height
+    corte = int(min(im.height, (max(b0, b1) + dd * 1.25) * k))
+    r = im.crop((0, 0, im.width, corte))
+    return r.crop(r.getbbox())
+
+
+def end_card_voto(meta):
+    """Tela de votação dos episódios: COMENTA A OU B, dois quadros com o rosto e a opção."""
+    im = vgrad(W, H, (64, 14, 22), (30, 8, 14)).convert("RGBA")
+    d = ImageDraw.Draw(im)
+    d.text((40, 150), HANDLE, font=font(MONT, 36, True), fill=(255, 255, 255), anchor="lm")
+    ft = font(MONT, 104, True)
+    d.text((W / 2, 250), "COMENTA A OU B", font=ft, fill=(246, 206, 72), anchor="mm", stroke_width=9, stroke_fill=(20, 16, 18))
+    cores = [(110, 165, 240), (246, 206, 72)]
+    rostos = meta.get("voto_rostos") or [None, None]
+    opts = meta.get("options") or ["", ""]
+    fo = font(MONT, 54, True)
+    for i in range(2):
+        y0 = 340 + i * 560
+        box = [55, y0, W - 55, y0 + 530]
+        d.rounded_rectangle(box, 34, fill=(22, 22, 30), outline=cores[i], width=10)
+        d.rounded_rectangle([90, y0 + 30, 210, y0 + 130], 22, fill=cores[i])
+        d.text((150, y0 + 80), "AB"[i], font=font(MONT, 84, True), fill=(20, 20, 26), anchor="mm")
+        if rostos[i]:
+            r = _rosto(rostos[i], 1400)
+            kz = min(430 / r.width, 410 / r.height)
+            r = r.resize((int(r.width * kz), int(r.height * kz)), Image.LANCZOS)
+            im.alpha_composite(r, (int(300 - r.width / 2), y0 + 530 - 12 - r.height))
+            d = ImageDraw.Draw(im)
+        txt = opts[i] if i < len(opts) else ""
+        palavras = txt.split()
+        meio = max(1, (len(palavras) + 1) // 2)
+        l1, l2 = " ".join(palavras[:meio]), " ".join(palavras[meio:])
+        cx = 760
+        linhas = wrap(l1, fo, 480) + ([(l2, True)] if l2 else [])
+        yy = y0 + 220 - 35 * (len(linhas) - 1)
+        for ln in linhas:
+            t, cor2 = (ln if isinstance(ln, tuple) else (ln, False))
+            d.text((cx, yy), t, font=fo, fill=cores[i] if cor2 else (255, 255, 255), anchor="mm",
+                   stroke_width=6, stroke_fill=(10, 10, 14))
+            yy += 72
+    fc = font(MONT, 60, True)
+    yy = 1500
+    for ln in wrap(meta.get("voto_chamada") or "Comenta e marca quem faria igual", fc, W - 160):
+        d.text((W / 2, yy), ln, font=fc, fill=(255, 255, 255), anchor="mm", stroke_width=6, stroke_fill=(10, 10, 14))
+        yy += 76
+    fp = font(MONT, 38, True)
+    t = f"Segue {HANDLE} pra ver a Parte {meta['part'] + 1}"
+    tw = fp.getlength(t)
+    d.rounded_rectangle([W / 2 - tw / 2 - 34, yy + 10, W / 2 + tw / 2 + 34, yy + 96], 43, fill=(232, 232, 236))
+    d.text((W / 2, yy + 53), t, font=fp, fill=(30, 30, 40), anchor="mm")
+    return im.convert("RGB")
+
+
 def end_card(meta, base):
+    if meta.get("vote") and meta.get("voto_rostos"):
+        return end_card_voto(meta)
     im = base.copy().convert("RGBA")
     im.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, 175)))
     d = ImageDraw.Draw(im)

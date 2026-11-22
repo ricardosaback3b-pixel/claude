@@ -49,5 +49,63 @@
    "speed": 0.95
   }
  },
- "partes": {}
+ "partes": {
+  "1": [
+   {
+    "cena": 1,
+    "personagem": "TEO",
+    "texto": "Toda manhã, a lousa da *sala doze* amanhece com um segredo escrito. Hoje, o segredo era *meu*."
+   },
+   {
+    "cena": 2,
+    "personagem": "TEO",
+    "texto": "Começou na segunda. Alguém escreve de madrugada, em giz, e assina sempre igual: *O Sombra*. Ninguém sabe como entra na sala trancada."
+   },
+   {
+    "cena": 3,
+    "personagem": "TEO",
+    "texto": "Primeiro foi o Caio, que ainda dorme de pijama de dinossauro. Depois a professora de artes, que canta no carro. A turma inteira ria. Até chegar a minha vez."
+   },
+   {
+    "cena": 4,
+    "personagem": "TEO",
+    "texto": "Teo tem *medo do escuro*. E o pior não foi o segredo. Foi a letra. Era a *minha letra*. Igualzinha."
+   },
+   {
+    "cena": 5,
+    "personagem": "MARTA",
+    "texto": "Teodoro. Na minha sala. *Agora*."
+   },
+   {
+    "cena": 5,
+    "personagem": "TEO",
+    "texto": "Diretora, eu juro que não fui eu!"
+   },
+   {
+    "cena": 6,
+    "personagem": "MARTA",
+    "texto": "Você tem *seis dias* pra me provar isso. Na sexta, ou eu descubro o Sombra, ou eu suspendo o dono dessa letra."
+   },
+   {
+    "cena": 7,
+    "personagem": "TEO",
+    "texto": "Na saída, a Nina sentou do meu lado com um caderno de capa verde."
+   },
+   {
+    "cena": 7,
+    "personagem": "NINA",
+    "texto": "Eu sei que não foi você. Você escreve o *a* torto. O Sombra escreve torto *de propósito*."
+   },
+   {
+    "cena": 8,
+    "personagem": "TEO",
+    "texto": "Às oito da noite, meu celular vibrou. A Nina tinha ficado pra ajudar o Seu Bento a fechar a biblioteca."
+   },
+   {
+    "cena": 9,
+    "personagem": "TEO",
+    "texto": "Na foto dela, a lousa já tinha um recado novo: amanhã, *alguém vai perder a chave*. E a sala estava *trancada por fora*. A Parte Dois fica no perfil."
+   }
+  ]
+ }
 }

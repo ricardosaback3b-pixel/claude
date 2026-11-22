@@ -300,8 +300,9 @@ def draw_char(spec, s=1.0, mouth_state=None, blink=False):
         eyes = "fechado" if blink else spec.get("eyes", "normal")
         mo = mouth_state or {"o": "o", "triste": "triste"}.get(spec.get("mouth", ""), "idle")
         modo = spec.get("enquadramento") or sprites.enquadramento_padrao(spec["sprite"])
-        alt = int((1850 if modo == "busto" else 900) * s)
-        im = sprites.render(spec["sprite"], alt, eyes, mo, spec.get("brows"), spec.get("flip", False), modo)
+        alt = int({"busto": 1850, "medio": 1300}.get(modo, 900) * s)
+        im = sprites.render(spec["sprite"], alt, eyes, mo, spec.get("brows"), spec.get("flip", False),
+                            "corpo" if modo == "medio" else modo)
         if spec.get("escuro"):
             r, g, b, a = im.split()
             dk = Image.merge("RGB", (r, g, b)).point(lambda v: int(v * 0.45))
@@ -513,6 +514,34 @@ def split_chunks(text):
 _cap_cache = {}
 
 
+def caption_img_ep(words):
+    """Legenda dos episódios: letra normal, branca, contorno azul-marinho, palavra-chave amarela."""
+    key = ("ep",) + tuple(words)
+    if key in _cap_cache:
+        return _cap_cache[key]
+    f = font(MONT, 92, True)
+    parts = [(w.replace("*", ""), w.startswith("*")) for w in words]
+    lines, cur, curw = [], [], 0
+    for txt, hl in parts:
+        tw = f.getlength(txt + " ")
+        if cur and curw + tw > W - 140:
+            lines.append(cur); cur, curw = [], 0
+        cur.append((txt, hl)); curw += tw
+    lines.append(cur)
+    lh = 112
+    im = Image.new("RGBA", (W, lh * len(lines) + 60), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    for li, line in enumerate(lines):
+        total = sum(f.getlength(t + " ") for t, _ in line) - f.getlength(" ")
+        x = (W - total) / 2
+        y = 30 + li * lh
+        for t, hl in line:
+            d.text((x, y), t, font=f, fill=YELLOW if hl else (255, 255, 255), stroke_width=11, stroke_fill=(22, 40, 92))
+            x += f.getlength(t + " ")
+    _cap_cache[key] = im
+    return im
+
+
 def caption_img(words, color_hl=YELLOW):
     key = tuple(words)
     if key in _cap_cache:
@@ -595,7 +624,33 @@ def camera(img, cam, t):
     return img.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + chh))
 
 
+def overlay_static_ep(meta):
+    """Topo dos episódios: @ no canto, faixa branca 'PARTE N · ...' e faixa amarela de votação."""
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    d.text((40, 200), HANDLE, font=font(MONT, 36, True), fill=(255, 255, 255, 235), anchor="lm",
+           stroke_width=3, stroke_fill=(0, 0, 0, 140))
+    y = 455
+    f1 = font(MONT, 46, True)
+    t1 = meta.get("faixa") or f"PARTE {meta['part']} · {meta['title'].upper()}"
+    while f1.getlength(t1) > W - 160 and f1.size > 30:
+        f1 = font(MONT, f1.size - 2, True)
+    tw = f1.getlength(t1)
+    d.rounded_rectangle([W / 2 - tw / 2 - 30, y - 42, W / 2 + tw / 2 + 30, y + 42], 20, fill=(248, 248, 248, 250))
+    d.text((W / 2, y), t1, font=f1, fill=(28, 28, 34), anchor="mm")
+    if meta.get("vote"):
+        y += 92
+        t2 = "NO FINAL VOCÊ DECIDE: A ou B"
+        f2 = font(MONT, 44, True)
+        tw = f2.getlength(t2)
+        d.rounded_rectangle([W / 2 - tw / 2 - 30, y - 40, W / 2 + tw / 2 + 30, y + 40], 20, fill=(246, 206, 72, 250))
+        d.text((W / 2, y), t2, font=f2, fill=(28, 28, 34), anchor="mm")
+    return lay
+
+
 def overlay_static(meta):
+    if meta.get("estilo") == "andar":
+        return overlay_static_ep(meta)
     lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(lay)
     f = font(ANTON, 52)
@@ -719,6 +774,20 @@ def synth_audio(total, cuts, hooks, end_t, mood="suspense", seed=1):
 
 
 # ---------------------------------------------------------------- render
+def speaker_tag_ep(name):
+    key = ("tagep", name)
+    if key in _cap_cache:
+        return _cap_cache[key]
+    f = font(MONT, 46, True)
+    tw = int(f.getlength(name.upper()))
+    im = Image.new("RGBA", (tw + 64, 74), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    d.rounded_rectangle([0, 0, tw + 63, 73], 37, fill=(150, 200, 240, 245))
+    d.text(((tw + 64) / 2, 37), name.upper(), font=f, fill=(22, 40, 92), anchor="mm")
+    _cap_cache[key] = im
+    return im
+
+
 def speaker_tag(name, color):
     key = ("tag", name, tuple(color))
     if key in _cap_cache:
@@ -862,7 +931,10 @@ def render(script, out_dir):
                 bob = math.sin(ft * 2.2 + ph) * 5
                 import sprites as _sp
                 x = int(c.get("x", 0.5) * BW - spr.width / 2)
-                if _sp.e_busto(c["sprite"], c.get("enquadramento")):  # busto: encostado na base da tela, como nos vídeos originais
+                _md = c.get("enquadramento") or _sp.enquadramento_padrao(c["sprite"])
+                if _md == "medio":  # plano médio dos episódios: cabeça em ~31% da tela, pernas saem por baixo
+                    y = int(BH * c.get("y", 0.325) + bob)
+                elif _sp.e_busto(c["sprite"], c.get("enquadramento")):  # busto: encostado na base da tela, como nos vídeos originais
                     y = int(BH * c.get("y", 0.25) + bob)  # topo do busto; rosto perto do meio da tela
                 else:
                     y = int((c.get("y", 0.86) - 0.07) * BH - spr.height + bob)
@@ -873,7 +945,8 @@ def render(script, out_dir):
         frame.alpha_composite(over)
         for words, es, ed, label, col in events:
             if es <= ft < es + ed:
-                ci = caption_img(words)
+                ep = meta.get("estilo") == "andar"
+                ci = caption_img_ep(words) if ep else caption_img(words)
                 age = ft - es
                 sc_ = 1.0 + max(0.0, 0.18 * (1 - age / 0.12))
                 if sc_ > 1.001:
@@ -881,7 +954,7 @@ def render(script, out_dir):
                 cy = int(1450 - ci.height / 2)
                 frame.alpha_composite(ci, (int(W / 2 - ci.width / 2), cy))
                 if label:
-                    tg = speaker_tag(label, col)
+                    tg = speaker_tag_ep(label) if ep else speaker_tag(label, col)
                     frame.alpha_composite(tg, (int(W / 2 - tg.width / 2), cy - 70))
                 break
         rgb = frame.convert("RGB")

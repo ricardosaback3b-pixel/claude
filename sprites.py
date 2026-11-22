@@ -50,6 +50,10 @@ def e_busto(name, modo=None):
     return (modo or enquadramento_padrao(name)) == "busto"
 
 
+def e_medio(name, modo=None):
+    return (modo or enquadramento_padrao(name)) == "medio"
+
+
 def _is_skinish(p):
     r, g, b, al = p
     return al > 0 and max(r, g, b) > 120 and not (min(r, g, b) > 228)
@@ -155,7 +159,7 @@ def _base(name):
 
 
 def enquadramento_padrao(name):
-    return "busto" if estilo_de(name) == "andar" else "corpo"
+    return "medio" if estilo_de(name) == "andar" else "corpo"
 
 
 def _cores_originais(im, pele=None):

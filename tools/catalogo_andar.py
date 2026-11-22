@@ -26,8 +26,8 @@ def _y(y):
     if not YMAP[0] or y <= 430:
         return y
     if y <= 935:
-        return 430 + (y - 430) * 0.70
-    return 430 + 505 * 0.70 + (y - 935) * 0.80
+        return y
+    return 935 + (y - 935) * 0.85
 
 
 def sc(v):
@@ -112,23 +112,23 @@ def corpo(p, c):
     else:
         if tipo == "macacao":
             calca = roupa
-        p.rect([150, 900, 292, 1325], calca)
-        p.rect([308, 900, 450, 1325], calca)
+        p.rect([170, 900, 290, 1325], calca)
+        p.rect([310, 900, 430, 1325], calca)
     tenis = c.get("tenis", (250, 250, 250))
     for x0, x1 in ((122, 300), (300, 478)):
         p.rect([x0, 1295, x1, 1378], tenis, r=28)
         p.rect([x0 + 4, 1350, x1 - 4, 1372], (46, 46, 52), ol=False)
     # braços
-    for x0, x1 in ((40, 126), (474, 560)):
+    for x0, x1 in ((72, 152), (448, 528)):
         if curta:
-            p.rect([x0, 500, x1, 840], pele, r=42)
+            p.rect([x0, 500, x1, 860], pele, r=40)
             if tipo != "regata":
-                p.rect([x0 - 4, 488, x1 + 4, 650], manga, r=42)
+                p.rect([x0 - 4, 488, x1 + 4, 650], manga, r=40)
         else:
-            p.rect([x0, 488, x1, 840], manga, r=42)
-        p.ell([x0 - 2, 800, x1 + 2, 886], pele)
+            p.rect([x0, 488, x1, 860], manga, r=40)
+        p.ell([x0 - 4, 830, x1 + 4, 914], pele)
     # tronco
-    p.rect([92, 430, 508, 935], roupa, r=95)
+    p.rect([120, 430, 480, 935], roupa, r=80)
     if c.get("cinto"):
         p.rect([118, 885, 482, 925], c["cinto"])
     detalhes_roupa(p, c, tipo, roupa)
@@ -141,13 +141,13 @@ def detalhes_roupa(p, c, tipo, roupa):
         p.rect([185, 425, 415, 500], escuro, r=36)
         p.line([(268, 490), (262, 640)], (250, 250, 250), w=9)
         p.line([(332, 490), (338, 640)], (250, 250, 250), w=9)
-        p.rect([175, 760, 425, 890], escuro, r=30)
+        p.rect([185, 770, 415, 895], escuro, r=30)
     elif tipo in ("camiseta", "regata"):
         p.chord([225, 405, 375, 505], 0, 180, c["pele"])
     elif tipo == "listrada":
         for y in range(520, 880, 70):
-            p.rect([100, y, 500, y + 32], c.get("listra", (250, 250, 250)), ol=False)
-        p.rect([92, 430, 508, 935], None, r=95)
+            p.rect([124, y, 476, y + 32], c.get("listra", (250, 250, 250)), ol=False)
+        p.rect([120, 430, 480, 935], None, r=80)
         p.chord([225, 405, 375, 505], 0, 180, c["pele"])
     elif tipo == "polo":
         p.poly([(245, 440), (300, 470), (270, 520)], escuro)
@@ -227,15 +227,15 @@ def detalhes_roupa(p, c, tipo, roupa):
         p.rect([250, 640, 350, 720], clarear(roupa, 0.15), w=4)
     elif tipo == "vestido":
         p.chord([225, 405, 375, 505], 0, 180, c["pele"])
-        p.rect([96, 690, 504, 715], escuro, ol=False)
+        p.rect([124, 690, 476, 715], escuro, ol=False)
     elif tipo == "blazer":
         p.poly([(245, 440), (355, 440), (300, 620)], camisa)
         p.line([(245, 440), (300, 620), (300, 900)], w=5)
         p.line([(355, 440), (300, 620)], w=5)
     if c.get("alcas"):
         cor = c["alcas"]
-        p.rect([128, 460, 168, 900], cor, w=5)
-        p.rect([432, 460, 472, 900], cor, w=5)
+        p.rect([150, 460, 188, 910], cor, w=5)
+        p.rect([412, 460, 450, 910], cor, w=5)
     if c.get("estampa") == "flor":
         for k in range(5):
             a = math.radians(k * 72)

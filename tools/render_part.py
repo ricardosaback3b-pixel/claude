@@ -13,6 +13,15 @@ import engine  # noqa: E402
 TAGS = "#historia #misterio #suspense #historiasempartes #contos #mundoemhistorias"
 
 
+def _faixa(story, n, script):
+    """Texto da faixa branca do topo (estilo dos episódios)."""
+    if story["tipo"] == "votacao" and n > 1:
+        ant = next((p for p in story["partes"] if p["n"] == n - 1), {})
+        if ant.get("escolha"):
+            return f"PARTE {n} · VOCÊS ESCOLHERAM {ant['escolha']}"
+    return f"PARTE {n} · {script.get('cover_text', story['titulo']).upper()}"
+
+
 def resolve(story, part):
     chars = story.get("personagens", {})
     total = 6
@@ -46,6 +55,8 @@ def resolve(story, part):
         "nomes": {k: v.get("nome", k.title()) for k, v in chars.items()},
         "cores": {k: v.get("cloth", [200, 20, 40]) for k, v in chars.items()},
         "sem_voz": story.get("sem_voz", False),
+        "estilo": story.get("estilo"),
+        "faixa": script.get("faixa") or _faixa(story, n, script),
     }
     caption = script["caption"].strip()
     if "#" not in caption:

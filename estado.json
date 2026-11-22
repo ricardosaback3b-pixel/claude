@@ -1,6 +1,6 @@
 {
  "horarios": "9h, 12h, 15h, 18h, 21h (America/Campo_Grande)",
- "vez": 1,
+ "vez": 3,
  "ativas": [
   {
    "slug": "ultimo-onibus",
@@ -53,6 +53,12 @@
    "slug": "ultimo-onibus",
    "parte": 1,
    "media_id": "18116734688138689"
+  },
+  {
+   "quando": "2026-11-22T22:05:00Z",
+   "slug": "cidade-sirene",
+   "parte": 3,
+   "media_id": "18276159127306573"
   }
  ]
 }

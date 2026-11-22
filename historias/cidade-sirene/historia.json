@@ -5,7 +5,7 @@
  "genero": "mistério distópico",
  "status": "ativa",
  "narrador": "PROTAGONISTA",
- "biblia": "Série antiga retomada (partes 1 e 2 já publicadas no estilo anterior; da parte 3 em diante segue no estilo atual mantendo personagens e fatos). Premissa: numa cidade, às 18h toca uma sirene e todos têm 60 segundos pra entrar em casa; ninguém explica por quê. O Prefeito esconde um caderno que ninguém pode ler. Parte 1: o protagonista (narrador, 1ª pessoa) perde a chave, fica na rua depois da sirene; o Policial segura seu braço e diz pra não olhar pra cima; ele olha: o Prefeito sorri na janela, o relógio da praça tem um ponteiro vermelho andando ao contrário; no zero, todas as luzes apagam menos a dele. Parte 2: o público escolheu encarar o 'outro eu' (uma cópia do protagonista que aparece depois da sirene); descobre-se que pra viver alguém tem que sumir, e o nome escrito no caderno do Prefeito é quem some. Dilema: A) escrever o nome do prefeito ou B) rasgar o caderno. Votos: 0 a 0 até agora (se continuar empatado, escolha a mais dramática e diga na legenda). Final planejado: revelar o que a sirene esconde e o preço do caderno na parte 6.",
+ "biblia": "Série antiga retomada (partes 1 e 2 já publicadas no estilo anterior; da parte 3 em diante segue no estilo atual mantendo personagens e fatos). Premissa: numa cidade, às 18h toca uma sirene e todos têm 60 segundos pra entrar em casa; ninguém explica por quê. O Prefeito esconde um caderno que ninguém pode ler. Parte 1: o protagonista (narrador, 1ª pessoa) perde a chave, fica na rua depois da sirene; o Policial segura seu braço e diz pra não olhar pra cima; ele olha: o Prefeito sorri na janela, o relógio da praça tem um ponteiro vermelho andando ao contrário; no zero, todas as luzes apagam menos a dele. Parte 2: o público escolheu encarar o 'outro eu' (uma cópia do protagonista que aparece depois da sirene); descobre-se que pra viver alguém tem que sumir, e o nome escrito no caderno do Prefeito é quem some. Dilema: A) escrever o nome do prefeito ou B) rasgar o caderno. Final planejado: revelar o que a sirene esconde e o preço do caderno na parte 6. Parte 2: deu empate 0 a 0, decidido A (escrever o nome do prefeito). Parte 3: o nome ficou vermelho; o Prefeito começa a ficar transparente; Policial revela que ele escreve um nome por ano há trinta anos pra segurar 'o que vem lá de cima'; frase no caderno: 'Nome não se apaga. Só se troca. Até a sirene da manhã.' O outro eu (feito de tudo que o protagonista esqueceu) pede pra ter o nome dele escrito no lugar. Dilema: A) trocar pelo nome do outro eu (perde parte de si) ou B) deixar o Prefeito sumir (ninguém mais segura a sirene). Prazo: a sirene da manhã.",
  "personagens": {
   "PROTAGONISTA": {
    "nome": "Eu",
@@ -124,7 +124,7 @@
   },
   {
    "n": 3,
-   "status": "pronta",
+   "status": "publicada",
    "votos": {
     "A": 0,
     "B": 0
@@ -343,7 +343,12 @@
       "text": "A: trocar pelo nome do *outro eu*, e perder uma parte de mim. B: deixar o *Prefeito sumir*, e ninguém mais segura o que vem lá de cima. E você, o que faria?"
      }
     ]
-   }
+   },
+   "media_id": "18276159127306573",
+   "publicada_em": "2026-11-22T22:05:00Z",
+   "primeiro_comentario": "17896383243685062",
+   "story_id": "17909748081605434",
+   "resumo": "Empate na parte 2, decidido A: escreveu o nome do Prefeito, que começa a sumir. Policial: ele escreveu um nome por ano há trinta anos pra segurar o que vem lá de cima. O caderno: nome não se apaga, só se troca, até a sirene da manhã. O outro eu (tudo que o protagonista esqueceu) se oferece pra trocar."
   }
  ],
  "personagens_travados": {

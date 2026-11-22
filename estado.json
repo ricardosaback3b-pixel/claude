@@ -1,6 +1,16 @@
 {
  "horarios": "9h, 12h, 15h, 18h, 21h (America/Campo_Grande)",
- "proximo_tipo": "continua",
- "ativas": {"continua": "ultimo-onibus", "votacao": null},
- "historico": []
+ "proximo_tipo": "votacao",
+ "ativas": {
+  "continua": "ultimo-onibus",
+  "votacao": null
+ },
+ "historico": [
+  {
+   "quando": "2026-11-22T15:54:49Z",
+   "slug": "ultimo-onibus",
+   "parte": 1,
+   "media_id": "18495678472112008"
+  }
+ ]
 }

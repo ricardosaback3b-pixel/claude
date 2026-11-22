@@ -86,6 +86,7 @@
     "Ficar e confiar no porteiro"
    ],
    "escolha": "B",
+   "votos": {"A": 1, "B": 3},
    "resumo": "Elevador para no -1; médico chama pra sair; porteiro manda ficar."
   },
   {

@@ -12,19 +12,20 @@ O dono da conta autorizou a publicação sem aprovação prévia.
 - `historias/<slug>/historia.json`: uma história (bíblia, personagens, roteiro de cada parte, status, votos).
 - `estado.json`: o que está ativo, qual tipo vem agora e o histórico de posts.
 
-## Várias histórias ao mesmo tempo
+## Várias histórias ao mesmo tempo (uma parte por dia cada)
 
-- Ficam ativas **4 histórias diferentes ao mesmo tempo**: 2 `continua` (sem votação) e 2 `votacao` (A/B), listadas em `estado.json > ativas`.
-- Cada horário publica a parte da **próxima história da fila** (`estado.json > vez` aponta o índice em `ativas`; depois de publicar, avance para o próximo, voltando ao início no fim). Assim o mesmo dia tem histórias variadas e nunca a mesma duas vezes seguidas.
-- As 4 precisam ser **bem distintas entre si**: gêneros diferentes (ex.: suspense sobrenatural, mistério policial, drama familiar, ficção científica, sobrevivência, comédia de mistério, romance com segredo), cenários diferentes e protagonistas diferentes (nome, aparência, cores de roupa).
-- Toda história tem **exatamente 6 partes**. Quando a parte 6 sair, marque a história como `concluida`, tire-a de `ativas` e, no mesmo lugar da fila, crie uma nova do mesmo tipo e de gênero diferente das outras 3 ativas. Ela entra com a Parte 1 na próxima vez que a fila chegar nela.
-- Se `ativas` tiver menos de 4 histórias, crie as que faltam (mantendo 2 de cada tipo) antes de publicar. A nova vai para o fim da fila.
+- Ficam ativas **5 histórias diferentes**, uma para cada horário do dia (9h, 12h, 15h, 18h, 21h): 2 `continua` (sem votação) e 3 `votacao` (A/B), em `estado.json > ativas`.
+- **Cada história publica no máximo 1 parte por dia**, sempre no mesmo horário. `estado.json > vez` aponta a história da vez; depois de publicar, avance para a próxima (volta a 0 depois da última). Como são 5 histórias e 5 horários, cada uma cai sempre no mesmo horário.
+- **Trava de segurança:** antes de publicar, confira no `historico` se a história da vez já publicou uma parte nas últimas 20 horas. Se já publicou, pule para a próxima da fila que não publicou nesse período.
+- As 5 precisam ser **bem distintas entre si**: gêneros diferentes (suspense sobrenatural, mistério policial, drama familiar, ficção científica, sobrevivência, comédia de mistério, romance com segredo...), cenários e protagonistas diferentes (nome, aparência, cores de roupa, voz).
+- Toda história tem **exatamente 6 partes**. Quando a parte 6 sair, marque a história como `concluida` e, no mesmo lugar da fila, crie uma nova do mesmo tipo e de gênero diferente das outras ativas. Ela estreia com a Parte 1 no dia seguinte, no mesmo horário.
+- Se `ativas` tiver menos de 5, crie as que faltam (mantendo 2 contínuas e 3 de votação) e coloque no fim da fila.
 
 ## Passo a passo de cada execução
 
 1. **Evite post duplicado.** Se o último item de `estado.json > historico` foi publicado há menos de 90 minutos, pare e diga "Já publicado neste horário".
-2. **Escolha a história**: complete `ativas` até 4 se faltar (veja "Criar história") e pegue `ativas[vez]`.
-3. **Defina a parte** = a primeira com status diferente de `publicada`. Nunca diga que uma parte "já está no perfil" se ela ainda não foi publicada. A frase padrão é "A Parte N+1 fica no perfil @mundoemhistorias (sai em até 24h)". Ela é verdadeira porque a fila de 4 histórias garante a próxima parte em menos de 24h.
+2. **Escolha a história**: complete `ativas` até 5 se faltar (veja "Criar história") e pegue `ativas[vez]`.
+3. **Defina a parte** = a primeira com status diferente de `publicada`. Nunca diga que uma parte "já está no perfil" se ela ainda não foi publicada. A frase padrão é "A Parte N+1 fica no perfil @mundoemhistorias (sai em até 24h)". Ela é verdadeira porque cada história publica uma parte por dia, no mesmo horário.
    - `continua`: o roteiro já está pronto (`status: pronta`).
    - `votacao`: se for a parte 2 a 6, **antes de escrever**: leia todos os comentários da parte anterior, **responda os que ainda não têm resposta** (veja "Responder antes de apurar") e **conte os votos** (veja "Votação"). Escreva o roteiro seguindo a opção vencedora.
 4. **Renderize** com `python3 tools/render_part.py <slug> <n>`. Confira: duração entre 50 e 100 s; extraia 2 quadros com ffmpeg e olhe se os personagens, o cenário e a legenda estão certos (a legenda não pode ficar cortada). Se algo estiver errado, corrija o roteiro e renderize de novo.
@@ -45,7 +46,7 @@ O dono da conta autorizou a publicação sem aprovação prévia.
 ## Criar história
 
 - **Original**, em português do Brasil, suspense/mistério/drama que prende, classificação livre a 14 anos: sem gore, sem violência gráfica, sem pessoas reais, marcas ou personagens de terceiros.
-- Não repita gênero, cenário principal nem premissa das outras histórias ativas nem das últimas 4 concluídas (veja `historias/`). Personagens de histórias diferentes não podem ser iguais.
+- Não repita gênero, cenário principal nem premissa das outras histórias ativas nem das últimas 5 concluídas (veja `historias/`). Personagens de histórias diferentes não podem ser iguais.
 - Se a história precisar de um cenário que não existe, você pode adicionar uma função `bg_...` em `engine.py` seguindo o padrão das outras (desenho com Pillow, tamanho BW x BH) e registrá-la em `BACKGROUNDS`. Teste renderizando um quadro antes de usar. Leia `APRENDIZADOS.md` (e, se existir, o caderno na memória `/areas/aprendizados-instagram.md`) e aplique o que funciona.
 - Narração em **1ª pessoa**, frases curtas, um mistério central claro desde a parte 1 e uma pergunta que só se resolve na parte 6.
 - Escreva a `biblia`: premissa, regras do mundo, personagens (nome, papel, segredo), linha do tempo e **o final planejado** (para `votacao`, os dois finais possíveis e como as escolhas levam a eles).

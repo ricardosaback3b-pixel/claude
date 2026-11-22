@@ -316,6 +316,28 @@ def draw_char(spec, s=1.0):
     d.ellipse([cx + 140 * s, 700 * s, cx + 220 * s, 780 * s], fill=skin, outline=ol, width=lw)
     if spec.get("uniform"):
         d.polygon([(cx - 50 * s, 440 * s), (cx, 540 * s), (cx + 50 * s, 440 * s)], fill=(240, 240, 240), outline=ol)
+    if spec.get("jaleco"):
+        d.polygon([(cx - 60 * s, 440 * s), (cx, 600 * s), (cx + 60 * s, 440 * s)], fill=tuple(spec.get("camisa", (110, 150, 200))), outline=ol)
+        d.line([cx - 60 * s, 440 * s, cx - 20 * s, 640 * s], fill=ol, width=lw)
+        d.line([cx + 60 * s, 440 * s, cx + 20 * s, 640 * s], fill=ol, width=lw)
+        d.line([cx - 110 * s, 480 * s, cx - 70 * s, 640 * s], fill=(110, 120, 140), width=max(2, lw // 2))
+        d.rectangle([cx + 55 * s, 560 * s, cx + 125 * s, 610 * s], fill=(250, 250, 250), outline=ol, width=max(2, lw // 2))
+        d.rectangle([cx + 68 * s, 572 * s, cx + 100 * s, 598 * s], fill=(120, 150, 190))
+    if spec.get("farda"):
+        d.polygon([(cx - 40 * s, 440 * s), (cx, 500 * s), (cx + 40 * s, 440 * s)], fill=(230, 230, 220), outline=ol)
+        for yy in (540, 600, 660):
+            d.ellipse([cx - 9 * s, yy * s - 9 * s, cx + 9 * s, yy * s + 9 * s], fill=(200, 170, 80), outline=ol)
+        d.rectangle([cx - 120 * s, 520 * s, cx - 50 * s, 560 * s], outline=ol, width=max(2, lw // 2))
+        d.rectangle([cx + 50 * s, 520 * s, cx + 120 * s, 560 * s], outline=ol, width=max(2, lw // 2))
+    if spec.get("moletom"):
+        d.rounded_rectangle([cx - 120 * s, 420 * s, cx + 120 * s, 480 * s], 30 * s, fill=tuple(spec.get("cloth")), outline=ol, width=lw)
+        d.line([cx - 35 * s, 470 * s, cx - 40 * s, 600 * s], fill=(235, 235, 235), width=max(3, int(10 * s)))
+        d.line([cx + 35 * s, 470 * s, cx + 40 * s, 600 * s], fill=(235, 235, 235), width=max(3, int(10 * s)))
+        d.rounded_rectangle([cx - 100 * s, 680 * s, cx + 100 * s, 780 * s], 20 * s, fill=tuple(int(c * 0.85) for c in spec.get("cloth")), outline=ol, width=max(2, lw // 2))
+    if spec.get("mochila"):
+        st = tuple(spec.get("mochila"))
+        d.rounded_rectangle([cx - 130 * s, 440 * s, cx - 95 * s, 790 * s], 12 * s, fill=st, outline=ol, width=max(2, lw // 2))
+        d.rounded_rectangle([cx + 95 * s, 440 * s, cx + 130 * s, 790 * s], 12 * s, fill=st, outline=ol, width=max(2, lw // 2))
     if spec.get("prop") == "papel":
         d.rectangle([cx + 150 * s, 640 * s, cx + 250 * s, 760 * s], fill=(245, 240, 220), outline=ol, width=lw)
     # cabeça
@@ -327,6 +349,10 @@ def draw_char(spec, s=1.0):
     if style == "capuz":
         d.ellipse([cx - hr - 40 * s, hy - hr - 40 * s, cx + hr + 40 * s, hy + hr + 50 * s], fill=cloth, outline=ol, width=lw)
     face = (20, 20, 26) if spec.get("shadow_face") else skin
+    if spec.get("orelhas"):
+        for sx in (-1, 1):
+            ex = cx + sx * hr * 0.98
+            d.ellipse([ex - 38 * s, hy - 10 * s, ex + 38 * s, hy + 70 * s], fill=face, outline=ol, width=lw)
     d.ellipse([cx - hr, hy - hr, cx + hr, hy + hr], fill=face, outline=ol, width=lw)
     if style in ("curto", "longo", "coque"):
         d.chord([cx - hr, hy - hr, cx + hr, hy + hr * 0.7], 180, 360, fill=hair, outline=ol, width=lw)
@@ -339,6 +365,26 @@ def draw_char(spec, s=1.0):
     if style == "careca":
         d.arc([cx - hr * 0.9, hy - hr * 0.2, cx - hr * 0.3, hy + hr * 0.5], 120, 240, fill=(220, 220, 220), width=int(30 * s))
         d.arc([cx + hr * 0.3, hy - hr * 0.2, cx + hr * 0.9, hy + hr * 0.5], 300, 60, fill=(220, 220, 220), width=int(30 * s))
+    if style == "tigela":
+        d.chord([cx - hr * 1.04, hy - hr * 1.08, cx + hr * 1.04, hy + hr * 0.62], 180, 360, fill=hair, outline=ol, width=lw)
+        d.rectangle([cx - hr * 1.02, hy - hr * 0.25, cx + hr * 1.02, hy - hr * 0.2], fill=hair)
+        d.line([cx - hr * 1.0, hy - hr * 0.2, cx + hr * 1.0, hy - hr * 0.2], fill=ol, width=lw)
+    if style == "quepe":
+        cap = tuple(spec.get("cap", (90, 100, 60)))
+        d.chord([cx - hr * 0.95, hy - hr * 1.12, cx + hr * 0.95, hy + hr * 0.2], 180, 360, fill=cap, outline=ol, width=lw)
+        d.rectangle([cx - hr * 1.0, hy - hr * 0.48, cx + hr * 1.0, hy - hr * 0.3], fill=tuple(int(c * 0.8) for c in cap), outline=ol, width=max(2, lw // 2))
+        d.chord([cx - hr * 0.9, hy - hr * 0.5, cx + hr * 0.9, hy - hr * 0.1], 0, 180, fill=tuple(int(c * 0.7) for c in cap), outline=ol, width=max(2, lw // 2))
+    brows = spec.get("brows")
+    if brows and not spec.get("shadow_face"):
+        by = hy - 60 * s
+        for sx in (-1, 1):
+            ex = cx + sx * 62 * s
+            if brows == "preocupado":
+                d.line([ex - 40 * s, by - sx * 0 - (12 * s if sx < 0 else -12 * s) * -1, ex + 40 * s, by + (12 * s if sx < 0 else -12 * s) * -1], fill=ol, width=int(lw * 1.6))
+            elif brows == "bravo":
+                d.line([ex - 40 * s, by - (12 * s if sx > 0 else -12 * s), ex + 40 * s, by + (12 * s if sx > 0 else -12 * s)], fill=ol, width=int(lw * 1.6))
+            else:
+                d.line([ex - 40 * s, by, ex + 40 * s, by], fill=ol, width=int(lw * 1.6))
     # olhos
     eyes = spec.get("eyes", "normal")
     ey = hy + 10 * s
@@ -371,6 +417,9 @@ def draw_char(spec, s=1.0):
             d.arc([cx - 45 * s, my, cx + 45 * s, my + 50 * s], 200, 340, fill=ol, width=lw)
         else:
             d.line([cx - 36 * s, my, cx + 36 * s, my], fill=ol, width=lw)
+    if spec.get("bigode") and not spec.get("shadow_face"):
+        my = hy + 72 * s
+        d.chord([cx - 60 * s, my - 18 * s, cx + 60 * s, my + 26 * s], 180, 360, fill=tuple(spec.get("bigode")), outline=ol, width=max(2, lw // 2))
     if spec.get("flip"):
         im = im.transpose(Image.FLIP_LEFT_RIGHT)
     return im

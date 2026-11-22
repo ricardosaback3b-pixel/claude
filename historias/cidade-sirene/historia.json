@@ -115,7 +115,327 @@
     "Escrever o nome do prefeito",
     "Rasgar o caderno"
    ],
-   "resumo": "Encararam o outro eu; pra viver alguém tem que sumir; o caderno decide quem."
+   "resumo": "Encararam o outro eu; pra viver alguém tem que sumir; o caderno decide quem.",
+   "votos": {
+    "A": 0,
+    "B": 0
+   },
+   "escolha": "A"
+  },
+  {
+   "n": 3,
+   "status": "pronta",
+   "votos": {
+    "A": 0,
+    "B": 0
+   },
+   "escolha": "A",
+   "escolha_motivo": "empate 0 a 0, escolhida a mais dramática",
+   "script": {
+    "cover_text": "O nome em vermelho",
+    "opcoes": [
+     "Trocar pelo nome do outro eu",
+     "Deixar o Prefeito sumir"
+    ],
+    "caption": "Nessa Cidade, a Sirene Toca às 18h · Parte 3 — O nome em vermelho 🚨\n\nNinguém votou na Parte 2... deu empate (0 a 0), então eu decidi: escrevi o nome do Prefeito. E agora ele está sumindo.\n\nVocê trocaria o nome dele pelo seu outro eu? Comenta 👇\n\n🅰️ Trocar pelo nome do outro eu\n🅱️ Deixar o Prefeito sumir\nA mais votada decide a Parte 4.\n\nA Parte 4 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#historiaemparte #distopia #misterio #suspense #vocedecide #contosdeterror",
+    "scenes": [
+     {
+      "bg": "rua_noite",
+      "bg_params": {
+       "sign": "PRAÇA"
+      },
+      "cam": "in",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Eu escrevi o nome do *Prefeito* no caderno. E a sirene tocou de novo... *fora de hora*."
+     },
+     {
+      "bg": "casa_noite",
+      "window": true,
+      "cam": "pan_r",
+      "text": "Nas partes anteriores: nessa cidade, às seis da tarde, toca uma sirene e todo mundo tem sessenta segundos pra entrar. Eu fiquei na rua. Encontrei uma *cópia de mim*. E descobri que quem tem o nome no caderno do Prefeito *some*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "carta",
+       "title": "O CADERNO",
+       "lines": [
+        "Marta Lins",
+        "Davi Rocha",
+        "Ana Prado",
+        "!PREFEITO"
+       ]
+      },
+      "text": "Ninguém me disse o que fazer. Então eu decidi sozinho. Peguei a caneta e escrevi, em letra grande: *Prefeito*. A tinta ficou *vermelha*."
+     },
+     {
+      "bg": "casa_noite",
+      "window": true,
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PREFEITO",
+        "x": 0.5,
+        "scale": 0.85,
+        "eyes": "arregalado",
+        "mouth": "triste",
+        "look": 0
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "Na janela, ele parou de sorrir. Olhou as próprias mãos. Elas estavam *ficando transparentes*."
+       },
+       {
+        "voz": "PREFEITO",
+        "texto": "Menino... você *não sabe* o que fez."
+       }
+      ]
+     },
+     {
+      "bg": "rua_noite",
+      "bg_params": {
+       "sign": "PRAÇA"
+      },
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "POLICIAL",
+        "x": 0.28,
+        "scale": 0.85,
+        "look": 1
+       },
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.74,
+        "scale": 0.85,
+        "eyes": "arregalado",
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "POLICIAL",
+        "texto": "Trinta anos. Ele escreveu um nome por ano pra segurar o que vem *lá de cima*."
+       },
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "E se ele sumir?"
+       },
+       {
+        "voz": "POLICIAL",
+        "texto": "Aí ninguém mais segura a sirene."
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "in",
+      "prop": {
+       "type": "bilhete",
+       "lines": [
+        "Nome não se apaga.",
+        "Só se troca.",
+        "!Até a sirene da manhã."
+       ]
+      },
+      "text": "Embaixo do nome dele, apareceu uma frase. Escrita *sozinha*, com a mesma tinta vermelha."
+     },
+     {
+      "bg": "rua_noite",
+      "bg_params": {
+       "sign": "PRAÇA"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "OUTRO_EU",
+        "x": 0.28,
+        "scale": 0.88,
+        "eyes": "normal",
+        "mouth": "sorriso",
+        "look": 1
+       },
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.74,
+        "scale": 0.85,
+        "eyes": "arregalado",
+        "mouth": "o",
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "OUTRO_EU",
+        "texto": "Escreve o *meu* nome no lugar. Eu sumo. Ele fica. Mas eu sou tudo que você *esqueceu*."
+       },
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "Se ele sumir... some junto uma parte de mim?"
+       }
+      ]
+     },
+     {
+      "bg": "rua_noite",
+      "bg_params": {
+       "sign": "PRAÇA"
+      },
+      "cam": "shake",
+      "tint": [
+       120,
+       0,
+       0
+      ],
+      "chars": [
+       {
+        "ref": "PREFEITO",
+        "x": 0.3,
+        "scale": 0.8,
+        "eyes": "arregalado",
+        "mouth": "o"
+       },
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.74,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "triste",
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "O Prefeito já não tinha os pés. A sirene subia. E a caneta *tremia* na minha mão."
+       },
+       {
+        "voz": "PREFEITO",
+        "texto": "Decide logo, menino! *Antes da manhã!*"
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 1.0,
+        "eyes": "arregalado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "A: trocar pelo nome do *outro eu*, e perder uma parte de mim. B: deixar o *Prefeito sumir*, e ninguém mais segura o que vem lá de cima. E você, o que faria?"
+     }
+    ]
+   }
   }
- ]
+ ],
+ "personagens_travados": {
+  "PROTAGONISTA": {
+   "nome": "Eu",
+   "skin": [
+    190,
+    130,
+    95
+   ],
+   "cloth": [
+    180,
+    60,
+    40
+   ],
+   "hair": [
+    25,
+    18,
+    14
+   ],
+   "hairstyle": "curto",
+   "voz": "piper:cadu",
+   "pitch": 1.0,
+   "speed": 1.0
+  },
+  "OUTRO_EU": {
+   "nome": "O outro eu",
+   "skin": [
+    190,
+    130,
+    95
+   ],
+   "cloth": [
+    180,
+    60,
+    40
+   ],
+   "hair": [
+    25,
+    18,
+    14
+   ],
+   "hairstyle": "curto",
+   "shadow_face": false,
+   "voz": "piper:cadu",
+   "pitch": 0.88,
+   "speed": 0.92
+  },
+  "PREFEITO": {
+   "nome": "Prefeito",
+   "skin": [
+    240,
+    200,
+    170
+   ],
+   "cloth": [
+    30,
+    30,
+    36
+   ],
+   "hair": [
+    200,
+    200,
+    200
+   ],
+   "hairstyle": "careca",
+   "age": true,
+   "voz": "kokoro:pm_santa",
+   "pitch": 0.92,
+   "speed": 0.9
+  },
+  "POLICIAL": {
+   "nome": "Policial",
+   "skin": [
+    120,
+    80,
+    60
+   ],
+   "cloth": [
+    20,
+    40,
+    90
+   ],
+   "hairstyle": "bone",
+   "cap": [
+    15,
+    25,
+    60
+   ],
+   "voz": "piper:jeff",
+   "pitch": 0.97,
+   "speed": 1.0
+  }
+ }
 }

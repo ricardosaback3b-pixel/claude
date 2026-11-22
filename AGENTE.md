@@ -24,7 +24,7 @@ O dono da conta autorizou a publicação sem aprovação prévia.
 
 1. **Evite post duplicado.** Se o último item de `estado.json > historico` foi publicado há menos de 90 minutos, pare e diga "Já publicado neste horário".
 2. **Escolha a história**: complete `ativas` até 4 se faltar (veja "Criar história") e pegue `ativas[vez]`.
-3. **Defina a parte** = a primeira com status diferente de `publicada`. Nunca diga em vídeo, capa ou legenda que uma parte "já está no perfil" se ela ainda não foi publicada: use "em breve".
+3. **Defina a parte** = a primeira com status diferente de `publicada`. Nunca diga que uma parte "já está no perfil" se ela ainda não foi publicada. A frase padrão é "A Parte N+1 fica no perfil @mundoemhistorias (sai em até 24h)". Ela é verdadeira porque a fila de 4 histórias garante a próxima parte em menos de 24h.
    - `continua`: o roteiro já está pronto (`status: pronta`).
    - `votacao`: se for a parte 2 a 6, **antes de escrever**: leia todos os comentários da parte anterior, **responda os que ainda não têm resposta** (veja "Responder antes de apurar") e **conte os votos** (veja "Votação"). Escreva o roteiro seguindo a opção vencedora.
 4. **Renderize** com `python3 tools/render_part.py <slug> <n>`. Confira: duração entre 50 e 100 s; extraia 2 quadros com ffmpeg e olhe se os personagens, o cenário e a legenda estão certos (a legenda não pode ficar cortada). Se algo estiver errado, corrija o roteiro e renderize de novo.
@@ -105,7 +105,7 @@ Antes de escrever qualquer parte, leia a `biblia` e o texto de **todas** as part
 - Linha 1: gancho ou resultado da votação. Linha com "Parte N — título da parte".
 - Uma pergunta que puxe comentário.
 - Votação: as opções como `🅰️ ...` e `🅱️ ...` + "A mais votada decide a Parte N+1".
-- Fecho: "Parte N+1 em breve. Segue @mundoemhistorias 🔔" (na parte 6: "FIM. Começa da Parte 1 no perfil. Nova história em breve.").
+- Fecho: "A Parte N+1 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔" (na parte 6: "FIM. Começa da Parte 1 no perfil. Nova história em breve.").
 - 4 a 6 hashtags no fim.
 
 ## Limites

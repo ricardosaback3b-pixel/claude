@@ -548,37 +548,43 @@ def overlay_static(meta):
 
 def end_card(meta, base):
     im = base.copy().convert("RGBA")
-    im.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, 170)))
+    im.alpha_composite(Image.new("RGBA", (W, H), (0, 0, 0, 175)))
     d = ImageDraw.Draw(im)
-    if meta.get("final"):
-        big, small = "FIM.", "Nova história já já"
-    elif meta.get("vote"):
-        big, small = "A OU B?", "Comenta! A mais votada decide a próxima parte"
-        opts = meta.get("options", [])
-    else:
-        big, small = f"PARTE {meta['part'] + 1}", "em breve"
-    f = font(ANTON, 210)
-    d.text((W / 2, 760), big, font=f, fill=YELLOW, anchor="mm", stroke_width=14, stroke_fill=(0, 0, 0))
     fs = font(MONT, 52, True)
-    y = 930
-    for line in wrap(small, fs, W - 160):
-        d.text((W / 2, y), line, font=fs, fill=(255, 255, 255), anchor="mm")
-        y += 70
-    if meta.get("vote") and meta.get("options"):
-        fo = font(MONT, 46, True)
-        y += 20
-        for lab, opt in zip("AB", meta["options"]):
-            for k, line in enumerate(wrap(f"{lab}) {opt}", fo, W - 200)):
-                d.text((W / 2, y), line, font=fo, fill=YELLOW if k == 0 else (255, 255, 255), anchor="mm")
-                y += 60
-            y += 10
-        y = max(y, 1180)
-    else:
-        y = 1180
     fb = font(ANTON, 80)
+    nxt = meta["part"] + 1
+    if meta.get("final"):
+        f = font(ANTON, 210)
+        d.text((W / 2, 700), "FIM.", font=f, fill=YELLOW, anchor="mm", stroke_width=14, stroke_fill=(0, 0, 0))
+        y = 880
+        for line in ["Tem história nova toda hora", "no perfil"]:
+            d.text((W / 2, y), line, font=fs, fill=(255, 255, 255), anchor="mm")
+            y += 70
+        y += 40
+    else:
+        top = 620 if meta.get("vote") else 700
+        f = font(ANTON, 190 if meta.get("vote") else 210)
+        big = "A OU B?" if meta.get("vote") else f"PARTE {nxt}"
+        d.text((W / 2, top), big, font=f, fill=YELLOW, anchor="mm", stroke_width=14, stroke_fill=(0, 0, 0))
+        y = top + 160
+        if meta.get("vote"):
+            d.text((W / 2, y), f"Comenta! A mais votada decide a Parte {nxt}", font=font(MONT, 42, True), fill=(255, 255, 255), anchor="mm")
+            y += 75
+            fo = font(MONT, 46, True)
+            for lab, opt in zip("AB", meta.get("options", [])):
+                for k, line in enumerate(wrap(f"{lab}) {opt}", fo, W - 200)):
+                    d.text((W / 2, y), line, font=fo, fill=YELLOW if k == 0 else (255, 255, 255), anchor="mm")
+                    y += 60
+                y += 10
+            y += 20
+        d.text((W / 2, y), f"A Parte {nxt} fica no perfil", font=fs, fill=(255, 255, 255), anchor="mm")
+        y += 85
+        d.text((W / 2, y), HANDLE, font=font(ANTON, 92), fill=YELLOW, anchor="mm", stroke_width=8, stroke_fill=(0, 0, 0))
+        y += 85
+        d.text((W / 2, y), "Ainda não saiu? Chega em até 24h", font=font(MONT, 40, True), fill=(220, 220, 220), anchor="mm")
+        y += 80
     d.rounded_rectangle([140, y, W - 140, y + 150], 75, fill=(200, 20, 40))
     d.text((W / 2, y + 75), "SEGUE PRA NÃO PERDER", font=fb, fill=(255, 255, 255), anchor="mm")
-    d.text((W / 2, y + 230), HANDLE, font=fs, fill=(255, 255, 255), anchor="mm")
     return im.convert("RGB")
 
 

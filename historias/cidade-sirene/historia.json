@@ -5,94 +5,33 @@
  "genero": "mistério distópico",
  "status": "ativa",
  "narrador": "PROTAGONISTA",
- "biblia": "Série antiga retomada (partes 1 e 2 já publicadas no estilo anterior; da parte 3 em diante segue no estilo atual mantendo personagens e fatos). Premissa: numa cidade, às 18h toca uma sirene e todos têm 60 segundos pra entrar em casa; ninguém explica por quê. O Prefeito esconde um caderno que ninguém pode ler. Parte 1: o protagonista (narrador, 1ª pessoa) perde a chave, fica na rua depois da sirene; o Policial segura seu braço e diz pra não olhar pra cima; ele olha: o Prefeito sorri na janela, o relógio da praça tem um ponteiro vermelho andando ao contrário; no zero, todas as luzes apagam menos a dele. Parte 2: o público escolheu encarar o 'outro eu' (uma cópia do protagonista que aparece depois da sirene); descobre-se que pra viver alguém tem que sumir, e o nome escrito no caderno do Prefeito é quem some. Dilema: A) escrever o nome do prefeito ou B) rasgar o caderno. Final planejado: revelar o que a sirene esconde e o preço do caderno na parte 6. Parte 2: deu empate 0 a 0, decidido A (escrever o nome do prefeito). Parte 3: o nome ficou vermelho; o Prefeito começa a ficar transparente; Policial revela que ele escreve um nome por ano há trinta anos pra segurar 'o que vem lá de cima'; frase no caderno: 'Nome não se apaga. Só se troca. Até a sirene da manhã.' O outro eu (feito de tudo que o protagonista esqueceu) pede pra ter o nome dele escrito no lugar. Dilema: A) trocar pelo nome do outro eu (perde parte de si) ou B) deixar o Prefeito sumir (ninguém mais segura a sirene). Prazo: a sirene da manhã.",
+ "biblia": "Série antiga retomada (partes 1 e 2 já publicadas no estilo anterior; da parte 3 em diante segue no estilo atual mantendo personagens e fatos). Premissa: numa cidade, às 18h toca uma sirene e todos têm 60 segundos pra entrar em casa; ninguém explica por quê. O Prefeito esconde um caderno que ninguém pode ler. Parte 1: o protagonista (narrador, 1ª pessoa) perde a chave, fica na rua depois da sirene; o Policial segura seu braço e diz pra não olhar pra cima; ele olha: o Prefeito sorri na janela, o relógio da praça tem um ponteiro vermelho andando ao contrário; no zero, todas as luzes apagam menos a dele. Parte 2: o público escolheu encarar o 'outro eu' (uma cópia do protagonista que aparece depois da sirene); descobre-se que pra viver alguém tem que sumir, e o nome escrito no caderno do Prefeito é quem some. Dilema: A) escrever o nome do prefeito ou B) rasgar o caderno. Final planejado: revelar o que a sirene esconde e o preço do caderno na parte 6. Parte 2: deu empate 0 a 0, decidido A (escrever o nome do prefeito). Parte 3: o nome ficou vermelho; o Prefeito começa a ficar transparente; Policial revela que ele escreve um nome por ano há trinta anos pra segurar 'o que vem lá de cima'; frase no caderno: 'Nome não se apaga. Só se troca. Até a sirene da manhã.' O outro eu (feito de tudo que o protagonista esqueceu) pede pra ter o nome dele escrito no lugar. Dilema: A) trocar pelo nome do outro eu (perde parte de si) ou B) deixar o Prefeito sumir (ninguém mais segura a sirene). Prazo: a sirene da manhã. VISUAL DEFINITIVO (a pedido do dono, a partir da Parte 4): personagens da cartela do dono — Eu = 'protagonista' (cabelo preto, camiseta azul-clara, bermuda vermelha); O outro eu = mesmo desenho escurecido; Prefeito = 'prefeito' (terno escuro com faixa verde e amarela); Policial = 'policial' (farda e quepe azul-escuros). Nunca trocar. Expressões e boca mudam por cena; o desenho não.",
  "personagens": {
   "PROTAGONISTA": {
    "nome": "Eu",
-   "skin": [
-    190,
-    130,
-    95
-   ],
-   "cloth": [
-    180,
-    60,
-    40
-   ],
-   "hair": [
-    25,
-    18,
-    14
-   ],
-   "hairstyle": "curto",
+   "sprite": "protagonista",
    "voz": "piper:cadu",
    "pitch": 1.0,
    "speed": 1.0
   },
   "OUTRO_EU": {
    "nome": "O outro eu",
-   "skin": [
-    190,
-    130,
-    95
-   ],
-   "cloth": [
-    180,
-    60,
-    40
-   ],
-   "hair": [
-    25,
-    18,
-    14
-   ],
-   "hairstyle": "curto",
-   "shadow_face": false,
+   "sprite": "protagonista",
+   "escuro": true,
    "voz": "piper:cadu",
    "pitch": 0.88,
    "speed": 0.92
   },
   "PREFEITO": {
    "nome": "Prefeito",
-   "skin": [
-    240,
-    200,
-    170
-   ],
-   "cloth": [
-    30,
-    30,
-    36
-   ],
-   "hair": [
-    200,
-    200,
-    200
-   ],
-   "hairstyle": "careca",
-   "age": true,
+   "sprite": "prefeito",
    "voz": "kokoro:pm_santa",
    "pitch": 0.92,
    "speed": 0.9
   },
   "POLICIAL": {
    "nome": "Policial",
-   "skin": [
-    120,
-    80,
-    60
-   ],
-   "cloth": [
-    20,
-    40,
-    90
-   ],
-   "hairstyle": "bone",
-   "cap": [
-    15,
-    25,
-    60
-   ],
+   "sprite": "policial",
    "voz": "piper:jeff",
    "pitch": 0.97,
    "speed": 1.0
@@ -354,93 +293,33 @@
  "personagens_travados": {
   "PROTAGONISTA": {
    "nome": "Eu",
-   "skin": [
-    190,
-    130,
-    95
-   ],
-   "cloth": [
-    180,
-    60,
-    40
-   ],
-   "hair": [
-    25,
-    18,
-    14
-   ],
-   "hairstyle": "curto",
+   "sprite": "protagonista",
    "voz": "piper:cadu",
    "pitch": 1.0,
    "speed": 1.0
   },
   "OUTRO_EU": {
    "nome": "O outro eu",
-   "skin": [
-    190,
-    130,
-    95
-   ],
-   "cloth": [
-    180,
-    60,
-    40
-   ],
-   "hair": [
-    25,
-    18,
-    14
-   ],
-   "hairstyle": "curto",
-   "shadow_face": false,
+   "sprite": "protagonista",
+   "escuro": true,
    "voz": "piper:cadu",
    "pitch": 0.88,
    "speed": 0.92
   },
   "PREFEITO": {
    "nome": "Prefeito",
-   "skin": [
-    240,
-    200,
-    170
-   ],
-   "cloth": [
-    30,
-    30,
-    36
-   ],
-   "hair": [
-    200,
-    200,
-    200
-   ],
-   "hairstyle": "careca",
-   "age": true,
+   "sprite": "prefeito",
    "voz": "kokoro:pm_santa",
    "pitch": 0.92,
    "speed": 0.9
   },
   "POLICIAL": {
    "nome": "Policial",
-   "skin": [
-    120,
-    80,
-    60
-   ],
-   "cloth": [
-    20,
-    40,
-    90
-   ],
-   "hairstyle": "bone",
-   "cap": [
-    15,
-    25,
-    60
-   ],
+   "sprite": "policial",
    "voz": "piper:jeff",
    "pitch": 0.97,
    "speed": 1.0
   }
- }
+ },
+ "estilo": "cartela"
 }

@@ -5,88 +5,32 @@
  "genero": "sobrevivência na serra",
  "status": "ativa",
  "narrador": "RAFA",
- "biblia": "Gênero: sobrevivência na serra, sem sobrenatural. Rafa (narrador, 1ª pessoa, guia de trilha há 8 anos, jaqueta vermelha) leva três turistas numa trilha de um dia na Serra do Vento. Na volta, a ponte pênsil sobre o rio cai 10 segundos antes de atravessarem: a corda foi cortada. Do outro lado ficam o carro e o caminho de volta. Sem sinal, escurece, tempestade. Mistério central (resolve na P6): quem cortou a corda e por quê? Personagens e segredos: Dona Célia (aposentada, cabelo branco longo, roupa roxa) é geóloga aposentada; viu sinais de deslizamento na encosta do outro lado (rio barrento, formigas subindo, cheiro de terra molhada, rachaduras) e cortou a corda para impedir a travessia; anos atrás ninguém acreditou num aviso dela. Júnior (17, moletom cinza com capuz) filmou sem querer a Célia perto da corda; o vídeo aparece no celular dele mais tarde. Marina (camiseta azul, coque) diz ser médica, mas é jornalista investigando a empresa de turismo do Rafa por ignorar a segurança (pista falsa; ela sabe primeiros socorros). Torceu o tornozelo na P1. Segredo do Rafa: sabia que a ponte estava velha e não avisou a empresa a tempo. Final A (o público confia mais na Célia): o grupo fica do lado de cá, a encosta do outro lado desaba de madrugada levando a trilha e o carro; resgate de helicóptero ao amanhecer; Célia revela tudo e vira heroína; Rafa assume o erro da ponte. Final B (o público desconfia mais): Rafa tenta atravessar pelo rio para buscar ajuda, a encosta começa a desabar, Célia o puxa de volta no último segundo e confessa; todos sobrevivem; a verdade sobre a ponte e a reportagem da Marina vêm à tona. As escolhas de confiar (salvar o grupo junto, ouvir a Célia) somam para o Final A; as de desconfiar/separar somam para o Final B. Parte 1: dilema A buscar o Júnior no escuro (deixa Marina machucada e Célia, possível suspeita) x B ficar e montar abrigo (Júnior sozinho no vale).",
+ "biblia": "Gênero: sobrevivência na serra, sem sobrenatural. Rafa (narrador, 1ª pessoa, guia de trilha há 8 anos, camisa verde e câmera no pescoço) leva três turistas numa trilha de um dia na Serra do Vento. Na volta, a ponte pênsil sobre o rio cai 10 segundos antes de atravessarem: a corda foi cortada. Do outro lado ficam o carro e o caminho de volta. Sem sinal, escurece, tempestade. Mistério central (resolve na P6): quem cortou a corda e por quê? Personagens e segredos: Dona Célia (aposentada, cabelo grisalho preso, casaco roxo) é geóloga aposentada; viu sinais de deslizamento na encosta do outro lado (rio barrento, formigas subindo, cheiro de terra molhada, rachaduras) e cortou a corda para impedir a travessia; anos atrás ninguém acreditou num aviso dela. Júnior (17, moletom cinza com capuz) filmou sem querer a Célia perto da corda; o vídeo aparece no celular dele mais tarde. Marina (camiseta azul, coque) diz ser médica, mas é jornalista investigando a empresa de turismo do Rafa por ignorar a segurança (pista falsa; ela sabe primeiros socorros). Torceu o tornozelo na P1. Segredo do Rafa: sabia que a ponte estava velha e não avisou a empresa a tempo. Final A (o público confia mais na Célia): o grupo fica do lado de cá, a encosta do outro lado desaba de madrugada levando a trilha e o carro; resgate de helicóptero ao amanhecer; Célia revela tudo e vira heroína; Rafa assume o erro da ponte. Final B (o público desconfia mais): Rafa tenta atravessar pelo rio para buscar ajuda, a encosta começa a desabar, Célia o puxa de volta no último segundo e confessa; todos sobrevivem; a verdade sobre a ponte e a reportagem da Marina vêm à tona. As escolhas de confiar (salvar o grupo junto, ouvir a Célia) somam para o Final A; as de desconfiar/separar somam para o Final B. Parte 1: dilema A buscar o Júnior no escuro (deixa Marina machucada e Célia, possível suspeita) x B ficar e montar abrigo (Júnior sozinho no vale).",
  "personagens": {
   "RAFA": {
-   "skin": [
-    170,
-    110,
-    80
-   ],
-   "cloth": [
-    190,
-    40,
-    40
-   ],
-   "hair": [
-    30,
-    20,
-    15
-   ],
-   "hairstyle": "curto",
    "nome": "Rafa",
+   "sprite": "fotografo",
    "voz": "piper:cadu",
    "pitch": 1.0,
    "speed": 1.0
   },
   "CELIA": {
-   "skin": [
-    230,
-    190,
-    160
-   ],
-   "cloth": [
-    110,
-    60,
-    140
-   ],
-   "hair": [
-    205,
-    205,
-    205
-   ],
-   "hairstyle": "longo",
-   "age": true,
    "nome": "Dona Célia",
+   "sprite": "vovozinha",
    "voz": "kokoro:pf_dora",
    "pitch": 0.88,
    "speed": 0.9
   },
   "JUNIOR": {
-   "skin": [
-    140,
-    95,
-    70
-   ],
-   "cloth": [
-    120,
-    120,
-    130
-   ],
-   "hairstyle": "capuz",
    "nome": "Júnior",
+   "sprite": "garoto_gorro_preto",
    "voz": "kokoro:pm_alex",
    "pitch": 1.12,
    "speed": 1.06
   },
   "MARINA": {
-   "skin": [
-    200,
-    150,
-    120
-   ],
-   "cloth": [
-    80,
-    150,
-    200
-   ],
-   "hair": [
-    60,
-    30,
-    20
-   ],
-   "hairstyle": "coque",
    "nome": "Marina",
+   "sprite": "moca_loira",
    "voz": "kokoro:pf_dora",
    "pitch": 1.02,
    "speed": 1.0
@@ -284,5 +228,36 @@
     "caption": "A ponte caiu dez segundos antes da gente atravessar… e a corda estava cortada. 🌧️🌉\n\nA Ponte Caída · Parte 1 — A corda foi cortada\n\nQuem você acha que cortou a corda? Mas antes, vota 👇\n\n🅰️ Buscar o Júnior no escuro\n🅱️ Ficar e montar abrigo\n\nA mais votada decide a Parte 2. A Parte 2 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#sobrevivencia #suspense #historiasempartes #trilha #voceescolhe"
    }
   }
- ]
+ ],
+ "personagens_travados": {
+  "RAFA": {
+   "nome": "Rafa",
+   "sprite": "fotografo",
+   "voz": "piper:cadu",
+   "pitch": 1.0,
+   "speed": 1.0
+  },
+  "CELIA": {
+   "nome": "Dona Célia",
+   "sprite": "vovozinha",
+   "voz": "kokoro:pf_dora",
+   "pitch": 0.88,
+   "speed": 0.9
+  },
+  "JUNIOR": {
+   "nome": "Júnior",
+   "sprite": "garoto_gorro_preto",
+   "voz": "kokoro:pm_alex",
+   "pitch": 1.12,
+   "speed": 1.06
+  },
+  "MARINA": {
+   "nome": "Marina",
+   "sprite": "moca_loira",
+   "voz": "kokoro:pf_dora",
+   "pitch": 1.02,
+   "speed": 1.0
+  }
+ },
+ "estilo": "cartela"
 }

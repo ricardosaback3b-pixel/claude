@@ -293,8 +293,20 @@ BACKGROUNDS.update({
 
 
 # ---------------------------------------------------------------- personagens
-def draw_char(spec, s=1.0):
-    """Personagem cartoon original. Retorna RGBA recortado; base no rodapé."""
+def draw_char(spec, s=1.0, mouth_state=None, blink=False):
+    """Personagem cartoon. Com "sprite": usa a cartela do dono (assets/personagens) com expressões."""
+    if spec.get("sprite"):
+        import sprites
+        eyes = "fechado" if blink else spec.get("eyes", "normal")
+        mo = mouth_state or {"o": "o", "triste": "triste"}.get(spec.get("mouth", ""), "idle")
+        alt = int((1250 if sprites.e_busto(spec["sprite"]) else 900) * s)
+        im = sprites.render(spec["sprite"], alt, eyes, mo, spec.get("brows"), spec.get("flip", False))
+        if spec.get("escuro"):
+            r, g, b, a = im.split()
+            dk = Image.merge("RGB", (r, g, b)).point(lambda v: int(v * 0.45))
+            im = Image.merge("RGBA", (*dk.split(), a))
+            dd = ImageDraw.Draw(im)
+        return im
     cw, ch = int(560 * s), int(980 * s)
     im = Image.new("RGBA", (cw, ch), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
@@ -541,6 +553,8 @@ def build_scene(sc):
     if sc.get("window"):
         window_frame(img)
     for c in sc.get("chars", []):
+        if c.get("sprite"):
+            continue  # cartela: desenhado quadro a quadro (boca, piscada, respiração)
         ci = draw_char(c, c.get("scale", 1.0))
         x = int(c.get("x", 0.5) * BW - ci.width / 2)
         y = int((c.get("y", 0.86) - 0.07) * BH - ci.height)
@@ -742,7 +756,7 @@ def build_timeline(meta, scenes):
                 spec = vozes.get(who) or {"voz": "kokoro:pm_alex"}
                 a = tts.synth(spec, ln["texto"])
                 ldur = len(a) / SR
-                clips.append((pos, a))
+                clips.append((pos, a, who, who != narr or bool(ln.get("fala"))))
                 w = [sum(len(x.strip("*")) for x in c) + 2 for c, _ in chunks]
                 tot = sum(w)
                 cs = pos
@@ -761,9 +775,23 @@ def build_timeline(meta, scenes):
         timeline.append((i, start, dur, events))
         t = start + dur
     voice = np.zeros(int((t + 6) * SR), dtype=np.float32)
-    for st, a in clips:
+    for st, a, _, _ in clips:
         i0 = int(st * SR)
         voice[i0:i0 + len(a)] += a[: len(voice) - i0]
+    # envelope de fala por personagem (para mexer a boca), um valor por quadro
+    nfr = int((t + 6) * FPS)
+    env = {}
+    hop = SR // FPS
+    for st, a, who, anim in clips:
+        if not anim or not who:
+            continue
+        arr = env.setdefault(who, np.zeros(nfr, dtype=np.float32))
+        f0 = int(st * FPS)
+        for k in range(len(a) // hop):
+            seg = a[k * hop:(k + 1) * hop]
+            if f0 + k < nfr:
+                arr[f0 + k] = max(arr[f0 + k], float(np.sqrt(np.mean(seg * seg))))
+    meta["_env"] = env
     return timeline, voice, t
 
 
@@ -800,6 +828,7 @@ def render(script, out_dir):
         "-i", wav, "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", mp4], stdin=subprocess.PIPE)
     nframes = int(total * FPS)
+    sprite_cache = {}
     last_frame = None
     cover_frame = None
     for fi in range(nframes):
@@ -812,7 +841,32 @@ def render(script, out_dir):
         k = max(j for j, (_, st, _, _) in enumerate(timeline) if st <= ft)
         si, st, dur, events = timeline[k]
         sc = scenes[si]
-        frame = camera(imgs[si], sc.get("cam", "in"), (ft - st) / dur).convert("RGBA")
+        src = imgs[si]
+        dyn = [c for c in sc.get("chars", []) if c.get("sprite")]
+        if dyn:
+            src = src.copy()
+            for ci_, c in enumerate(dyn):
+                ref = c.get("_ref")
+                env = meta.get("_env", {}).get(ref)
+                lvl = float(env[fi]) if env is not None and fi < len(env) else 0.0
+                ms = "aberta" if lvl > 0.16 else ("meia" if lvl > 0.05 else None)
+                if ms is None and env is not None and fi < len(env) and float(env[max(0, fi - 2):fi + 3].max()) > 0.05:
+                    ms = "fechada"
+                ph = (hash(ref or ci_) % 100) / 100 * 3.0
+                blink = ((ft + ph) % 3.6) < 0.12
+                key = (si, ci_, ms, blink)
+                if key not in sprite_cache:
+                    sprite_cache[key] = draw_char(c, c.get("scale", 1.0), mouth_state=ms, blink=blink)
+                spr = sprite_cache[key]
+                bob = math.sin(ft * 2.2 + ph) * 5
+                import sprites as _sp
+                x = int(c.get("x", 0.5) * BW - spr.width / 2)
+                if _sp.e_busto(c["sprite"]):  # busto: encostado na base da tela, como nos vídeos originais
+                    y = int(BH * c.get("y", 1.0) - spr.height + 12 + bob)
+                else:
+                    y = int((c.get("y", 0.86) - 0.07) * BH - spr.height + bob)
+                src.paste(spr, (x, y), spr)
+        frame = camera(src, sc.get("cam", "in"), (ft - st) / dur).convert("RGBA")
         if ft - st < 0.12 and k > 0:
             frame.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, int(110 * (1 - (ft - st) / 0.12)))))
         frame.alpha_composite(over)
@@ -832,7 +886,7 @@ def render(script, out_dir):
         rgb = frame.convert("RGB")
         last_frame = rgb
         if sc.get("cover") and cover_frame is None and ft - st > dur * 0.5:
-            cover_frame = camera(imgs[si], sc.get("cam", "in"), 0.5)
+            cover_frame = camera(src, sc.get("cam", "in"), 0.5)
         proc.stdin.write(rgb.tobytes())
     proc.stdin.close()
     proc.wait()

@@ -8,130 +8,43 @@
  "biblia": "Gênero: comédia de mistério escolar, sem sobrenatural. Teo (narrador, 1ª pessoa, aluno da turma da sala 12, tem medo do escuro) é acusado de ser 'O Sombra', que toda manhã escreve na lousa da sala 12 (trancada) um segredo bobo de alguém, com a letra igual à do Teo. A Diretora Marta dá 6 dias (até sexta) para ele provar a inocência. Nina (melhor amiga, caderno verde, detetive) ajuda. Pistas: chaves do zelador Seu Bento somem (P2); giz azul do professor Rui (P2, Rui é inocente, P3); pegada de tênis com estrela na sola (P3); ladrilho solto sob a placa 'SALA 12' com chave pequena e foto da turma de 1996 onde está Marta criança (P4); a sala 12 será demolida no mês que vem e a turma dividida (P4); Caio tem tênis de estrela e copia o caderno do Teo o ano inteiro (P5). Segredos: Caio = O Sombra; entra pela porta do armário do fundo, que tem alçapão para o porão. Motivo: ouviu sobre a demolição e quis que todos olhassem para a sala; usou a letra do Teo porque todos escutam o Teo. Final (P6, sexta 19h): luz apaga, Teo não foge do escuro, Caio confessa, devolve chaves e giz; a chave abre a cápsula do tempo atrás da lousa com carta da Marta aos 12 anos; a sala vira patrimônio, a turma não é dividida, Teo não é suspenso; Caio ajuda o Seu Bento por um mês. Última lousa: 'Obrigado, turma. O Sombra, aposentado'. Teo dorme de luz apagada.",
  "personagens": {
   "TEO": {
-   "skin": [
-    222,
-    170,
-    130
-   ],
-   "cloth": [
-    230,
-    120,
-    30
-   ],
-   "hair": [
-    40,
-    26,
-    18
-   ],
-   "hairstyle": "curto",
    "nome": "Teo",
+   "sprite": "miguel",
    "voz": "kokoro:pm_alex",
    "pitch": 1.12,
    "speed": 1.04
   },
   "NINA": {
-   "skin": [
-    120,
-    80,
-    56
-   ],
-   "cloth": [
-    40,
-    150,
-    90
-   ],
-   "hair": [
-    20,
-    14,
-    10
-   ],
-   "hairstyle": "coque",
    "nome": "Nina",
+   "sprite": "clara",
    "voz": "kokoro:pf_dora",
    "pitch": 1.14,
    "speed": 1.05
   },
   "CAIO": {
-   "skin": [
-    240,
-    200,
-    170
-   ],
-   "cloth": [
-    200,
-    40,
-    50
-   ],
-   "hairstyle": "bone",
-   "cap": [
-    30,
-    40,
-    130
-   ],
    "nome": "Caio",
+   "sprite": "felipe",
    "voz": "piper:faber",
    "pitch": 1.1,
    "speed": 1.04
   },
   "BENTO": {
-   "skin": [
-    150,
-    100,
-    70
-   ],
-   "cloth": [
-    70,
-    90,
-    110
-   ],
-   "hairstyle": "careca",
-   "age": true,
    "nome": "Seu Bento",
+   "sprite": "carlos_porteiro",
    "voz": "kokoro:pm_santa",
    "pitch": 0.9,
    "speed": 0.92
   },
   "RUI": {
-   "skin": [
-    200,
-    150,
-    110
-   ],
-   "cloth": [
-    60,
-    60,
-    70
-   ],
-   "hair": [
-    90,
-    90,
-    90
-   ],
-   "hairstyle": "curto",
    "nome": "Prof. Rui",
+   "sprite": "professor_caio",
    "voz": "piper:jeff",
    "pitch": 0.98,
    "speed": 1.0
   },
   "MARTA": {
-   "skin": [
-    180,
-    120,
-    90
-   ],
-   "cloth": [
-    120,
-    30,
-    60
-   ],
-   "hair": [
-    50,
-    30,
-    30
-   ],
-   "hairstyle": "coque",
-   "age": true,
    "nome": "Diretora Marta",
+   "sprite": "lucia_empreendedora",
    "voz": "kokoro:pf_dora",
    "pitch": 0.92,
    "speed": 0.95
@@ -1271,5 +1184,50 @@
     "caption": "O Sombra finalmente apareceu… e o motivo ninguém esperava. 🖤✏️\n\nO Sombra da Sala 12 · Parte 6 — Quem é o Sombra (FINAL)\n\nVocê perdoaria o Caio? Conta aqui 👇\n\nFIM. Começa da Parte 1 no perfil. Nova história em breve.\n\n#misterio #historiasempartes #final #escola #contos #mundoemhistorias"
    }
   }
- ]
+ ],
+ "personagens_travados": {
+  "TEO": {
+   "nome": "Teo",
+   "sprite": "miguel",
+   "voz": "kokoro:pm_alex",
+   "pitch": 1.12,
+   "speed": 1.04
+  },
+  "NINA": {
+   "nome": "Nina",
+   "sprite": "clara",
+   "voz": "kokoro:pf_dora",
+   "pitch": 1.14,
+   "speed": 1.05
+  },
+  "CAIO": {
+   "nome": "Caio",
+   "sprite": "felipe",
+   "voz": "piper:faber",
+   "pitch": 1.1,
+   "speed": 1.04
+  },
+  "BENTO": {
+   "nome": "Seu Bento",
+   "sprite": "carlos_porteiro",
+   "voz": "kokoro:pm_santa",
+   "pitch": 0.9,
+   "speed": 0.92
+  },
+  "RUI": {
+   "nome": "Prof. Rui",
+   "sprite": "professor_caio",
+   "voz": "piper:jeff",
+   "pitch": 0.98,
+   "speed": 1.0
+  },
+  "MARTA": {
+   "nome": "Diretora Marta",
+   "sprite": "lucia_empreendedora",
+   "voz": "kokoro:pf_dora",
+   "pitch": 0.92,
+   "speed": 0.95
+  }
+ },
+ "estilo": "catalogo"
 }

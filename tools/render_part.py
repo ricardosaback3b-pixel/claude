@@ -24,6 +24,8 @@ def resolve(story, part):
         for c in sc.get("chars", []):
             base = dict(chars.get(c.get("ref"), {})) if c.get("ref") else {}
             base.update({k: v for k, v in c.items() if k != "ref"})
+            if c.get("ref"):
+                base["_ref"] = c["ref"]
             for k in ("voz", "pitch", "speed", "nome"):
                 base.pop(k, None)
             res.append(base)

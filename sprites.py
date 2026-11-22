@@ -155,65 +155,133 @@ def enquadramento_padrao(name):
     return "busto" if estilo_de(name) == "catalogo" else "corpo"
 
 
+def _cores_originais(im, pele=None):
+    """Cores de roupa, manga e calça de um personagem de corpo inteiro."""
+    a = np.asarray(im).astype(int)
+    h, w = a.shape[:2]
+    def med(y0, y1, x0, x1):
+        reg = a[int(h * y0):int(h * y1), int(w * x0):int(w * x1)]
+        reg = reg[reg[..., 3] > 0]
+        reg = reg[reg[..., :3].max(axis=1) > 45]  # ignora contorno
+        return tuple(int(v) for v in np.median(reg[:, :3], axis=0)) if len(reg) else None
+    roupa = _moda(a[int(h * 0.29):int(h * 0.42), int(w * 0.28):int(w * 0.72)], pele)  # lateral do tronco (evita gravata/estampa)
+    calca = med(0.66, 0.78, 0.36, 0.64)
+    if calca is None or (calca[0] > 170 and calca[0] > calca[1] > calca[2] and calca[0] - calca[2] > 40):
+        calca = med(0.50, 0.58, 0.36, 0.64)  # bermuda/short: pega a cor da bermuda, não da perna
+    # manga: na lateral do braço, altura do cotovelo
+    al = a[..., 3] > 0
+    yb = int(h * 0.40)
+    xs = np.nonzero(al[yb])[0]
+    manga = None
+    if len(xs):
+        for off in (8, 10, 12, 6):
+            px = a[yb, min(xs.max(), xs.min() + off), :3]
+            if px.max() > 60:  # não é contorno
+                manga = tuple(int(v) for v in px)
+                break
+    return roupa, manga, calca
+
+
+def _moda(px, pele=None):
+    """Cor mais comum (ignora contorno e pele)."""
+    px = np.asarray(px).reshape(-1, px.shape[-1])
+    if px.shape[1] == 4:
+        px = px[px[:, 3] > 0][:, :3]
+    px = px[px.max(axis=1) > 45]
+    if pele is not None and len(px):
+        dist = np.abs(px - np.array(pele)).sum(axis=1)
+        if (dist > 75).sum() > 10:
+            px = px[dist > 75]
+    sk = (px[:, 0] > 170) & (px[:, 0] > px[:, 1]) & (px[:, 1] > px[:, 2]) & ((px[:, 0] - px[:, 2]) > 40) & ((px[:, 0] - px[:, 2]) < 120)
+    if (~sk).sum() > 10:
+        px = px[~sk]
+    if not len(px):
+        return None
+    q = (px // 24).astype(int)
+    keys = q[:, 0] * 10000 + q[:, 1] * 100 + q[:, 2]
+    vals, cnt = np.unique(keys, return_counts=True)
+    best = vals[np.argmax(cnt)]
+    sel = px[keys == best]
+    return tuple(int(v) for v in np.median(sel, axis=0))
+
+
+def _parece_pele(c):
+    r, g, b = c
+    return r > 170 and r > g > b and (r - b) > 40
+
+
+def _gerar_corpo(im, m):
+    """Desenha braços, tronco, cinto, calça e tênis embaixo de um busto (mesmo formato para todos)."""
+    a = np.asarray(im).astype(np.uint8)
+    h, w = a.shape[:2]
+    row = a[h - 2]
+    xs = np.nonzero(row[:, 3] > 0)[0]
+    x0, x1 = int(xs.min()), int(xs.max())
+    cw = x1 - x0
+    tor = int(h * 0.30)
+    leg = int(h * 0.62)
+    ol = max(3, int(w * 0.013))
+    canvas = Image.new("RGBA", (w, h + tor + leg + 30), (0, 0, 0, 0))
+    d = ImageDraw.Draw(canvas)
+    pele = tuple(m.get("pele", (240, 200, 170)))
+    def cor(xf):
+        return tuple(int(v) for v in row[int(x0 + cw * xf)][:3])
+    roupa = tuple(m.get("roupa") or _moda(a[h - 12:h - 1, int(x0 + cw * 0.18):int(x1 - cw * 0.18)], pele) or cor(0.3))
+    manga = tuple(m.get("manga") or cor(0.07))
+    curta = m.get("manga_curta", False)
+    aw = cw * 0.15
+    ytop = h - 3
+    yw = h + tor
+    for xa in (x0, x1 - aw):
+        if curta:
+            d.rounded_rectangle([xa, ytop, xa + aw, yw - tor * 0.05], radius=int(aw * 0.4), fill=pele, outline=OUT, width=ol)
+            d.rectangle([xa, ytop, xa + aw, ytop + tor * 0.25], fill=roupa, outline=OUT, width=ol)
+        else:
+            d.rounded_rectangle([xa, ytop, xa + aw, yw - tor * 0.05], radius=int(aw * 0.4), fill=manga, outline=OUT, width=ol)
+        d.ellipse([xa - aw * 0.05, yw - tor * 0.12, xa + aw * 1.05, yw + aw * 0.9], fill=pele, outline=OUT, width=ol)
+    tx0, tx1 = x0 + aw * 0.95, x1 - aw * 0.95
+    d.rectangle([tx0, ytop, tx1, yw], fill=roupa, outline=OUT, width=ol)
+    canvas.alpha_composite(im, (0, 0))
+    d = ImageDraw.Draw(canvas)
+    calca = tuple(m.get("calca") or (46, 56, 92))
+    lx0, lx1 = tx0 + cw * 0.03, tx1 - cw * 0.03
+    mid = (lx0 + lx1) / 2
+    gap = cw * 0.025
+    d.rectangle([tx0, yw - ol, tx1, yw + leg * 0.06], fill=(36, 30, 30), outline=OUT, width=ol)
+    for a_, b_ in ((lx0, mid - gap), (mid + gap, lx1)):
+        d.rectangle([a_, yw + leg * 0.06, b_, yw + leg * 0.9], fill=calca, outline=OUT, width=ol)
+        d.rounded_rectangle([a_ - cw * 0.03, yw + leg * 0.88, b_ + cw * 0.05, yw + leg],
+                            radius=int(cw * 0.05), fill=(250, 250, 250), outline=OUT, width=ol)
+        d.rectangle([a_ - cw * 0.02, yw + leg * 0.95, b_ + cw * 0.04, yw + leg - ol], fill=(44, 44, 50))
+    bb = canvas.getbbox()
+    return canvas.crop((0, 0, canvas.width, bb[3]))  # só corta embaixo: o rosto não se mexe
+
+
 @lru_cache(None)
 def _variante(name, modo):
     """Mesmo personagem em close ('busto') ou de pé ('corpo').
-    corpo inteiro -> busto: recorta a parte de cima. busto -> corpo: desenha tronco, calça e sapatos."""
+    Estilo catálogo: TODOS ficam no mesmo formato — cabeça e peito do desenho do dono + corpo gerado."""
     im, m = _base(name)
     m = dict(m)
     est = estilo_de(name)
-    if modo == "busto" and est != "catalogo":
+    if est == "catalogo_corpo":
+        # parte de cima do desenho de corpo inteiro; guarda as cores originais para o corpo gerado
+        roupa, manga, calca = _cores_originais(im, m.get("pele"))
+        if roupa:
+            m["roupa"] = roupa
+        if calca:
+            m["calca"] = calca
+        if manga is not None:
+            if _parece_pele(manga):
+                m["manga_curta"] = True
+            else:
+                m["manga"] = manga
         (l0, t0, l1, b0), (r0, t1, r1, b1) = m["olhos"]
         ey = (t0 + b0 + t1 + b1) / 4
-        bottom = int(min(im.height, ey + m["dd"] * 3.4))
-        im = im.crop((0, 0, im.width, bottom))
-        m["busto"] = True
-        return im, m
-    if modo == "corpo" and est == "catalogo":
-        a = np.asarray(im).astype(np.uint8)
-        h, w = a.shape[:2]
-        row = a[h - 2]
-        xs = np.nonzero(row[:, 3] > 0)[0]
-        x0, x1 = int(xs.min()), int(xs.max())
-        cw = x1 - x0
-        tor = int(h * 0.30)
-        leg = int(h * 0.62)
-        ol = max(3, int(w * 0.013))
-        canvas = Image.new("RGBA", (w, h + tor + leg + 30), (0, 0, 0, 0))
-        d = ImageDraw.Draw(canvas)
-        pele = tuple(m.get("pele", (240, 200, 170)))
-        # cores tiradas da última linha do busto: mangas (laterais) e roupa (centro)
-        def cor(xf):
-            px = row[int(x0 + cw * xf)]
-            return tuple(int(v) for v in px[:3])
-        manga, roupa = cor(0.07), cor(0.5)
-        aw = cw * 0.15
-        ytop = h - 3
-        yw = h + tor  # cintura
-        # braços (mangas até o cotovelo, depois pele) e mãos
-        for xa in (x0, x1 - aw):
-            d.rounded_rectangle([xa, ytop, xa + aw, yw - tor * 0.05], radius=int(aw * 0.4), fill=manga, outline=OUT, width=ol)
-            d.ellipse([xa - aw * 0.05, yw - tor * 0.12, xa + aw * 1.05, yw + aw * 0.9], fill=pele, outline=OUT, width=ol)
-        # tronco
-        tx0, tx1 = x0 + aw * 0.95, x1 - aw * 0.95
-        d.rectangle([tx0, ytop, tx1, yw], fill=roupa, outline=OUT, width=ol)
-        canvas.alpha_composite(im, (0, 0))
-        d = ImageDraw.Draw(canvas)
-        # pernas
-        calca = tuple(m.get("calca", (46, 56, 92)))
-        lx0, lx1 = tx0 + cw * 0.03, tx1 - cw * 0.03
-        mid = (lx0 + lx1) / 2
-        gap = cw * 0.025
-        d.rectangle([tx0, yw - ol, tx1, yw + leg * 0.06], fill=(36, 30, 30), outline=OUT, width=ol)
-        for a_, b_ in ((lx0, mid - gap), (mid + gap, lx1)):
-            d.rectangle([a_, yw + leg * 0.06, b_, yw + leg * 0.9], fill=calca, outline=OUT, width=ol)
-            d.rounded_rectangle([a_ - cw * 0.03, yw + leg * 0.88, b_ + cw * 0.05, yw + leg],
-                                radius=int(cw * 0.05), fill=(250, 250, 250), outline=OUT, width=ol)
-            d.rectangle([a_ - cw * 0.02, yw + leg * 0.95, b_ + cw * 0.04, yw + leg - ol], fill=(44, 44, 50))
-        bb = canvas.getbbox()
-        canvas = canvas.crop((0, 0, canvas.width, bb[3]))  # corta só embaixo: coordenadas do rosto não mudam
+        im = im.crop((0, 0, im.width, int(min(im.height, ey + m["dd"] * 3.4))))
+    if modo == "corpo" and est in ("catalogo", "catalogo_corpo"):
         m["busto"] = False
-        return canvas, m
+        return _gerar_corpo(im, m), m
     m["busto"] = modo == "busto"
     return im, m
 

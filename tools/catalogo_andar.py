@@ -18,8 +18,23 @@ LW = 7                     # contorno (em coordenadas 1x)
 PELES = {"clara": (246, 205, 170), "media": (232, 178, 132), "morena": (196, 138, 98), "escura": (140, 92, 64)}
 
 
+YMAP = [False]
+
+
+def _y(y):
+    """Corpo mais curto: tronco e pernas comprimidos (a cabeça não muda)."""
+    if not YMAP[0] or y <= 430:
+        return y
+    if y <= 935:
+        return 430 + (y - 430) * 0.70
+    return 430 + 505 * 0.70 + (y - 935) * 0.80
+
+
 def sc(v):
-    return [c * S for c in v]
+    out = []
+    for i, c in enumerate(v):
+        out.append((_y(c) if i % 2 else c) * S)
+    return out
 
 
 class Pen:
@@ -39,10 +54,10 @@ class Pen:
         self.d.chord(sc(box), a0, a1, fill=fill, outline=OL if ol else None, width=w * S if ol else 0)
 
     def poly(self, pts, fill, ol=True, w=LW):
-        self.d.polygon([(x * S, y * S) for x, y in pts], fill=fill, outline=OL if ol else None, width=w * S if ol else 0)
+        self.d.polygon([(x * S, _y(y) * S) for x, y in pts], fill=fill, outline=OL if ol else None, width=w * S if ol else 0)
 
     def line(self, pts, fill=OL, w=LW):
-        self.d.line([(x * S, y * S) for x, y in pts], fill=fill, width=w * S, joint="curve")
+        self.d.line([(x * S, _y(y) * S) for x, y in pts], fill=fill, width=w * S, joint="curve")
 
     def arc(self, box, a0, a1, fill=OL, w=LW):
         self.d.arc(sc(box), a0, a1, fill=fill, width=w * S)
@@ -92,33 +107,30 @@ def corpo(p, c):
     elif baixo == "bermuda":
         for x0, x1 in ((165, 285), (315, 435)):
             p.rect([x0, 1080, x1, 1320], pele)
-        p.rect([140, 915, 295, 1110], calca)
-        p.rect([305, 915, 460, 1110], calca)
+        p.rect([150, 900, 292, 1110], calca)
+        p.rect([308, 900, 450, 1110], calca)
     else:
         if tipo == "macacao":
             calca = roupa
-        p.rect([140, 915, 295, 1325], calca)
-        p.rect([305, 915, 460, 1325], calca)
+        p.rect([150, 900, 292, 1325], calca)
+        p.rect([308, 900, 450, 1325], calca)
     tenis = c.get("tenis", (250, 250, 250))
     for x0, x1 in ((122, 300), (300, 478)):
         p.rect([x0, 1295, x1, 1378], tenis, r=28)
         p.rect([x0 + 4, 1350, x1 - 4, 1372], (46, 46, 52), ol=False)
     # braços
-    for x0, x1 in ((62, 142), (458, 538)):
+    for x0, x1 in ((40, 126), (474, 560)):
         if curta:
-            p.rect([x0, 480, x1, 870], pele, r=36)
+            p.rect([x0, 500, x1, 840], pele, r=42)
             if tipo != "regata":
-                p.rect([x0 - 4, 470, x1 + 4, 640], manga, r=30)
+                p.rect([x0 - 4, 488, x1 + 4, 650], manga, r=42)
         else:
-            p.rect([x0, 470, x1, 870], manga, r=36)
-        p.ell([x0 - 6, 830, x1 + 6, 915], pele)
+            p.rect([x0, 488, x1, 840], manga, r=42)
+        p.ell([x0 - 2, 800, x1 + 2, 886], pele)
     # tronco
-    if baixo != "vestido" or tipo != "vestido":
-        p.rect([110, 440, 490, 905], roupa, r=48)
-    else:
-        p.rect([110, 440, 490, 905], roupa, r=48)
-    if baixo in ("calca", "bermuda") and tipo not in ("macacao", "vestido"):
-        p.rect([126, 880, 474, 925], c.get("cinto", (40, 30, 28)))
+    p.rect([92, 430, 508, 935], roupa, r=95)
+    if c.get("cinto"):
+        p.rect([118, 885, 482, 925], c["cinto"])
     detalhes_roupa(p, c, tipo, roupa)
 
 
@@ -127,15 +139,15 @@ def detalhes_roupa(p, c, tipo, roupa):
     camisa = c.get("camisa", (245, 245, 240))
     if tipo == "moletom":
         p.rect([185, 425, 415, 500], escuro, r=36)
-        p.line([(268, 490), (262, 610)], (250, 250, 250), w=8)
-        p.line([(332, 490), (338, 610)], (250, 250, 250), w=8)
-        p.rect([185, 745, 415, 860], escuro, r=26)
+        p.line([(268, 490), (262, 640)], (250, 250, 250), w=9)
+        p.line([(332, 490), (338, 640)], (250, 250, 250), w=9)
+        p.rect([175, 760, 425, 890], escuro, r=30)
     elif tipo in ("camiseta", "regata"):
         p.chord([225, 405, 375, 505], 0, 180, c["pele"])
     elif tipo == "listrada":
-        for y in range(500, 880, 70):
-            p.rect([114, y, 486, y + 32], c.get("listra", (250, 250, 250)), ol=False)
-        p.rect([110, 440, 490, 905], None, r=48)
+        for y in range(520, 880, 70):
+            p.rect([100, y, 500, y + 32], c.get("listra", (250, 250, 250)), ol=False)
+        p.rect([92, 430, 508, 935], None, r=95)
         p.chord([225, 405, 375, 505], 0, 180, c["pele"])
     elif tipo == "polo":
         p.poly([(245, 440), (300, 470), (270, 520)], escuro)
@@ -215,15 +227,15 @@ def detalhes_roupa(p, c, tipo, roupa):
         p.rect([250, 640, 350, 720], clarear(roupa, 0.15), w=4)
     elif tipo == "vestido":
         p.chord([225, 405, 375, 505], 0, 180, c["pele"])
-        p.rect([112, 690, 488, 715], escuro, ol=False)
+        p.rect([96, 690, 504, 715], escuro, ol=False)
     elif tipo == "blazer":
         p.poly([(245, 440), (355, 440), (300, 620)], camisa)
         p.line([(245, 440), (300, 620), (300, 900)], w=5)
         p.line([(355, 440), (300, 620)], w=5)
     if c.get("alcas"):
         cor = c["alcas"]
-        p.rect([150, 455, 188, 905], cor, w=5)
-        p.rect([412, 455, 450, 905], cor, w=5)
+        p.rect([128, 460, 168, 900], cor, w=5)
+        p.rect([432, 460, 472, 900], cor, w=5)
     if c.get("estampa") == "flor":
         for k in range(5):
             a = math.radians(k * 72)
@@ -237,7 +249,7 @@ def detalhes_roupa(p, c, tipo, roupa):
         p.ell([325, 630, 343, 648], (60, 60, 70), w=3)
         p.ell([345, 645, 363, 663], (60, 60, 70), w=3)
     if c.get("numero"):
-        p.d.text((300 * S, 640 * S), c["numero"], fill=(240, 240, 240), anchor="mm",
+        p.d.text((300 * S, _y(640) * S), c["numero"], fill=(240, 240, 240), anchor="mm",
                  font=_font(70 * S))
 
 
@@ -373,12 +385,15 @@ def desenhar(c):
     im = Image.new("RGBA", (W * S, H * S), (0, 0, 0, 0))
     p = Pen(ImageDraw.Draw(im))
     cabelo_atras(p, c)
+    YMAP[0] = True
     corpo(p, c)
+    YMAP[0] = False
     cabeca(p, c)
     rosto(p, c)
     cabelo_frente(p, c)
     chapeu(p, c)
-    return im.resize((W, H), Image.LANCZOS)
+    im = im.resize((W, H), Image.LANCZOS)
+    return im.crop((0, 0, W, im.getbbox()[3]))
 
 
 # ------------------------------------------------------------------ elenco
@@ -433,7 +448,7 @@ def gerar():
         im = desenhar(c)
         im.save(os.path.join(OUTDIR, f"{nome}.png"))
         boca_y = 400 if c.get("bigode") else 386
-        meta[nome] = {"w": W, "h": H, "exato": True, "desc": c["desc"],
+        meta[nome] = {"w": W, "h": im.height, "exato": True, "desc": c["desc"],
                       "olhos": [[188, 260, 268, 340], [332, 260, 412, 340]], "olho_h": 80, "dd": 144,
                       "boca": [300, boca_y], "boca_w": 76, "pele": list(c["pele"]), "bigode": bool(c.get("bigode"))}
     with open(os.path.join(OUTDIR, "rostos.json"), "w") as f:

@@ -265,9 +265,7 @@ def _variante(name, modo):
     """Mesmo personagem em close ('busto') ou de pé ('corpo')."""
     im, m = _base(name)
     m = dict(m)
-    if estilo_de(name) == "andar" and modo == "busto":
-        ey = (m["olhos"][0][1] + m["olhos"][0][3]) / 2
-        im = im.crop((0, 0, im.width, int(min(im.height, ey + m["dd"] * 3.4))))
+    # close no estilo "andar": o desenho inteiro, grande, cortado pela borda da tela (sem esticar o tronco)
     m["busto"] = modo == "busto"
     return im, m
 
@@ -349,7 +347,7 @@ def render(name, altura, eyes="normal", mouth="idle", brows=None, flip=False, mo
     oa = np.minimum(np.asarray(over.split()[3]), np.asarray(inner))
     over.putalpha(Image.fromarray(oa.astype(np.uint8)))
     big.alpha_composite(over)
-    if modo == "busto":
+    if modo == "busto" and not m.get("exato"):
         # o busto continua até a base da tela: estica a última linha (roupa) para baixo
         ext = int(big.height * 0.6)
         row = big.crop((0, big.height - 2, big.width, big.height - 1)).resize((big.width, ext))

@@ -110,6 +110,7 @@ Antes de escrever qualquer parte, leia `APRENDIZADOS.md` e aplique as recomenda�
 - `prop.type`: `lista`/`carta` (title + lines; linha começando com `!` fica vermelha), `bilhete` (lines), `celular` (title + lines), `placa` (title). Use em cenas sem personagens.
 - Personagens: use os desenhos das cartelas (veja "Estilos de personagens"). Na cena use `ref` + `x`, `scale`, `eyes`, `brows`, `mouth`, `flip`. No máximo 2 personagens por cena. (Os campos antigos `skin`, `cloth`, `hairstyle`... só valem para as histórias antigas que já usavam desenho próprio.)
 - `tint`: [r,g,b] opcional para clima (ex.: vermelho no clímax).
+- `"filtro": "tv"`: cena vista por câmera de segurança / TV velha (cor lavada, linhas, chiado, "CAM 03", REC piscando e relógio). Use em cenas de câmera, gravação, lembrança ou quando alguém observa de longe (ex.: o porteiro na câmera do prédio). No máximo 1 ou 2 cenas por parte.
 
 ### Vozes e falas (cada personagem tem a sua voz)
 

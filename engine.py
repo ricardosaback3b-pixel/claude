@@ -624,6 +624,41 @@ def camera(img, cam, t):
     return img.resize((W, H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + chh))
 
 
+_tv_lines = None
+
+
+def filtro_tv(frame, ft, rng=np.random.default_rng(7)):
+    """Filtro de câmera de segurança / TV velha: cor lavada, linhas, chiado, faixa rolando, CAM e REC."""
+    global _tv_lines
+    a = np.asarray(frame.convert("RGB")).astype(np.float32)
+    g = a.mean(axis=2, keepdims=True)
+    a = a * 0.45 + g * 0.55
+    a[..., 1] *= 1.06
+    a[..., 2] *= 0.92
+    if _tv_lines is None:
+        _tv_lines = np.ones((H, 1, 1), np.float32)
+        _tv_lines[::4] = 0.72
+        _tv_lines[1::4] = 0.86
+    a *= _tv_lines
+    a += rng.normal(0, 14, (H // 2, W // 2, 1)).repeat(2, 0).repeat(2, 1)
+    yb = int((ft * 260) % (H + 200)) - 100
+    a[max(0, yb):max(0, yb + 60)] += 22
+    a = np.roll(a, 3, axis=1) * 0.5 + a * 0.5
+    yy, xx = np.ogrid[:H, :W]
+    vig = 1 - 0.45 * (((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2)
+    a *= np.clip(vig, 0.35, 1)[..., None]
+    out = Image.fromarray(np.clip(a, 0, 255).astype(np.uint8)).convert("RGBA")
+    d = ImageDraw.Draw(out)
+    f = font(MONT, 40, True)
+    d.text((50, 320), "CAM 03", font=f, fill=(235, 235, 235))
+    if int(ft * 2) % 2 == 0:
+        d.ellipse([W - 230, 312, W - 200, 342], fill=(230, 40, 40))
+    d.text((W - 185, 327), "REC", font=f, fill=(235, 235, 235), anchor="lm")
+    seg = int(ft) % 60
+    d.text((50, 380), f"23:59:{seg:02d}", font=font(MONT, 34, True), fill=(220, 220, 220))
+    return out
+
+
 def overlay_static_ep(meta):
     """Topo dos episódios: @ no canto, faixa branca 'PARTE N · ...' e faixa amarela de votação."""
     lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -940,6 +975,8 @@ def render(script, out_dir):
                     y = int((c.get("y", 0.86) - 0.07) * BH - spr.height + bob)
                 src.paste(spr, (x, y), spr)
         frame = camera(src, sc.get("cam", "in"), (ft - st) / dur).convert("RGBA")
+        if sc.get("filtro") == "tv":
+            frame = filtro_tv(frame, ft)
         if ft - st < 0.12 and k > 0:
             frame.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, int(110 * (1 - (ft - st) / 0.12)))))
         frame.alpha_composite(over)

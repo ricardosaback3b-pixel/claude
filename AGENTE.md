@@ -55,6 +55,10 @@ O dono da conta autorizou a publicação sem aprovação prévia.
 - `votacao`: escreva só a parte 1. Cada parte (1 a 5) termina num **dilema de verdade**: duas opções (`script.opcoes`: ["texto A", "texto B"], curtas) em que **as duas têm um preço** (salvar alguém x salvar a si mesmo, confiar x desconfiar, contar a verdade x proteger alguém). Nada de opção obviamente certa. As últimas 2 cenas montam a tensão da escolha (relógio, ameaça, alguém pedindo ajuda) e a última pergunta direto ao público: "E você, o que faria?". A parte seguinte começa mostrando a consequência da escolha da maioria.
 - Slug em minúsculas com hífens. Crie `historias/<slug>/historia.json` (campos: slug, titulo, tipo, genero, status, biblia, personagens, partes) e registre em `estado.json > ativas` como `{"slug": ..., "tipo": ...}`.
 
+## Elenco salvo de cada história
+
+Cada história tem `historias/<slug>/elenco.json` (estilo/catálogo + desenho e voz de cada personagem), `falas.json` (vozes e tudo o que cada personagem falou em cada parte) e o resumo geral em `ELENCOS.md`. Leia o elenco antes de escrever qualquer parte. Ao criar uma história nova ou um personagem novo, atualize `elenco.json`, `falas.json` e `ELENCOS.md` no mesmo commit (o `tools/preparar.py` já grava as falas).
+
 ## Estilos de personagens (obrigatório usar só estes desenhos)
 
 Existem **só dois estilos**. Cada história usa **um estilo só**, gravado em `historia.json > estilo`, e **as histórias novas alternam** entre eles (`estado.json > ultimo_estilo`: a próxima história nova usa o outro estilo e atualiza esse campo).

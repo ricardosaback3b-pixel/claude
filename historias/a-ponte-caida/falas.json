@@ -1,0 +1,33 @@
+{
+ "vozes": {
+  "RAFA": {
+   "nome": "Rafa",
+   "sprite": "fotografo",
+   "voz": "piper:cadu",
+   "pitch": 1.0,
+   "speed": 1.0
+  },
+  "CELIA": {
+   "nome": "Dona Célia",
+   "sprite": "vovozinha",
+   "voz": "kokoro:pf_dora",
+   "pitch": 0.88,
+   "speed": 0.9
+  },
+  "JUNIOR": {
+   "nome": "Júnior",
+   "sprite": "garoto_gorro_preto",
+   "voz": "kokoro:pm_alex",
+   "pitch": 1.12,
+   "speed": 1.06
+  },
+  "MARINA": {
+   "nome": "Marina",
+   "sprite": "moca_loira",
+   "voz": "kokoro:pf_dora",
+   "pitch": 1.02,
+   "speed": 1.0
+  }
+ },
+ "partes": {}
+}

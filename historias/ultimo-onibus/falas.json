@@ -2,36 +2,42 @@
  "vozes": {
   "LIA": {
    "nome": "Lia",
+   "sprite": "garota_moletom_roxo",
    "voz": "kokoro:pf_dora",
    "pitch": 1.0,
    "speed": 1.0
   },
   "IVO": {
    "nome": "Seu Ivo",
+   "sprite": "porteiro",
    "voz": "kokoro:pm_santa",
    "pitch": 0.94,
    "speed": 0.92
   },
   "MOTORISTA": {
    "nome": "Motorista",
+   "sprite": "motorista",
    "voz": "kokoro:pm_santa",
    "pitch": 0.85,
    "speed": 0.9
   },
   "LIA_VELHA": {
    "nome": "Lia mais velha",
+   "sprite": "mulher_vestido_roxo",
    "voz": "kokoro:pf_dora",
    "pitch": 0.86,
    "speed": 0.9
   },
   "MENINA": {
    "nome": "Menina",
+   "sprite": "menina_laco_vermelho",
    "voz": "kokoro:pf_dora",
    "pitch": 1.22,
    "speed": 1.05
   },
   "BIA": {
    "nome": "Bia",
+   "sprite": "menina_vestido_rosa",
    "voz": "kokoro:pf_dora",
    "pitch": 1.1,
    "speed": 1.05

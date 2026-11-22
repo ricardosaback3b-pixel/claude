@@ -1,0 +1,50 @@
+{
+ "slug": "o-sombra-da-sala-12",
+ "titulo": "O Sombra da Sala 12",
+ "estilo": "andar",
+ "narrador": "TEO",
+ "personagens": {
+  "TEO": {
+   "nome": "Teo",
+   "sprite": "andar_menino",
+   "voz": "kokoro:pm_alex",
+   "pitch": 1.12,
+   "speed": 1.04
+  },
+  "NINA": {
+   "nome": "Nina",
+   "sprite": "andar_leitora",
+   "voz": "kokoro:pf_dora",
+   "pitch": 1.14,
+   "speed": 1.05
+  },
+  "CAIO": {
+   "nome": "Caio",
+   "sprite": "andar_rival",
+   "voz": "piper:faber",
+   "pitch": 1.1,
+   "speed": 1.04
+  },
+  "BENTO": {
+   "nome": "Seu Bento",
+   "sprite": "andar_zelador",
+   "voz": "kokoro:pm_santa",
+   "pitch": 0.9,
+   "speed": 0.92
+  },
+  "RUI": {
+   "nome": "Prof. Rui",
+   "sprite": "andar_professor",
+   "voz": "piper:jeff",
+   "pitch": 0.98,
+   "speed": 1.0
+  },
+  "MARTA": {
+   "nome": "Diretora Marta",
+   "sprite": "andar_jornalista",
+   "voz": "kokoro:pf_dora",
+   "pitch": 0.92,
+   "speed": 0.95
+  }
+ }
+}

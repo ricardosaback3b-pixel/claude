@@ -64,6 +64,8 @@ Antes de escrever qualquer parte, leia `APRENDIZADOS.md` e aplique as recomenda�
 
 ## Responder antes de apurar
 
+- **Registro único de respostas:** `comentarios_respondidos.json` guarda `{comment_id: data}` de todo comentário já respondido por qualquer tarefa. Antes de responder, pule os que já estão lá (os dados do Windsor podem demorar para mostrar nossas respostas). Logo depois de responder, acrescente o `comment_id` e faça commit + push.
+
 - Use `execute_action` com `reply_to_comment` (`comment_id`, `message`). Só comentários principais de outras pessoas que ainda não têm resposta da @mundoemhistorias (confira as respostas: linhas com `comment_parent_id` = esse comentário e `comment_username` = mundoemhistorias). Nunca responda o mesmo comentário duas vezes.
 - Só votou ("A", "B"): confirme o voto, diga que a Parte N+1 sai em breve e convide a seguir. Sem pergunta.
 - Opinou, brincou ou teorizou: reaja ao que a pessoa disse, de forma leve e provocativa; pode terminar com pergunta.

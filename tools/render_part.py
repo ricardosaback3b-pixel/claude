@@ -56,6 +56,19 @@ def main(slug, n):
     with open(path) as f:
         story = json.load(f)
     part = next(p for p in story["partes"] if p["n"] == n)
+    # Trava de personagens: na primeira renderização guarda uma cópia; depois, qualquer mudança
+    # de visual ou voz de um personagem existente faz a renderização parar com erro.
+    lock = story.get("personagens_travados")
+    if lock is None:
+        story["personagens_travados"] = json.loads(json.dumps(story.get("personagens", {})))
+        with open(path, "w") as f:
+            json.dump(story, f, ensure_ascii=False, indent=1)
+    else:
+        for ref, spec in lock.items():
+            atual = story.get("personagens", {}).get(ref)
+            if atual != spec:
+                sys.exit(f"ERRO: o personagem {ref} mudou de visual ou voz. Restaure em 'personagens' "
+                         f"exatamente o que está em 'personagens_travados'.")
     data = resolve(story, part)
     tmp = os.path.join("/tmp", f"render_{slug}_{n}")
     shutil.rmtree(tmp, ignore_errors=True)

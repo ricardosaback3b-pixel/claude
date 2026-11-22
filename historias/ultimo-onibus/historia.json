@@ -1,0 +1,694 @@
+{
+ "slug": "ultimo-onibus",
+ "titulo": "O Último Ônibus",
+ "tipo": "continua",
+ "status": "ativa",
+ "biblia": "Lia (narradora, 1ª pessoa) perde o último ônibus e pega um ônibus sem número que passa à meia-noite na Rua 9. Ele é feito de coisas não ditas: cada parada mostra um segredo escondido. Passageiros: Seu Ivo (porteiro falecido, guia gentil), uma menina de uniforme (ajuda a fugir pela parada 4), o motorista (é Lia 40 anos mais velha, o que ela vira se continuar fugindo). Segredo de Lia: escondeu sob o piso da casa de infância uma carta do pai para a irmã Bia. Bia entra no ônibus na parada 3 sem memória. Para sair, alguém diz a verdade antes da última parada. Final: Lia conta, acorda no ponto ao amanhecer, Bia atende, a carta está lá, o ônibus volta com número e Seu Ivo acena.",
+ "personagens": {
+  "LIA": {
+   "skin": [
+    198,
+    140,
+    105
+   ],
+   "cloth": [
+    96,
+    44,
+    130
+   ],
+   "hair": [
+    30,
+    20,
+    16
+   ],
+   "hairstyle": "longo"
+  },
+  "IVO": {
+   "skin": [
+    160,
+    112,
+    84
+   ],
+   "cloth": [
+    58,
+    84,
+    62
+   ],
+   "hairstyle": "bone",
+   "cap": [
+    26,
+    54,
+    38
+   ],
+   "age": true
+  },
+  "MOTORISTA": {
+   "cloth": [
+    24,
+    24,
+    30
+   ],
+   "hairstyle": "capuz",
+   "shadow_face": true
+  },
+  "LIA_VELHA": {
+   "skin": [
+    190,
+    135,
+    105
+   ],
+   "cloth": [
+    40,
+    40,
+    48
+   ],
+   "hair": [
+    170,
+    170,
+    170
+   ],
+   "hairstyle": "longo",
+   "age": true
+  },
+  "MENINA": {
+   "skin": [
+    236,
+    188,
+    150
+   ],
+   "cloth": [
+    36,
+    58,
+    140
+   ],
+   "hair": [
+    60,
+    34,
+    20
+   ],
+   "hairstyle": "coque",
+   "uniform": true
+  },
+  "BIA": {
+   "skin": [
+    198,
+    140,
+    105
+   ],
+   "cloth": [
+    214,
+    128,
+    40
+   ],
+   "hair": [
+    80,
+    46,
+    20
+   ],
+   "hairstyle": "curto"
+  }
+ },
+ "partes": [
+  {
+   "n": 1,
+   "status": "pronta",
+   "script": {
+    "cover_text": "Nunca pegue esse ônibus",
+    "scenes": [
+     {
+      "bg": "rua_noite",
+      "cam": "in",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "LIA",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Toda noite, à *meia-noite*, passa um ônibus *sem número* na Rua 9. E ninguém nunca entra."
+     },
+     {
+      "bg": "rua_noite",
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "LIA",
+        "x": 0.32,
+        "scale": 0.85,
+        "eyes": "normal",
+        "look": 1
+       }
+      ],
+      "text": "Hoje eu perdi o último ônibus normal. Celular sem bateria. Rua vazia."
+     },
+     {
+      "bg": "onibus_fora",
+      "cam": "zoom_forte",
+      "hook": true,
+      "text": "Às 00:00 ele parou na minha frente. A porta abriu *sozinha*."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "MOTORISTA",
+        "x": 0.2,
+        "scale": 0.8,
+        "y": 0.8
+       },
+       {
+        "ref": "LIA",
+        "x": 0.72,
+        "scale": 0.85,
+        "eyes": "normal",
+        "look": -1
+       }
+      ],
+      "text": "Eu entrei. O motorista não virou o rosto. E no espelho... *não tinha reflexo*."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "IVO",
+        "x": 0.3,
+        "scale": 0.8,
+        "y": 0.78,
+        "eyes": "normal"
+       },
+       {
+        "ref": "LIA",
+        "x": 0.75,
+        "scale": 0.85,
+        "eyes": "arregalado",
+        "mouth": "o",
+        "look": -1
+       }
+      ],
+      "text": "No fundo, sentado, estava o *Seu Ivo*. O porteiro do meu prédio. Que morreu ano passado."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "shake",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "IVO",
+        "x": 0.5,
+        "scale": 1.15,
+        "y": 0.92,
+        "eyes": "arregalado"
+       }
+      ],
+      "text": "Ele me olhou e disse: *Você não devia estar aqui.* *Ainda.*"
+     }
+    ],
+    "caption": "Toda noite à meia-noite passa um ônibus sem número na Rua 9... e ninguém entra. 🚌\n\nVocê entraria? 👇\n\nParte 2 em breve. Segue @mundoemhistorias 🔔\n\n#historia #misterio #suspense #terror #historiasempartes #contos"
+   }
+  },
+  {
+   "n": 2,
+   "status": "pronta",
+   "script": {
+    "cover_text": "A parada do que você escondeu",
+    "scenes": [
+     {
+      "bg": "onibus_dentro",
+      "cam": "in",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "IVO",
+        "x": 0.5,
+        "scale": 1.0,
+        "y": 0.88
+       }
+      ],
+      "text": "Seu Ivo explicou: esse ônibus para onde você *escondeu alguma coisa*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "in",
+      "prop": {
+       "type": "placa",
+       "title": "PARADA 1"
+      },
+      "text": "Um letreiro acendeu. *Parada 1.* O ônibus freou."
+     },
+     {
+      "bg": "casa_noite",
+      "window": true,
+      "cam": "zoom_forte",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "LIA",
+        "hairstyle": "coque",
+        "x": 0.35,
+        "scale": 0.3,
+        "y": 0.664
+       }
+      ],
+      "text": "Era a *minha casa* de infância. E na janela... uma menina de 8 anos. *Eu.*"
+     },
+     {
+      "bg": "casa_noite",
+      "window": true,
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "LIA",
+        "hairstyle": "coque",
+        "x": 0.35,
+        "scale": 0.3,
+        "y": 0.664,
+        "prop": "papel"
+       }
+      ],
+      "text": "Eu via a mim mesma tirando uma tábua do chão e escondendo um *envelope*."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "IVO",
+        "x": 0.28,
+        "scale": 0.8,
+        "y": 0.8
+       },
+       {
+        "ref": "LIA",
+        "x": 0.72,
+        "scale": 0.85,
+        "eyes": "arregalado",
+        "look": -1
+       }
+      ],
+      "text": "Seu Ivo disse que a última parada é onde *ninguém desce*. E me deu um papel."
+     },
+     {
+      "bg": "escuro",
+      "cam": "shake",
+      "hook": true,
+      "prop": {
+       "type": "lista",
+       "title": "PASSAGEIROS",
+       "lines": [
+        "Ivo Ramos",
+        "Marta Souza",
+        "Jonas Prado",
+        "!LIA MATOS — HOJE"
+       ]
+      },
+      "text": "Era a lista de passageiros. E o último nome era o *meu*. Com a data de *hoje*."
+     }
+    ],
+    "caption": "Parte 2 — A parada do que você escondeu 🚌\n\nO último nome da lista era o dela. Com a data de hoje.\n\nO que você acha que tem no envelope? 👇\n\nParte 3 em breve. Segue @mundoemhistorias 🔔\n\n#historia #misterio #suspense #terror #historiasempartes #contos"
+   }
+  },
+  {
+   "n": 3,
+   "status": "pronta",
+   "script": {
+    "cover_text": "A porta que não abre",
+    "scenes": [
+     {
+      "bg": "onibus_dentro",
+      "cam": "shake",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "LIA",
+        "x": 0.5,
+        "scale": 1.0,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Eu corri pra porta. Apertei o botão. *Nada.* Ela não abria."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "MENINA",
+        "x": 0.3,
+        "scale": 0.75,
+        "y": 0.82,
+        "prop": "papel",
+        "flip": true
+       },
+       {
+        "ref": "LIA",
+        "x": 0.72,
+        "scale": 0.85,
+        "look": -1
+       }
+      ],
+      "text": "Uma menina de uniforme sentou do meu lado. Sem falar nada, me passou um *bilhete*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "in",
+      "prop": {
+       "type": "bilhete",
+       "lines": [
+        "Desce na PARADA 4.",
+        "É a única porta",
+        "que abre.",
+        "!Não conta pra ele."
+       ]
+      },
+      "text": "*Desce na parada 4.* É a única porta que abre. *Não conta pra ele.*"
+     },
+     {
+      "bg": "escuro",
+      "cam": "in",
+      "prop": {
+       "type": "placa",
+       "title": "PARADA 3"
+      },
+      "text": "O letreiro mudou. *Parada 3.*"
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "celular",
+       "title": "BIA",
+       "lines": [
+        "Chamada perdida",
+        "17 chamadas"
+       ]
+      },
+      "text": "Na janela, eu vi a noite em que minha irmã me ligou *17 vezes*. E eu não atendi."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "shake",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "BIA",
+        "x": 0.5,
+        "scale": 1.05,
+        "y": 0.9,
+        "eyes": "normal"
+       }
+      ],
+      "text": "A porta abriu. E quem entrou... foi a *minha irmã*."
+     }
+    ],
+    "caption": "Parte 3 — A porta que não abre 🚪\n\nQuem é a menina do bilhete? Conta sua teoria 👇\n\nParte 4 em breve. Segue @mundoemhistorias 🔔\n\n#historia #misterio #suspense #terror #historiasempartes #contos"
+   }
+  },
+  {
+   "n": 4,
+   "status": "pronta",
+   "script": {
+    "cover_text": "O rosto do motorista",
+    "scenes": [
+     {
+      "bg": "onibus_dentro",
+      "cam": "in",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "BIA",
+        "x": 0.35,
+        "scale": 0.9,
+        "look": 1
+       },
+       {
+        "ref": "LIA",
+        "x": 0.72,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "o",
+        "look": -1
+       }
+      ],
+      "text": "Eu chamei: *Bia!* Ela olhou pra mim... como se nunca tivesse me visto."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "IVO",
+        "x": 0.5,
+        "scale": 0.9,
+        "y": 0.84
+       }
+      ],
+      "text": "Seu Ivo cochichou: quem chega na última parada *esquece tudo*. E vira passageiro pra sempre."
+     },
+     {
+      "bg": "escuro",
+      "cam": "in",
+      "prop": {
+       "type": "placa",
+       "title": "PARADA 4"
+      },
+      "text": "*Parada 4.* A porta de trás abriu. A menina desceu... e *sumiu* no escuro."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "LIA",
+        "x": 0.5,
+        "scale": 1.0,
+        "eyes": "normal",
+        "mouth": "triste"
+       }
+      ],
+      "text": "Era a minha chance. Mas eu não ia deixar a Bia *sozinha* aqui dentro."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "zoom_forte",
+      "chars": [
+       {
+        "ref": "MOTORISTA",
+        "x": 0.5,
+        "scale": 1.1,
+        "y": 0.9
+       }
+      ],
+      "text": "A porta fechou. E o motorista, pela primeira vez, *virou o rosto*."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "shake",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "LIA_VELHA",
+        "x": 0.5,
+        "scale": 1.15,
+        "y": 0.92,
+        "eyes": "normal",
+        "mouth": "sorriso"
+       }
+      ],
+      "text": "Era o *meu rosto*. Só que 40 anos *mais velho*."
+     }
+    ],
+    "caption": "Parte 4 — O rosto do motorista 😨\n\nVocê descia na parada 4 ou ficava pela sua irmã? 👇\n\nParte 5 em breve. Segue @mundoemhistorias 🔔\n\n#historia #misterio #suspense #terror #historiasempartes #contos"
+   }
+  },
+  {
+   "n": 5,
+   "status": "pronta",
+   "script": {
+    "cover_text": "Alguém precisa dizer a verdade",
+    "scenes": [
+     {
+      "bg": "onibus_dentro",
+      "cam": "in",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "LIA_VELHA",
+        "x": 0.5,
+        "scale": 1.05,
+        "y": 0.9
+       }
+      ],
+      "text": "Ela disse: *eu sou você*, se continuar fugindo do que escondeu."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "LIA_VELHA",
+        "x": 0.3,
+        "scale": 0.85,
+        "y": 0.84
+       },
+       {
+        "ref": "LIA",
+        "x": 0.74,
+        "scale": 0.85,
+        "look": -1
+       }
+      ],
+      "text": "Esse ônibus é feito de *coisas não ditas*. Cada passageiro guardou um segredo até o fim."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "hook": true,
+      "text": "Pra sair, alguém tem que dizer a verdade *em voz alta*. Antes da última parada."
+     },
+     {
+      "bg": "escuro",
+      "cam": "in",
+      "prop": {
+       "type": "carta",
+       "title": "PRA BIA",
+       "lines": [
+        "Filha, eu volto.",
+        "Me espera no",
+        "ponto da Rua 9.",
+        "— Pai"
+       ]
+      },
+      "text": "Então eu contei. O envelope do chão era uma *carta do nosso pai*. Pra Bia. E eu escondi."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "BIA",
+        "x": 0.5,
+        "scale": 1.0,
+        "eyes": "fechado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "A Bia fechou os olhos. E uma lágrima caiu. Ela *lembrou*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "shake",
+      "hook": true,
+      "tint": [
+       200,
+       0,
+       20
+      ],
+      "prop": {
+       "type": "placa",
+       "title": "ÚLTIMA PARADA"
+      },
+      "text": "Aí o letreiro ficou *vermelho*. E as luzes *apagaram*."
+     }
+    ],
+    "caption": "Parte 5 — Alguém precisa dizer a verdade 💌\n\nVocê teria contado? 👇\n\nParte final em breve. Segue @mundoemhistorias 🔔\n\n#historia #misterio #suspense #terror #historiasempartes #contos"
+   }
+  },
+  {
+   "n": 6,
+   "status": "pronta",
+   "script": {
+    "cover_text": "A última parada",
+    "scenes": [
+     {
+      "bg": "rua_amanhecer",
+      "cam": "out",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "LIA",
+        "x": 0.5,
+        "scale": 0.95,
+        "eyes": "arregalado"
+       }
+      ],
+      "text": "Eu acordei no ponto da Rua 9. O céu estava *clareando*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "in",
+      "prop": {
+       "type": "celular",
+       "title": "BIA",
+       "lines": [
+        "Chamando..."
+       ]
+      },
+      "text": "Liguei pra Bia. Ela atendeu no *primeiro toque*. Chorando."
+     },
+     {
+      "bg": "rua_amanhecer",
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "BIA",
+        "x": 0.32,
+        "scale": 0.85,
+        "mouth": "sorriso",
+        "look": 1
+       },
+       {
+        "ref": "LIA",
+        "x": 0.72,
+        "scale": 0.85,
+        "mouth": "sorriso",
+        "look": -1
+       }
+      ],
+      "text": "Ela disse: *eu sonhei com você*. Num ônibus. E você me contou da carta."
+     },
+     {
+      "bg": "casa_noite",
+      "cam": "in",
+      "text": "Fomos na casa antiga. Tiramos a tábua. A carta *ainda estava lá*."
+     },
+     {
+      "bg": "onibus_fora",
+      "bg_params": {
+       "number": "Nº 9"
+      },
+      "cam": "zoom_forte",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "IVO",
+        "x": 0.7,
+        "scale": 0.45,
+        "y": 0.78,
+        "mouth": "sorriso"
+       }
+      ],
+      "text": "Na noite seguinte, o ônibus passou de novo. Agora *com número*. E Seu Ivo *acenou* da janela."
+     },
+     {
+      "bg": "escuro",
+      "cam": "in",
+      "text": "Se um ônibus sem número parar pra você... diga a verdade *antes da última parada*."
+     }
+    ],
+    "caption": "Parte 6 (FINAL) — A última parada 🚌\n\nGostou do final? Comenta qual parte te prendeu mais 👇\n\nComeça da Parte 1 no perfil. Nova história em breve. Segue @mundoemhistorias 🔔\n\n#historia #misterio #suspense #terror #historiasempartes #contos"
+   }
+  }
+ ]
+}

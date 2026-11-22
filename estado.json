@@ -1,0 +1,6 @@
+{
+ "horarios": "9h, 12h, 15h, 18h, 21h (America/Campo_Grande)",
+ "proximo_tipo": "continua",
+ "ativas": {"continua": "ultimo-onibus", "votacao": null},
+ "historico": []
+}

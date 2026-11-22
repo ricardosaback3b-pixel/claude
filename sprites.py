@@ -214,6 +214,14 @@ def render(name, altura, eyes="normal", mouth="idle", brows=None, flip=False):
     oa = np.minimum(np.asarray(over.split()[3]), np.asarray(inner))
     over.putalpha(Image.fromarray(oa.astype(np.uint8)))
     big.alpha_composite(over)
+    if m.get("busto"):
+        # o busto continua até a base da tela: estica a última linha (roupa) para baixo
+        ext = int(big.height * 0.6)
+        row = big.crop((0, big.height - 2, big.width, big.height - 1)).resize((big.width, ext))
+        tall = Image.new("RGBA", (big.width, big.height + ext), (0, 0, 0, 0))
+        tall.paste(big, (0, 0))
+        tall.paste(row, (0, big.height - 1))
+        big = tall
     if flip:
         big = big.transpose(Image.FLIP_LEFT_RIGHT)
     return big

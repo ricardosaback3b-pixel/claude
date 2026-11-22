@@ -3,130 +3,47 @@
  "titulo": "O Último Ônibus",
  "tipo": "continua",
  "status": "ativa",
- "biblia": "Lia (narradora, 1ª pessoa) perde o último ônibus e pega um ônibus sem número que passa à meia-noite na Rua 9. Ele é feito de coisas não ditas: cada parada mostra um segredo escondido. Passageiros: Seu Ivo (porteiro falecido, guia gentil), uma menina de uniforme (ajuda a fugir pela parada 4), o motorista (é Lia 40 anos mais velha, o que ela vira se continuar fugindo). Segredo de Lia: escondeu sob o piso da casa de infância uma carta do pai para a irmã Bia. Bia entra no ônibus na parada 3 sem memória. Para sair, alguém diz a verdade antes da última parada. Final: Lia conta, acorda no ponto ao amanhecer, Bia atende, a carta está lá, o ônibus volta com número e Seu Ivo acena.",
+ "biblia": "Lia (narradora, 1ª pessoa) perde o último ônibus e pega um ônibus sem número que passa à meia-noite na Rua 9. Ele é feito de coisas não ditas: cada parada mostra um segredo escondido. Passageiros: Seu Ivo (porteiro falecido, guia gentil), uma menina de uniforme (ajuda a fugir pela parada 4), o motorista (é Lia 40 anos mais velha, o que ela vira se continuar fugindo). Segredo de Lia: escondeu sob o piso da casa de infância uma carta do pai para a irmã Bia. Bia entra no ônibus na parada 3 sem memória. Para sair, alguém diz a verdade antes da última parada. Final: Lia conta, acorda no ponto ao amanhecer, Bia atende, a carta está lá, o ônibus volta com número e Seu Ivo acena. VISUAL DEFINITIVO a partir da Parte 2 (cartela do dono): Lia = garota de moletom roxo; Seu Ivo = porteiro de quepe azul; Motorista = motorista escurecido (rosto na sombra) até a revelação; Lia mais velha = mulher de vestido roxo; Menina de uniforme = menina do laço vermelho com mochila; Bia = menina de vestido rosa.",
  "personagens": {
   "LIA": {
-   "skin": [
-    198,
-    140,
-    105
-   ],
-   "cloth": [
-    96,
-    44,
-    130
-   ],
-   "hair": [
-    30,
-    20,
-    16
-   ],
-   "hairstyle": "longo",
    "nome": "Lia",
+   "sprite": "garota_moletom_roxo",
    "voz": "kokoro:pf_dora",
    "pitch": 1.0,
    "speed": 1.0
   },
   "IVO": {
-   "skin": [
-    160,
-    112,
-    84
-   ],
-   "cloth": [
-    58,
-    84,
-    62
-   ],
-   "hairstyle": "bone",
-   "cap": [
-    26,
-    54,
-    38
-   ],
-   "age": true,
    "nome": "Seu Ivo",
+   "sprite": "porteiro",
    "voz": "kokoro:pm_santa",
    "pitch": 0.94,
    "speed": 0.92
   },
   "MOTORISTA": {
-   "cloth": [
-    24,
-    24,
-    30
-   ],
-   "hairstyle": "capuz",
-   "shadow_face": true,
    "nome": "Motorista",
+   "sprite": "motorista",
    "voz": "kokoro:pm_santa",
    "pitch": 0.85,
-   "speed": 0.9
+   "speed": 0.9,
+   "escuro": true
   },
   "LIA_VELHA": {
-   "skin": [
-    190,
-    135,
-    105
-   ],
-   "cloth": [
-    40,
-    40,
-    48
-   ],
-   "hair": [
-    170,
-    170,
-    170
-   ],
-   "hairstyle": "longo",
-   "age": true,
    "nome": "Lia mais velha",
+   "sprite": "mulher_vestido_roxo",
    "voz": "kokoro:pf_dora",
    "pitch": 0.86,
    "speed": 0.9
   },
   "MENINA": {
-   "skin": [
-    236,
-    188,
-    150
-   ],
-   "cloth": [
-    36,
-    58,
-    140
-   ],
-   "hair": [
-    60,
-    34,
-    20
-   ],
-   "hairstyle": "coque",
-   "uniform": true,
    "nome": "Menina",
+   "sprite": "menina_laco_vermelho",
    "voz": "kokoro:pf_dora",
    "pitch": 1.22,
    "speed": 1.05
   },
   "BIA": {
-   "skin": [
-    198,
-    140,
-    105
-   ],
-   "cloth": [
-    214,
-    128,
-    40
-   ],
-   "hair": [
-    80,
-    46,
-    20
-   ],
-   "hairstyle": "curto",
    "nome": "Bia",
+   "sprite": "menina_vestido_rosa",
    "voz": "kokoro:pf_dora",
    "pitch": 1.1,
    "speed": 1.05
@@ -846,130 +763,48 @@
  "narrador": "LIA",
  "personagens_travados": {
   "LIA": {
-   "skin": [
-    198,
-    140,
-    105
-   ],
-   "cloth": [
-    96,
-    44,
-    130
-   ],
-   "hair": [
-    30,
-    20,
-    16
-   ],
-   "hairstyle": "longo",
    "nome": "Lia",
+   "sprite": "garota_moletom_roxo",
    "voz": "kokoro:pf_dora",
    "pitch": 1.0,
    "speed": 1.0
   },
   "IVO": {
-   "skin": [
-    160,
-    112,
-    84
-   ],
-   "cloth": [
-    58,
-    84,
-    62
-   ],
-   "hairstyle": "bone",
-   "cap": [
-    26,
-    54,
-    38
-   ],
-   "age": true,
    "nome": "Seu Ivo",
+   "sprite": "porteiro",
    "voz": "kokoro:pm_santa",
    "pitch": 0.94,
    "speed": 0.92
   },
   "MOTORISTA": {
-   "cloth": [
-    24,
-    24,
-    30
-   ],
-   "hairstyle": "capuz",
-   "shadow_face": true,
    "nome": "Motorista",
+   "sprite": "motorista",
    "voz": "kokoro:pm_santa",
    "pitch": 0.85,
-   "speed": 0.9
+   "speed": 0.9,
+   "escuro": true
   },
   "LIA_VELHA": {
-   "skin": [
-    190,
-    135,
-    105
-   ],
-   "cloth": [
-    40,
-    40,
-    48
-   ],
-   "hair": [
-    170,
-    170,
-    170
-   ],
-   "hairstyle": "longo",
-   "age": true,
    "nome": "Lia mais velha",
+   "sprite": "mulher_vestido_roxo",
    "voz": "kokoro:pf_dora",
    "pitch": 0.86,
    "speed": 0.9
   },
   "MENINA": {
-   "skin": [
-    236,
-    188,
-    150
-   ],
-   "cloth": [
-    36,
-    58,
-    140
-   ],
-   "hair": [
-    60,
-    34,
-    20
-   ],
-   "hairstyle": "coque",
-   "uniform": true,
    "nome": "Menina",
+   "sprite": "menina_laco_vermelho",
    "voz": "kokoro:pf_dora",
    "pitch": 1.22,
    "speed": 1.05
   },
   "BIA": {
-   "skin": [
-    198,
-    140,
-    105
-   ],
-   "cloth": [
-    214,
-    128,
-    40
-   ],
-   "hair": [
-    80,
-    46,
-    20
-   ],
-   "hairstyle": "curto",
    "nome": "Bia",
+   "sprite": "menina_vestido_rosa",
    "voz": "kokoro:pf_dora",
    "pitch": 1.1,
    "speed": 1.05
   }
- }
+ },
+ "estilo": "cartela"
 }

@@ -53,10 +53,35 @@ def resolve(story, part):
     return {"meta": meta, "scenes": scenes, "caption": caption}
 
 
+def checar_catalogos(story):
+    """Trava: todo personagem tem que vir das cartelas do dono, todos do mesmo estilo."""
+    import sprites
+    estilos = set()
+    for ref, spec in story.get("personagens", {}).items():
+        nome = spec.get("sprite")
+        if not nome:
+            sys.exit(f"ERRO: o personagem {ref} não usa um desenho dos catálogos do dono (falta 'sprite'). "
+                     f"Escolha um nome de sprites.lista().")
+        try:
+            estilos.add(sprites.estilo_de(nome))
+        except KeyError:
+            sys.exit(f"ERRO: '{nome}' (personagem {ref}) não existe nos catálogos do dono.")
+    if len(estilos) > 1:
+        sys.exit("ERRO: a história mistura os dois estilos (cartela e catálogo). Use um estilo só.")
+    if story.get("estilo") and estilos and story["estilo"] not in estilos:
+        sys.exit(f"ERRO: a história diz estilo '{story['estilo']}' mas os personagens são de outro estilo.")
+    for p in story.get("partes", []):
+        for sc in (p.get("script") or {}).get("scenes", []):
+            for c in sc.get("chars", []):
+                if not c.get("ref"):
+                    sys.exit("ERRO: personagem em cena sem 'ref'. Todo personagem em cena precisa vir de 'personagens'.")
+
+
 def main(slug, n):
     path = os.path.join(ROOT, "historias", slug, "historia.json")
     with open(path) as f:
         story = json.load(f)
+    checar_catalogos(story)
     part = next(p for p in story["partes"] if p["n"] == n)
     # Trava de personagens: na primeira renderização guarda uma cópia; depois, qualquer mudança
     # de visual ou voz de um personagem existente faz a renderização parar com erro.

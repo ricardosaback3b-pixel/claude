@@ -5,95 +5,25 @@
  "genero": "terror psicológico em prédio",
  "status": "ativa",
  "narrador": "PROTAGONISTA",
- "biblia": "Série antiga retomada (partes 1 e 2 já publicadas no estilo de desenho anterior; a partir da parte 3 continua no estilo atual, mantendo personagens e fatos). Premissa: num prédio de 20 andares, o elevador às vezes para num andar que não existe, o -1. Regra do prédio: nunca saia no andar que não existe. Protagonista (narrador, 1ª pessoa, jovem morador) fica preso no elevador com o Médico do 7º andar e o Porteiro fala pelo interfone. Parte 1: dilema A) sair no -1 com o médico ou B) ficar e confiar no porteiro. Venceu B (ficar). Parte 2: o médico tentou levar o protagonista pro -1 e acabou preso dentro do espelho do elevador; só um deles pode sair quando a porta abrir no 20º andar. Dilema: A) empurrar o médico de volta pro espelho ou B) correr pra porta primeiro. Votos até agora: B 2 x 0 A (nathalia_5003, kevin_12_zn). Ideias para o resto: o -1 guarda as pessoas que 'saíram' do prédio; o Porteiro sabe mais do que diz; o reflexo do espelho pode ser uma cópia do protagonista. Final planejado em aberto, decidido pelos votos, fechando o mistério do -1 na parte 6. VISUAL (igual aos vídeos originais, obrigatório): Você = cabelo castanho em tigela, moletom azul com cordões brancos e alças de mochila vermelhas; Médico = jaleco branco com crachá e camisa azul, cabelo grisalho; Porteiro = farda verde-oliva com botões dourados, quepe verde e bigode grisalho. Cenários de elevador e câmera de segurança (CAM 03) combinam com os originais.",
+ "biblia": "Série antiga retomada (partes 1 e 2 já publicadas no estilo de desenho anterior; a partir da parte 3 continua no estilo atual, mantendo personagens e fatos). Premissa: num prédio de 20 andares, o elevador às vezes para num andar que não existe, o -1. Regra do prédio: nunca saia no andar que não existe. Protagonista (narrador, 1ª pessoa, jovem morador) fica preso no elevador com o Médico do 7º andar e o Porteiro fala pelo interfone. Parte 1: dilema A) sair no -1 com o médico ou B) ficar e confiar no porteiro. Venceu B (ficar). Parte 2: o médico tentou levar o protagonista pro -1 e acabou preso dentro do espelho do elevador; só um deles pode sair quando a porta abrir no 20º andar. Dilema: A) empurrar o médico de volta pro espelho ou B) correr pra porta primeiro. Votos até agora: B 2 x 0 A (nathalia_5003, kevin_12_zn). Ideias para o resto: o -1 guarda as pessoas que 'saíram' do prédio; o Porteiro sabe mais do que diz; o reflexo do espelho pode ser uma cópia do protagonista. Final planejado em aberto, decidido pelos votos, fechando o mistério do -1 na parte 6. VISUAL (igual aos vídeos originais, obrigatório): Você = cabelo castanho em tigela, moletom azul com cordões brancos e alças de mochila vermelhas; Médico = jaleco branco com crachá e camisa azul, cabelo grisalho; Porteiro = farda verde-oliva com botões dourados, quepe verde e bigode grisalho. Cenários de elevador e câmera de segurança (CAM 03) combinam com os originais. VISUAL DEFINITIVO (catálogo do dono): Você = Ricardo; Porteiro = Sargento Alves (farda verde, bigode); Médico = Guilherme (jaleco).",
  "personagens": {
   "PROTAGONISTA": {
    "nome": "Você",
-   "skin": [
-    224,
-    170,
-    128
-   ],
-   "cloth": [
-    78,
-    100,
-    150
-   ],
-   "hair": [
-    92,
-    58,
-    38
-   ],
-   "hairstyle": "tigela",
-   "moletom": true,
-   "mochila": [
-    176,
-    74,
-    50
-   ],
-   "brows": "preocupado",
-   "orelhas": true,
+   "sprite": "ricardo",
    "voz": "kokoro:pm_alex",
    "pitch": 1.04,
    "speed": 1.0
   },
   "MEDICO": {
    "nome": "Médico",
-   "skin": [
-    230,
-    200,
-    170
-   ],
-   "cloth": [
-    240,
-    240,
-    244
-   ],
-   "camisa": [
-    120,
-    160,
-    210
-   ],
-   "hair": [
-    150,
-    150,
-    150
-   ],
-   "hairstyle": "tigela",
-   "jaleco": true,
-   "brows": "neutro",
-   "orelhas": true,
+   "sprite": "guilherme",
    "voz": "piper:faber",
    "pitch": 0.95,
    "speed": 0.95
   },
   "PORTEIRO": {
    "nome": "Porteiro",
-   "skin": [
-    176,
-    124,
-    88
-   ],
-   "cloth": [
-    112,
-    124,
-    74
-   ],
-   "hairstyle": "quepe",
-   "cap": [
-    104,
-    116,
-    70
-   ],
-   "farda": true,
-   "bigode": [
-    110,
-    110,
-    110
-   ],
-   "age": true,
-   "brows": "neutro",
-   "orelhas": true,
+   "sprite": "sargento_alves",
    "voz": "kokoro:pm_santa",
    "pitch": 0.9,
    "speed": 0.92
@@ -127,5 +57,29 @@
    ],
    "resumo": "Escolheram ficar. Médico tenta levar o protagonista pro -1 e fica preso no espelho; só um sai no 20º andar."
   }
- ]
+ ],
+ "personagens_travados": {
+  "PROTAGONISTA": {
+   "nome": "Você",
+   "sprite": "ricardo",
+   "voz": "kokoro:pm_alex",
+   "pitch": 1.04,
+   "speed": 1.0
+  },
+  "MEDICO": {
+   "nome": "Médico",
+   "sprite": "guilherme",
+   "voz": "piper:faber",
+   "pitch": 0.95,
+   "speed": 0.95
+  },
+  "PORTEIRO": {
+   "nome": "Porteiro",
+   "sprite": "sargento_alves",
+   "voz": "kokoro:pm_santa",
+   "pitch": 0.9,
+   "speed": 0.92
+  }
+ },
+ "estilo": "catalogo"
 }

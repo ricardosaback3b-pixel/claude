@@ -556,7 +556,7 @@ def end_card(meta, base):
         big, small = "A OU B?", "Comenta! A mais votada decide a próxima parte"
         opts = meta.get("options", [])
     else:
-        big, small = f"PARTE {meta['part'] + 1}", "já no perfil"
+        big, small = f"PARTE {meta['part'] + 1}", "em breve"
     f = font(ANTON, 210)
     d.text((W / 2, 760), big, font=f, fill=YELLOW, anchor="mm", stroke_width=14, stroke_fill=(0, 0, 0))
     fs = font(MONT, 52, True)

@@ -24,18 +24,19 @@ O dono da conta autorizou a publicação sem aprovação prévia.
 
 1. **Evite post duplicado.** Se o último item de `estado.json > historico` foi publicado há menos de 90 minutos, pare e diga "Já publicado neste horário".
 2. **Escolha a história**: complete `ativas` até 4 se faltar (veja "Criar história") e pegue `ativas[vez]`.
-3. **Defina a parte** = a primeira com status diferente de `publicada`.
+3. **Defina a parte** = a primeira com status diferente de `publicada`. Nunca diga em vídeo, capa ou legenda que uma parte "já está no perfil" se ela ainda não foi publicada: use "em breve".
    - `continua`: o roteiro já está pronto (`status: pronta`).
-   - `votacao`: se for a parte 2 a 6, apure os votos da parte anterior (veja "Votação") e escreva o roteiro desta parte seguindo a opção vencedora.
-4. **Renderize** com `python3 tools/render_part.py <slug> <n>`. Confira: duração entre 25 e 75 s; extraia 2 quadros com ffmpeg e olhe se os personagens, o cenário e a legenda estão certos (a legenda não pode ficar cortada). Se algo estiver errado, corrija o roteiro e renderize de novo.
+   - `votacao`: se for a parte 2 a 6, **antes de escrever**: leia todos os comentários da parte anterior, **responda os que ainda não têm resposta** (veja "Responder antes de apurar") e **conte os votos** (veja "Votação"). Escreva o roteiro seguindo a opção vencedora.
+4. **Renderize** com `python3 tools/render_part.py <slug> <n>`. Confira: duração entre 50 e 100 s; extraia 2 quadros com ffmpeg e olhe se os personagens, o cenário e a legenda estão certos (a legenda não pode ficar cortada). Se algo estiver errado, corrija o roteiro e renderize de novo.
 5. **Suba** o vídeo, a capa e o JSON: `git add -A && git commit -m "<slug> parte <n>" && git push`. Configure antes `git config user.name "mundoemhistorias-bot"` e `git config user.email "bot@mundoemhistorias.local"`.
 6. **Confira o link público** (deve responder 200):
    `https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/<slug>/parte<n>.mp4`
    (o mesmo vale para `capa<n>.jpg`). Se der 404, espere 20 s e tente de novo, no máximo 5 vezes.
-7. **Publique** com o Windsor.ai (carregue as ferramentas `mcp__Windsor_ai__*` via ToolSearch): `execute_action`, connector `instagram`, account `17841437436804359`, action `create_video_post`, params `{video_url, cover_url, caption, share_to_feed: true}`. Se falhar, tente mais uma vez; se falhar de novo, **não** marque como publicada e avise no resumo.
-8. **Registre**: na parte, ponha `status: publicada`, `media_id` e `publicada_em` (ISO, UTC). Em `estado.json`, adicione ao `historico` `{quando, slug, parte, media_id}` e avance `vez` (volta a 0 depois do último). Se foi a parte 6, ponha a história como `concluida` e troque-a em `ativas` por uma nova do mesmo tipo (crie o `historia.json` com a bíblia e, se for `continua`, as 6 partes). Faça commit e push.
-9. **Limpeza**: apague com `git rm` os `.mp4` e `.jpg` de partes publicadas há mais de 3 dias (o Instagram já guardou o vídeo). Nunca apague os `historia.json`.
-10. **Resumo final** curto (3 linhas): o que foi publicado (história, parte, link se tiver), placar da votação se houver, e qualquer problema.
+7. **Última conferência (só votação):** logo antes de publicar, leia de novo os comentários da parte anterior. Responda os novos sem resposta e reconte. Se a opção vencedora mudou, reescreva e renderize a parte com a nova escolha antes de publicar.
+8. **Publique** com o Windsor.ai (carregue as ferramentas `mcp__Windsor_ai__*` via ToolSearch): `execute_action`, connector `instagram`, account `17841437436804359`, action `create_video_post`, params `{video_url, cover_url, caption, share_to_feed: true}`. Se falhar, tente mais uma vez; se falhar de novo, **não** marque como publicada e avise no resumo.
+9. **Registre**: na parte, ponha `status: publicada`, `media_id` e `publicada_em` (ISO, UTC). Em `estado.json`, adicione ao `historico` `{quando, slug, parte, media_id}` e avance `vez` (volta a 0 depois do último). Se foi a parte 6, ponha a história como `concluida` e troque-a em `ativas` por uma nova do mesmo tipo (crie o `historia.json` com a bíblia e, se for `continua`, as 6 partes). Faça commit e push.
+10. **Limpeza**: apague com `git rm` os `.mp4` e `.jpg` de partes publicadas há mais de 3 dias (o Instagram já guardou o vídeo). Nunca apague os `historia.json`.
+11. **Resumo final** curto (3 linhas): o que foi publicado (história, parte, link se tiver), placar da votação se houver, e qualquer problema.
 
 ## Criar história
 
@@ -51,6 +52,13 @@ O dono da conta autorizou a publicação sem aprovação prévia.
 ## Coerência entre partes (obrigatório)
 
 Antes de escrever qualquer parte, leia a `biblia` e o texto de **todas** as partes anteriores. Mantenha nomes, aparências (use sempre os mesmos `ref` de personagens), lugares, horários e fatos. Na `votacao`, depois de escrever a parte, acrescente à `biblia` uma linha com o que ficou decidido ("Parte 3: escolheram B, Lia abriu a porta e ..."). A parte 6 tem que fechar o mistério de verdade.
+
+## Responder antes de apurar
+
+- Use `execute_action` com `reply_to_comment` (`comment_id`, `message`). Só comentários principais de outras pessoas que ainda não têm resposta da @mundoemhistorias (confira as respostas: linhas com `comment_parent_id` = esse comentário e `comment_username` = mundoemhistorias). Nunca responda o mesmo comentário duas vezes.
+- Só votou ("A", "B"): confirme o voto, diga que a Parte N+1 sai em breve e convide a seguir. Sem pergunta.
+- Opinou, brincou ou teorizou: reaja ao que a pessoa disse, de forma leve e provocativa; pode terminar com pergunta.
+- Ignore spam e ofensas. No máximo 40 respostas por execução.
 
 ## Votação
 
@@ -75,7 +83,7 @@ Antes de escrever qualquer parte, leia a `biblia` e o texto de **todas** as part
 }
 ```
 
-- **5 a 7 cenas** por parte, **110 a 150 palavras** no total. Cena 1 = gancho forte nos 3 primeiros segundos (`hook: true`, `cover: true`). Última cena = gancho/dilema (`hook: true`).
+- **8 a 10 cenas** por parte, **190 a 240 palavras** no total (vídeo de ~60 a 90 s). Se uma parte já `pronta` tiver menos de 190 palavras, expanda antes de renderizar (mais detalhes, mais uma fala, tensão crescendo) sem mudar os fatos nem o gancho final. Cena 1 = gancho forte nos 3 primeiros segundos (`hook: true`, `cover: true`). Última cena = gancho/dilema (`hook: true`).
 - `bg`: `rua_noite`, `rua_amanhecer` (`bg_params.sign`), `onibus_dentro`, `onibus_fora` (`bg_params.number`), `casa_noite` (+ `"window": true` para ver por uma janela), `escuro`, `corredor_predio`, `elevador` (`bg_params.floor`), `quarto_noite`, `floresta_noite`, `sala_aula`.
 - `cam`: `in`, `out`, `zoom_forte`, `pan_l`, `pan_r`, `shake` (sustos).
 - `prop.type`: `lista`/`carta` (title + lines; linha começando com `!` fica vermelha), `bilhete` (lines), `celular` (title + lines), `placa` (title). Use em cenas sem personagens.
@@ -102,5 +110,5 @@ Antes de escrever qualquer parte, leia a `biblia` e o texto de **todas** as part
 
 ## Limites
 
-- Use só este repositório. Não apague posts do Instagram e não responda comentários (outra tarefa faz isso).
+- Use só este repositório. Não apague posts do Instagram. Fora das histórias com votação, as respostas aos comentários ficam com a outra tarefa.
 - Nunca publique mais de 1 vídeo por execução.

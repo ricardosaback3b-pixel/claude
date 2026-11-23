@@ -106,6 +106,113 @@
     "personagem": "LIA",
     "texto": "Atrás de mim, a porta *fechou*. E o ônibus começou a andar. O que ele quis dizer com *ainda*? A Parte Dois fica no perfil. Segue pra não perder."
    }
+  ],
+  "2": [
+   {
+    "cena": 1,
+    "personagem": "LIA",
+    "texto": "Eu entrei num ônibus *sem número*. E o Seu Ivo, morto há um ano, me contou a regra:"
+   },
+   {
+    "cena": 2,
+    "personagem": "IVO",
+    "texto": "Ele para onde você *escondeu alguma coisa*."
+   },
+   {
+    "cena": 3,
+    "personagem": "LIA",
+    "texto": "Um letreiro vermelho acendeu no teto: *Parada Um*."
+   },
+   {
+    "cena": 4,
+    "personagem": "LIA",
+    "texto": "O ônibus freou sem barulho. Ninguém desceu. Ninguém subiu."
+   },
+   {
+    "cena": 5,
+    "personagem": "LIA",
+    "texto": "Lá fora não era a Rua Nove. Era a *minha casa* de infância."
+   },
+   {
+    "cena": 6,
+    "personagem": "LIA",
+    "texto": "A mesma cerca torta. E na janela acesa, uma menina de oito anos. *Eu.*"
+   },
+   {
+    "cena": 7,
+    "personagem": "LIA",
+    "texto": "Eu me vi ajoelhada na sala, puxando uma *tábua solta* do chão."
+   },
+   {
+    "cena": 8,
+    "personagem": "LIA",
+    "texto": "E escondendo um *envelope branco* lá embaixo."
+   },
+   {
+    "cena": 9,
+    "personagem": "LIA",
+    "texto": "Eu tinha esquecido disso. Ou *fingia* que tinha."
+   },
+   {
+    "cena": 10,
+    "personagem": "LIA",
+    "texto": "O que tem nesse envelope, Seu Ivo?"
+   },
+   {
+    "cena": 11,
+    "personagem": "IVO",
+    "texto": "Você sabe, minha filha. Só não quer *lembrar*."
+   },
+   {
+    "cena": 12,
+    "personagem": "LIA",
+    "texto": "Lá na frente, o motorista falou sem virar o rosto:"
+   },
+   {
+    "cena": 13,
+    "personagem": "MOTORISTA",
+    "texto": "Quem não desce... *continua*."
+   },
+   {
+    "cena": 14,
+    "personagem": "LIA",
+    "texto": "Continua pra onde? Ninguém me respondeu."
+   },
+   {
+    "cena": 15,
+    "personagem": "IVO",
+    "texto": "A última parada é onde *ninguém desce*. Guarda isso."
+   },
+   {
+    "cena": 16,
+    "personagem": "LIA",
+    "texto": "E ele me entregou um papel dobrado, *frio feito gelo*."
+   },
+   {
+    "cena": 17,
+    "personagem": "LIA",
+    "texto": "Era a lista de passageiros. Os nomes de cima tinham *descido*."
+   },
+   {
+    "cena": 18,
+    "personagem": "LIA",
+    "texto": "E o último nome era o *meu*. Com a data de *hoje*."
+   },
+   {
+    "cena": 19,
+    "personagem": "LIA",
+    "texto": "No teto, *Parada Dois* já estava acendendo."
+   },
+   {
+    "cena": 20,
+    "personagem": "LIA",
+    "texto": "Eu precisava descer antes da última. Só não sabia se a porta *ainda abria*."
+   },
+   {
+    "cena": 21,
+    "personagem": "LIA",
+    "texto": "Manda pra quem guarda um segredo desde criança. A *Parte Três* sai amanhã aqui no perfil. Segue pra não perder."
+   }
   ]
  }
 }

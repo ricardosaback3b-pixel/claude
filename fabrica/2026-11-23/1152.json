@@ -5,7 +5,7 @@
  "historia": "ultimo-onibus",
  "titulo": "O Último Ônibus",
  "parte": 2,
- "status": "planejado",
+ "status": "produzido",
  "votacao": false,
  "versao_padrao": "unica",
  "estilo": "andar",
@@ -14,7 +14,7 @@
   "unica": {
    "resumo": "Na Parada 1, Lia vê a si mesma criança escondendo um envelope sob o piso, e descobre que o último nome da lista de passageiros é o dela, com a data de hoje.",
    "retomada_gancho": "Cena 1: 'Eu entrei no ônibus sem número... e o Seu Ivo me contou a regra' (~3s).",
-   "palavras": 206,
+   "palavras": 214,
    "duracao_alvo_s": "50-60",
    "momento_zoom_tensao": [
     1,
@@ -26,31 +26,30 @@
    "final": "Parada Dois acendendo; Lia precisa descer antes da última parada e não sabe se a porta abre (a Parte 3 abre com ela correndo pra porta).",
    "gatilho_compartilhar": "Fala final + legenda: 'Manda pra quem guarda um segredo desde criança'.",
    "legenda": "O último nome da lista de passageiros era o meu. Com a data de hoje. 🚌\n\nO Último Ônibus · Parte 2 — A parada do que você escondeu\n\nO que você acha que tem no envelope? Chuta aqui 👇\n\nManda pra alguém que guarda um segredo desde criança 👀\n\nA Parte 3 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#historiasempartes #suspense #misterio #onibus #segredos",
-   "capa": {
-    "titulo": "O Último Ônibus",
-    "parte": "Parte 2",
-    "cover_text": "A parada do que você escondeu"
-   },
+   "capa": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/ultimo-onibus/capa2.jpg",
    "script": {
     "cover_text": "A parada do que você escondeu",
     "caption": "O último nome da lista de passageiros era o meu. Com a data de hoje. 🚌\n\nO Último Ônibus · Parte 2 — A parada do que você escondeu\n\nO que você acha que tem no envelope? Chuta aqui 👇\n\nManda pra alguém que guarda um segredo desde criança 👀\n\nA Parte 3 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#historiasempartes #suspense #misterio #onibus #segredos",
     "scenes": [
      {
       "bg": "onibus_dentro",
-      "cam": "zoom_rosto",
+      "cam": "shake",
       "hook": true,
       "cover": true,
-      "foco_em": "IVO",
       "chars": [
        {
         "ref": "IVO",
-        "x": 0.3,
-        "scale": 0.95
+        "enquadramento": "busto",
+        "x": 0.28,
+        "scale": 0.75,
+        "y": 0.3
        },
        {
         "ref": "LIA",
+        "enquadramento": "busto",
         "x": 0.72,
-        "scale": 0.95,
+        "scale": 0.75,
+        "y": 0.3,
         "eyes": "arregalado",
         "mouth": "o"
        }
@@ -58,8 +57,24 @@
       "linhas": [
        {
         "voz": "LIA",
-        "texto": "Eu entrei no ônibus sem número. E o Seu Ivo, que morreu ano passado, me contou a regra:"
-       },
+        "texto": "Eu entrei num ônibus *sem número*. E o Seu Ivo, morto há um ano, me contou a regra:"
+       }
+      ]
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "IVO",
+        "enquadramento": "busto",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "preocupado"
+       }
+      ],
+      "linhas": [
        {
         "voz": "IVO",
         "texto": "Ele para onde você *escondeu alguma coisa*."
@@ -67,42 +82,86 @@
       ]
      },
      {
-      "bg": "escuro",
-      "cam": "in",
+      "bg": "onibus_dentro",
+      "cam": "zoom_forte",
       "prop": {
        "type": "placa",
        "title": "PARADA 1"
       },
-      "text": "Um letreiro vermelho acendeu no teto: *Parada Um*. O ônibus freou sem fazer barulho. Ninguém desceu. Ninguém subiu."
+      "text": "Um letreiro vermelho acendeu no teto: *Parada Um*."
      },
      {
-      "bg": "casa_noite",
-      "window": true,
-      "cam": "zoom_forte",
-      "hook": true,
+      "bg": "onibus_dentro",
+      "cam": "pan_l",
       "chars": [
        {
         "ref": "LIA",
-        "x": 0.35,
-        "scale": 0.3,
-        "y": 0.664
-       }
-      ],
-      "text": "Lá fora não era a Rua Nove. Era a *minha casa* de infância. A mesma cerca torta. E na janela, uma menina de oito anos. *Eu.*"
-     },
-     {
-      "bg": "casa_noite",
-      "cam": "in",
-      "chars": [
-       {
-        "ref": "LIA",
+        "enquadramento": "busto",
         "x": 0.5,
         "scale": 0.9,
         "eyes": "arregalado",
         "brows": "preocupado"
        }
       ],
-      "text": "Eu vi a mim mesma ajoelhada na sala, tirando uma tábua solta do chão. E escondendo um *envelope* branco lá embaixo. Eu tinha esquecido disso. Ou fingia que tinha."
+      "text": "O ônibus freou sem barulho. Ninguém desceu. Ninguém subiu."
+     },
+     {
+      "bg": "casa",
+      "bg_params": {
+       "hora": "noite"
+      },
+      "window": true,
+      "cam": "zoom_forte",
+      "hook": true,
+      "text": "Lá fora não era a Rua Nove. Era a *minha casa* de infância."
+     },
+     {
+      "bg": "casa",
+      "bg_params": {
+       "hora": "noite"
+      },
+      "cam": "in",
+      "text": "A mesma cerca torta. E na janela acesa, uma menina de oito anos. *Eu.*"
+     },
+     {
+      "bg": "sala_estar",
+      "bg_params": {
+       "hora": "noite"
+      },
+      "cam": "pan_r",
+      "text": "Eu me vi ajoelhada na sala, puxando uma *tábua solta* do chão."
+     },
+     {
+      "bg": "sala_estar",
+      "bg_params": {
+       "hora": "noite"
+      },
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "bilhete",
+       "lines": [
+        "(envelope branco,",
+        "lacrado, sem nome)"
+       ]
+      },
+      "text": "E escondendo um *envelope branco* lá embaixo."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "LIA",
+        "enquadramento": "busto",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "fechado",
+        "mouth": "triste",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "Eu tinha esquecido disso. Ou *fingia* que tinha."
      },
      {
       "bg": "onibus_dentro",
@@ -110,21 +169,40 @@
       "chars": [
        {
         "ref": "LIA",
-        "x": 0.3,
-        "scale": 0.95,
+        "enquadramento": "busto",
+        "x": 0.28,
+        "scale": 0.75,
+        "y": 0.3,
         "brows": "preocupado"
        },
        {
         "ref": "IVO",
+        "enquadramento": "busto",
         "x": 0.72,
-        "scale": 0.95
+        "scale": 0.75,
+        "y": 0.3
        }
       ],
       "linhas": [
        {
         "voz": "LIA",
         "texto": "O que tem nesse envelope, Seu Ivo?"
-       },
+       }
+      ]
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "IVO",
+        "enquadramento": "busto",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "fechado"
+       }
+      ],
+      "linhas": [
        {
         "voz": "IVO",
         "texto": "Você sabe, minha filha. Só não quer *lembrar*."
@@ -135,25 +213,31 @@
       "bg": "onibus_dentro",
       "cam": "zoom_rosto",
       "tensao": true,
-      "foco_em": "MOTORISTA",
+      "chars": [
+       {
+        "ref": "LIA",
+        "enquadramento": "busto",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "look": -1
+       }
+      ],
+      "text": "Lá na frente, o motorista falou sem virar o rosto:"
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "zoom_tremido",
+      "tensao": true,
       "chars": [
        {
         "ref": "MOTORISTA",
-        "x": 0.3,
-        "scale": 0.95
-       },
-       {
-        "ref": "LIA",
-        "x": 0.72,
-        "scale": 0.95,
-        "eyes": "arregalado"
+        "enquadramento": "busto",
+        "x": 0.5,
+        "scale": 0.9
        }
       ],
       "linhas": [
-       {
-        "voz": "LIA",
-        "texto": "Lá na frente, o motorista falou sem virar o rosto."
-       },
        {
         "voz": "MOTORISTA",
         "texto": "Quem não desce... *continua*."
@@ -162,31 +246,60 @@
      },
      {
       "bg": "onibus_dentro",
-      "cam": "in",
+      "cam": "out",
+      "chars": [
+       {
+        "ref": "LIA",
+        "x": 0.21,
+        "mouth": "o"
+       },
+       {
+        "ref": "IVO",
+        "x": 0.67,
+        "brows": "preocupado"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "LIA",
+        "texto": "Continua pra onde? Ninguém me respondeu."
+       }
+      ]
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "zoom_rosto",
+      "tensao": true,
       "chars": [
        {
         "ref": "IVO",
-        "x": 0.3,
-        "scale": 0.95,
+        "enquadramento": "busto",
+        "x": 0.5,
+        "scale": 0.9,
         "brows": "preocupado"
-       },
-       {
-        "ref": "LIA",
-        "x": 0.72,
-        "scale": 0.95,
-        "mouth": "o"
        }
       ],
       "linhas": [
        {
         "voz": "IVO",
         "texto": "A última parada é onde *ninguém desce*. Guarda isso."
-       },
-       {
-        "voz": "LIA",
-        "texto": "E ele me entregou um papel dobrado, frio feito gelo."
        }
       ]
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "LIA",
+        "enquadramento": "busto",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "E ele me entregou um papel dobrado, *frio feito gelo*."
      },
      {
       "bg": "escuro",
@@ -196,13 +309,42 @@
        "type": "lista",
        "title": "PASSAGEIROS",
        "lines": [
-        "Ivo - desceu",
         "Rosa - desceu",
         "Tião - desceu",
-        "!Lia - 23/11 - hoje"
+        "Dalva - desceu",
+        "!LIA - 23/11 - HOJE"
        ]
       },
-      "text": "Era a lista de passageiros. Os nomes de cima estavam riscados. E o último nome era o *meu*. Com a data de *hoje*."
+      "text": "Era a lista de passageiros. Os nomes de cima tinham *descido*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "tint": [
+       150,
+       20,
+       20
+      ],
+      "prop": {
+       "type": "lista",
+       "title": "PASSAGEIROS",
+       "lines": [
+        "Rosa - desceu",
+        "Tião - desceu",
+        "Dalva - desceu",
+        "!LIA - 23/11 - HOJE"
+       ]
+      },
+      "text": "E o último nome era o *meu*. Com a data de *hoje*."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "placa",
+       "title": "PARADA 2"
+      },
+      "text": "No teto, *Parada Dois* já estava acendendo."
      },
      {
       "bg": "onibus_dentro",
@@ -211,14 +353,31 @@
       "chars": [
        {
         "ref": "LIA",
+        "enquadramento": "busto",
         "x": 0.5,
         "scale": 0.9,
         "eyes": "arregalado",
-        "mouth": "o",
-        "brows": "preocupado"
+        "brows": "preocupado",
+        "mouth": "o"
        }
       ],
-      "text": "No teto, *Parada Dois* já estava acendendo. Eu precisava descer antes da última. Só não sabia se a porta ainda abria. Manda pra quem guarda um segredo desde criança. A Parte Três sai amanhã, segue o perfil."
+      "text": "Eu precisava descer antes da última. Só não sabia se a porta *ainda abria*."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "out",
+      "chars": [
+       {
+        "ref": "LIA",
+        "x": 0.21,
+        "brows": "preocupado"
+       },
+       {
+        "ref": "MOTORISTA",
+        "x": 0.67
+       }
+      ],
+      "text": "Manda pra quem guarda um segredo desde criança. A *Parte Três* sai amanhã aqui no perfil. Segue pra não perder."
      }
     ]
    },
@@ -227,10 +386,17 @@
      "IVO",
      "LIA"
     ],
+    [
+     "IVO"
+    ],
     [],
     [
      "LIA"
     ],
+    [],
+    [],
+    [],
+    [],
     [
      "LIA"
     ],
@@ -239,22 +405,67 @@
      "IVO"
     ],
     [
-     "MOTORISTA",
+     "IVO"
+    ],
+    [
      "LIA"
     ],
     [
-     "IVO",
+     "MOTORISTA"
+    ],
+    [
+     "LIA",
+     "IVO"
+    ],
+    [
+     "IVO"
+    ],
+    [
      "LIA"
     ],
     [],
+    [],
+    [],
     [
      "LIA"
+    ],
+    [
+     "LIA",
+     "MOTORISTA"
     ]
+   ],
+   "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/ultimo-onibus/parte2.mp4",
+   "duracao": 77.0,
+   "cenas": 21,
+   "roteiro": [
+    "LIA: Eu entrei num ônibus *sem número*. E o Seu Ivo, morto há um ano, me contou a regra:",
+    "IVO: Ele para onde você *escondeu alguma coisa*.",
+    "Um letreiro vermelho acendeu no teto: *Parada Um*.",
+    "O ônibus freou sem barulho. Ninguém desceu. Ninguém subiu.",
+    "Lá fora não era a Rua Nove. Era a *minha casa* de infância.",
+    "A mesma cerca torta. E na janela acesa, uma menina de oito anos. *Eu.*",
+    "Eu me vi ajoelhada na sala, puxando uma *tábua solta* do chão.",
+    "E escondendo um *envelope branco* lá embaixo.",
+    "Eu tinha esquecido disso. Ou *fingia* que tinha.",
+    "LIA: O que tem nesse envelope, Seu Ivo?",
+    "IVO: Você sabe, minha filha. Só não quer *lembrar*.",
+    "Lá na frente, o motorista falou sem virar o rosto:",
+    "MOTORISTA: Quem não desce... *continua*.",
+    "LIA: Continua pra onde? Ninguém me respondeu.",
+    "IVO: A última parada é onde *ninguém desce*. Guarda isso.",
+    "E ele me entregou um papel dobrado, *frio feito gelo*.",
+    "Era a lista de passageiros. Os nomes de cima tinham *descido*.",
+    "E o último nome era o *meu*. Com a data de *hoje*.",
+    "No teto, *Parada Dois* já estava acendendo.",
+    "Eu precisava descer antes da última. Só não sabia se a porta *ainda abria*.",
+    "Manda pra quem guarda um segredo desde criança. A *Parte Três* sai amanhã aqui no perfil. Segue pra não perder."
    ]
   }
  },
  "problemas": [
-  "Elenco trocado com aprovação do dono às 08h31: estilo 'andar' (Seu Ivo = andar_porteiro, Lia = andar_adolescente_menina). O cartaz das 8h19 saiu com o desenho anterior."
+  "Elenco trocado com aprovação do dono às 08h31: estilo 'andar' (Seu Ivo = andar_porteiro, Lia = andar_adolescente_menina). O cartaz das 8h19 saiu com o desenho anterior.",
+  "Produção 23/11 08h55: lista de passageiros sem o nome do Seu Ivo como 'desceu' (ele ainda está no ônibus — evitava contradição); nomes de cima = Rosa, Tião, Dalva. Boné/quepe sem cor citada.",
+  "ATENÇÃO DONO (não alterado, elenco travado): o Motorista 'escurecido' aparece com rosto marrom-escuro, que pode ser lido como outra cor de pele e não como sombra; na bíblia ele é a Lia 40 anos mais velha — a revelação pode soar incoerente. Decida antes da Parte 5/6."
  ],
  "criado_em": "2026-11-23T11:08:11Z",
  "em_breve": {
@@ -264,5 +475,6 @@
   "corrigido_em": "2026-11-23T12:33Z",
   "imagem_corrigida": "videos/ultimo-onibus/embreve2b.jpg",
   "media_id_corrigido": "18008393352001160"
- }
+ },
+ "produzido_em": "2026-11-23T13:10Z"
 }

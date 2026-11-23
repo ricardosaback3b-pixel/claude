@@ -1,6 +1,6 @@
 {
  "horarios": "9h, 12h, 15h, 18h, 21h (America/Campo_Grande)",
- "vez": 3,
+ "vez": 4,
  "ativas": [
   {
    "slug": "ultimo-onibus",
@@ -59,6 +59,12 @@
    "slug": "cidade-sirene",
    "parte": 3,
    "media_id": "18276159127306573"
+  },
+  {
+   "quando": "2026-11-23T00:59:07Z",
+   "slug": "o-sombra-da-sala-12",
+   "parte": 1,
+   "media_id": "18405150862204741"
   }
  ],
  "ultimo_estilo": "cartela"

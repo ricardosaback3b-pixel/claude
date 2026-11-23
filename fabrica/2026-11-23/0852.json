@@ -272,5 +272,9 @@
  "placar": null,
  "media_id": "18029895026874855",
  "publicado_em": "2026-11-23T13:03:29Z",
- "primeiro_comentario_id": "17914026423483236"
+ "primeiro_comentario_id": "17914026423483236",
+ "story": {
+  "imagem": "videos/a-ponte-caida/story1.jpg",
+  "media_id": "18650061178047172"
+ }
 }

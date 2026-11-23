@@ -246,12 +246,14 @@
    "status": "pronta",
    "script": {
     "cover_text": "O giz azul",
+    "caption": "Às 7h as chaves da escola sumiram… exatamente como a lousa avisou. 🔑\n\nO Sombra da Sala 12 · Parte 2 — O giz azul\n\nO giz azul aponta pro professor Rui. Mas quem escreveria na letra do Teo? Chuta quem é o Sombra 👇\n\nManda pra quem tem medo do escuro e nunca admite 👀\n\nA Parte 3 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#misterio #escola #historiasempartes #detetive #comedia",
     "scenes": [
      {
       "bg": "corredor_predio",
       "cam": "zoom_forte",
       "hook": true,
       "cover": true,
+      "tensao": true,
       "chars": [
        {
         "ref": "BENTO",
@@ -261,7 +263,25 @@
         "mouth": "o"
        }
       ],
-      "text": "Às sete da manhã, o grito do *Seu Bento* ecoou no corredor. O molho de chaves da escola tinha *sumido*."
+      "text": "Sete da manhã. As chaves da escola *sumiram*. Do jeitinho que a lousa avisou."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "5 DIAS"
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "TEO",
+        "enquadramento": "busto",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "E eu tenho *cinco dias* pra provar que não sou o Sombra."
      },
      {
       "bg": "corredor_predio",
@@ -269,67 +289,98 @@
       "chars": [
        {
         "ref": "BENTO",
-        "x": 0.3,
-        "scale": 0.9,
-        "mouth": "triste"
+        "x": 0.21,
+        "mouth": "o"
        },
        {
         "ref": "TEO",
-        "x": 0.72,
-        "scale": 0.8,
+        "x": 0.67,
         "look": -1
        }
       ],
       "linhas": [
        {
         "voz": "BENTO",
-        "texto": "Trinta anos nessa escola e eu nunca perdi uma chave. Nunca!"
-       },
+        "texto": "Sumiu o molho inteiro! Até a chave da sala doze!"
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
        {
-        "voz": "TEO",
-        "texto": "O senhor emprestou pra alguém, Seu Bento?"
-       },
+        "ref": "BENTO",
+        "enquadramento": "busto",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
        {
         "voz": "BENTO",
-        "texto": "Só pra quem pede *por favor*. E ontem muita gente pediu."
+        "texto": "Se a diretora souber, quem perde o emprego sou eu."
        }
       ]
      },
      {
       "bg": "sala_aula",
       "bg_params": {
-       "board": "CHAVE?"
+       "board": "EU AVISEI"
       },
-      "cam": "pan_r",
-      "chars": [
-       {
-        "ref": "TEO",
-        "x": 0.35,
-        "scale": 0.85,
-        "look": 1
-       }
-      ],
-      "text": "Na lousa, o Sombra tinha escrito: *eu avisei*. Mas dessa vez a Nina notou um detalhe que ninguém mais viu. A turma inteira ficou olhando pra mim de novo."
+      "cam": "out",
+      "text": "Na lousa, o Sombra já tinha deixado o recado: *eu avisei*."
      },
      {
       "bg": "sala_aula",
       "bg_params": {
-       "board": "AZUL"
+       "board": "EU AVISEI"
       },
-      "cam": "in",
+      "cam": "zoom_rosto",
       "chars": [
        {
         "ref": "NINA",
+        "enquadramento": "busto",
         "x": 0.5,
         "scale": 0.9,
         "eyes": "arregalado",
-        "mouth": "sorriso"
+        "brows": "surpreso",
+        "mouth": "o"
        }
       ],
       "linhas": [
        {
         "voz": "NINA",
-        "texto": "Olha a cor, Teo. O giz é *azul*. Na escola inteira, só um professor usa giz azul."
+        "texto": "Olha a cor, Teo. O giz é *azul*."
+       }
+      ]
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "EU AVISEI"
+      },
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.21,
+        "look": 1
+       },
+       {
+        "ref": "TEO",
+        "x": 0.67,
+        "look": -1,
+        "eyes": "arregalado"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "NINA",
+        "texto": "Na escola inteira, só *um professor* usa giz azul."
        }
       ]
      },
@@ -342,19 +393,37 @@
       "chars": [
        {
         "ref": "RUI",
-        "x": 0.3,
+        "enquadramento": "busto",
+        "x": 0.5,
         "scale": 0.9,
-        "mouth": "neutra"
-       },
-       {
-        "ref": "TEO",
-        "x": 0.72,
-        "scale": 0.8,
-        "eyes": "normal",
-        "look": -1
+        "brows": "neutro"
        }
       ],
-      "text": "O *professor Rui*. Chegou esse ano, ensina matemática, e guarda o giz azul trancado na gaveta como se fosse ouro. Ele sempre chega antes de todo mundo e sai por último."
+      "text": "O *professor Rui*. Que guarda o giz azul trancado na gaveta, como se fosse ouro."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "2 + 2 = ?"
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "RUI",
+        "enquadramento": "busto",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "bravo",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "RUI",
+        "texto": "Alguém mexeu na minha gaveta. Faltam *três caixas*."
+       }
+      ]
      },
      {
       "bg": "sala_aula",
@@ -365,19 +434,43 @@
       "chars": [
        {
         "ref": "RUI",
-        "x": 0.5,
-        "scale": 1.0,
-        "eyes": "normal",
-        "mouth": "triste",
+        "enquadramento": "busto",
+        "x": 0.28,
+        "scale": 0.75,
+        "y": 0.3,
+        "brows": "bravo",
         "look": 1
+       },
+       {
+        "ref": "TEO",
+        "enquadramento": "busto",
+        "x": 0.72,
+        "scale": 0.75,
+        "y": 0.3,
+        "eyes": "arregalado",
+        "mouth": "o",
+        "look": -1
        }
       ],
       "linhas": [
        {
         "voz": "RUI",
-        "texto": "Alguém mexeu na minha gaveta, eu sei. Faltam três caixas. E vocês dois estão me olhando muito estranho."
+        "texto": "E vocês dois estão me olhando muito estranho."
        }
       ]
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "celular",
+       "title": "10:15",
+       "lines": [
+        "INTERVALO",
+        "15 MINUTOS"
+       ]
+      },
+      "text": "Dez e quinze. Intervalo. *Quinze minutos* pra revistar a sala dele."
      },
      {
       "bg": "corredor_predio",
@@ -385,22 +478,79 @@
       "chars": [
        {
         "ref": "NINA",
-        "x": 0.3,
-        "scale": 0.8,
+        "x": 0.21,
+        "brows": "preocupado",
         "look": 1
        },
        {
         "ref": "TEO",
-        "x": 0.68,
-        "scale": 0.8,
+        "x": 0.67,
         "look": -1
        }
       ],
-      "text": "No intervalo, a gente voltou escondido pra sala dele. A gaveta estava *aberta*. Sem cadeado. Sem giz. Eu senti o estômago gelar. Se alguém visse a gente ali, era o fim."
+      "linhas": [
+       {
+        "voz": "NINA",
+        "texto": "Se pegarem a gente lá dentro, você é suspenso *hoje*."
+       }
+      ]
+     },
+     {
+      "bg": "gabinete",
+      "bg_params": {
+       "texto": "PROF. RUI",
+       "cor": [
+        40,
+        70,
+        160
+       ]
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "TEO",
+        "enquadramento": "busto",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "brows": "surpreso",
+        "mouth": "o"
+       }
+      ],
+      "text": "A gaveta estava *aberta*. Sem cadeado. Sem giz nenhum."
+     },
+     {
+      "bg": "gabinete",
+      "bg_params": {
+       "texto": "PROF. RUI",
+       "cor": [
+        40,
+        70,
+        160
+       ]
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.21,
+        "eyes": "arregalado",
+        "look": 1
+       },
+       {
+        "ref": "TEO",
+        "x": 0.67,
+        "brows": "preocupado",
+        "look": -1
+       }
+      ],
+      "text": "No fundo, dobrado, tinha um bilhete. Escrito na *minha letra*."
      },
      {
       "bg": "escuro",
       "cam": "zoom_forte",
+      "hook": true,
       "prop": {
        "type": "bilhete",
        "lines": [
@@ -410,28 +560,97 @@
         "- O SOMBRA"
        ]
       },
-      "text": "No fundo, dobrado, tinha um bilhete. Escrito na *minha letra*."
+      "text": "Frio. Tenta de novo, Teo. Assinado: *O Sombra*."
      },
      {
-      "bg": "sala_aula",
+      "bg": "gabinete",
       "bg_params": {
-       "board": "FRIO"
+       "texto": "PROF. RUI",
+       "cor": [
+        40,
+        70,
+        160
+       ]
       },
-      "cam": "shake",
-      "hook": true,
+      "cam": "zoom_rosto",
+      "tensao": true,
       "chars": [
        {
-        "ref": "TEO",
+        "ref": "NINA",
+        "enquadramento": "busto",
         "x": 0.5,
-        "scale": 1.0,
+        "scale": 0.9,
         "eyes": "arregalado",
+        "brows": "preocupado",
         "mouth": "o"
        }
       ],
-      "text": "O Sombra sabia que a gente vinha. Sabia *antes* da gente. Ou seja: ele estava perto. Muito perto. A Parte Três fica no perfil."
+      "linhas": [
+       {
+        "voz": "NINA",
+        "texto": "Ele sabia que a gente vinha, Teo. Sabia *antes* da gente."
+       }
+      ]
+     },
+     {
+      "bg": "gabinete",
+      "bg_params": {
+       "texto": "PROF. RUI",
+       "cor": [
+        40,
+        70,
+        160
+       ]
+      },
+      "cam": "shake",
+      "prop": {
+       "type": "placa",
+       "title": "10:29"
+      },
+      "text": "Dez e vinte e nove. O sinal ia tocar. E tinha *passos* no corredor."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "hook": true,
+      "tint": [
+       120,
+       0,
+       0
+      ],
+      "prop": {
+       "type": "bilhete",
+       "lines": [
+        "(ATRÁS)",
+        "!HOJE, 19H.",
+        "!SALA 12.",
+        "!SEM LUZ."
+       ]
+      },
+      "text": "Eu virei o bilhete. Atrás: hoje, sete da noite. Sala doze. *Sem luz*."
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "zoom_tremido",
+      "hook": true,
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "TEO",
+        "enquadramento": "busto",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Ele escolheu justo o *escuro*. A única coisa que eu não aguento. Comenta PARTE TRÊS pra saber quem escreveu na minha letra."
      }
-    ],
-    "caption": "O giz era azul… e só um professor usa giz azul. 🔵\n\nO Sombra da Sala 12 · Parte 2 — O giz azul\n\nVocê confiaria no professor Rui? Comenta 👇\n\nA Parte 3 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#misterio #escola #historiasempartes #detetive #contos #suspense"
+    ]
    }
   },
   {

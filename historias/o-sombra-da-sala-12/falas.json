@@ -106,6 +106,103 @@
     "personagem": "TEO",
     "texto": "Na foto dela, a lousa já tinha um recado novo: amanhã, *alguém vai perder a chave*. E a sala estava *trancada por fora*. A Parte Dois sai amanhã, aqui no perfil."
    }
+  ],
+  "2": [
+   {
+    "cena": 1,
+    "personagem": "TEO",
+    "texto": "Sete da manhã. As chaves da escola *sumiram*. Do jeitinho que a lousa avisou."
+   },
+   {
+    "cena": 2,
+    "personagem": "TEO",
+    "texto": "E eu tenho *cinco dias* pra provar que não sou o Sombra."
+   },
+   {
+    "cena": 3,
+    "personagem": "BENTO",
+    "texto": "Sumiu o molho inteiro! Até a chave da sala doze!"
+   },
+   {
+    "cena": 4,
+    "personagem": "BENTO",
+    "texto": "Se a diretora souber, quem perde o emprego sou eu."
+   },
+   {
+    "cena": 5,
+    "personagem": "TEO",
+    "texto": "Na lousa, o Sombra já tinha deixado o recado: *eu avisei*."
+   },
+   {
+    "cena": 6,
+    "personagem": "NINA",
+    "texto": "Olha a cor, Teo. O giz é *azul*."
+   },
+   {
+    "cena": 7,
+    "personagem": "NINA",
+    "texto": "Na escola inteira, só *um professor* usa giz azul."
+   },
+   {
+    "cena": 8,
+    "personagem": "TEO",
+    "texto": "O *professor Rui*. Que guarda o giz azul trancado na gaveta, como se fosse ouro."
+   },
+   {
+    "cena": 9,
+    "personagem": "RUI",
+    "texto": "Alguém mexeu na minha gaveta. Faltam *três caixas*."
+   },
+   {
+    "cena": 10,
+    "personagem": "RUI",
+    "texto": "E vocês dois estão me olhando muito estranho."
+   },
+   {
+    "cena": 11,
+    "personagem": "TEO",
+    "texto": "Dez e quinze. Intervalo. *Quinze minutos* pra revistar a sala dele."
+   },
+   {
+    "cena": 12,
+    "personagem": "NINA",
+    "texto": "Se pegarem a gente lá dentro, você é suspenso *hoje*."
+   },
+   {
+    "cena": 13,
+    "personagem": "TEO",
+    "texto": "A gaveta estava *aberta*. Sem cadeado. Sem giz nenhum."
+   },
+   {
+    "cena": 14,
+    "personagem": "TEO",
+    "texto": "No fundo, dobrado, tinha um bilhete. Escrito na *minha letra*."
+   },
+   {
+    "cena": 15,
+    "personagem": "TEO",
+    "texto": "Frio. Tenta de novo, Teo. Assinado: *O Sombra*."
+   },
+   {
+    "cena": 16,
+    "personagem": "NINA",
+    "texto": "Ele sabia que a gente vinha, Teo. Sabia *antes* da gente."
+   },
+   {
+    "cena": 17,
+    "personagem": "TEO",
+    "texto": "Dez e vinte e nove. O sinal ia tocar. E tinha *passos* no corredor."
+   },
+   {
+    "cena": 18,
+    "personagem": "TEO",
+    "texto": "Eu virei o bilhete. Atrás: hoje, sete da noite. Sala doze. *Sem luz*."
+   },
+   {
+    "cena": 19,
+    "personagem": "TEO",
+    "texto": "Ele escolheu justo o *escuro*. A única coisa que eu não aguento. Comenta PARTE TRÊS pra saber quem escreveu na minha letra."
+   }
   ]
  }
 }

@@ -7,21 +7,21 @@
  "personagens": {
   "LIA": {
    "nome": "Lia",
-   "sprite": "garota_moletom_roxo",
+   "sprite": "andar_adolescente_menina",
    "voz": "kokoro:pf_dora",
    "pitch": 1.0,
    "speed": 1.0
   },
   "IVO": {
    "nome": "Seu Ivo",
-   "sprite": "porteiro",
+   "sprite": "andar_porteiro",
    "voz": "kokoro:pm_santa",
    "pitch": 0.94,
    "speed": 0.92
   },
   "MOTORISTA": {
    "nome": "Motorista",
-   "sprite": "motorista",
+   "sprite": "andar_motorista",
    "voz": "piper:jeff",
    "pitch": 0.93,
    "speed": 0.86,
@@ -29,21 +29,21 @@
   },
   "LIA_VELHA": {
    "nome": "Lia mais velha",
-   "sprite": "mulher_vestido_roxo",
+   "sprite": "andar_mae",
    "voz": "kokoro:mix:pf_dora*0.8+pm_santa*0.2",
    "pitch": 0.95,
    "speed": 0.88
   },
   "MENINA": {
    "nome": "Menina",
-   "sprite": "menina_laco_vermelho",
+   "sprite": "andar_menina",
    "voz": "kokoro:pf_dora",
    "pitch": 1.08,
    "speed": 1.08
   },
   "BIA": {
    "nome": "Bia",
-   "sprite": "menina_vestido_rosa",
+   "sprite": "andar_estudante_ana",
    "voz": "kokoro:mix:pf_dora*0.85+pm_alex*0.15",
    "pitch": 1.05,
    "speed": 1.0
@@ -762,21 +762,21 @@
  "personagens_travados": {
   "LIA": {
    "nome": "Lia",
-   "sprite": "garota_moletom_roxo",
+   "sprite": "andar_adolescente_menina",
    "voz": "kokoro:pf_dora",
    "pitch": 1.0,
    "speed": 1.0
   },
   "IVO": {
    "nome": "Seu Ivo",
-   "sprite": "porteiro",
+   "sprite": "andar_porteiro",
    "voz": "kokoro:pm_santa",
    "pitch": 0.94,
    "speed": 0.92
   },
   "MOTORISTA": {
    "nome": "Motorista",
-   "sprite": "motorista",
+   "sprite": "andar_motorista",
    "voz": "piper:jeff",
    "pitch": 0.93,
    "speed": 0.86,
@@ -784,25 +784,28 @@
   },
   "LIA_VELHA": {
    "nome": "Lia mais velha",
-   "sprite": "mulher_vestido_roxo",
+   "sprite": "andar_mae",
    "voz": "kokoro:mix:pf_dora*0.8+pm_santa*0.2",
    "pitch": 0.95,
    "speed": 0.88
   },
   "MENINA": {
    "nome": "Menina",
-   "sprite": "menina_laco_vermelho",
+   "sprite": "andar_menina",
    "voz": "kokoro:pf_dora",
    "pitch": 1.08,
    "speed": 1.08
   },
   "BIA": {
    "nome": "Bia",
-   "sprite": "menina_vestido_rosa",
+   "sprite": "andar_estudante_ana",
    "voz": "kokoro:mix:pf_dora*0.85+pm_alex*0.15",
    "pitch": 1.05,
    "speed": 1.0
   }
  },
- "estilo": "cartela"
+ "estilo": "andar",
+ "notas_dono": [
+  "23/11 08h31: o dono aprovou passar a série para o estilo 'andar' a partir da Parte 2 (Seu Ivo = porteiro de quepe verde; Lia = adolescente de moletom roxo). Fica travado assim até o fim."
+ ]
 }

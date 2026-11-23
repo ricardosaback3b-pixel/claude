@@ -8,7 +8,7 @@
  "status": "planejado",
  "votacao": false,
  "versao_padrao": "unica",
- "estilo": "cartela",
+ "estilo": "andar",
  "observacao": "O roteiro 'pronta' do historia.json tinha só 6 cenas/81 palavras: este pré-roteiro expande para 9 cenas sem mudar fatos nem o gancho (lista com o nome dela e a data de hoje). Substituir o script da parte 2 por este. Seu Ivo: não citar cor do boné (P1 falou 'verde', o desenho é quepe azul).",
  "versoes": {
   "unica": {
@@ -253,7 +253,9 @@
    ]
   }
  },
- "problemas": [],
+ "problemas": [
+  "Elenco trocado com aprovação do dono às 08h31: estilo 'andar' (Seu Ivo = andar_porteiro, Lia = andar_adolescente_menina). O cartaz das 8h19 saiu com o desenho anterior."
+ ],
  "criado_em": "2026-11-23T11:08:11Z",
  "em_breve": {
   "postado_em": "2026-11-23T12:19:41Z",

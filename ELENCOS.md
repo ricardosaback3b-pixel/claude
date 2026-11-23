@@ -27,10 +27,10 @@ O visual e a voz de cada personagem ficam travados até o fim da história.
 - **Prof. Rui** (RUI): desenho `andar_professor`, voz `piper:jeff` pitch 0.98 speed 1.0
 - **Diretora Marta** (MARTA): desenho `andar_jornalista`, voz `kokoro:pf_dora` pitch 0.92 speed 0.95
 
-## O Último Ônibus (`ultimo-onibus`) — estilo `cartela`, ativa
-- **Lia** (LIA): desenho `garota_moletom_roxo`, voz `kokoro:pf_dora` pitch 1.0 speed 1.0
-- **Seu Ivo** (IVO): desenho `porteiro`, voz `kokoro:pm_santa` pitch 0.94 speed 0.92
-- **Motorista** (MOTORISTA): desenho `motorista` (escurecido), voz `piper:jeff` pitch 0.93 speed 0.86
-- **Lia mais velha** (LIA_VELHA): desenho `mulher_vestido_roxo`, voz `kokoro:mix:pf_dora*0.8+pm_santa*0.2` pitch 0.95 speed 0.88
-- **Menina** (MENINA): desenho `menina_laco_vermelho`, voz `kokoro:pf_dora` pitch 1.08 speed 1.08
-- **Bia** (BIA): desenho `menina_vestido_rosa`, voz `kokoro:mix:pf_dora*0.85+pm_alex*0.15` pitch 1.05 speed 1.0
+## O Último Ônibus (`ultimo-onibus`) — estilo `andar`, ativa
+- **Lia** (LIA): desenho `andar_adolescente_menina`, voz `kokoro:pf_dora` pitch 1.0 speed 1.0
+- **Seu Ivo** (IVO): desenho `andar_porteiro`, voz `kokoro:pm_santa` pitch 0.94 speed 0.92
+- **Motorista** (MOTORISTA): desenho `andar_motorista` (escurecido), voz `piper:jeff` pitch 0.93 speed 0.86
+- **Lia mais velha** (LIA_VELHA): desenho `andar_mae`, voz `kokoro:mix:pf_dora*0.8+pm_santa*0.2` pitch 0.95 speed 0.88
+- **Menina** (MENINA): desenho `andar_menina`, voz `kokoro:pf_dora` pitch 1.08 speed 1.08
+- **Bia** (BIA): desenho `andar_estudante_ana`, voz `kokoro:mix:pf_dora*0.85+pm_alex*0.15` pitch 1.05 speed 1.0

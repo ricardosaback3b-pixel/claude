@@ -291,7 +291,7 @@
   },
   {
    "n": 4,
-   "status": "produzida",
+   "status": "publicada",
    "opcoes": [
     "Caderno: escolher quem some",
     "Olhar pra cima sem proteção"
@@ -697,7 +697,17 @@
       "text": "E você, o que faria? Comenta *A ou B*."
      }
     ]
-   }
+   },
+   "media_id": "18133967224835332",
+   "publicada_em": "2026-11-23T21:55:10Z",
+   "votos": {
+    "A": 0,
+    "B": 1
+   },
+   "escolha": "B",
+   "escolha_motivo": "1 voto no B (luuh.santosmdc) na Parte 3",
+   "primeiro_comentario": "18019921763969772",
+   "versao_publicada": "B"
   }
  ],
  "personagens_travados": {

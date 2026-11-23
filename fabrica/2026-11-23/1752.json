@@ -5,7 +5,7 @@
  "historia": "cidade-sirene",
  "titulo": "Nessa Cidade, a Sirene Toca às 18h",
  "parte": 4,
- "status": "aprovado",
+ "status": "publicado",
  "votacao": true,
  "versao_padrao": "A",
  "estilo": "cartela",
@@ -1027,5 +1027,13 @@
    "A cena 1: 16 → 14 palavras (regra 3)",
    "A e B re-renderizadas; parte4.mp4/capa4.jpg = B (líder); capa4B igual à anterior, capa4A igual ao cartaz"
   ]
- }
+ },
+ "versao_escolhida": "B",
+ "placar": {
+  "A": 0,
+  "B": 1
+ },
+ "media_id": "18133967224835332",
+ "publicado_em": "2026-11-23T21:55:10Z",
+ "primeiro_comentario_id": "18019921763969772"
 }

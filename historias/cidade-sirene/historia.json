@@ -366,7 +366,8 @@
         30,
         120,
         60
-       ]
+       ],
+       "cadeira": true
       },
       "cam": "out",
       "text": "Sobrou só a cadeira dele, *vazia*, de frente pra praça."

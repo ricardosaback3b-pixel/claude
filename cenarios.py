@@ -460,6 +460,12 @@ def gabinete(p):
     d.rectangle([520, 320, 720, 560], fill=(230, 220, 200), outline=(150, 120, 60), width=10)  # retrato
     d.ellipse([580, 360, 660, 440], fill=(140, 120, 110))
     d.rectangle([570, 450, 670, 540], fill=(60, 60, 80))
+    if p.get("cadeira"):  # cadeira vazia de encosto alto atrás da mesa
+        cx = E.BW // 2
+        d.rounded_rectangle([cx - 170, 620, cx + 170, 1160], 40, fill=(70, 20, 26), outline=(30, 10, 12), width=10)
+        d.rounded_rectangle([cx - 120, 680, cx + 120, 1100], 30, fill=(95, 30, 36))
+        for bx in (cx - 140, cx - 70, cx, cx + 70, cx + 140):
+            d.ellipse([bx - 9, 650, bx + 9, 668], fill=(200, 170, 80))
     d.rectangle([60, 1150, E.BW - 60, 1230], fill=(90, 50, 30))  # mesa grande
     d.rectangle([90, 1230, E.BW - 90, 1480], fill=(70, 40, 24))
     if p.get("texto"):
@@ -766,7 +772,9 @@ def beco(p):
         d.line([E.BW - 360, y, E.BW - 120, y - 180], fill=(20, 20, 22), width=8)
     d.rectangle([80, 1400, 330, 1700], fill=(40, 90, 60), outline=(20, 40, 30), width=8)  # caçamba
     d.rectangle([60, 1370, 350, 1410], fill=(30, 70, 46))
-    txt(d, (200, 900), p.get("texto", "NÃO OLHE"), 300, 90, (255, 60, 160), 4)
+    pich = str(p.get("texto", "NÃO OLHE")).split()  # uma palavra por linha, dentro da parte visível da parede
+    for i, w in enumerate(pich[:4]):
+        txt(d, (275, 840 + (i - (len(pich[:4]) - 1) / 2) * 125), w, 190, 120, (255, 60, 160), 5)
     if noite(p):
         E.glow(img, (E.BW // 2, 500), 220, (255, 220, 150), 110)
     return img

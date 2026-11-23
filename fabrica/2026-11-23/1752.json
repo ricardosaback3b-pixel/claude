@@ -5,7 +5,7 @@
  "historia": "cidade-sirene",
  "titulo": "Nessa Cidade, a Sirene Toca às 18h",
  "parte": 4,
- "status": "produzido",
+ "status": "aprovado",
  "votacao": true,
  "versao_padrao": "A",
  "estilo": "cartela",
@@ -65,7 +65,7 @@
         "brows": "preocupado"
        }
       ],
-      "text": "Faltavam três minutos pra sirene da manhã. E eu troquei o Prefeito pelo *meu outro eu*."
+      "text": "Três minutos pra sirene da manhã. E eu troquei o Prefeito pelo *meu outro eu*."
      },
      {
       "bg": "rua_noite",
@@ -482,11 +482,11 @@
      "PROTAGONISTA"
     ]
    ],
-   "roteiro": "Faltavam três minutos pra sirene da manhã. E eu troquei o Prefeito pelo meu outro eu. Cinco e cinquenta e sete. A tinta vermelha engoliu um nome e cuspiu o outro. Obrigado. Eu levo só uma coisa comigo. Que coisa? Ele não respondeu. Só sorriu. E virou fumaça na minha frente. Na janela da prefeitura, as mãos do Prefeito voltaram a ter cor. Aí eu tentei lembrar o caminho de casa. E nada veio. A rua. O número. A cor da porta. Tudo apagado. Foi isso que ele levou, menino. A sua casa. Por isso eu perdi a chave na primeira noite? Ele já estava te levando antes. Quem troca um nome vira o dono do caderno. Agora é você. Na última página, a tinta escreveu sozinha: dono novo. E o meu nome. O céu começou a clarear. E o ponteiro vermelho agora corria pra frente. Dessa vez, ninguém mandou eu não olhar pra cima. Ninguém. Eu olhei uma vez, menino. Foi por isso que eu comecei a escrever. Cinco e cinquenta e nove. A sirene ia tocar em um minuto. A: fico com o caderno e escolho quem some, todo ano. B: olho pra cima, sem proteção. E você, o que faria? Comenta A ou B.",
+   "roteiro": "Três minutos pra sirene da manhã. E eu troquei o Prefeito pelo meu outro eu. Cinco e cinquenta e sete. A tinta vermelha engoliu um nome e cuspiu o outro. Obrigado. Eu levo só uma coisa comigo. Que coisa? Ele não respondeu. Só sorriu. E virou fumaça na minha frente. Na janela da prefeitura, as mãos do Prefeito voltaram a ter cor. Aí eu tentei lembrar o caminho de casa. E nada veio. A rua. O número. A cor da porta. Tudo apagado. Foi isso que ele levou, menino. A sua casa. Por isso eu perdi a chave na primeira noite? Ele já estava te levando antes. Quem troca um nome vira o dono do caderno. Agora é você. Na última página, a tinta escreveu sozinha: dono novo. E o meu nome. O céu começou a clarear. E o ponteiro vermelho agora corria pra frente. Dessa vez, ninguém mandou eu não olhar pra cima. Ninguém. Eu olhei uma vez, menino. Foi por isso que eu comecei a escrever. Cinco e cinquenta e nove. A sirene ia tocar em um minuto. A: fico com o caderno e escolho quem some, todo ano. B: olho pra cima, sem proteção. E você, o que faria? Comenta A ou B.",
    "cenas": 19,
    "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/parte4A.mp4",
    "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/capa4A.jpg",
-   "duracao": 73.3
+   "duracao": 72.7
   },
   "B": {
    "resumo": "Escolheram deixar o Prefeito sumir: o caderno fica sem dono, o outro eu tenta escrever o nome do narrador e ele recupera o caderno pela metade, minutos antes da sirene da manhã.",
@@ -577,7 +577,8 @@
         30,
         120,
         60
-       ]
+       ],
+       "cadeira": true
       },
       "cam": "out",
       "text": "Sobrou só a cadeira dele, *vazia*, de frente pra praça."
@@ -997,5 +998,34 @@
   "7. Opções com custo: A 'fico com o caderno e escolho quem some, todo ano' x B 'olho pra cima, sem proteção' + 'Comenta A ou B'. Na tela de votos: 'Caderno: escolher quem some' / 'Olhar pra cima sem proteção'.",
   "8. Legenda: linha 1 = gancho (depois do {RESULTADO_SE_HOUVER_VOTOS}) + linha 'Manda pra quem nunca obedece quando mandam não olhar 👀'.",
   "Cenários: trocado casa_noite com moldura de janela de ônibus (proibido fora do ônibus) por gabinete da prefeitura; praça (noite/amanhecer, neblina na fumaça), casa com luz apagada e número '?', beco 'NÃO OLHE' no dilema. Cena de capa mantida igual ao cartaz (rua_noite RUA 9, protagonista, boca do desenho)."
- ]
+ ],
+ "regras_virais_ok": {
+  "1_frase1_conflito_prazo": "corrigido (A: cena 1 tinha 16 palavras, encurtada para 'Três minutos pra sirene da manhã. E eu troquei o Prefeito pelo meu outro eu.'; B ok)",
+  "2_sem_curriculo": "ok",
+  "3_15s_fatos_frases_curtas": "corrigido (A cena 1); B ok",
+  "4_relogio_na_tela": "ok (05:57 → 05:58 → 05:59)",
+  "5_papel_celular_legivel": "ok (página do caderno; B também bilhete do Prefeito)",
+  "6_final_virada": "ok (o Prefeito já olhou pra cima uma vez)",
+  "7_chamada_A_B_com_custo": "ok",
+  "8_legenda_gancho_manda_pra_quem": "ok"
+ },
+ "controle_qualidade": {
+  "feito_em": "2026-11-23T20:50Z",
+  "resultado": "aprovado com correções",
+  "checado": [
+   "ficha produzido; cartaz embreve4.jpg = capa (mesmo título, Parte 4, protagonista, rua_noite RUA 9)",
+   "personagens só da cartela, físico igual (protagonista, outro eu escurecido, prefeito, policial); vozes do elenco travado",
+   "quadros de todas as cenas de A (19) e B (20) olhados",
+   "ritmo: 19/20 cenas de 2–4 s, zoom no gancho e na tensão, sem cenas seguidas iguais",
+   "áudio: A 72,7 s, B 76,8 s, com áudio, sem silêncio >1,2 s",
+   "coerência com Partes 1–3 (chave perdida, caderno, sirene da manhã); legenda sem dizer que ninguém votou",
+   "preparar.py ok (só aviso de sirene na cena 1: a sirene ainda não tocou, sem alerta de propósito); checar_catalogos ok; links raw 200"
+  ],
+  "corrigido": [
+   "beco: pichação 'NÃO OLHE' saía cortada na borda esquerda (cenarios.py: agora em 2 linhas dentro da parede visível) — cena do dilema em A e B",
+   "B cena 3: narração 'sobrou só a cadeira dele, vazia' sem cadeira na imagem → gabinete ganhou bg_params cadeira (cadeira vazia atrás da mesa)",
+   "A cena 1: 16 → 14 palavras (regra 3)",
+   "A e B re-renderizadas; parte4.mp4/capa4.jpg = B (líder); capa4B igual à anterior, capa4A igual ao cartaz"
+  ]
+ }
 }

@@ -29,7 +29,8 @@ def _cena_capa(story, part, n):
     meta["final"] = n == 6
     sc = next((s for s in scenes if s.get("cover")), scenes[0])
     src = engine.build_scene(sc).copy()
-    for c in [c for c in sc.get("chars", []) if c.get("sprite")]:
+    for c in [dict(c) for c in sc.get("chars", []) if c.get("sprite")]:
+        c.pop("mouth", None)  # cartaz: boca do próprio desenho (evita boca dupla em alguns sprites)
         spr = engine.draw_char(c, c.get("scale", 1.0))
         x = int(c.get("x", 0.5) * engine.BW - spr.width / 2)
         md = c.get("enquadramento") or sprites.enquadramento_padrao(c["sprite"])

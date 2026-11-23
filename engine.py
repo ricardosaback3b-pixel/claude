@@ -291,6 +291,10 @@ BACKGROUNDS.update({
     "sala_aula": lambda p: bg_school(board=p.get("board", "PROVA")),
 })
 
+# 30 cenários personalizáveis (cenarios.py): hora, luz, cor, texto, chuva, neblina, alerta, seed
+import cenarios as _cenarios  # noqa: E402
+BACKGROUNDS.update(_cenarios.fundos(sys.modules[__name__]))
+
 
 # ---------------------------------------------------------------- personagens
 def draw_char(spec, s=1.0, mouth_state=None, blink=False):

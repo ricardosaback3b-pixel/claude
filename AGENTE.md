@@ -164,3 +164,38 @@ Nas histórias de estilo `andar`, o vídeo usa o visual dos episódios originais
 - `elencos_travados.json` guarda, para cada história, os personagens com físico (`sprite`, `escuro`), voz (`voz`, `pitch`, `speed`) e nome. **Nunca altere nem apague nada desse arquivo.** Só é permitido acrescentar história nova ou personagem novo (o `tools/render_part.py` faz isso sozinho na primeira renderização).
 - Em `historia.json`, `personagens` e `personagens_travados` têm que ficar idênticos ao arquivo. Nas cenas, nunca use `sprite`, `cloth`, `skin`, `hair`, `hairstyle`, `escuro`, `voz`, `pitch`, `speed` ou `nome` dentro de um personagem: físico e voz vêm só de `personagens`.
 - `render_part.py` e `cartaz.py` param com erro se algo disso mudar. Se der esse erro, restaure o personagem; nunca edite o arquivo da trava para "passar".
+
+## Cenários (30 personalizáveis, `cenarios.py`)
+Além dos fundos antigos (rua_noite, rua_amanhecer, onibus_dentro, onibus_fora, casa_noite, escuro, corredor_predio, elevador, quarto_noite, floresta_noite, sala_aula), use estes em `bg`. Prefira um cenário de verdade a `escuro`: varie os lugares para a história ficar mais rica, mas mantenha o mesmo lugar quando a cena continua no mesmo ambiente.
+Parâmetros em `bg_params` (todos opcionais, valem para todos): `hora` (dia, tarde, noite, amanhecer), `luz` (acesa, apagada), `cor` [r,g,b], `texto` (placa/quadro/letreiro), `chuva`, `neblina`, `alerta` (luz vermelha de sirene), `seed`.
+
+- `cozinha`: cozinha com azulejos, armários, janela e fogão
+- `sala_estar`: sala com sofá, TV, cortinas, janela e quadro (texto = escrito no quadro)
+- `banheiro`: banheiro com espelho grande e pia (texto = escrito no espelho (vermelho))
+- `porao`: porão de tijolos com escada, caixas e lâmpada pendurada (texto = escrito na caixa)
+- `sotao`: sótão de madeira com janela redonda, baú e móvel coberto
+- `hospital_quarto`: quarto de hospital com cama, monitor cardíaco e soro
+- `delegacia`: delegacia com quadro de suspeitos ligados por fio vermelho e mesa (texto = título do quadro)
+- `escritorio`: escritório com janelão para a cidade e computadores (texto = nome da empresa)
+- `biblioteca`: biblioteca com estantes de livros coloridos
+- `mercadinho`: mercadinho com prateleiras e letreiro (texto = letreiro (padrão MERCADINHO))
+- `lanchonete`: lanchonete anos 50 com letreiro neon, balcão e chão xadrez (texto = neon (padrão LANCHES 24H); cor = cor do neon)
+- `laboratorio`: laboratório com telão, bancada e frascos brilhando (texto = escrito no telão; cor = cor da tela)
+- `nave_espacial`: nave espacial com janela para o espaço, planeta e painel (texto = aviso no painel; cor = cor do planeta)
+- `recepcao_hotel`: recepção de hotel antigo com quadro de chaves e balcão (texto = placa (padrão RECEPÇÃO))
+- `gabinete`: gabinete (prefeito, diretor, chefe) com bandeira, retrato e mesa grande (texto = plaquinha na mesa; cor = cor da bandeira)
+- `ginasio`: ginásio com arquibancada, placar e quadra (texto = placar (padrão CASA 0 x 0 VISITA))
+- `teatro`: palco de teatro com cortina e holofote (texto = título no alto; cor = cor da cortina)
+- `estacao_metro`: plataforma de metrô com placa e trilhos (texto = nome da estação; cor = faixa da parede)
+- `caverna`: caverna com estalactites, túnel escuro e luz de tocha (luz_cor = cor da tocha)
+- `ponte`: ponte suspensa de madeira entre penhascos, rio lá embaixo (quebrada = true (ponte caída); texto = placa)
+- `rio`: margem de rio com árvores e pedras (texto = placa)
+- `praia`: praia com mar, coqueiro e guarda-sol (texto = escrito na areia; cor = guarda-sol)
+- `praca`: praça com coreto, bancos, árvores e poste (texto = placa (padrão PRAÇA))
+- `parque_diversoes`: parque de diversões com roda-gigante e barraca listrada (texto = nome na barraca; cor = listras)
+- `estrada`: estrada deserta até o horizonte com placa (texto = placa (padrão KM 47))
+- `posto_gasolina`: posto de gasolina com bombas e painel de preços (texto = nome do posto; cor = cobertura)
+- `cemiterio`: cemitério com lápides, grade e árvore seca (texto = escrito no portão)
+- `beco`: beco entre prédios com escada de incêndio, caçamba e pichação (texto = pichação (padrão NÃO OLHE); cor = paredes)
+- `telhado`: telhado de prédio com caixa d'água e cidade ao fundo (texto = escrito na caixa d'água)
+- `fazenda`: fazenda com celeiro, cerca e campo (texto = nome no celeiro; cor = celeiro)

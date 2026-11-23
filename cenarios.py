@@ -553,24 +553,34 @@ def ponte(p):
     for _ in range(10):
         x, y = rng.randint(0, E.BW - 120), rng.randint(Y + 300, E.BH - 20)
         d.line([x, y, x + 120, y], fill=(200, 230, 255) if not noite(p) else (60, 90, 120), width=5)
-    for x0, x1 in ((0, 170), (E.BW - 170, E.BW)):  # penhascos
+    # vão mais estreito: a ponte inteira cabe na tela mesmo com pan/zoom (antes parecia "pela metade")
+    L, R = 250, E.BW - 250
+    for x0, x1 in ((0, L), (R, E.BW)):  # penhascos
         d.polygon([(x0, Y - 30), (x1, Y), (x1, E.BH), (x0, E.BH)], fill=(70, 60, 50))
     for x in (60, E.BW - 110):
         arvore(d, x, Y - 20, 620, rng, (24, 60, 36) if not noite(p) else (10, 26, 18))
     cor = _p(p, "cor", (130, 90, 50))
     corda = (60, 44, 30)
-    L, R = 170, E.BW - 170
     yb = lambda x: Y + 90 * math.sin(math.pi * (x - L) / (R - L))
-    fim = E.BW // 2 - 70 if p.get("quebrada") else R
-    for x in range(L, fim, 46):
-        d.rectangle([x, yb(x), x + 38, yb(x) + 30], fill=cor)
-        d.line([x + 19, yb(x), x + 19, yb(x) - 190], fill=corda, width=4)
-    d.line([(x, yb(x) - 190) for x in range(L, fim + 1, 20)], fill=corda, width=8)
-    d.line([(x, yb(x) + 4) for x in range(L, fim + 1, 20)], fill=corda, width=8)
     if p.get("quebrada"):
-        for i in range(9):  # outro lado pendurado no penhasco
-            d.rectangle([R - 30, Y + 10 + i * 46, R + 8, Y + 40 + i * 46], fill=cor)
-        d.line([R - 11, Y - 190, R - 11, Y + 430], fill=corda, width=8)
+        # ponte CAÍDA: nada atravessa o vão; cada metade ficou pendurada no seu penhasco
+        n = 10
+        for lado, xp in ((1, L), (-1, R)):
+            xs = xp + lado * 12
+            for i in range(n):
+                yy = Y + 20 + i * 44
+                sw = lado * int(6 * math.sin(i * 0.9))  # leve torção das tábuas
+                d.rectangle([xs - 20 + sw, yy, xs + 20 + sw, yy + 28], fill=cor)
+            d.line([xs - 22, Y - 190, xs - 22, Y + 20 + n * 44], fill=corda, width=8)
+            d.line([xs + 22, Y, xs + 22, Y + 20 + n * 44], fill=corda, width=8)
+            # pontas de corda rompidas balançando no topo
+            d.line([(xp, Y - 190), (xp + lado * 60, Y - 150), (xp + lado * 80, Y - 100)], fill=corda, width=6)
+    else:
+        for x in range(L, R, 46):
+            d.rectangle([x, yb(x), x + 38, yb(x) + 30], fill=cor)
+            d.line([x + 19, yb(x), x + 19, yb(x) - 190], fill=corda, width=4)
+        d.line([(x, yb(x) - 190) for x in range(L, R + 1, 20)], fill=corda, width=8)
+        d.line([(x, yb(x) + 4) for x in range(L, R + 1, 20)], fill=corda, width=8)
     for x in (L, R):
         d.rectangle([x - 16, Y - 260, x + 16, Y + 20], fill=(90, 64, 40))
     if p.get("texto"):

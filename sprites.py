@@ -59,15 +59,16 @@ def _is_skinish(p):
     return al > 0 and max(r, g, b) > 120 and not (min(r, g, b) > 228)
 
 
-def _full_eye(a, box):
-    """Olho inteiro = parte branca + pupila preta + contorno; varre a partir da parte branca até achar pele."""
+def _full_eye(a, box, cap=6):
+    """Olho inteiro = parte branca + pupila preta + contorno; varre a partir da parte branca até achar pele.
+    Cresce no máximo `cap` px por lado e nunca passa da silhueta (senão o olho sai cortado ou engole óculos)."""
     x0, y0, x1, y1 = box
     cy = int((y0 + y1) / 2)
     h, w = a.shape[:2]
     def scan(x, y, dx, dy):
         n = 0
-        while 0 <= x < w and 0 <= y < h and n < 80:
-            if _is_skinish(a[y, x]):
+        while 0 <= x + dx < w and 0 <= y + dy < h and n < cap:
+            if _is_skinish(a[y, x]) or a[y + dy, x + dx][3] == 0:
                 return x, y
             x += dx; y += dy; n += 1
         return x, y
@@ -89,7 +90,11 @@ def _base(name):
         m["frente"] = True
         return im, m
     a = np.asarray(im).astype(int)
+    boca_json = list(m.get("boca") or [])
     m["olhos"] = [_full_eye(a, e) for e in m["olhos"]]
+    if m["olhos"][0][2] >= m["olhos"][1][0]:  # olhos (ou óculos) não podem se encostar
+        mid_ = (m["olhos"][0][2] + m["olhos"][1][0]) / 2
+        m["olhos"][0][2], m["olhos"][1][0] = mid_ - 1, mid_ + 1
     (l0, t0, l1, b0), (r0, t1, r1, b1) = m["olhos"]
     eh = max(b0 - t0, b1 - t1)
     m["olho_h"] = eh
@@ -104,6 +109,10 @@ def _base(name):
     else:
         y0, y1 = int(eb + eh * 0.05), int(eb + eh * 0.75)
     x0, x1 = int(ex0 + dd * 0.15), int(ex1 + dd * 0.05)
+    if est == "cartela" and len(boca_json) == 2:
+        # a boca anotada na cartela é a referência: só procura a tinta da boca bem perto dela
+        x0, x1 = int(boca_json[0] - dd * 0.3), int(boca_json[0] + dd * 0.3)
+        y0, y1 = int(boca_json[1] - eh * 0.3), int(boca_json[1] + eh * 0.3)
     reg = a[y0:y1, x0:x1]
     dark = (reg[..., :3].max(axis=2) < 110) & (reg[..., 3] > 0)
     if dark.sum() > 3:
@@ -155,6 +164,12 @@ def _base(name):
     m["frente"] = est in ("catalogo", "catalogo_corpo")
     m["dd"] = dd
     m["pele"] = tuple(int(v) for v in np.median(sk[:, :3], axis=0)) if len(sk) else (240, 200, 170)
+    if est == "cartela":
+        # barba em volta da boca: apagar com cor de pele vira uma mancha fora do rosto
+        reg = a[int(by - eh * 0.25):int(by + eh * 0.35), int(bx - dd * 0.45):int(bx + dd * 0.45)]
+        reg = reg[reg[..., 3] > 0]
+        pel = np.abs(reg[:, :3] - np.array(m["pele"])).sum(axis=1) < 70 if len(reg) else np.array([])
+        m["barba"] = bool(len(reg) and pel.mean() < 0.6) or bool(m.get("bigode"))
     return im, m
 
 
@@ -274,6 +289,47 @@ def _variante(name, modo):
     return im, m
 
 
+def _apaga_boca(big, m, k):
+    """Remove o traço da boca original preenchendo com a pele ao redor (cv2.inpaint)."""
+    import cv2
+    a = np.array(big)
+    bx, by = m["boca"][0] * k, m["boca"][1] * k
+    hw = (m["boca_w"] / 2 + 9) * k
+    hh = m["olho_h"] * 0.38 * k
+    x0, x1 = int(max(0, bx - hw)), int(min(a.shape[1], bx + hw))
+    y0, y1 = int(max(0, by - hh)), int(min(a.shape[0], by + hh))
+    reg = a[y0:y1, x0:x1]
+    pel = np.array(m["pele"])
+    # longe do contorno do rosto (senão o inpaint borra a borda)
+    dentro = cv2.erode((a[..., 3] > 0).astype(np.uint8), np.ones((int(9 * k) | 1, int(9 * k) | 1), np.uint8))[y0:y1, x0:x1]
+    ink = (np.abs(reg[..., :3].astype(int) - pel).sum(axis=2) > 90) & (dentro > 0)
+    # apaga só o traço da boca: o maior componente perto do centro da janela (nunca contorno/cabelo)
+    n_, lab = cv2.connectedComponents(ink.astype(np.uint8))
+    best, best_n = 0, 0
+    cxw, cyw = ink.shape[1] / 2, ink.shape[0] / 2
+    for i in range(1, n_):
+        ys_, xs_ = np.nonzero(lab == i)
+        if abs(xs_.mean() - cxw) > 0.28 * ink.shape[1] or abs(ys_.mean() - cyw) > 0.35 * ink.shape[0]:
+            continue
+        if (ys_.max() - ys_.min()) > 0.7 * ink.shape[0]:
+            continue
+        if len(ys_) > best_n:
+            best, best_n = i, len(ys_)
+    ink = lab == best if best else np.zeros_like(ink)
+    if ink.any():  # a boca nova fica exatamente onde estava a original
+        ys_, xs_ = np.nonzero(ink)
+        m["_boca_k"] = (float(xs_.mean() + x0) / k, float(ys_.mean() + y0) / k)
+    mask = np.zeros(a.shape[:2], np.uint8)
+    mask[y0:y1, x0:x1] = ink.astype(np.uint8) * 255
+    r = max(2, int(1.2 * k))
+    mask = cv2.dilate(mask, np.ones((2 * r + 1, 2 * r + 1), np.uint8))
+    longe = cv2.erode((a[..., 3] > 0).astype(np.uint8), np.ones((int(6 * k) | 1, int(6 * k) | 1), np.uint8))
+    mask[longe == 0] = 0
+    rgb = cv2.inpaint(np.ascontiguousarray(a[..., :3]), mask, max(3, int(3 * k)), cv2.INPAINT_TELEA)
+    a[..., :3] = np.where(mask[..., None] > 0, rgb, a[..., :3])
+    return Image.fromarray(a, "RGBA")
+
+
 def render(name, altura, eyes="normal", mouth="idle", brows=None, flip=False, modo=None):
     """Retorna RGBA com altura ~= altura px. modo: 'busto' (close) ou 'corpo' (de pé)."""
     modo = modo or enquadramento_padrao(name)
@@ -286,14 +342,27 @@ def render(name, altura, eyes="normal", mouth="idle", brows=None, flip=False, mo
     d = ImageDraw.Draw(over)
     lw = max(3, int(2.2 * k))
     pele = m["pele"]
+    limpa = estilo_de(name) == "cartela" and not m.get("exato")
+    if limpa:
+        # cartela: olhos e sobrancelhas desenhados por cima ficavam tortos/cortados -> mantém os originais.
+        # A expressão fica na boca, e a boca original é apagada por inpainting (sem mancha de cor chapada).
+        eyes, brows = "normal", None
+        if (m.get("barba") and mouth in ("fechada", "sorriso", "triste")) or m.get("sem_boca"):
+            mouth = "idle"  # máscara/barba: fica a boca original
+        if mouth != "idle" and not m.get("barba"):
+            m = dict(m)
+            big = _apaga_boca(big, m, k)
+            if "_boca_k" in m:
+                m["boca"] = list(m["_boca_k"])
     (l0, t0, l1, b0), (r0, t1, r1, b1) = [[c * k for c in e] for e in m["olhos"]]
     eh = m["olho_h"] * k
     # olhos
     for (x0, y0, x1, y1) in ((l0, t0, l1, b0), (r0, t1, r1, b1)):
         cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
-        rw, rh = (x1 - x0) / 2 + 2 * k, (y1 - y0) / 2 + 2 * k
+        pad = 0 if not m.get("exato") else 2 * k
+        rw, rh = (x1 - x0) / 2 + pad, (y1 - y0) / 2 + pad
         if eyes == "fechado":
-            d.ellipse([cx - rw - lw, cy - rh - lw, cx + rw + lw, cy + rh + lw], fill=pele)
+            d.ellipse([cx - rw - lw * 0.5, cy - rh - lw * 0.5, cx + rw + lw * 0.5, cy + rh + lw * 0.5], fill=pele)
             d.arc([cx - rw, cy - rh * 0.3, cx + rw, cy + rh * 0.9], 200, 340, fill=OUT, width=lw)
         elif eyes == "arregalado":
             d.ellipse([cx - rw, cy - rh, cx + rw, cy + rh], fill=(255, 255, 255), outline=OUT, width=lw)
@@ -320,8 +389,12 @@ def render(name, altura, eyes="normal", mouth="idle", brows=None, flip=False, mo
                 pts = [(outer, by), (inner, by)]
             d.line(pts, fill=OUT, width=int(lw * (3.2 if m.get("exato") else 1.8)))
     # boca
+    if m.get("barba") and mouth in ("fechada", "sorriso", "triste"):
+        mouth = "idle"  # com barba fica a boca original (não dá para apagar sem manchar)
     if mouth != "idle":
         bx, by = m["boca"][0] * k, m["boca"][1] * k
+        if limpa and m.get("barba"):
+            by -= m["olho_h"] * k * 0.12  # logo abaixo do bigode, não no queixo
         bw = max(m["boca_w"] * k, eh * 0.55)
         # apaga a boca original
         if m.get("frente"):
@@ -331,7 +404,7 @@ def render(name, altura, eyes="normal", mouth="idle", brows=None, flip=False, mo
             else:
                 d.ellipse([bx - dk * 0.36, by - dk * 0.15, bx + dk * 0.36, by + dk * 0.17], fill=pele)
             eh = dk * 0.55
-        else:
+        elif not m.get("barba") and not limpa:
             d.ellipse([bx - bw * 0.62, by - eh * 0.16, bx + bw * 0.62, by + eh * 0.2], fill=pele)
         mw = bw * 0.5
         if mouth == "fechada":

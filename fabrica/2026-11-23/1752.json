@@ -9,7 +9,7 @@
  "votacao": true,
  "versao_padrao": "A",
  "estilo": "cartela",
- "observacao": "Sem votos registrados na Parte 3 até agora -> padrão A (mais pessoal: o narrador perde algo de si; o caderno vira dele). Se não houver votos, a legenda NÃO fala de empate nem de 0 a 0 (contraria o AGENTE.md antigo, segue APRENDIZADOS + regra do dono). Protagonista é o chibi 'protagonista' da cartela do dono a partir desta parte (decisão do dono). As duas versões amarram a chave perdida da Parte 1 (o outro eu leva o caminho de casa) e convergem no mesmo dilema da Parte 5.",
+ "observacao": "Sem votos registrados na Parte 3 até agora -> padrão A (mais pessoal: o narrador perde algo de si; o caderno vira dele). Se não houver votos, a legenda NÃO fala de empate nem de 0 a 0 (contraria o AGENTE.md antigo, segue APRENDIZADOS + regra do dono). Protagonista é o chibi 'protagonista' da cartela do dono a partir desta parte (decisão do dono). As duas versões amarram a chave perdida da Parte 1 (o outro eu leva o caminho de casa) e convergem no mesmo dilema da Parte 5. ATENÇÃO (pré-fiscalização 07h15): há 1 voto no B na Parte 3 (luuh.santosmdc). A Publicação deve recontar; se nada mudar, vence B, não o padrão A.",
  "versoes": {
   "A": {
    "resumo": "Escolheram trocar: o outro eu some levando o caminho de casa do narrador, o Prefeito volta e passa o caderno pra ele, minutos antes da sirene da manhã.",
@@ -494,5 +494,10 @@
   }
  },
  "problemas": [],
- "criado_em": "2026-11-23T11:08:11Z"
+ "criado_em": "2026-11-23T11:08:11Z",
+ "placar_parcial": {
+  "A": 0,
+  "B": 1,
+  "fonte": "pré-fiscalização 23/11 07h15: luuh.santosmdc comentou \"O prefeito q suma\" (= B, deixar o Prefeito sumir), já respondido como voto no B"
+ }
 }

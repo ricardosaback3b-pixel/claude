@@ -25,5 +25,118 @@
    "speed": 0.92
   }
  },
- "partes": {}
+ "partes": {
+  "3": [
+   {
+    "cena": 1,
+    "personagem": "PROTAGONISTA",
+    "texto": "Eu empurrei o médico de volta pro espelho. E ele *me olhou* enquanto afundava."
+   },
+   {
+    "cena": 2,
+    "personagem": "PROTAGONISTA",
+    "texto": "Nas partes anteriores: o elevador parou no *menos um*, o andar que não existe."
+   },
+   {
+    "cena": 3,
+    "personagem": "PROTAGONISTA",
+    "texto": "Eu fiquei, como o porteiro mandou. E o médico do sétimo tentou me *levar com ele*."
+   },
+   {
+    "cena": 4,
+    "personagem": "PROTAGONISTA",
+    "texto": "A porta abriu no vigésimo andar e eu saí *correndo*."
+   },
+   {
+    "cena": 5,
+    "personagem": "PROTAGONISTA",
+    "texto": "Atrás de mim, o vidro do espelho ainda *tremia*."
+   },
+   {
+    "cena": 6,
+    "personagem": "PROTAGONISTA",
+    "texto": "No embaçado, alguém escreveu com o dedo, de dentro pra fora: *ele mentiu*."
+   },
+   {
+    "cena": 7,
+    "personagem": "PROTAGONISTA",
+    "texto": "E embaixo: o menos um é a *portaria*."
+   },
+   {
+    "cena": 8,
+    "personagem": "PROTAGONISTA",
+    "texto": "O interfone do corredor tocou."
+   },
+   {
+    "cena": 8,
+    "personagem": "PORTEIRO",
+    "texto": "Muito bem. Fez a coisa certa."
+   },
+   {
+    "cena": 9,
+    "personagem": "PORTEIRO",
+    "texto": "Agora desce aqui na *portaria*."
+   },
+   {
+    "cena": 10,
+    "personagem": "PROTAGONISTA",
+    "texto": "Por que eu? O que tem aí embaixo?"
+   },
+   {
+    "cena": 11,
+    "personagem": "PROTAGONISTA",
+    "texto": "Na telinha do interfone, a câmera três mostrava o elevador descendo. E o médico batia no espelho."
+   },
+   {
+    "cena": 12,
+    "personagem": "MEDICO",
+    "texto": "Não desce! Ele precisa de *alguém* no lugar dele!"
+   },
+   {
+    "cena": 13,
+    "personagem": "PORTEIRO",
+    "texto": "Não escuta ele. Desce pela escada."
+   },
+   {
+    "cena": 14,
+    "personagem": "PORTEIRO",
+    "texto": "A sua *mãe* está te esperando aqui."
+   },
+   {
+    "cena": 15,
+    "personagem": "PROTAGONISTA",
+    "texto": "E aí eu *gelei*."
+   },
+   {
+    "cena": 16,
+    "personagem": "PROTAGONISTA",
+    "texto": "A minha mãe *saiu desse prédio* faz dez anos. E nunca mais voltou."
+   },
+   {
+    "cena": 17,
+    "personagem": "PROTAGONISTA",
+    "texto": "No visor, o elevador já estava *subindo* de novo. Com o médico dentro."
+   },
+   {
+    "cena": 18,
+    "personagem": "PROTAGONISTA",
+    "texto": "Eu tinha *um minuto*."
+   },
+   {
+    "cena": 19,
+    "personagem": "PROTAGONISTA",
+    "texto": "A: voltar pro elevador e tirar o médico do espelho, mesmo que ele me leve pro *menos um*."
+   },
+   {
+    "cena": 20,
+    "personagem": "PROTAGONISTA",
+    "texto": "B: descer a escada e encarar o porteiro, deixando o médico *pra trás*."
+   },
+   {
+    "cena": 21,
+    "personagem": "PROTAGONISTA",
+    "texto": "E você, o que faria?"
+   }
+  ]
+ }
 }

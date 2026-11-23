@@ -222,7 +222,7 @@
     "scenes": [
      {
       "bg": "onibus_dentro",
-      "cam": "in",
+      "cam": "zoom_forte",
       "hook": true,
       "cover": true,
       "chars": [
@@ -446,7 +446,7 @@
     "scenes": [
      {
       "bg": "onibus_dentro",
-      "cam": "in",
+      "cam": "zoom_forte",
       "hook": true,
       "cover": true,
       "chars": [
@@ -560,7 +560,7 @@
     "scenes": [
      {
       "bg": "onibus_dentro",
-      "cam": "in",
+      "cam": "zoom_forte",
       "hook": true,
       "cover": true,
       "chars": [
@@ -672,7 +672,7 @@
     "scenes": [
      {
       "bg": "rua_amanhecer",
-      "cam": "out",
+      "cam": "zoom_forte",
       "hook": true,
       "cover": true,
       "chars": [

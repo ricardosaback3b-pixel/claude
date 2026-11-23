@@ -201,4 +201,8 @@ Parâmetros em `bg_params` (todos opcionais, valem para todos): `hora` (dia, tar
 - `fazenda`: fazenda com celeiro, cerca e campo (texto = nome no celeiro; cor = celeiro)
 
 ## Cenário, zoom e efeitos (regra do dono, 23/11)
-Nada artificial e nada forçado por regra. O cenário, o zoom e os efeitos servem à história: mostre o lugar onde a cena acontece de verdade (ver Cenários), use zoom nos momentos de tensão e efeitos só quando a história pedir (chuva se está chovendo, luz apagada se a luz caiu, alarme se toca uma sirene, filtro de TV numa câmera de segurança). Evite o fundo `escuro` quando existe um lugar de verdade para mostrar, mas não troque nada só para cumprir número. A preparação só dá avisos sobre isso, nunca bloqueia. Ao corrigir, nunca mude o cenário da cena de capa (`cover`) se o cartaz EM BREVE já saiu.
+Nada artificial e nada forçado, mas com regras de bom senso:
+- **Obrigatório (a preparação bloqueia):** no máximo 3 cenas com fundo `escuro` por parte (mostre o lugar onde a cena acontece; use `escuro` só para escuridão de verdade ou cartões de texto); a 1ª cena (gancho) entra com zoom ou tremida.
+- **O que a narração diz, a imagem mostra:** se a cena fala de chuva, mostre chuva; de neblina, neblina; de sirene/alarme, `alerta`; de luz apagada, `luz: apagada`; de câmera de segurança/gravação, `"filtro": "tv"`. A preparação avisa quando falta; o Controle de qualidade confere e corrige.
+- **Com bom senso (sem número mínimo):** zoom nos momentos de tensão; trocar de cenário quando a história muda de lugar; personalizar o cenário com `bg_params` (hora, placa, cor) para combinar com a história. Nunca coloque efeito ou cenário só para cumprir regra.
+- Ao corrigir, nunca mude o cenário da cena de capa (`cover`) se o cartaz EM BREVE já saiu.

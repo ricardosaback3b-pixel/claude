@@ -118,11 +118,33 @@ def preparar(slug, n, salvar=True):
               and sc.get("cam") not in (None, "zoom_rosto", "zoom_tremido", "zoom_forte", "shake")]
     if tensas:
         avisos.append(f"cenas de tensão sem zoom no rosto: {tensas} (use cam zoom_rosto/zoom_tremido ou deixe sem cam)")
-    # cenário, zoom e efeitos: só sugestões (regra do dono: nada forçado; use quando a história pedir)
+    # cenário, zoom e efeitos (regra do dono): regras de bom senso, nada forçado
     if scenes:
+        import re, unicodedata
+        def _norm(t):
+            return unicodedata.normalize("NFD", (t or "").lower()).encode("ascii", "ignore").decode()
         bgs = [sc.get("bg") for sc in scenes]
-        if bgs.count("escuro") > 2:
-            avisos.append(f"{bgs.count('escuro')} cenas com fundo 'escuro': veja se algum cenário de verdade combina melhor com o que acontece")
+        # REGRA: fundo genérico tem limite
+        if bgs.count("escuro") > 3:
+            erros.append(f"{bgs.count('escuro')} cenas com fundo 'escuro' (máximo 3): mostre o lugar onde a cena acontece")
+        # REGRA: o gancho entra com zoom
+        c1 = scenes[0]
+        if c1.get("cam") not in (None, "zoom_rosto", "zoom_tremido", "zoom_forte", "shake"):
+            erros.append("a 1ª cena (gancho) precisa de zoom ou tremida (zoom_forte, zoom_rosto, zoom_tremido, shake ou sem cam)")
+        # REGRA: o que a narração diz, a imagem mostra
+        pistas = [(r"\bchuv|\bchov|tempestade", lambda bp, sc: bp.get("chuva"), "chuva", "bg_params chuva"),
+                  (r"\bneblina|\bnevoa|\bnevoeiro|\bfumaca", lambda bp, sc: bp.get("neblina"), "neblina", "bg_params neblina"),
+                  (r"\bsirene|\balarme", lambda bp, sc: bp.get("alerta") or sc.get("tint"), "sirene/alarme", "bg_params alerta ou tint"),
+                  (r"luz(es)? (se )?apag|apagou a luz|faltou luz|\bbreu\b", lambda bp, sc: bp.get("luz") == "apagada" or sc.get("bg") == "escuro", "luz apagada", "bg_params luz apagada"),
+                  (r"\bcamera de seguranca|\bgravacao\b|\bfita\b|\bvhs\b", lambda bp, sc: sc.get("filtro") == "tv", "câmera/gravação", "filtro tv")]
+        for i, sc in enumerate(scenes):
+            fala = _norm(" ".join([sc.get("text") or ""] + [l.get("texto", "") for l in sc.get("linhas", [])]))
+            if re.search(r"\bnao\b.{0,25}(chov|chuv|apag|sirene|alarme)", fala):
+                continue  # negação: "não chovia", "a luz não apagou"
+            bp = sc.get("bg_params") or {}
+            for pad, tem, nome, como in pistas:
+                if re.search(pad, fala) and not tem(bp, sc):
+                    avisos.append(f"cena {i + 1} fala de {nome} mas a imagem não mostra ({como}), se fizer sentido na cena")
         if len(set(bgs)) < 2 and len(scenes) >= 6:
             avisos.append("a parte toda num cenário só: se a história muda de lugar, mostre o lugar")
         if not any(sc.get("cam") in ("zoom_rosto", "zoom_tremido", "zoom_forte", "shake") or sc.get("tensao")

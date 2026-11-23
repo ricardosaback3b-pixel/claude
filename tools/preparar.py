@@ -118,6 +118,26 @@ def preparar(slug, n, salvar=True):
               and sc.get("cam") not in (None, "zoom_rosto", "zoom_tremido", "zoom_forte", "shake")]
     if tensas:
         avisos.append(f"cenas de tensão sem zoom no rosto: {tensas} (use cam zoom_rosto/zoom_tremido ou deixe sem cam)")
+    # cenário, zoom e efeitos (regra do dono: nada genérico demais)
+    if scenes:
+        bgs = [sc.get("bg") for sc in scenes]
+        if bgs.count("escuro") > 2:
+            erros.append(f"{bgs.count('escuro')} cenas com fundo 'escuro' (máximo 2): use cenários de verdade (ver Cenários no AGENTE.md)")
+        if len(set(bgs)) < 3:
+            erros.append(f"só {len(set(bgs))} cenário(s) diferente(s) na parte (mínimo 3)")
+        zooms = sum(1 for sc in scenes if sc.get("cam") in ("zoom_rosto", "zoom_tremido", "zoom_forte", "shake")
+                    or ((sc.get("tensao") or sc.get("hook")) and sc.get("cam") is None))
+        if zooms < 3:
+            erros.append(f"só {zooms} cena(s) com zoom/tremida (mínimo 3: gancho + momentos de tensão)")
+        def _efeito(sc):
+            bp = sc.get("bg_params") or {}
+            return bool(sc.get("tint") or sc.get("filtro") or bp.get("chuva") or bp.get("neblina")
+                        or bp.get("alerta") or bp.get("luz") == "apagada")
+        fx = sum(1 for sc in scenes if _efeito(sc))
+        if fx < 2:
+            erros.append(f"só {fx} cena(s) com efeito (mínimo 2): tint, filtro \"tv\", ou bg_params chuva/neblina/alerta/luz apagada")
+        if sum(1 for sc in scenes if sc.get("bg_params")) < 2:
+            avisos.append("personalize pelo menos 2 cenários com bg_params (hora, texto, cor...)")
     palavras = sum(len(f["texto"].split()) for f in falas)
     if not 8 <= len(scenes) <= 10:
         avisos.append(f"{len(scenes)} cenas (o ideal é 8 a 10)")

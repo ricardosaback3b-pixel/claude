@@ -199,3 +199,6 @@ Parâmetros em `bg_params` (todos opcionais, valem para todos): `hora` (dia, tar
 - `beco`: beco entre prédios com escada de incêndio, caçamba e pichação (texto = pichação (padrão NÃO OLHE); cor = paredes)
 - `telhado`: telhado de prédio com caixa d'água e cidade ao fundo (texto = escrito na caixa d'água)
 - `fazenda`: fazenda com celeiro, cerca e campo (texto = nome no celeiro; cor = celeiro)
+
+## Cenário, zoom e efeitos (regra do dono, 23/11)
+A preparação (`tools/preparar.py`) recusa a parte se: mais de 2 cenas com `escuro`; menos de 3 cenários diferentes; menos de 3 cenas com zoom/tremida (`zoom_rosto`, `zoom_tremido`, `zoom_forte`, `shake`, ou `hook`/`tensao` sem `cam`); menos de 2 cenas com efeito (`tint`, `"filtro": "tv"`, ou `bg_params` com `chuva`, `neblina`, `alerta` ou `"luz": "apagada"`). Personalize os cenários com `bg_params` (hora, texto, cor) para combinarem com a história. Ao corrigir, nunca mude o cenário da cena de capa (`cover`) se o cartaz EM BREVE já saiu.

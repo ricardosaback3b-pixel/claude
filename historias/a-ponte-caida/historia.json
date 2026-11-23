@@ -64,7 +64,7 @@
       "text": "A ponte caiu *dez segundos* antes da gente atravessar. E quando eu puxei a corda do rio... ela estava *cortada*."
      },
      {
-      "bg": "floresta_noite",
+      "bg": "ponte",
       "cam": "pan_r",
       "chars": [
        {
@@ -74,10 +74,14 @@
         "look": 1
        }
       ],
-      "text": "Eu sou guia na Serra do Vento há oito anos. Hoje eu levava três pessoas numa trilha de um dia. Fácil. Volta antes do escuro."
+      "text": "Eu sou guia na Serra do Vento há oito anos. Hoje eu levava três pessoas numa trilha de um dia. Fácil. Volta antes do escuro.",
+      "bg_params": {
+       "hora": "tarde",
+       "texto": "SERRA DO VENTO"
+      }
      },
      {
-      "bg": "floresta_noite",
+      "bg": "rio",
       "cam": "in",
       "chars": [
        {
@@ -94,10 +98,13 @@
         "mouth": "triste"
        }
       ],
-      "text": "A Dona Célia, aposentada, que parava pra cheirar a terra. A Marina, que disse ser médica. E o Júnior, dezessete anos, que só queria sinal de celular."
+      "text": "A Dona Célia, aposentada, que parava pra cheirar a terra. A Marina, que disse ser médica. E o Júnior, dezessete anos, que só queria sinal de celular.",
+      "bg_params": {
+       "hora": "tarde"
+      }
      },
      {
-      "bg": "escuro",
+      "bg": "ponte",
       "cam": "zoom_forte",
       "prop": {
        "type": "lista",
@@ -109,7 +116,12 @@
         "!Tempestade chegando"
        ]
       },
-      "text": "Do outro lado do rio, o carro e o caminho de volta. Do nosso lado, mata fechada. E um trovão que já roncava atrás do morro."
+      "text": "Do outro lado do rio, o carro e o caminho de volta. Do nosso lado, mata fechada. E um trovão que já roncava atrás do morro.",
+      "bg_params": {
+       "hora": "noite",
+       "quebrada": true,
+       "neblina": true
+      }
      },
      {
       "bg": "floresta_noite",
@@ -205,7 +217,7 @@
       ]
      },
      {
-      "bg": "floresta_noite",
+      "bg": "ponte",
       "cam": "shake",
       "hook": true,
       "tint": [
@@ -222,7 +234,12 @@
         "mouth": "o"
        }
       ],
-      "text": "A chuva começou. Se eu for buscar o Júnior no escuro, a Marina e a Célia ficam sem abrigo. Se eu ficar, o Júnior passa a noite *sozinho* lá embaixo. E você, o que faria?"
+      "text": "A chuva começou. Se eu for buscar o Júnior no escuro, a Marina e a Célia ficam sem abrigo. Se eu ficar, o Júnior passa a noite *sozinho* lá embaixo. E você, o que faria?",
+      "bg_params": {
+       "hora": "noite",
+       "quebrada": true,
+       "chuva": true
+      }
      }
     ],
     "caption": "A ponte caiu dez segundos antes da gente atravessar… e a corda estava cortada. 🌧️🌉\n\nA Ponte Caída · Parte 1 — A corda foi cortada\n\nQuem você acha que cortou a corda? Mas antes, vota 👇\n\n🅰️ Buscar o Júnior no escuro\n🅱️ Ficar e montar abrigo\n\nA mais votada decide a Parte 2. A Parte 2 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#sobrevivencia #suspense #historiasempartes #trilha #voceescolhe"

@@ -270,7 +270,7 @@
       "bg_params": {
        "board": "5 DIAS"
       },
-      "cam": "zoom_rosto",
+      "cam": "out",
       "chars": [
        {
         "ref": "TEO",
@@ -278,7 +278,8 @@
         "x": 0.5,
         "scale": 0.9,
         "brows": "preocupado",
-        "mouth": "triste"
+        "mouth": "triste",
+        "y": 0.42
        }
       ],
       "text": "E eu tenho *cinco dias* pra provar que não sou o Sombra."
@@ -503,7 +504,8 @@
         40,
         70,
         160
-       ]
+       ],
+       "hora": "dia"
       },
       "cam": "zoom_rosto",
       "tensao": true,
@@ -528,7 +530,8 @@
         40,
         70,
         160
-       ]
+       ],
+       "hora": "dia"
       },
       "cam": "in",
       "chars": [
@@ -570,7 +573,8 @@
         40,
         70,
         160
-       ]
+       ],
+       "hora": "dia"
       },
       "cam": "zoom_rosto",
       "tensao": true,
@@ -600,7 +604,8 @@
         40,
         70,
         160
-       ]
+       ],
+       "hora": "dia"
       },
       "cam": "shake",
       "prop": {
@@ -635,7 +640,6 @@
        "luz": "apagada"
       },
       "cam": "zoom_tremido",
-      "hook": true,
       "tensao": true,
       "chars": [
        {
@@ -648,7 +652,18 @@
         "mouth": "o"
        }
       ],
-      "text": "Ele escolheu justo o *escuro*. A única coisa que eu não aguento. Comenta PARTE TRÊS pra saber quem escreveu na minha letra."
+      "text": "Ele escolheu justo o *escuro*. A única coisa que eu não aguento."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "hook": true,
+      "tensao": true,
+      "prop": {
+       "type": "placa",
+       "title": "HOJE 19:00"
+      },
+      "text": "Comenta PARTE TRÊS pra saber quem escreveu na minha letra."
      }
     ]
    }

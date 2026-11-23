@@ -5,7 +5,7 @@
  "historia": "o-sombra-da-sala-12",
  "titulo": "O Sombra da Sala 12",
  "parte": 2,
- "status": "produzido",
+ "status": "aprovado",
  "votacao": false,
  "versao_padrao": "unica",
  "estilo": "andar",
@@ -54,7 +54,7 @@
       "bg_params": {
        "board": "5 DIAS"
       },
-      "cam": "zoom_rosto",
+      "cam": "out",
       "chars": [
        {
         "ref": "TEO",
@@ -62,7 +62,8 @@
         "x": 0.5,
         "scale": 0.9,
         "brows": "preocupado",
-        "mouth": "triste"
+        "mouth": "triste",
+        "y": 0.42
        }
       ],
       "text": "E eu tenho *cinco dias* pra provar que não sou o Sombra."
@@ -287,7 +288,8 @@
         40,
         70,
         160
-       ]
+       ],
+       "hora": "dia"
       },
       "cam": "zoom_rosto",
       "tensao": true,
@@ -312,7 +314,8 @@
         40,
         70,
         160
-       ]
+       ],
+       "hora": "dia"
       },
       "cam": "in",
       "chars": [
@@ -354,7 +357,8 @@
         40,
         70,
         160
-       ]
+       ],
+       "hora": "dia"
       },
       "cam": "zoom_rosto",
       "tensao": true,
@@ -384,7 +388,8 @@
         40,
         70,
         160
-       ]
+       ],
+       "hora": "dia"
       },
       "cam": "shake",
       "prop": {
@@ -419,7 +424,6 @@
        "luz": "apagada"
       },
       "cam": "zoom_tremido",
-      "hook": true,
       "tensao": true,
       "chars": [
        {
@@ -432,7 +436,18 @@
         "mouth": "o"
        }
       ],
-      "text": "Ele escolheu justo o *escuro*. A única coisa que eu não aguento. Comenta PARTE TRÊS pra saber quem escreveu na minha letra."
+      "text": "Ele escolheu justo o *escuro*. A única coisa que eu não aguento."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "hook": true,
+      "tensao": true,
+      "prop": {
+       "type": "placa",
+       "title": "HOJE 19:00"
+      },
+      "text": "Comenta PARTE TRÊS pra saber quem escreveu na minha letra."
      }
     ]
    },
@@ -488,13 +503,14 @@
     [],
     [
      "TEO"
-    ]
+    ],
+    []
    ],
    "roteiro": "Sete da manhã. As chaves da escola sumiram. Do jeitinho que a lousa avisou. E eu tenho cinco dias pra provar que não sou o Sombra. Sumiu o molho inteiro! Até a chave da sala doze! Se a diretora souber, quem perde o emprego sou eu. Na lousa, o Sombra já tinha deixado o recado: eu avisei. Olha a cor, Teo. O giz é azul. Na escola inteira, só um professor usa giz azul. O professor Rui. Que guarda o giz azul trancado na gaveta, como se fosse ouro. Alguém mexeu na minha gaveta. Faltam três caixas. E vocês dois estão me olhando muito estranho. Dez e quinze. Intervalo. Quinze minutos pra revistar a sala dele. Se pegarem a gente lá dentro, você é suspenso hoje. A gaveta estava aberta. Sem cadeado. Sem giz nenhum. No fundo, dobrado, tinha um bilhete. Escrito na minha letra. Frio. Tenta de novo, Teo. Assinado: O Sombra. Ele sabia que a gente vinha, Teo. Sabia antes da gente. Dez e vinte e nove. O sinal ia tocar. E tinha passos no corredor. Eu virei o bilhete. Atrás: hoje, sete da noite. Sala doze. Sem luz. Ele escolheu justo o escuro. A única coisa que eu não aguento. Comenta PARTE TRÊS pra saber quem escreveu na minha letra.",
-   "cenas": 19,
+   "cenas": 20,
    "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/o-sombra-da-sala-12/parte2.mp4",
    "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/o-sombra-da-sala-12/capa2.jpg",
-   "duracao": 73.6
+   "duracao": 73.9
   }
  },
  "problemas": [
@@ -519,5 +535,34 @@
   "6. Final = virada de quem sabe mais (verso do bilhete), sem resumo; tirada a fala de compartilhar do áudio (ficou na legenda).",
   "7. Última frase: 'Comenta PARTE TRÊS pra saber quem escreveu na minha letra.'",
   "8. Legenda linha 1 = gancho (chaves às 7h como a lousa avisou) + 'Manda pra quem tem medo do escuro e nunca admite'."
- ]
+ ],
+ "regras_virais_ok": {
+  "1_frase1_conflito_prazo": "ok ('Sete da manhã. As chaves da escola sumiram...' + 5 dias na cena 2)",
+  "2_sem_curriculo": "ok",
+  "3_15s_fatos_frases_curtas": "ok (máx. 14 palavras por cena nos 15 s)",
+  "4_relogio_na_tela": "corrigido (lousa '5 DIAS' agora legível → 10:15 → 10:29 → HOJE 19H → nova placa 'HOJE 19:00' na chamada final)",
+  "5_papel_celular_legivel": "ok (celular 10:15; bilhete e verso em vermelho)",
+  "6_final_virada": "ok (verso do bilhete: Sombra sabe mais e escolheu o escuro)",
+  "7_chamada_parte_n1": "ok ('Comenta PARTE TRÊS pra saber quem escreveu na minha letra.')",
+  "8_legenda_gancho_manda_pra_quem": "ok"
+ },
+ "controle_qualidade": {
+  "feito_em": "2026-11-23T23:52Z",
+  "resultado": "aprovado com correções",
+  "checado": [
+   "ficha produzido; cartaz embreve2.jpg = capa (mesmo título, Parte 2, Seu Bento no corredor)",
+   "personagens só do catálogo andar, físico igual à Parte 1 e ao cartaz; vozes do elenco travado (aviso antigo: pitch de TEO 1.12/NINA 1.14 fora da faixa, travado, não mexido)",
+   "quadro de cada cena olhado (20 cenas); rostos com 1 boca e 2 olhos; legendas e textos legíveis",
+   "ritmo: 20 cenas de ~3–4,5 s, zoom no gancho e nas tensões, sem duas cenas seguidas iguais",
+   "áudio: 73,9 s, com áudio, sem silêncio >1,2 s; falas batem com o roteiro",
+   "coerência: retoma o recado da Parte 1 (alguém vai perder a chave), 5 dias depois dos 6; liga na Parte 3 (19h, luz apaga); legenda ok",
+   "preparar.py ok; checar_catalogos ok; links raw 200"
+  ],
+  "corrigido": [
+   "gabinete do Prof. Rui (cenas 13, 14, 16, 17) mostrava céu de NOITE com estrelas às 10h15 da manhã → bg_params hora 'dia'",
+   "cena 2: lousa '5 DIAS' ficava escondida atrás da cabeça do Teo / cortada pelo zoom → Teo mais baixo (y 0.42) e câmera 'out'",
+   "última cena tinha ~10 s (2 frases + chamada) → dividida: Teo 'escolheu justo o escuro' + nova cena placa 'HOJE 19:00' com a chamada (relógio avança até o fim)",
+   "re-renderizado (parte2.mp4 73,9 s; capa2 igual)"
+  ]
+ }
 }

@@ -201,7 +201,12 @@
    {
     "cena": 19,
     "personagem": "TEO",
-    "texto": "Ele escolheu justo o *escuro*. A única coisa que eu não aguento. Comenta PARTE TRÊS pra saber quem escreveu na minha letra."
+    "texto": "Ele escolheu justo o *escuro*. A única coisa que eu não aguento."
+   },
+   {
+    "cena": 20,
+    "personagem": "TEO",
+    "texto": "Comenta PARTE TRÊS pra saber quem escreveu na minha letra."
    }
   ]
  }

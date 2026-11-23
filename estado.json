@@ -1,6 +1,6 @@
 {
  "horarios": "9h, 12h, 15h, 18h, 21h (America/Campo_Grande)",
- "vez": 1,
+ "vez": 2,
  "ativas": [
   {
    "slug": "ultimo-onibus",
@@ -77,6 +77,12 @@
    "slug": "ultimo-onibus",
    "parte": 2,
    "media_id": "18088148606330324"
+  },
+  {
+   "quando": "2026-11-23T18:55:21Z",
+   "slug": "elevador",
+   "parte": 3,
+   "media_id": "18137593846679833"
   }
  ],
  "ultimo_estilo": "cartela"

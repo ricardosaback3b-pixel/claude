@@ -65,7 +65,7 @@
   },
   {
    "n": 3,
-   "status": "produzida",
+   "status": "publicada",
    "opcoes": [
     "Voltar e tirar o médico",
     "Descer e encarar o porteiro"
@@ -433,7 +433,11 @@
       "text": "E você, o que faria?"
      }
     ]
-   }
+   },
+   "media_id": "18137593846679833",
+   "publicada_em": "2026-11-23T18:55:21Z",
+   "versao": "B",
+   "primeiro_comentario_id": "18360961804220453"
   }
  ],
  "personagens_travados": {

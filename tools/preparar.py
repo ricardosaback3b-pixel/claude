@@ -128,7 +128,7 @@ def preparar(slug, n, salvar=True):
         if not any(sc.get("cam") in ("zoom_rosto", "zoom_tremido", "zoom_forte", "shake") or sc.get("tensao")
                    for sc in scenes[1:]):
             avisos.append("nenhum zoom depois do gancho: se houver um momento de tensão, marque-o")
-    palavras = sum(len(f["texto"].split()) for f in falas)    palavras = sum(len(f["texto"].split()) for f in falas)
+    palavras = sum(len(f["texto"].split()) for f in falas)
     if not 8 <= len(scenes) <= 10:
         avisos.append(f"{len(scenes)} cenas (o ideal é 8 a 10)")
     if not 190 <= palavras <= 240:

@@ -3,7 +3,7 @@
  "titulo": "O Último Ônibus",
  "tipo": "continua",
  "status": "ativa",
- "biblia": "Lia (narradora, 1ª pessoa) perde o último ônibus e pega um ônibus sem número que passa à meia-noite na Rua 9. Ele é feito de coisas não ditas: cada parada mostra um segredo escondido. Passageiros: Seu Ivo (porteiro falecido, guia gentil), uma menina de uniforme (ajuda a fugir pela parada 4), o motorista (é Lia 40 anos mais velha, o que ela vira se continuar fugindo). Segredo de Lia: escondeu sob o piso da casa de infância uma carta do pai para a irmã Bia. Bia entra no ônibus na parada 3 sem memória. Para sair, alguém diz a verdade antes da última parada. Final: Lia conta, acorda no ponto ao amanhecer, Bia atende, a carta está lá, o ônibus volta com número e Seu Ivo acena. VISUAL DEFINITIVO a partir da Parte 2 (cartela do dono): Lia = garota de moletom roxo; Seu Ivo = porteiro de quepe azul; Motorista = motorista escurecido (rosto na sombra) até a revelação; Lia mais velha = mulher de vestido roxo; Menina de uniforme = menina do laço vermelho com mochila; Bia = menina de vestido rosa.",
+ "biblia": "Lia (narradora, 1ª pessoa) perde o último ônibus e pega um ônibus sem número que passa à meia-noite na Rua 9. Ele é feito de coisas não ditas: cada parada mostra um segredo escondido. Passageiros: Seu Ivo (porteiro falecido, guia gentil), uma menina de laço no cabelo (ajuda a fugir pela parada 4), o motorista (é Lia 40 anos mais velha, o que ela vira se continuar fugindo). Segredo de Lia: escondeu sob o piso da casa de infância uma carta do pai para a irmã Bia. Bia entra no ônibus na parada 3 sem memória. Para sair, alguém diz a verdade antes da última parada. Final: Lia conta, acorda no ponto ao amanhecer, Bia atende, a carta está lá, o ônibus volta com número e Seu Ivo acena. VISUAL DEFINITIVO a partir da Parte 2 (estilo 'andar', aprovado pelo dono em 23/11): Lia = adolescente de moletom roxo e rabo de cavalo; Seu Ivo = porteiro de quepe e uniforme verdes, bigode grisalho; Motorista = motorista de quepe azul, escurecido (rosto na sombra) até a revelação; Lia mais velha = mulher de cabelo comprido e blusa clara; Menina = menina de laço rosa e camiseta rosa; Bia = estudante de moletom rosa.",
  "personagens": {
   "LIA": {
    "nome": "Lia",
@@ -375,7 +375,7 @@
         "look": -1
        }
       ],
-      "text": "Uma menina de uniforme sentou do meu lado. Sem falar nada, me passou um *bilhete*."
+      "text": "Uma menina de laço no cabelo sentou do meu lado. Sem falar nada, me passou um *bilhete*."
      },
      {
       "bg": "escuro",

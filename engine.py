@@ -456,7 +456,7 @@ def prop_layer(prop):
     kind = prop["type"]
     if kind in ("lista", "bilhete", "carta"):
         pw, ph = (760, 980) if kind != "bilhete" else (700, 520)
-        x0, y0 = (BW - pw) // 2, 520
+        x0, y0 = (BW - pw) // 2, int(prop.get("y", 520))
         d.rectangle([x0 + 18, y0 + 18, x0 + pw + 18, y0 + ph + 18], fill=(0, 0, 0, 120))
         d.rectangle([x0, y0, x0 + pw, y0 + ph], fill=(240, 232, 206), outline=(60, 50, 40), width=6)
         f = font(MONT, 46, True)
@@ -485,7 +485,7 @@ def prop_layer(prop):
         d.ellipse([x0 + 90, y0 + ph - 240, x0 + 230, y0 + ph - 100], fill=(220, 50, 50))
         d.ellipse([x0 + pw - 230, y0 + ph - 240, x0 + pw - 90, y0 + ph - 100], fill=(40, 200, 90))
     elif kind == "placa":
-        x0, y0 = 120, 500
+        x0, y0 = 120, int(prop.get("y", 500))
         d.rounded_rectangle([x0, y0, BW - 120, y0 + 330], 30, fill=(12, 12, 14), outline=(255, 140, 40), width=10)
         f = font(ANTON, 110)
         d.text((BW // 2, y0 + 165), prop.get("title", ""), font=f, fill=(255, 140, 40), anchor="mm")
@@ -665,12 +665,12 @@ def filtro_tv(frame, ft, rng=np.random.default_rng(7)):
     out = Image.fromarray(np.clip(a, 0, 255).astype(np.uint8)).convert("RGBA")
     d = ImageDraw.Draw(out)
     f = font(MONT, 40, True)
-    d.text((50, 320), "CAM 03", font=f, fill=(235, 235, 235))
+    d.text((50, 430), "CAM 03", font=f, fill=(235, 235, 235))
     if int(ft * 2) % 2 == 0:
-        d.ellipse([W - 230, 312, W - 200, 342], fill=(230, 40, 40))
-    d.text((W - 185, 327), "REC", font=f, fill=(235, 235, 235), anchor="lm")
+        d.ellipse([W - 230, 422, W - 200, 452], fill=(230, 40, 40))
+    d.text((W - 185, 437), "REC", font=f, fill=(235, 235, 235), anchor="lm")
     seg = int(ft) % 60
-    d.text((50, 380), f"23:59:{seg:02d}", font=font(MONT, 34, True), fill=(220, 220, 220))
+    d.text((50, 490), f"23:59:{seg:02d}", font=font(MONT, 34, True), fill=(220, 220, 220))
     return out
 
 
@@ -1094,7 +1094,7 @@ def render(script, out_dir):
         rgb = frame.convert("RGB")
         last_frame = rgb
         if sc.get("cover") and cover_frame is None and ft - st > dur * 0.5:
-            cover_frame = camera(src, sc.get("cam", "in"), 0.5)
+            cover_frame = camera(src, "in", 0.0)  # capa = plano aberto, igual ao cartaz EM BREVE (rosto fora do título)
         proc.stdin.write(rgb.tobytes())
     proc.stdin.close()
     proc.wait()

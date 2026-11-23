@@ -169,7 +169,8 @@
       "tensao": true,
       "prop": {
        "type": "placa",
-       "title": "20... 10... 1... -1"
+       "title": "10... 5... 1... -1",
+       "y": 820
       },
       "text": "No visor, os números foram caindo. Dez. Cinco. Um. E parou no *menos um*."
      },
@@ -364,7 +365,12 @@
       },
       "cam": "zoom_forte",
       "tensao": true,
-      "text": "No visor, o elevador já estava *subindo* de novo. Com o médico dentro."
+      "text": "No visor, o elevador já estava *subindo* de novo. Com o médico dentro.",
+      "prop": {
+       "type": "placa",
+       "title": "SUBINDO... 5",
+       "y": 820
+      }
      },
      {
       "bg": "corredor_predio",

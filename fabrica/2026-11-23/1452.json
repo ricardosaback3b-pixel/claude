@@ -5,7 +5,7 @@
  "historia": "elevador",
  "titulo": "O Andar que Não Existe",
  "parte": 3,
- "status": "produzido",
+ "status": "aprovado",
  "votacao": true,
  "versao_padrao": "B",
  "estilo": "andar",
@@ -138,9 +138,11 @@
       "tensao": true,
       "prop": {
        "type": "bilhete",
+       "title": "NO ESPELHO:",
        "lines": [
         "ELE MENTIU."
-       ]
+       ],
+       "y": 760
       },
       "text": "No embaçado, alguém escreveu com o dedo, de dentro pra fora: *ele mentiu*."
      },
@@ -150,10 +152,12 @@
       "tensao": true,
       "prop": {
        "type": "bilhete",
+       "title": "NO ESPELHO:",
        "lines": [
         "ELE MENTIU.",
         "!O -1 É A PORTARIA."
-       ]
+       ],
+       "y": 760
       },
       "text": "E embaixo: o menos um é a *portaria*."
      },
@@ -348,7 +352,12 @@
       },
       "cam": "zoom_forte",
       "tensao": true,
-      "text": "No visor, o elevador já estava *subindo* de novo. Com o médico dentro."
+      "text": "No visor, o elevador já estava *subindo* de novo. Com o médico dentro.",
+      "prop": {
+       "type": "placa",
+       "title": "SUBINDO... 5",
+       "y": 820
+      }
      },
      {
       "bg": "corredor_predio",
@@ -590,7 +599,8 @@
       "tensao": true,
       "prop": {
        "type": "placa",
-       "title": "20... 10... 1... -1"
+       "title": "10... 5... 1... -1",
+       "y": 820
       },
       "text": "No visor, os números foram caindo. Dez. Cinco. Um. E parou no *menos um*."
      },
@@ -785,7 +795,12 @@
       },
       "cam": "zoom_forte",
       "tensao": true,
-      "text": "No visor, o elevador já estava *subindo* de novo. Com o médico dentro."
+      "text": "No visor, o elevador já estava *subindo* de novo. Com o médico dentro.",
+      "prop": {
+       "type": "placa",
+       "title": "SUBINDO... 5",
+       "y": 820
+      }
      },
      {
       "bg": "corredor_predio",
@@ -923,5 +938,26 @@
   },
   "contado_em": "2026-11-23T15:55Z",
   "obs": "Todos os 3 comentários principais da Parte 2 já tinham resposta; nenhuma resposta nova."
+ },
+ "controle_qualidade": {
+  "revisado_em": "2026-11-23T17:45Z",
+  "resultado": "aprovado com correções",
+  "checado": [
+   "Ficha x cartaz EM BREVE: mesmo nome, Parte 3, mesmo protagonista no elevador 20; capa agora em plano aberto igual ao cartaz",
+   "Cenários: 1 quadro por cena olhado (A 21, B 20); elevador/corredor/portaria/porão personalizados; escuro A=2, B=2; window não usado; câmera de segurança com filtro tv",
+   "Ritmo: A 21 e B 20 cenas, gancho com zoom_rosto, sem cenas seguidas iguais, zoom nos momentos de tensão",
+   "Imagem: só catálogo andar (andar_voce, andar_medico, andar_porteiro), mesmo físico do cartaz/bíblia; 1 boca e 2 olhos; legendas legíveis",
+   "Áudio: A 77,4 s e B 76,5 s, com áudio, sem silêncios >1,2 s; vozes kokoro:pm_alex / piper:faber / kokoro:pm_santa conforme elenco travado",
+   "Coerência: continua a Parte 2 (médico preso no espelho, saída no 20º); faixa 'VOCÊS ESCOLHERAM A/B' certa em cada versão; final com voto e 'Segue pra ver a Parte 4'; legenda sem 'já está no perfil' e sem dizer que ninguém votou",
+   "Técnica: links raw de parte3/parte3A/parte3B e capas respondem 200; preparar.py sem erros; checar_catalogos ok"
+  ],
+  "corrigido": [
+   "A cenas 6-7: o bilhete 'ELE MENTIU' ficava escondido atrás das faixas do topo no zoom; agora 'NO ESPELHO:' + texto abaixo das faixas (prop.y)",
+   "A cena 17 / B cena 16: narração fala do visor subindo e a imagem só mostrava a porta; agora o visor 'SUBINDO... 5' aparece",
+   "B cena 6: visor mostrava '20... 10... 1... -1' e a narração diz 'Dez. Cinco. Um'; agora '10... 5... 1... -1'",
+   "Câmera de segurança: selo CAM 03/REC/hora ficava atrás da faixa amarela; movido para baixo das faixas (engine.filtro_tv)",
+   "Capa: o título tapava os olhos do protagonista (quadro em zoom); capa agora usa o plano aberto da cena de capa, igual ao cartaz (cenário da capa não mudou)",
+   "Re-renderizadas A e B; parte3.mp4/capa3.jpg = B (padrão)"
+  ]
  }
 }

@@ -30,7 +30,7 @@
    {
     "cena": 1,
     "personagem": "PROTAGONISTA",
-    "texto": "Eu empurrei o médico de volta pro espelho. E ele *me olhou* enquanto afundava."
+    "texto": "Eu corri pra porta primeiro. E deixei o médico *preso no espelho*."
    },
    {
     "cena": 2,
@@ -40,100 +40,95 @@
    {
     "cena": 3,
     "personagem": "PROTAGONISTA",
-    "texto": "Eu fiquei, como o porteiro mandou. E o médico do sétimo tentou me *levar com ele*."
+    "texto": "Eu fiquei, como o porteiro mandou. E o médico do sétimo acabou *dentro do espelho*."
    },
    {
     "cena": 4,
     "personagem": "PROTAGONISTA",
-    "texto": "A porta abriu no vigésimo andar e eu saí *correndo*."
+    "texto": "Eu caí de joelhos no corredor do vigésimo andar."
    },
    {
     "cena": 5,
     "personagem": "PROTAGONISTA",
-    "texto": "Atrás de mim, o vidro do espelho ainda *tremia*."
+    "texto": "Atrás de mim, a porta fechou. E o elevador começou a *descer sozinho*."
    },
    {
     "cena": 6,
     "personagem": "PROTAGONISTA",
-    "texto": "No embaçado, alguém escreveu com o dedo, de dentro pra fora: *ele mentiu*."
+    "texto": "No visor, os números foram caindo. Dez. Cinco. Um. E parou no *menos um*."
    },
    {
     "cena": 7,
     "personagem": "PROTAGONISTA",
-    "texto": "E embaixo: o menos um é a *portaria*."
-   },
-   {
-    "cena": 8,
-    "personagem": "PROTAGONISTA",
     "texto": "O interfone do corredor tocou."
    },
    {
+    "cena": 7,
+    "personagem": "PORTEIRO",
+    "texto": "Muito bem. Você saiu."
+   },
+   {
     "cena": 8,
     "personagem": "PORTEIRO",
-    "texto": "Muito bem. Fez a coisa certa."
+    "texto": "Agora *alguém* precisa entrar no seu lugar."
    },
    {
     "cena": 9,
-    "personagem": "PORTEIRO",
-    "texto": "Agora desce aqui na *portaria*."
+    "personagem": "PROTAGONISTA",
+    "texto": "No meu lugar? Como assim, no meu lugar?"
    },
    {
     "cena": 10,
     "personagem": "PROTAGONISTA",
-    "texto": "Por que eu? O que tem aí embaixo?"
+    "texto": "Na telinha do interfone, a câmera três mostrava o médico batendo no espelho."
    },
    {
     "cena": 11,
-    "personagem": "PROTAGONISTA",
-    "texto": "Na telinha do interfone, a câmera três mostrava o elevador descendo. E o médico batia no espelho."
+    "personagem": "MEDICO",
+    "texto": "Ele mente pra você desde o *primeiro andar*!"
    },
    {
     "cena": 12,
-    "personagem": "MEDICO",
-    "texto": "Não desce! Ele precisa de *alguém* no lugar dele!"
+    "personagem": "PORTEIRO",
+    "texto": "Não escuta ele. Desce pela escada e vem pra portaria."
    },
    {
     "cena": 13,
     "personagem": "PORTEIRO",
-    "texto": "Não escuta ele. Desce pela escada."
-   },
-   {
-    "cena": 14,
-    "personagem": "PORTEIRO",
     "texto": "A sua *mãe* está te esperando aqui."
    },
    {
-    "cena": 15,
+    "cena": 14,
     "personagem": "PROTAGONISTA",
     "texto": "E aí eu *gelei*."
    },
    {
-    "cena": 16,
+    "cena": 15,
     "personagem": "PROTAGONISTA",
     "texto": "A minha mãe *saiu desse prédio* faz dez anos. E nunca mais voltou."
    },
    {
-    "cena": 17,
+    "cena": 16,
     "personagem": "PROTAGONISTA",
     "texto": "No visor, o elevador já estava *subindo* de novo. Com o médico dentro."
    },
    {
-    "cena": 18,
+    "cena": 17,
     "personagem": "PROTAGONISTA",
     "texto": "Eu tinha *um minuto*."
    },
    {
-    "cena": 19,
+    "cena": 18,
     "personagem": "PROTAGONISTA",
     "texto": "A: voltar pro elevador e tirar o médico do espelho, mesmo que ele me leve pro *menos um*."
    },
    {
-    "cena": 20,
+    "cena": 19,
     "personagem": "PROTAGONISTA",
     "texto": "B: descer a escada e encarar o porteiro, deixando o médico *pra trás*."
    },
    {
-    "cena": 21,
+    "cena": 20,
     "personagem": "PROTAGONISTA",
     "texto": "E você, o que faria?"
    }

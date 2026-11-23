@@ -206,3 +206,8 @@ Nada artificial e nada forçado, mas com regras de bom senso:
 - **O que a narração diz, a imagem mostra:** se a cena fala de chuva, mostre chuva; de neblina, neblina; de sirene/alarme, `alerta`; de luz apagada, `luz: apagada`; de câmera de segurança/gravação, `"filtro": "tv"`. A preparação avisa quando falta; o Controle de qualidade confere e corrige.
 - **Com bom senso (sem número mínimo):** zoom nos momentos de tensão; trocar de cenário quando a história muda de lugar; personalizar o cenário com `bg_params` (hora, placa, cor) para combinar com a história. Nunca coloque efeito ou cenário só para cumprir regra.
 - Ao corrigir, nunca mude o cenário da cena de capa (`cover`) se o cartaz EM BREVE já saiu.
+
+## Cortes rápidos e cenários de excelência (regra do dono, 23/11)
+- Como nos vídeos virais de referência: **cortes rápidos e gancho forte**. Cada parte tem **14 a 22 cenas curtas** (1 frase cada, 2–4 s), trocando o plano a cada corte: close no rosto de quem fala, plano aberto do lugar, objeto/prova (`prop`), reação de outro personagem, mudança de cenário quando a história muda de lugar. Nunca duas cenas seguidas iguais (mesmo cenário, plano e personagens).
+- A preparação recusa parte com menos de 12 cenas. Depois de escrever, rode `python3 tools/cortes.py <slug> <n>` para dividir cenas longas e **revise o resultado** à mão (variar planos, trocar cenas repetidas por reação ou detalhe).
+- **Cenário de excelência:** nada de cenário pobre ou mal montado (ex.: casa chapada atrás de moldura de janela de ônibus sem motivo). Use os cenários caprichados (`cenarios.py`), personalizados para a história. `window: true` (moldura de janela de ônibus) só quando a pessoa está DENTRO do ônibus olhando para fora.

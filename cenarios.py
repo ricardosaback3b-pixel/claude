@@ -806,6 +806,59 @@ def fazenda(p):
     return img
 
 
+def casa(p):
+    """Casa de rua caprichada: telhado de telhas, varanda, janelas com cortina, cerca, árvore e poste."""
+    img = ceu(p)
+    d = ImageDraw.Draw(img)
+    rng = random.Random(p.get("seed", 8))
+    n = noite(p)
+    chao_ext(img, 1420, (40, 70, 40) if not n else (14, 26, 18))
+    d.rectangle([0, 1560, E.BW, E.BH], fill=(150, 140, 130) if not n else (42, 40, 46))  # calçada
+    for x in range(0, E.BW, 140):
+        d.line([x, 1560, x - 60, E.BH], fill=(120, 112, 104) if not n else (30, 30, 34), width=4)
+    arvore(d, 110, 1450, 760, rng, (40, 96, 46) if not n else (12, 30, 20))
+    cor = _p(p, "cor", (196, 160, 120))
+    x0, x1, top = 260, E.BW - 120, 820
+    parede = cor if not n else sh(cor, 0.55)
+    d.rectangle([x0, top, x1, 1430], fill=parede)
+    for y in range(top + 30, 1430, 46):  # tábuas
+        d.line([x0, y, x1, y], fill=sh(parede, 0.9), width=3)
+    telha = (150, 60, 44) if not n else (70, 30, 26)
+    d.polygon([(x0 - 70, top + 10), ((x0 + x1) // 2, top - 330), (x1 + 70, top + 10)], fill=telha)
+    for k in range(1, 7):  # fileiras de telhas
+        y = top + 10 - k * 48
+        f = k * 48 / 340
+        xa, xb = x0 - 70 + (((x0 + x1) // 2) - (x0 - 70)) * f, x1 + 70 - ((x1 + 70) - ((x0 + x1) // 2)) * f
+        d.line([xa, y, xb, y], fill=sh(telha, 0.75), width=5)
+    d.rectangle([x1 - 150, top - 260, x1 - 90, top - 120], fill=(110, 90, 80))  # chaminé
+    luz = (255, 214, 130)
+    for (a, b) in ((x0 + 60, x0 + 280), (x1 - 280, x1 - 60)):
+        acesa = n and (a < E.BW // 2 or p.get("luz") != "apagada")
+        d.rectangle([a, top + 120, b, top + 380], fill=luz if acesa else ((40, 50, 70) if n else (150, 190, 220)))
+        d.rectangle([a, top + 120, b, top + 380], outline=(250, 245, 235) if not n else (60, 50, 44), width=12)
+        d.line([(a + b) // 2, top + 120, (a + b) // 2, top + 380], fill=(250, 245, 235) if not n else (60, 50, 44), width=8)
+        d.polygon([(a + 6, top + 126), (a + 60, top + 126), (a + 30, top + 374), (a + 6, top + 374)], fill=(170, 50, 60))
+        d.polygon([(b - 6, top + 126), (b - 60, top + 126), (b - 30, top + 374), (b - 6, top + 374)], fill=(170, 50, 60))
+        if acesa:
+            E.glow(img, ((a + b) // 2, top + 250), 200, luz, 90)
+            d = ImageDraw.Draw(img)
+    dx = (x0 + x1) // 2
+    d.rectangle([dx - 90, top + 260, dx + 90, 1430], fill=(110, 64, 40) if not n else (60, 36, 24))  # porta
+    d.ellipse([dx + 50, top + 520, dx + 70, top + 540], fill=(220, 190, 90))
+    d.rectangle([x0 - 30, 1400, x1 + 30, 1440], fill=sh(parede, 0.7))  # degrau/varanda
+    if p.get("texto"):
+        d.rectangle([dx - 70, top + 190, dx + 70, top + 240], fill=(240, 235, 220))
+        txt(d, (dx, top + 215), p["texto"], 130, 40, (40, 30, 20))
+    for x in range(0, E.BW, 70):  # cerca
+        d.polygon([(x, 1500), (x + 20, 1470), (x + 40, 1500), (x + 40, 1600), (x, 1600)], fill=(240, 238, 230) if not n else (80, 78, 76))
+    d.rectangle([0, 1530, E.BW, 1546], fill=(240, 238, 230) if not n else (80, 78, 76))
+    px = E.BW - 60
+    d.rectangle([px, 760, px + 18, 1600], fill=(30, 30, 40))
+    if n:
+        E.glow(img, (px, 760), 190, (255, 214, 130), 120)
+    return img
+
+
 FUNCOES = {
     "cozinha": cozinha, "sala_estar": sala_estar, "banheiro": banheiro, "porao": porao, "sotao": sotao,
     "hospital_quarto": hospital, "delegacia": delegacia, "escritorio": escritorio, "biblioteca": biblioteca,
@@ -813,7 +866,7 @@ FUNCOES = {
     "recepcao_hotel": hotel, "gabinete": gabinete, "ginasio": ginasio, "teatro": teatro,
     "estacao_metro": metro, "caverna": caverna, "ponte": ponte, "rio": rio, "praia": praia, "praca": praca,
     "parque_diversoes": parque_diversoes, "estrada": estrada, "posto_gasolina": posto, "cemiterio": cemiterio,
-    "beco": beco, "telhado": telhado, "fazenda": fazenda,
+    "beco": beco, "telhado": telhado, "fazenda": fazenda, "casa": casa,
 }
 
 CENARIOS = {
@@ -847,6 +900,7 @@ CENARIOS = {
     "beco": {"o_que": "beco entre prédios com escada de incêndio, caçamba e pichação", "extras": "texto = pichação (padrão NÃO OLHE); cor = paredes"},
     "telhado": {"o_que": "telhado de prédio com caixa d'água e cidade ao fundo", "extras": "texto = escrito na caixa d'água"},
     "fazenda": {"o_que": "fazenda com celeiro, cerca e campo", "extras": "texto = nome no celeiro; cor = celeiro"},
+    "casa": {"o_que": "casa de rua com telhado, varanda, janelas com cortina, cerca, árvore e poste", "extras": "texto = número da casa; cor = parede; luz apagada = janela da direita apagada"},
 }
 
 

@@ -151,8 +151,18 @@ def preparar(slug, n, salvar=True):
                    for sc in scenes[1:]):
             avisos.append("nenhum zoom depois do gancho: se houver um momento de tensão, marque-o")
     palavras = sum(len(f["texto"].split()) for f in falas)
-    if not 8 <= len(scenes) <= 10:
-        avisos.append(f"{len(scenes)} cenas (o ideal é 8 a 10)")
+    # cortes rápidos (regra do dono, como nos vídeos virais): cenas curtas de 1 frase
+    if len(scenes) < 12:
+        erros.append(f"só {len(scenes)} cenas: o dono quer cortes rápidos (14 a 22 cenas de 2–4 s). Rode python3 tools/cortes.py {slug} {n} e revise")
+    longas = [i + 1 for i, sc in enumerate(scenes)
+              if len(" ".join([sc.get("text") or ""] + [l.get("texto", "") for l in sc.get("linhas", [])]).split()) > 22]
+    if longas:
+        avisos.append(f"cenas longas demais (mais de 22 palavras): {longas}; divida em cortes")
+    for i in range(1, len(scenes)):
+        a, b = scenes[i - 1], scenes[i]
+        if (a.get("bg"), a.get("cam"), [c.get("ref") for c in a.get("chars", [])]) == (b.get("bg"), b.get("cam"), [c.get("ref") for c in b.get("chars", [])]):
+            avisos.append(f"cenas {i} e {i + 1} iguais (mesmo cenário, plano e personagens): varie o plano")
+            break
     if not 190 <= palavras <= 240:
         avisos.append(f"{palavras} palavras faladas (o ideal é 190 a 240)")
     if len(falantes) < 1 or sum(1 for f in falas if f["personagem"] != narr) < 2:

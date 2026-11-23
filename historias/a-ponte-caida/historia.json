@@ -61,7 +61,21 @@
         "mouth": "o"
        }
       ],
-      "text": "A ponte caiu *dez segundos* antes da gente atravessar. E quando eu puxei a corda do rio... ela estava *cortada*."
+      "text": "A ponte caiu *dez segundos* antes da gente atravessar."
+     },
+     {
+      "bg": "floresta_noite",
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "RAFA",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "E quando eu puxei a corda do rio... ela estava *cortada*."
      },
      {
       "bg": "ponte",
@@ -74,11 +88,28 @@
         "look": 1
        }
       ],
-      "text": "Eu sou guia na Serra do Vento há oito anos. Hoje eu levava três pessoas numa trilha de um dia. Fácil. Volta antes do escuro.",
       "bg_params": {
        "hora": "tarde",
        "texto": "SERRA DO VENTO"
-      }
+      },
+      "text": "Eu sou guia na Serra do Vento há oito anos."
+     },
+     {
+      "bg": "ponte",
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "RAFA",
+        "x": 0.35,
+        "scale": 0.85,
+        "look": 1
+       }
+      ],
+      "bg_params": {
+       "hora": "tarde",
+       "texto": "SERRA DO VENTO"
+      },
+      "text": "Hoje eu levava três pessoas numa trilha de um dia. Fácil. Volta antes do escuro."
      },
      {
       "bg": "rio",
@@ -98,10 +129,33 @@
         "mouth": "triste"
        }
       ],
-      "text": "A Dona Célia, aposentada, que parava pra cheirar a terra. A Marina, que disse ser médica. E o Júnior, dezessete anos, que só queria sinal de celular.",
       "bg_params": {
        "hora": "tarde"
-      }
+      },
+      "text": "A Dona Célia, aposentada, que parava pra cheirar a terra. A Marina, que disse ser médica."
+     },
+     {
+      "bg": "rio",
+      "cam": "out",
+      "chars": [
+       {
+        "ref": "CELIA",
+        "x": 0.3,
+        "scale": 0.85,
+        "mouth": "neutra"
+       },
+       {
+        "ref": "MARINA",
+        "x": 0.72,
+        "scale": 0.85,
+        "look": -1,
+        "mouth": "triste"
+       }
+      ],
+      "bg_params": {
+       "hora": "tarde"
+      },
+      "text": "E o Júnior, dezessete anos, que só queria sinal de celular."
      },
      {
       "bg": "ponte",
@@ -116,12 +170,32 @@
         "!Tempestade chegando"
        ]
       },
-      "text": "Do outro lado do rio, o carro e o caminho de volta. Do nosso lado, mata fechada. E um trovão que já roncava atrás do morro.",
       "bg_params": {
        "hora": "noite",
        "quebrada": true,
        "neblina": true
-      }
+      },
+      "text": "Do outro lado do rio, o carro e o caminho de volta."
+     },
+     {
+      "bg": "ponte",
+      "cam": "pan_r",
+      "prop": {
+       "type": "lista",
+       "title": "SITUAÇÃO",
+       "lines": [
+        "Ponte: caiu",
+        "Celular: sem sinal",
+        "!Escurece em 1 hora",
+        "!Tempestade chegando"
+       ]
+      },
+      "bg_params": {
+       "hora": "noite",
+       "quebrada": true,
+       "neblina": true
+      },
+      "text": "Do nosso lado, mata fechada. E um trovão que já roncava atrás do morro."
      },
      {
       "bg": "floresta_noite",
@@ -147,7 +221,23 @@
        {
         "voz": "RAFA",
         "texto": "Alguém cortou essa corda. Alguém aqui."
-       },
+       }
+      ]
+     },
+     {
+      "bg": "floresta_noite",
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "CELIA",
+        "x": 0.5,
+        "scale": 0.85,
+        "eyes": "fechado",
+        "mouth": "sorriso",
+        "look": -1
+       }
+      ],
+      "linhas": [
        {
         "voz": "CELIA",
         "texto": "Calma, rapaz. Às vezes, uma ponte que cai é *sorte*."
@@ -170,7 +260,22 @@
        {
         "voz": "RAFA",
         "texto": "Eu ia perguntar o que ela quis dizer. Mas a Marina gritou."
-       },
+       }
+      ]
+     },
+     {
+      "bg": "floresta_noite",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "MARINA",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
        {
         "voz": "MARINA",
         "texto": "Cadê o Júnior? Ele subiu a encosta procurando sinal faz vinte minutos!"
@@ -178,14 +283,35 @@
       ]
      },
      {
+      "bg": "rio",
+      "cam": "out",
+      "text": "Lá longe, no fundo do vale, um apito.",
+      "bg_params": {
+       "hora": "noite",
+       "neblina": true
+      }
+     },
+     {
       "bg": "escuro",
       "cam": "shake",
-      "hook": true,
       "prop": {
        "type": "placa",
        "title": "FIIIIU..."
       },
-      "text": "Lá longe, no fundo do vale, um apito. O apito de emergência que eu dei pra cada um de manhã. Três vezes. E depois, *silêncio*."
+      "text": "O apito de emergência que eu dei pra cada um de manhã. Três vezes."
+     },
+     {
+      "bg": "floresta_noite",
+      "cam": "zoom_rosto",
+      "text": "E depois, *silêncio*.",
+      "chars": [
+       {
+        "ref": "RAFA",
+        "x": 0.5,
+        "scale": 0.95,
+        "eyes": "arregalado"
+       }
+      ]
      },
      {
       "bg": "floresta_noite",
@@ -209,7 +335,22 @@
        {
         "voz": "MARINA",
         "texto": "Eu torci o tornozelo, Rafa. Eu não consigo andar rápido."
-       },
+       }
+      ]
+     },
+     {
+      "bg": "floresta_noite",
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "RAFA",
+        "x": 0.5,
+        "scale": 0.85,
+        "eyes": "arregalado",
+        "look": -1
+       }
+      ],
+      "linhas": [
        {
         "voz": "RAFA",
         "texto": "Se eu for atrás dele, deixo as duas sozinhas. Com quem cortou a corda, talvez."
@@ -234,12 +375,60 @@
         "mouth": "o"
        }
       ],
-      "text": "A chuva começou. Se eu for buscar o Júnior no escuro, a Marina e a Célia ficam sem abrigo. Se eu ficar, o Júnior passa a noite *sozinho* lá embaixo. E você, o que faria?",
       "bg_params": {
        "hora": "noite",
        "quebrada": true,
        "chuva": true
-      }
+      },
+      "text": "A chuva começou."
+     },
+     {
+      "bg": "ponte",
+      "cam": "zoom_rosto",
+      "tint": [
+       120,
+       20,
+       20
+      ],
+      "chars": [
+       {
+        "ref": "RAFA",
+        "x": 0.5,
+        "scale": 1.05,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "bg_params": {
+       "hora": "noite",
+       "quebrada": true,
+       "chuva": true
+      },
+      "text": "Se eu for buscar o Júnior no escuro, a Marina e a Célia ficam sem abrigo."
+     },
+     {
+      "bg": "ponte",
+      "cam": "zoom_tremido",
+      "tint": [
+       120,
+       20,
+       20
+      ],
+      "chars": [
+       {
+        "ref": "RAFA",
+        "x": 0.5,
+        "scale": 1.05,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "bg_params": {
+       "hora": "noite",
+       "quebrada": true,
+       "chuva": true
+      },
+      "text": "Se eu ficar, o Júnior passa a noite *sozinho* lá embaixo. E você, o que faria?"
      }
     ],
     "caption": "A ponte caiu dez segundos antes da gente atravessar… e a corda estava cortada. 🌧️🌉\n\nA Ponte Caída · Parte 1 — A corda foi cortada\n\nQuem você acha que cortou a corda? Mas antes, vota 👇\n\n🅰️ Buscar o Júnior no escuro\n🅱️ Ficar e montar abrigo\n\nA mais votada decide a Parte 2. A Parte 2 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#sobrevivencia #suspense #historiasempartes #trilha #voceescolhe"

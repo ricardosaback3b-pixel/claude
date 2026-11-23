@@ -294,6 +294,8 @@ BACKGROUNDS.update({
 # 30 cenários personalizáveis (cenarios.py): hora, luz, cor, texto, chuva, neblina, alerta, seed
 import cenarios as _cenarios  # noqa: E402
 BACKGROUNDS.update(_cenarios.fundos(sys.modules[__name__]))
+# casa_noite antiga (desenho simples) agora usa a casa caprichada dos cenários
+BACKGROUNDS["casa_noite"] = lambda p: BACKGROUNDS["casa"](dict({"hora": "noite"}, **(p or {})))
 
 
 # ---------------------------------------------------------------- personagens
@@ -930,7 +932,7 @@ def build_timeline(meta, scenes):
     for i, sc in enumerate(scenes):
         lines = sc.get("linhas") or [{"voz": narr, "texto": sc["text"]}]
         start = t
-        pos = t + 0.15
+        pos = t + 0.06
         events = []
         for ln in lines:
             who = ln.get("voz") or narr
@@ -955,7 +957,7 @@ def build_timeline(meta, scenes):
                     label = nomes.get(who) if who and who != narr else None
                     events.append((c, pos, cd, label, cores.get(who, (200, 20, 40))))
                     pos += cd
-        dur = max(1.6, pos - start + sc.get("hold", 0.15))
+        dur = max(1.3, pos - start + sc.get("hold", 0.08))
         timeline.append((i, start, dur, events))
         t = start + dur
     voice = np.zeros(int((t + 6) * SR), dtype=np.float32)

@@ -33,5 +33,108 @@
    "speed": 1.0
   }
  },
- "partes": {}
+ "partes": {
+  "4": [
+   {
+    "cena": 1,
+    "personagem": "PROTAGONISTA",
+    "texto": "Faltavam três minutos pra sirene da manhã. E o Prefeito *sumiu* na minha frente."
+   },
+   {
+    "cena": 2,
+    "personagem": "PROTAGONISTA",
+    "texto": "Na janela da prefeitura, primeiro sumiram as mãos. Depois o *sorriso*."
+   },
+   {
+    "cena": 3,
+    "personagem": "PROTAGONISTA",
+    "texto": "Sobrou só a cadeira dele, *vazia*, de frente pra praça."
+   },
+   {
+    "cena": 4,
+    "personagem": "PROTAGONISTA",
+    "texto": "Cinco e cinquenta e sete. E o caderno começou a *esquentar* na minha mão."
+   },
+   {
+    "cena": 5,
+    "personagem": "POLICIAL",
+    "texto": "Agora o caderno *não tem dono*, menino."
+   },
+   {
+    "cena": 6,
+    "personagem": "PROTAGONISTA",
+    "texto": "E o que um caderno sem dono faz?"
+   },
+   {
+    "cena": 7,
+    "personagem": "OUTRO_EU",
+    "texto": "Procura um. E eu cheguei *primeiro*."
+   },
+   {
+    "cena": 8,
+    "personagem": "PROTAGONISTA",
+    "texto": "Ele arrancou o caderno da minha mão."
+   },
+   {
+    "cena": 9,
+    "personagem": "PROTAGONISTA",
+    "texto": "A caneta escreveu sozinha, em vermelho, um nome. O *meu*."
+   },
+   {
+    "cena": 10,
+    "personagem": "POLICIAL",
+    "texto": "Pega de volta! Antes do nome *terminar*!"
+   },
+   {
+    "cena": 11,
+    "personagem": "PROTAGONISTA",
+    "texto": "Eu puxei com força. O meu nome ficou *pela metade*."
+   },
+   {
+    "cena": 12,
+    "personagem": "PROTAGONISTA",
+    "texto": "Mas eu já não lembrava o caminho de casa. Nem a cor da *porta*."
+   },
+   {
+    "cena": 13,
+    "personagem": "PROTAGONISTA",
+    "texto": "Foi por isso que eu perdi a chave na primeira noite."
+   },
+   {
+    "cena": 14,
+    "personagem": "OUTRO_EU",
+    "texto": "Metade de você já é *minha*."
+   },
+   {
+    "cena": 15,
+    "personagem": "PROTAGONISTA",
+    "texto": "O céu começou a clarear. E o ponteiro vermelho agora corria *pra frente*."
+   },
+   {
+    "cena": 16,
+    "personagem": "PROTAGONISTA",
+    "texto": "Do caderno caiu um bilhete. A letra era do *Prefeito*."
+   },
+   {
+    "cena": 17,
+    "personagem": "PROTAGONISTA",
+    "texto": "Ele sabia o que vem lá de cima. E mesmo assim escolheu *escrever nomes*."
+   },
+   {
+    "cena": 18,
+    "personagem": "PROTAGONISTA",
+    "texto": "Cinco e cinquenta e nove. A sirene ia tocar em um minuto. E o caderno era *meu*."
+   },
+   {
+    "cena": 19,
+    "personagem": "PROTAGONISTA",
+    "texto": "A: fico com o caderno e escolho *quem some*, todo ano. B: olho pra cima, *sem proteção*."
+   },
+   {
+    "cena": 20,
+    "personagem": "PROTAGONISTA",
+    "texto": "E você, o que faria? Comenta *A ou B*."
+   }
+  ]
+ }
 }

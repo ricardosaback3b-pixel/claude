@@ -5,7 +5,7 @@
  "historia": "cidade-sirene",
  "titulo": "Nessa Cidade, a Sirene Toca às 18h",
  "parte": 4,
- "status": "planejado",
+ "status": "produzido",
  "votacao": true,
  "versao_padrao": "A",
  "estilo": "cartela",
@@ -14,7 +14,7 @@
   "A": {
    "resumo": "Escolheram trocar: o outro eu some levando o caminho de casa do narrador, o Prefeito volta e passa o caderno pra ele, minutos antes da sirene da manhã.",
    "retomada_gancho": "Cena 1: 'Eu troquei o nome do Prefeito pelo do meu outro eu' (~3s).",
-   "palavras": 203,
+   "palavras": 207,
    "duracao_alvo_s": "50-60",
    "momento_zoom_tensao": [
     1,
@@ -23,9 +23,9 @@
     8,
     9
    ],
-   "final": "Sirene da manhã em um minuto, ninguém manda não olhar pra cima; dilema caderno x olhar. Tela de votos 'Segue @mundoemhistorias pra ver a Parte 5'.",
-   "gatilho_compartilhar": "Chamada + legenda: 'Marca quem olharia pra cima sem pensar'.",
-   "legenda": "{RESULTADO_SE_HOUVER_VOTOS}Eu troquei o nome... e esqueci onde eu moro. 🚨\n\nNessa Cidade, a Sirene Toca às 18h · Parte 4 — O dono do caderno\n\nO que você acha que vem lá de cima? Teoria aqui 👇\n\n🅰️ Ficar com o caderno\n🅱️ Olhar pra cima na sirene\nA mais votada decide a Parte 5.\n\nMarca quem olharia pra cima sem pensar 👀\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #suspense #vocedecide",
+   "final": "Virada: o Prefeito (quem sabe mais) revela que já olhou pra cima uma vez e por isso começou a escrever nomes (A: ele fala; B: bilhete dele cai do caderno). 05:59, sirene em 1 minuto. A/B com custo + 'Comenta A ou B'.",
+   "gatilho_compartilhar": "Legenda: 'Manda pra quem nunca obedece quando mandam não olhar' + tela de votos 'Manda pra quem olharia pra cima sem pensar'.",
+   "legenda": "{RESULTADO_SE_HOUVER_VOTOS}Faltavam 3 minutos pra sirene da manhã... e eu troquei o Prefeito pelo meu outro eu. 🚨\n\nNessa Cidade, a Sirene Toca às 18h · Parte 4 — O dono do caderno\n\nO Prefeito olhou pra cima uma vez. O que você acha que ele viu? Teoria aqui 👇\n\n🅰️ Ficar com o caderno e escolher quem some, todo ano\n🅱️ Olhar pra cima na sirene, sem proteção nenhuma\nA mais votada decide a Parte 5.\n\nManda pra quem nunca obedece quando mandam não olhar 👀\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #suspense #vocedecide",
    "capa": {
     "titulo": "Nessa Cidade, a Sirene Toca às 18h",
     "parte": "Parte 4",
@@ -34,8 +34,8 @@
    "script": {
     "cover_text": "O dono do caderno",
     "opcoes": [
-     "Ficar com o caderno",
-     "Olhar pra cima na sirene"
+     "Caderno: escolher quem some",
+     "Olhar pra cima sem proteção"
     ],
     "opcoes_rostos": [
      {
@@ -45,12 +45,11 @@
      },
      {
       "ref": "POLICIAL",
-      "eyes": "arregalado",
-      "mouth": "o"
+      "brows": "preocupado"
      }
     ],
-    "chamada": "Marca quem olharia pra cima sem pensar",
-    "caption": "{RESULTADO_SE_HOUVER_VOTOS}Eu troquei o nome... e esqueci onde eu moro. 🚨\n\nNessa Cidade, a Sirene Toca às 18h · Parte 4 — O dono do caderno\n\nO que você acha que vem lá de cima? Teoria aqui 👇\n\n🅰️ Ficar com o caderno\n🅱️ Olhar pra cima na sirene\nA mais votada decide a Parte 5.\n\nMarca quem olharia pra cima sem pensar 👀\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #suspense #vocedecide",
+    "chamada": "Manda pra quem olharia pra cima sem pensar",
+    "caption": "{RESULTADO_SE_HOUVER_VOTOS}Faltavam 3 minutos pra sirene da manhã... e eu troquei o Prefeito pelo meu outro eu. 🚨\n\nNessa Cidade, a Sirene Toca às 18h · Parte 4 — O dono do caderno\n\nO Prefeito olhou pra cima uma vez. O que você acha que ele viu? Teoria aqui 👇\n\n🅰️ Ficar com o caderno e escolher quem some, todo ano\n🅱️ Olhar pra cima na sirene, sem proteção nenhuma\nA mais votada decide a Parte 5.\n\nManda pra quem nunca obedece quando mandam não olhar 👀\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #suspense #vocedecide",
     "scenes": [
      {
       "bg": "rua_noite",
@@ -62,30 +61,29 @@
         "ref": "PROTAGONISTA",
         "x": 0.5,
         "scale": 0.9,
-        "eyes": "arregalado",
-        "brows": "preocupado",
-        "mouth": "o"
+        "enquadramento": "busto",
+        "brows": "preocupado"
        }
       ],
-      "text": "Eu troquei o nome do Prefeito pelo do *meu outro eu*. E ele começou a sumir *sorrindo*."
-     },
-     {
-      "bg": "casa_noite",
-      "window": true,
-      "cam": "in",
-      "chars": [
-       {
-        "ref": "PREFEITO",
-        "x": 0.5,
-        "scale": 0.9,
-        "eyes": "fechado",
-        "brows": "neutro"
-       }
-      ],
-      "text": "Na janela, as mãos do Prefeito voltaram a ter cor. Depois os pés. Ele respirou fundo, como quem sai de baixo d'água."
+      "text": "Faltavam três minutos pra sirene da manhã. E eu troquei o Prefeito pelo *meu outro eu*."
      },
      {
       "bg": "rua_noite",
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "placa",
+       "title": "05:57",
+       "y": 700
+      },
+      "text": "Cinco e cinquenta e sete. A tinta vermelha engoliu um nome e *cuspiu o outro*."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7
+      },
       "cam": "in",
       "chars": [
        {
@@ -103,8 +101,28 @@
       "linhas": [
        {
         "voz": "OUTRO_EU",
-        "texto": "Não fica triste. Eu levo só *uma coisa* comigo."
-       },
+        "texto": "Obrigado. Eu levo só *uma coisa* comigo."
+       }
+      ]
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
        {
         "voz": "PROTAGONISTA",
         "texto": "Que coisa?"
@@ -112,54 +130,157 @@
       ]
      },
      {
-      "bg": "escuro",
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7,
+       "neblina": true
+      },
       "cam": "shake",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "OUTRO_EU",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto"
+       }
+      ],
+      "text": "Ele não respondeu. Só *sorriu*. E virou fumaça na minha frente."
+     },
+     {
+      "bg": "gabinete",
+      "bg_params": {
+       "hora": "noite",
+       "texto": "PREFEITO",
+       "cor": [
+        30,
+        120,
+        60
+       ]
+      },
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "PREFEITO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto"
+       }
+      ],
+      "text": "Na janela da prefeitura, as mãos do Prefeito voltaram a ter *cor*."
+     },
+     {
+      "bg": "rua_noite",
+      "cam": "zoom_tremido",
       "tensao": true,
       "chars": [
        {
         "ref": "PROTAGONISTA",
         "x": 0.5,
         "scale": 0.9,
-        "eyes": "arregalado",
-        "mouth": "o"
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "triste"
        }
       ],
-      "text": "Ele virou fumaça. Eu tentei lembrar o caminho de casa. A rua. A cor da porta. *Nada*. Eu não sabia mais onde eu morava."
+      "text": "Aí eu tentei lembrar o caminho de casa. E *nada* veio."
      },
      {
-      "bg": "rua_noite",
+      "bg": "casa",
       "bg_params": {
-       "sign": "PRAÇA"
+       "hora": "noite",
+       "luz": "apagada",
+       "texto": "?"
       },
       "cam": "pan_l",
+      "text": "A rua. O número. A cor da porta. Tudo *apagado*."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7
+      },
+      "cam": "in",
       "chars": [
        {
         "ref": "POLICIAL",
         "x": 0.3,
-        "scale": 0.95,
-        "brows": "preocupado"
+        "scale": 0.95
        },
        {
         "ref": "PROTAGONISTA",
         "x": 0.72,
         "scale": 0.95,
-        "eyes": "arregalado"
+        "brows": "preocupado"
        }
       ],
       "linhas": [
        {
         "voz": "POLICIAL",
-        "texto": "Foi isso que ele levou, menino. A sua casa. Por isso você perdeu a chave na primeira noite."
-       },
-       {
-        "voz": "PROTAGONISTA",
-        "texto": "Então ele já estava me levando *antes*?"
+        "texto": "Foi isso que ele levou, menino. A sua *casa*."
        }
       ]
      },
      {
-      "bg": "casa_noite",
-      "window": true,
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "Por isso eu perdi a chave na primeira noite?"
+       }
+      ]
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7
+      },
+      "cam": "zoom_rosto",
+      "foco_em": "POLICIAL",
+      "chars": [
+       {
+        "ref": "POLICIAL",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "POLICIAL",
+        "texto": "Ele já estava te levando *antes*."
+       }
+      ]
+     },
+     {
+      "bg": "gabinete",
+      "bg_params": {
+       "hora": "noite",
+       "texto": "PREFEITO",
+       "cor": [
+        30,
+        120,
+        60
+       ]
+      },
       "cam": "zoom_rosto",
       "tensao": true,
       "chars": [
@@ -167,29 +288,45 @@
         "ref": "PREFEITO",
         "x": 0.5,
         "scale": 0.9,
+        "enquadramento": "busto",
         "brows": "bravo"
        }
       ],
       "linhas": [
        {
         "voz": "PREFEITO",
-        "texto": "Trinta anos eu segurei esse caderno. Quem troca um nome vira o *dono* dele. Agora é você."
+        "texto": "Quem troca um nome vira o *dono* do caderno. Agora é você."
        }
       ]
      },
      {
       "bg": "escuro",
       "cam": "zoom_forte",
+      "tensao": true,
       "prop": {
        "type": "carta",
        "title": "O CADERNO",
        "lines": [
         "Nome não se apaga.",
         "Só se troca.",
+        "",
         "!Dono novo: você."
        ]
       },
-      "text": "Na última página, a tinta vermelha escreveu sozinha: *dono novo*. E embaixo, o meu nome."
+      "text": "Na última página, a tinta escreveu sozinha: *dono novo*. E o meu nome."
+     },
+     {
+      "bg": "rua_amanhecer",
+      "bg_params": {
+       "sign": "PRAÇA"
+      },
+      "cam": "in",
+      "prop": {
+       "type": "placa",
+       "title": "05:58",
+       "y": 700
+      },
+      "text": "O céu começou a clarear. E o ponteiro vermelho agora corria *pra frente*."
      },
      {
       "bg": "rua_amanhecer",
@@ -203,27 +340,94 @@
         "ref": "PROTAGONISTA",
         "x": 0.5,
         "scale": 0.9,
-        "eyes": "arregalado",
+        "enquadramento": "busto",
         "brows": "preocupado",
-        "mouth": "o"
+        "mouth": "triste"
        }
       ],
-      "text": "O céu começou a clarear. O ponteiro vermelho do relógio agora corria pra frente. A sirene da manhã ia tocar em *um minuto*. E dessa vez ninguém mandou eu não olhar pra cima."
+      "text": "Dessa vez, ninguém mandou eu não olhar pra cima. *Ninguém*."
+     },
+     {
+      "bg": "gabinete",
+      "bg_params": {
+       "hora": "noite",
+       "texto": "PREFEITO",
+       "cor": [
+        30,
+        120,
+        60
+       ]
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PREFEITO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PREFEITO",
+        "texto": "Eu olhei *uma vez*, menino. Foi por isso que eu comecei a escrever."
+       }
+      ]
+     },
+     {
+      "bg": "rua_amanhecer",
+      "bg_params": {
+       "sign": "PRAÇA"
+      },
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "placa",
+       "title": "05:59",
+       "y": 700
+      },
+      "text": "Cinco e cinquenta e nove. A sirene ia tocar em *um minuto*.",
+      "tint": [
+       200,
+       40,
+       40
+      ]
+     },
+     {
+      "bg": "beco",
+      "bg_params": {
+       "hora": "amanhecer",
+       "texto": "NÃO OLHE"
+      },
+      "cam": "shake",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.7,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "A: fico com o caderno e escolho *quem some*, todo ano. B: olho pra cima, *sem proteção*."
      },
      {
       "bg": "escuro",
-      "cam": "shake",
+      "cam": "zoom_rosto",
       "hook": true,
       "chars": [
        {
         "ref": "PROTAGONISTA",
         "x": 0.5,
         "scale": 0.9,
-        "eyes": "arregalado",
+        "enquadramento": "busto",
         "brows": "preocupado"
        }
       ],
-      "text": "A: ficar com o caderno e escrever um nome por ano, como o Prefeito fez. B: olhar pra cima quando a sirene tocar e descobrir o que vem lá de cima, sem proteção nenhuma. E você, o que faria?"
+      "text": "E você, o que faria? Comenta *A ou B*."
      }
     ]
    },
@@ -231,9 +435,7 @@
     [
      "PROTAGONISTA"
     ],
-    [
-     "PREFEITO"
-    ],
+    [],
     [
      "OUTRO_EU",
      "PROTAGONISTA"
@@ -242,7 +444,31 @@
      "PROTAGONISTA"
     ],
     [
+     "OUTRO_EU"
+    ],
+    [
+     "PREFEITO"
+    ],
+    [
+     "PROTAGONISTA"
+    ],
+    [],
+    [
      "POLICIAL",
+     "PROTAGONISTA"
+    ],
+    [
+     "PROTAGONISTA"
+    ],
+    [
+     "POLICIAL"
+    ],
+    [
+     "PREFEITO"
+    ],
+    [],
+    [],
+    [
      "PROTAGONISTA"
     ],
     [
@@ -255,12 +481,17 @@
     [
      "PROTAGONISTA"
     ]
-   ]
+   ],
+   "roteiro": "Faltavam três minutos pra sirene da manhã. E eu troquei o Prefeito pelo meu outro eu. Cinco e cinquenta e sete. A tinta vermelha engoliu um nome e cuspiu o outro. Obrigado. Eu levo só uma coisa comigo. Que coisa? Ele não respondeu. Só sorriu. E virou fumaça na minha frente. Na janela da prefeitura, as mãos do Prefeito voltaram a ter cor. Aí eu tentei lembrar o caminho de casa. E nada veio. A rua. O número. A cor da porta. Tudo apagado. Foi isso que ele levou, menino. A sua casa. Por isso eu perdi a chave na primeira noite? Ele já estava te levando antes. Quem troca um nome vira o dono do caderno. Agora é você. Na última página, a tinta escreveu sozinha: dono novo. E o meu nome. O céu começou a clarear. E o ponteiro vermelho agora corria pra frente. Dessa vez, ninguém mandou eu não olhar pra cima. Ninguém. Eu olhei uma vez, menino. Foi por isso que eu comecei a escrever. Cinco e cinquenta e nove. A sirene ia tocar em um minuto. A: fico com o caderno e escolho quem some, todo ano. B: olho pra cima, sem proteção. E você, o que faria? Comenta A ou B.",
+   "cenas": 19,
+   "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/parte4A.mp4",
+   "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/capa4A.jpg",
+   "duracao": 73.3
   },
   "B": {
    "resumo": "Escolheram deixar o Prefeito sumir: o caderno fica sem dono, o outro eu tenta escrever o nome do narrador e ele recupera o caderno pela metade, minutos antes da sirene da manhã.",
    "retomada_gancho": "Cena 1: 'Eu não troquei o nome. E o Prefeito sumiu' (~3s).",
-   "palavras": 201,
+   "palavras": 215,
    "duracao_alvo_s": "50-60",
    "momento_zoom_tensao": [
     1,
@@ -268,9 +499,9 @@
     8,
     9
    ],
-   "final": "Sirene da manhã em um minuto, ninguém manda não olhar pra cima; dilema caderno x olhar. Tela de votos 'Segue @mundoemhistorias pra ver a Parte 5'.",
-   "gatilho_compartilhar": "Chamada + legenda: 'Marca quem olharia pra cima sem pensar'.",
-   "legenda": "{RESULTADO_SE_HOUVER_VOTOS}O Prefeito sumiu... e o caderno escreveu o meu nome. 🚨\n\nNessa Cidade, a Sirene Toca às 18h · Parte 4 — O dono do caderno\n\nO que você acha que vem lá de cima? Teoria aqui 👇\n\n🅰️ Ficar com o caderno\n🅱️ Olhar pra cima na sirene\nA mais votada decide a Parte 5.\n\nMarca quem olharia pra cima sem pensar 👀\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #suspense #vocedecide",
+   "final": "Virada: o Prefeito (quem sabe mais) revela que já olhou pra cima uma vez e por isso começou a escrever nomes (A: ele fala; B: bilhete dele cai do caderno). 05:59, sirene em 1 minuto. A/B com custo + 'Comenta A ou B'.",
+   "gatilho_compartilhar": "Legenda: 'Manda pra quem nunca obedece quando mandam não olhar' + tela de votos 'Manda pra quem olharia pra cima sem pensar'.",
+   "legenda": "{RESULTADO_SE_HOUVER_VOTOS}Faltavam 3 minutos pra sirene da manhã... e o Prefeito sumiu na minha frente. 🚨\n\nNessa Cidade, a Sirene Toca às 18h · Parte 4 — O dono do caderno\n\nO Prefeito olhou pra cima uma vez. O que você acha que ele viu? Teoria aqui 👇\n\n🅰️ Ficar com o caderno e escolher quem some, todo ano\n🅱️ Olhar pra cima na sirene, sem proteção nenhuma\nA mais votada decide a Parte 5.\n\nManda pra quem nunca obedece quando mandam não olhar 👀\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #suspense #vocedecide",
    "capa": {
     "titulo": "Nessa Cidade, a Sirene Toca às 18h",
     "parte": "Parte 4",
@@ -279,8 +510,8 @@
    "script": {
     "cover_text": "O dono do caderno",
     "opcoes": [
-     "Ficar com o caderno",
-     "Olhar pra cima na sirene"
+     "Caderno: escolher quem some",
+     "Olhar pra cima sem proteção"
     ],
     "opcoes_rostos": [
      {
@@ -290,12 +521,11 @@
      },
      {
       "ref": "POLICIAL",
-      "eyes": "arregalado",
-      "mouth": "o"
+      "brows": "preocupado"
      }
     ],
-    "chamada": "Marca quem olharia pra cima sem pensar",
-    "caption": "{RESULTADO_SE_HOUVER_VOTOS}O Prefeito sumiu... e o caderno escreveu o meu nome. 🚨\n\nNessa Cidade, a Sirene Toca às 18h · Parte 4 — O dono do caderno\n\nO que você acha que vem lá de cima? Teoria aqui 👇\n\n🅰️ Ficar com o caderno\n🅱️ Olhar pra cima na sirene\nA mais votada decide a Parte 5.\n\nMarca quem olharia pra cima sem pensar 👀\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #suspense #vocedecide",
+    "chamada": "Manda pra quem olharia pra cima sem pensar",
+    "caption": "{RESULTADO_SE_HOUVER_VOTOS}Faltavam 3 minutos pra sirene da manhã... e o Prefeito sumiu na minha frente. 🚨\n\nNessa Cidade, a Sirene Toca às 18h · Parte 4 — O dono do caderno\n\nO Prefeito olhou pra cima uma vez. O que você acha que ele viu? Teoria aqui 👇\n\n🅰️ Ficar com o caderno e escolher quem some, todo ano\n🅱️ Olhar pra cima na sirene, sem proteção nenhuma\nA mais votada decide a Parte 5.\n\nManda pra quem nunca obedece quando mandam não olhar 👀\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #suspense #vocedecide",
     "scenes": [
      {
       "bg": "rua_noite",
@@ -307,44 +537,106 @@
         "ref": "PROTAGONISTA",
         "x": 0.5,
         "scale": 0.9,
-        "eyes": "arregalado",
-        "brows": "preocupado",
-        "mouth": "o"
+        "enquadramento": "busto",
+        "brows": "preocupado"
        }
       ],
-      "text": "Eu não troquei o nome. E o Prefeito *sumiu* bem na minha frente."
+      "text": "Faltavam três minutos pra sirene da manhã. E o Prefeito *sumiu* na minha frente."
      },
      {
-      "bg": "casa_noite",
-      "window": true,
-      "cam": "in",
-      "text": "Primeiro as mãos, depois o sorriso. Na janela, ficou só o terno vazio, caindo devagar no chão."
+      "bg": "gabinete",
+      "bg_params": {
+       "hora": "noite",
+       "texto": "PREFEITO",
+       "cor": [
+        30,
+        120,
+        60
+       ]
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PREFEITO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "Na janela da prefeitura, primeiro sumiram as mãos. Depois o *sorriso*."
+     },
+     {
+      "bg": "gabinete",
+      "bg_params": {
+       "hora": "noite",
+       "texto": "PREFEITO",
+       "cor": [
+        30,
+        120,
+        60
+       ]
+      },
+      "cam": "out",
+      "text": "Sobrou só a cadeira dele, *vazia*, de frente pra praça."
      },
      {
       "bg": "rua_noite",
-      "bg_params": {
-       "sign": "PRAÇA"
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "placa",
+       "title": "05:57",
+       "y": 700
       },
-      "cam": "pan_l",
+      "text": "Cinco e cinquenta e sete. E o caderno começou a *esquentar* na minha mão."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7
+      },
+      "cam": "in",
       "chars": [
        {
         "ref": "POLICIAL",
         "x": 0.3,
-        "scale": 0.95,
-        "brows": "preocupado"
+        "scale": 0.95
        },
        {
         "ref": "PROTAGONISTA",
         "x": 0.72,
         "scale": 0.95,
-        "eyes": "arregalado"
+        "brows": "preocupado"
        }
       ],
       "linhas": [
        {
         "voz": "POLICIAL",
-        "texto": "Trinta anos ele segurou isso. Agora o caderno *não tem dono*."
-       },
+        "texto": "Agora o caderno *não tem dono*, menino."
+       }
+      ]
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado"
+       }
+      ],
+      "linhas": [
        {
         "voz": "PROTAGONISTA",
         "texto": "E o que um caderno sem dono faz?"
@@ -352,81 +644,196 @@
       ]
      },
      {
-      "bg": "rua_noite",
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7
+      },
       "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "OUTRO_EU",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "OUTRO_EU",
+        "texto": "Procura um. E eu cheguei *primeiro*."
+       }
+      ]
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7
+      },
+      "cam": "shake",
       "tensao": true,
       "foco_em": "OUTRO_EU",
       "chars": [
        {
         "ref": "OUTRO_EU",
         "x": 0.3,
-        "scale": 0.95,
-        "brows": "bravo"
+        "scale": 0.95
        },
        {
         "ref": "PROTAGONISTA",
         "x": 0.72,
         "scale": 0.95,
-        "eyes": "arregalado",
-        "mouth": "o"
+        "brows": "preocupado"
        }
       ],
-      "linhas": [
-       {
-        "voz": "OUTRO_EU",
-        "texto": "Ele procura um. E eu cheguei *primeiro*."
-       },
-       {
-        "voz": "PROTAGONISTA",
-        "texto": "E ele arrancou o caderno da minha mão."
-       }
-      ]
+      "text": "Ele arrancou o caderno da minha mão."
      },
      {
       "bg": "escuro",
-      "cam": "shake",
+      "cam": "zoom_forte",
+      "tensao": true,
       "prop": {
        "type": "carta",
        "title": "O CADERNO",
        "lines": [
         "Nome não se apaga.",
         "Só se troca.",
+        "",
         "!Próximo: você."
        ]
       },
-      "text": "A caneta escreveu sozinha, em vermelho, um nome que eu conhecia muito bem. O *meu*."
+      "text": "A caneta escreveu sozinha, em vermelho, um nome. O *meu*."
      },
      {
-      "bg": "rua_noite",
-      "cam": "in",
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7
+      },
+      "cam": "zoom_rosto",
+      "foco_em": "POLICIAL",
       "chars": [
        {
         "ref": "POLICIAL",
         "x": 0.5,
         "scale": 0.9,
-        "eyes": "arregalado",
+        "enquadramento": "busto",
         "brows": "bravo"
        }
       ],
       "linhas": [
        {
         "voz": "POLICIAL",
-        "texto": "Só o dono pode trocar! Pega de volta antes da sirene da manhã!"
+        "texto": "Pega de volta! Antes do nome *terminar*!"
        }
       ]
      },
      {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7
+      },
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "OUTRO_EU",
+        "x": 0.3,
+        "scale": 0.95
+       },
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.72,
+        "scale": 0.95,
+        "brows": "bravo"
+       }
+      ],
+      "text": "Eu puxei com força. O meu nome ficou *pela metade*."
+     },
+     {
+      "bg": "casa",
+      "bg_params": {
+       "hora": "noite",
+       "luz": "apagada",
+       "texto": "?"
+      },
+      "cam": "pan_r",
+      "text": "Mas eu já não lembrava o caminho de casa. Nem a cor da *porta*."
+     },
+     {
       "bg": "rua_noite",
-      "cam": "in",
+      "cam": "zoom_tremido",
+      "tensao": true,
       "chars": [
        {
         "ref": "PROTAGONISTA",
         "x": 0.5,
         "scale": 0.9,
-        "brows": "bravo"
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "triste"
        }
       ],
-      "text": "Eu puxei o caderno de volta e o meu nome ficou pela metade. Mas eu senti: eu tinha esquecido o caminho de casa. Por isso eu perdi a chave naquela primeira noite."
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "Foi por isso que eu perdi a chave na primeira noite."
+       }
+      ]
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7
+      },
+      "cam": "zoom_rosto",
+      "foco_em": "OUTRO_EU",
+      "chars": [
+       {
+        "ref": "OUTRO_EU",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "OUTRO_EU",
+        "texto": "Metade de você já é *minha*."
+       }
+      ]
+     },
+     {
+      "bg": "rua_amanhecer",
+      "bg_params": {
+       "sign": "PRAÇA"
+      },
+      "cam": "in",
+      "prop": {
+       "type": "placa",
+       "title": "05:58",
+       "y": 700
+      },
+      "text": "O céu começou a clarear. E o ponteiro vermelho agora corria *pra frente*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "bilhete",
+       "lines": [
+        "Eu olhei pra cima",
+        "uma vez.",
+        "Por isso comecei",
+        "a escrever."
+       ]
+      },
+      "text": "Do caderno caiu um bilhete. A letra era do *Prefeito*."
      },
      {
       "bg": "rua_amanhecer",
@@ -440,27 +847,64 @@
         "ref": "PROTAGONISTA",
         "x": 0.5,
         "scale": 0.9,
-        "eyes": "arregalado",
-        "brows": "preocupado",
-        "mouth": "o"
+        "enquadramento": "busto",
+        "brows": "preocupado"
        }
       ],
-      "text": "O céu começou a clarear. O ponteiro vermelho do relógio agora corria pra frente. A sirene da manhã ia tocar em *um minuto*. E dessa vez ninguém mandou eu não olhar pra cima."
+      "text": "Ele sabia o que vem lá de cima. E mesmo assim escolheu *escrever nomes*."
+     },
+     {
+      "bg": "rua_amanhecer",
+      "bg_params": {
+       "sign": "PRAÇA"
+      },
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "placa",
+       "title": "05:59",
+       "y": 700
+      },
+      "text": "Cinco e cinquenta e nove. A sirene ia tocar em um minuto. E o caderno era *meu*.",
+      "tint": [
+       200,
+       40,
+       40
+      ]
+     },
+     {
+      "bg": "beco",
+      "bg_params": {
+       "hora": "amanhecer",
+       "texto": "NÃO OLHE"
+      },
+      "cam": "shake",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.7,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "A: fico com o caderno e escolho *quem some*, todo ano. B: olho pra cima, *sem proteção*."
      },
      {
       "bg": "escuro",
-      "cam": "shake",
+      "cam": "zoom_rosto",
       "hook": true,
       "chars": [
        {
         "ref": "PROTAGONISTA",
         "x": 0.5,
         "scale": 0.9,
-        "eyes": "arregalado",
+        "enquadramento": "busto",
         "brows": "preocupado"
        }
       ],
-      "text": "Agora o caderno era meu. A: ficar com o caderno e escrever um nome por ano, como o Prefeito fez. B: olhar pra cima quando a sirene tocar e descobrir o que vem lá de cima, sem proteção nenhuma. E você, o que faria?"
+      "text": "E você, o que faria? Comenta *A ou B*."
      }
     ]
    },
@@ -468,10 +912,20 @@
     [
      "PROTAGONISTA"
     ],
+    [
+     "PREFEITO"
+    ],
+    [],
     [],
     [
      "POLICIAL",
      "PROTAGONISTA"
+    ],
+    [
+     "PROTAGONISTA"
+    ],
+    [
+     "OUTRO_EU"
     ],
     [
      "OUTRO_EU",
@@ -482,30 +936,66 @@
      "POLICIAL"
     ],
     [
+     "OUTRO_EU",
      "PROTAGONISTA"
     ],
+    [],
+    [
+     "PROTAGONISTA"
+    ],
+    [
+     "OUTRO_EU"
+    ],
+    [],
+    [],
+    [
+     "PROTAGONISTA"
+    ],
+    [],
     [
      "PROTAGONISTA"
     ],
     [
      "PROTAGONISTA"
     ]
-   ]
+   ],
+   "roteiro": "Faltavam três minutos pra sirene da manhã. E o Prefeito sumiu na minha frente. Na janela da prefeitura, primeiro sumiram as mãos. Depois o sorriso. Sobrou só a cadeira dele, vazia, de frente pra praça. Cinco e cinquenta e sete. E o caderno começou a esquentar na minha mão. Agora o caderno não tem dono, menino. E o que um caderno sem dono faz? Procura um. E eu cheguei primeiro. Ele arrancou o caderno da minha mão. A caneta escreveu sozinha, em vermelho, um nome. O meu. Pega de volta! Antes do nome terminar! Eu puxei com força. O meu nome ficou pela metade. Mas eu já não lembrava o caminho de casa. Nem a cor da porta. Foi por isso que eu perdi a chave na primeira noite. Metade de você já é minha. O céu começou a clarear. E o ponteiro vermelho agora corria pra frente. Do caderno caiu um bilhete. A letra era do Prefeito. Ele sabia o que vem lá de cima. E mesmo assim escolheu escrever nomes. Cinco e cinquenta e nove. A sirene ia tocar em um minuto. E o caderno era meu. A: fico com o caderno e escolho quem some, todo ano. B: olho pra cima, sem proteção. E você, o que faria? Comenta A ou B.",
+   "cenas": 20,
+   "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/parte4B.mp4",
+   "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/capa4B.jpg",
+   "duracao": 76.8
   }
  },
  "problemas": [
-  "Revisão: conferir a boca do protagonista chibi com mouth 'o' (aparece uma 2ª boca abaixo do queixo). Prefira boca do próprio desenho ou 'aberta' nas falas."
+  "CORRIGIDO na Produção 23/11 15h: a boca do 'protagonista' (cartela) era desenhada no queixo (2ª boca) e o rosto era tratado como 'barba' (boca triste não mudava). Ajustado assets/personagens/rostos.json > protagonista.boca de [94.6,126] para [89,112.5] (posição real do sorriso). Vale também para o OUTRO_EU (mesmo desenho). Conferido nas imagens de rostos.",
+  "Fato novo pequeno nas duas versões (não muda história/parte/personagens/vozes): a sirene da manhã é às 6h e o Prefeito revela que já olhou pra cima uma vez — a Parte 5 deve manter isso. No B, o outro eu continua por perto ('Metade de você já é minha')."
  ],
  "criado_em": "2026-11-23T11:08:11Z",
  "placar_parcial": {
   "A": 0,
   "B": 1,
-  "fonte": "pré-fiscalização 23/11 07h15: luuh.santosmdc comentou \"O prefeito q suma\" (= B, deixar o Prefeito sumir), já respondido como voto no B"
+  "fonte": "Produção 23/11 15h: Windsor (media 18276159127306573, last_3dT) só tem 1 comentário de público: luuh.santosmdc 'O prefeito q suma' = B, já respondido (18013421831990350). Nenhum comentário novo sem resposta. Se nada mudar até a hora do post, vence B (não o padrão A)."
  },
  "em_breve": {
   "postado_em": "2026-11-23T15:41Z",
   "imagem": "videos/cidade-sirene/embreve4.jpg",
   "media_id": "18155736013544817",
   "obs": "postado à mão às 11h41 (a tarefa das 10h17 parou no limite de uso)"
- }
+ },
+ "produzido_em": "2026-11-23T19:30Z",
+ "arquivos": {
+  "parte4.mp4/capa4.jpg": "cópia da versão B (líder no placar parcial)",
+  "historia.json": "parte 4 com o script B e parte 3 escolha 'B' provisória; se A vencer, trocar pelo script A da ficha e escolha 'A' (ou usar parte4A.mp4/capa4A.jpg)"
+ },
+ "regras_virais": [
+  "1. Frase 1 reescrita com prazo concreto e conflito: A 'Faltavam três minutos pra sirene da manhã. E eu troquei o Prefeito pelo meu outro eu.' / B '... E o Prefeito sumiu na minha frente.' Cena 2 já traz fato novo.",
+  "2. Tiradas as falas de currículo 'Trinta anos eu segurei esse caderno' (Prefeito, A) e 'Trinta anos ele segurou isso' (Policial, B).",
+  "3. Cenas divididas: A 19 cenas, B 20 cenas, máx. 15 palavras por cena nos primeiros 15 s; nenhuma cena só de clima.",
+  "4. Relógio na tela: placas 05:57 → 05:58 → 05:59 (sirene da manhã às 6h) em 3 cenas, + 'faltavam três minutos' na fala.",
+  "5. Papel legível: página do caderno 'Nome não se apaga. Só se troca. Dono novo/Próximo: você.' e, no B, bilhete do Prefeito 'Eu olhei pra cima uma vez. Por isso comecei a escrever.'",
+  "6. Final com virada de quem sabe mais: o Prefeito já olhou pra cima uma vez (A: ele conta; B: bilhete). Sem resumo.",
+  "7. Opções com custo: A 'fico com o caderno e escolho quem some, todo ano' x B 'olho pra cima, sem proteção' + 'Comenta A ou B'. Na tela de votos: 'Caderno: escolher quem some' / 'Olhar pra cima sem proteção'.",
+  "8. Legenda: linha 1 = gancho (depois do {RESULTADO_SE_HOUVER_VOTOS}) + linha 'Manda pra quem nunca obedece quando mandam não olhar 👀'.",
+  "Cenários: trocado casa_noite com moldura de janela de ônibus (proibido fora do ônibus) por gabinete da prefeitura; praça (noite/amanhecer, neblina na fumaça), casa com luz apagada e número '?', beco 'NÃO OLHE' no dilema. Cena de capa mantida igual ao cartaz (rua_noite RUA 9, protagonista, boca do desenho)."
+ ]
 }

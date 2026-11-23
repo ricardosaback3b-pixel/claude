@@ -5,7 +5,7 @@
  "historia": "a-ponte-caida",
  "titulo": "A Ponte Caída",
  "parte": 1,
- "status": "planejado",
+ "status": "publicado",
  "votacao": true,
  "versao_padrao": "unica",
  "estilo": "cartela",
@@ -259,11 +259,18 @@
    ]
   }
  },
- "problemas": [],
+ "problemas": [
+  "Fábrica falhou: a ficha chegou à publicação como \"planejado\" (sem vídeo produzido nem aprovação do Controle de qualidade). Vídeo renderizado na hora com o roteiro de 20 cenas já pronto em historia.json (passou em preparar.py); legenda/chamada/opcoes_rostos da ficha aplicadas; história, parte, personagens e vozes inalterados."
+ ],
  "criado_em": "2026-11-23T11:08:11Z",
  "em_breve": {
   "postado_em": "2026-11-23T11:19:08Z",
   "imagem": "videos/a-ponte-caida/embreve1.jpg",
   "media_id": "18001998519043830"
- }
+ },
+ "versao_escolhida": "unica",
+ "placar": null,
+ "media_id": "18029895026874855",
+ "publicado_em": "2026-11-23T13:03:29Z",
+ "primeiro_comentario_id": "17914026423483236"
 }

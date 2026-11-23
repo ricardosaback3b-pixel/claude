@@ -1,6 +1,6 @@
 {
  "horarios": "9h, 12h, 15h, 18h, 21h (America/Campo_Grande)",
- "vez": 4,
+ "vez": 0,
  "ativas": [
   {
    "slug": "ultimo-onibus",
@@ -65,6 +65,12 @@
    "slug": "o-sombra-da-sala-12",
    "parte": 1,
    "media_id": "18405150862204741"
+  },
+  {
+   "quando": "2026-11-23T13:03:29Z",
+   "slug": "a-ponte-caida",
+   "parte": 1,
+   "media_id": "18029895026874855"
   }
  ],
  "ultimo_estilo": "cartela"

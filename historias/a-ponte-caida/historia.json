@@ -39,7 +39,7 @@
  "partes": [
   {
    "n": 1,
-   "status": "pronta",
+   "status": "publicada",
    "script": {
     "cover_text": "A corda foi cortada",
     "opcoes": [
@@ -445,7 +445,9 @@
       "brows": "preocupado"
      }
     ]
-   }
+   },
+   "media_id": "18029895026874855",
+   "publicada_em": "2026-11-23T13:03:29Z"
   }
  ],
  "personagens_travados": {

@@ -1,0 +1,264 @@
+{
+ "data": "2026-11-23",
+ "horario": "0852",
+ "fuso": "America/Campo_Grande",
+ "historia": "a-ponte-caida",
+ "titulo": "A Ponte Caída",
+ "parte": 1,
+ "status": "planejado",
+ "votacao": true,
+ "versao_padrao": "unica",
+ "estilo": "cartela",
+ "observacao": "Estreia. Roteiro já pronto no historia.json (9 cenas, 232 palavras); mantido igual, só legenda/chamada ganharam gatilho de compartilhar e a pergunta 'quem cortou' vem antes do voto.",
+ "versoes": {
+  "unica": {
+   "resumo": "A ponte pênsil cai com a corda cortada, o Júnior some no vale e o Rafa precisa escolher entre buscá-lo no escuro ou proteger as duas que ficaram.",
+   "retomada_gancho": null,
+   "palavras": 223,
+   "duracao_alvo_s": "50-60",
+   "momento_zoom_tensao": [
+    1,
+    7,
+    9
+   ],
+   "final": "Apito de emergência três vezes e silêncio; chuva; Rafa entre buscar o Júnior e deixar as duas com quem talvez cortou a corda. 'E você, o que faria?' + tela de votos 'Segue @mundoemhistorias pra ver a Parte 2'.",
+   "gatilho_compartilhar": "Chamada da tela de votos e legenda: 'Marca quem você levaria nessa trilha'.",
+   "legenda": "A ponte caiu dez segundos antes da gente atravessar… e a corda estava cortada. 🌧️🌉\n\nA Ponte Caída · Parte 1 — A corda foi cortada\n\nQuem você acha que cortou a corda? Chuta aqui 👇\n\nE no fim, vota: 🅰️ Buscar o Júnior no escuro ou 🅱️ Ficar e montar abrigo. A mais votada decide a Parte 2.\n\nMarca quem você levaria nessa trilha (e quem largaria todo mundo) 👀\n\nA Parte 2 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#sobrevivencia #suspense #historiasempartes #trilha #serra",
+   "capa": {
+    "titulo": "A Ponte Caída",
+    "parte": "Parte 1",
+    "cover_text": "A corda foi cortada"
+   },
+   "script": {
+    "cover_text": "A corda foi cortada",
+    "opcoes": [
+     "Buscar o Júnior no escuro",
+     "Ficar e montar abrigo"
+    ],
+    "opcoes_rostos": [
+     {
+      "ref": "RAFA",
+      "brows": "bravo",
+      "mouth": "o"
+     },
+     {
+      "ref": "MARINA",
+      "eyes": "arregalado",
+      "brows": "preocupado"
+     }
+    ],
+    "chamada": "Marca quem largaria todo mundo na trilha",
+    "caption": "A ponte caiu dez segundos antes da gente atravessar… e a corda estava cortada. 🌧️🌉\n\nA Ponte Caída · Parte 1 — A corda foi cortada\n\nQuem você acha que cortou a corda? Chuta aqui 👇\n\nE no fim, vota: 🅰️ Buscar o Júnior no escuro ou 🅱️ Ficar e montar abrigo. A mais votada decide a Parte 2.\n\nMarca quem você levaria nessa trilha (e quem largaria todo mundo) 👀\n\nA Parte 2 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#sobrevivencia #suspense #historiasempartes #trilha #serra",
+    "scenes": [
+     {
+      "bg": "floresta_noite",
+      "cam": "zoom_forte",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "RAFA",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "A ponte caiu *dez segundos* antes da gente atravessar. E quando eu puxei a corda do rio... ela estava *cortada*."
+     },
+     {
+      "bg": "floresta_noite",
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "RAFA",
+        "x": 0.35,
+        "scale": 0.85,
+        "look": 1
+       }
+      ],
+      "text": "Eu sou guia na Serra do Vento há oito anos. Hoje eu levava três pessoas numa trilha de um dia. Fácil. Volta antes do escuro."
+     },
+     {
+      "bg": "floresta_noite",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "CELIA",
+        "x": 0.3,
+        "scale": 0.85,
+        "mouth": "neutra"
+       },
+       {
+        "ref": "MARINA",
+        "x": 0.72,
+        "scale": 0.85,
+        "look": -1,
+        "mouth": "triste"
+       }
+      ],
+      "text": "A Dona Célia, aposentada, que parava pra cheirar a terra. A Marina, que disse ser médica. E o Júnior, dezessete anos, que só queria sinal de celular."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "lista",
+       "title": "SITUAÇÃO",
+       "lines": [
+        "Ponte: caiu",
+        "Celular: sem sinal",
+        "!Escurece em 1 hora",
+        "!Tempestade chegando"
+       ]
+      },
+      "text": "Do outro lado do rio, o carro e o caminho de volta. Do nosso lado, mata fechada. E um trovão que já roncava atrás do morro."
+     },
+     {
+      "bg": "floresta_noite",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "RAFA",
+        "x": 0.3,
+        "scale": 0.85,
+        "eyes": "normal",
+        "look": 1
+       },
+       {
+        "ref": "CELIA",
+        "x": 0.72,
+        "scale": 0.85,
+        "eyes": "fechado",
+        "mouth": "sorriso",
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "RAFA",
+        "texto": "Alguém cortou essa corda. Alguém aqui."
+       },
+       {
+        "voz": "CELIA",
+        "texto": "Calma, rapaz. Às vezes, uma ponte que cai é *sorte*."
+       }
+      ]
+     },
+     {
+      "bg": "floresta_noite",
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "MARINA",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "RAFA",
+        "texto": "Eu ia perguntar o que ela quis dizer. Mas a Marina gritou."
+       },
+       {
+        "voz": "MARINA",
+        "texto": "Cadê o Júnior? Ele subiu a encosta procurando sinal faz vinte minutos!"
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "shake",
+      "hook": true,
+      "prop": {
+       "type": "placa",
+       "title": "FIIIIU..."
+      },
+      "text": "Lá longe, no fundo do vale, um apito. O apito de emergência que eu dei pra cada um de manhã. Três vezes. E depois, *silêncio*."
+     },
+     {
+      "bg": "floresta_noite",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "MARINA",
+        "x": 0.3,
+        "scale": 0.85,
+        "mouth": "triste"
+       },
+       {
+        "ref": "RAFA",
+        "x": 0.72,
+        "scale": 0.85,
+        "eyes": "arregalado",
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MARINA",
+        "texto": "Eu torci o tornozelo, Rafa. Eu não consigo andar rápido."
+       },
+       {
+        "voz": "RAFA",
+        "texto": "Se eu for atrás dele, deixo as duas sozinhas. Com quem cortou a corda, talvez."
+       }
+      ]
+     },
+     {
+      "bg": "floresta_noite",
+      "cam": "shake",
+      "hook": true,
+      "tint": [
+       120,
+       20,
+       20
+      ],
+      "chars": [
+       {
+        "ref": "RAFA",
+        "x": 0.5,
+        "scale": 1.05,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "A chuva começou. Se eu for buscar o Júnior no escuro, a Marina e a Célia ficam sem abrigo. Se eu ficar, o Júnior passa a noite *sozinho* lá embaixo. E você, o que faria?"
+     }
+    ]
+   },
+   "personagens_por_cena": [
+    [
+     "RAFA"
+    ],
+    [
+     "RAFA"
+    ],
+    [
+     "CELIA",
+     "MARINA"
+    ],
+    [],
+    [
+     "RAFA",
+     "CELIA"
+    ],
+    [
+     "MARINA"
+    ],
+    [],
+    [
+     "MARINA",
+     "RAFA"
+    ],
+    [
+     "RAFA"
+    ]
+   ]
+  }
+ },
+ "problemas": [],
+ "criado_em": "2026-11-23T11:08:11Z"
+}

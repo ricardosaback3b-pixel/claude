@@ -1,0 +1,258 @@
+{
+ "data": "2026-11-23",
+ "horario": "1152",
+ "fuso": "America/Campo_Grande",
+ "historia": "ultimo-onibus",
+ "titulo": "O Último Ônibus",
+ "parte": 2,
+ "status": "planejado",
+ "votacao": false,
+ "versao_padrao": "unica",
+ "estilo": "cartela",
+ "observacao": "O roteiro 'pronta' do historia.json tinha só 6 cenas/81 palavras: este pré-roteiro expande para 9 cenas sem mudar fatos nem o gancho (lista com o nome dela e a data de hoje). Substituir o script da parte 2 por este. Seu Ivo: não citar cor do boné (P1 falou 'verde', o desenho é quepe azul).",
+ "versoes": {
+  "unica": {
+   "resumo": "Na Parada 1, Lia vê a si mesma criança escondendo um envelope sob o piso, e descobre que o último nome da lista de passageiros é o dela, com a data de hoje.",
+   "retomada_gancho": "Cena 1: 'Eu entrei no ônibus sem número... e o Seu Ivo me contou a regra' (~3s).",
+   "palavras": 206,
+   "duracao_alvo_s": "50-60",
+   "momento_zoom_tensao": [
+    1,
+    3,
+    6,
+    8,
+    9
+   ],
+   "final": "Parada Dois acendendo; Lia precisa descer antes da última parada e não sabe se a porta abre (a Parte 3 abre com ela correndo pra porta).",
+   "gatilho_compartilhar": "Fala final + legenda: 'Manda pra quem guarda um segredo desde criança'.",
+   "legenda": "O último nome da lista de passageiros era o meu. Com a data de hoje. 🚌\n\nO Último Ônibus · Parte 2 — A parada do que você escondeu\n\nO que você acha que tem no envelope? Chuta aqui 👇\n\nManda pra alguém que guarda um segredo desde criança 👀\n\nA Parte 3 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#historiasempartes #suspense #misterio #onibus #segredos",
+   "capa": {
+    "titulo": "O Último Ônibus",
+    "parte": "Parte 2",
+    "cover_text": "A parada do que você escondeu"
+   },
+   "script": {
+    "cover_text": "A parada do que você escondeu",
+    "caption": "O último nome da lista de passageiros era o meu. Com a data de hoje. 🚌\n\nO Último Ônibus · Parte 2 — A parada do que você escondeu\n\nO que você acha que tem no envelope? Chuta aqui 👇\n\nManda pra alguém que guarda um segredo desde criança 👀\n\nA Parte 3 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#historiasempartes #suspense #misterio #onibus #segredos",
+    "scenes": [
+     {
+      "bg": "onibus_dentro",
+      "cam": "zoom_rosto",
+      "hook": true,
+      "cover": true,
+      "foco_em": "IVO",
+      "chars": [
+       {
+        "ref": "IVO",
+        "x": 0.3,
+        "scale": 0.95
+       },
+       {
+        "ref": "LIA",
+        "x": 0.72,
+        "scale": 0.95,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "LIA",
+        "texto": "Eu entrei no ônibus sem número. E o Seu Ivo, que morreu ano passado, me contou a regra:"
+       },
+       {
+        "voz": "IVO",
+        "texto": "Ele para onde você *escondeu alguma coisa*."
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "in",
+      "prop": {
+       "type": "placa",
+       "title": "PARADA 1"
+      },
+      "text": "Um letreiro vermelho acendeu no teto: *Parada Um*. O ônibus freou sem fazer barulho. Ninguém desceu. Ninguém subiu."
+     },
+     {
+      "bg": "casa_noite",
+      "window": true,
+      "cam": "zoom_forte",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "LIA",
+        "x": 0.35,
+        "scale": 0.3,
+        "y": 0.664
+       }
+      ],
+      "text": "Lá fora não era a Rua Nove. Era a *minha casa* de infância. A mesma cerca torta. E na janela, uma menina de oito anos. *Eu.*"
+     },
+     {
+      "bg": "casa_noite",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "LIA",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "Eu vi a mim mesma ajoelhada na sala, tirando uma tábua solta do chão. E escondendo um *envelope* branco lá embaixo. Eu tinha esquecido disso. Ou fingia que tinha."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "LIA",
+        "x": 0.3,
+        "scale": 0.95,
+        "brows": "preocupado"
+       },
+       {
+        "ref": "IVO",
+        "x": 0.72,
+        "scale": 0.95
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "LIA",
+        "texto": "O que tem nesse envelope, Seu Ivo?"
+       },
+       {
+        "voz": "IVO",
+        "texto": "Você sabe, minha filha. Só não quer *lembrar*."
+       }
+      ]
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "foco_em": "MOTORISTA",
+      "chars": [
+       {
+        "ref": "MOTORISTA",
+        "x": 0.3,
+        "scale": 0.95
+       },
+       {
+        "ref": "LIA",
+        "x": 0.72,
+        "scale": 0.95,
+        "eyes": "arregalado"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "LIA",
+        "texto": "Lá na frente, o motorista falou sem virar o rosto."
+       },
+       {
+        "voz": "MOTORISTA",
+        "texto": "Quem não desce... *continua*."
+       }
+      ]
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "IVO",
+        "x": 0.3,
+        "scale": 0.95,
+        "brows": "preocupado"
+       },
+       {
+        "ref": "LIA",
+        "x": 0.72,
+        "scale": 0.95,
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "IVO",
+        "texto": "A última parada é onde *ninguém desce*. Guarda isso."
+       },
+       {
+        "voz": "LIA",
+        "texto": "E ele me entregou um papel dobrado, frio feito gelo."
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "shake",
+      "hook": true,
+      "prop": {
+       "type": "lista",
+       "title": "PASSAGEIROS",
+       "lines": [
+        "Ivo - desceu",
+        "Rosa - desceu",
+        "Tião - desceu",
+        "!Lia - 23/11 - hoje"
+       ]
+      },
+      "text": "Era a lista de passageiros. Os nomes de cima estavam riscados. E o último nome era o *meu*. Com a data de *hoje*."
+     },
+     {
+      "bg": "onibus_dentro",
+      "cam": "zoom_tremido",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "LIA",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "o",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "No teto, *Parada Dois* já estava acendendo. Eu precisava descer antes da última. Só não sabia se a porta ainda abria. Manda pra quem guarda um segredo desde criança. A Parte Três sai amanhã, segue o perfil."
+     }
+    ]
+   },
+   "personagens_por_cena": [
+    [
+     "IVO",
+     "LIA"
+    ],
+    [],
+    [
+     "LIA"
+    ],
+    [
+     "LIA"
+    ],
+    [
+     "LIA",
+     "IVO"
+    ],
+    [
+     "MOTORISTA",
+     "LIA"
+    ],
+    [
+     "IVO",
+     "LIA"
+    ],
+    [],
+    [
+     "LIA"
+    ]
+   ]
+  }
+ },
+ "problemas": [],
+ "criado_em": "2026-11-23T11:08:11Z"
+}

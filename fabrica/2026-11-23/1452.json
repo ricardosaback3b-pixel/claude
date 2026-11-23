@@ -1,0 +1,481 @@
+{
+ "data": "2026-11-23",
+ "horario": "1452",
+ "fuso": "America/Campo_Grande",
+ "historia": "elevador",
+ "titulo": "O Andar que Não Existe",
+ "parte": 3,
+ "status": "planejado",
+ "votacao": true,
+ "versao_padrao": "B",
+ "estilo": "andar",
+ "observacao": "Série antiga: Parte 3 traz 1 cena de recapitulação ('Nas partes anteriores'). Votos registrados na bíblia até agora: B 2 x 0 A (nathalia_5003, kevin_12_zn) -> padrão B; a Produção/Publicação reconta. {RESULTADO_SE_HOUVER_VOTOS} = 'Vocês escolheram X (a a b)! ' ou vazio se 0 votos (nunca dizer que ninguém votou). Fato novo da Parte 3 (registrar na bíblia ao produzir): a mãe do Você saiu do prédio há 10 anos e nunca voltou; o porteiro diz que ela espera na portaria (liga com a ideia do -1 guardar quem 'saiu' do prédio).",
+ "versoes": {
+  "A": {
+   "resumo": "Escolheram empurrar o médico: Você sai no 20º, o espelho avisa que o -1 é a portaria e o porteiro diz que a mãe dele, que saiu do prédio há dez anos, espera na portaria.",
+   "retomada_gancho": "Cena 1: 'Eu empurrei o médico de volta pro espelho' (~3s).",
+   "palavras": 209,
+   "duracao_alvo_s": "50-60",
+   "momento_zoom_tensao": [
+    1,
+    4,
+    6,
+    8,
+    9
+   ],
+   "final": "A mãe que sumiu há dez anos 'espera' na portaria; o elevador volta com o médico; um minuto pra escolher. Tela de votos 'Segue @mundoemhistorias pra ver a Parte 4'.",
+   "gatilho_compartilhar": "Chamada da tela de votos + legenda: 'Marca quem desceria essa escada sozinho'.",
+   "legenda": "{RESULTADO_SE_HOUVER_VOTOS}Eu empurrei o médico de volta pro espelho... e o espelho escreveu: ele mentiu. 🛗\n\nO Andar que Não Existe · Parte 3 — Alguém no meu lugar\n\nQuem está esperando lá na portaria? Teoria aqui 👇\n\n🅰️ Voltar e tirar o médico do espelho\n🅱️ Descer e encarar o porteiro\nA mais votada decide a Parte 4.\n\nMarca quem desceria essa escada sozinho 👀\n\nA Parte 4 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #elevador #historiasempartes #vocedecide #suspense #misterio",
+   "capa": {
+    "titulo": "O Andar que Não Existe",
+    "parte": "Parte 3",
+    "cover_text": "Alguém no meu lugar"
+   },
+   "script": {
+    "cover_text": "Alguém no meu lugar",
+    "opcoes": [
+     "Voltar e tirar o médico",
+     "Descer e encarar o porteiro"
+    ],
+    "opcoes_rostos": [
+     {
+      "ref": "MEDICO",
+      "eyes": "arregalado",
+      "brows": "preocupado",
+      "mouth": "o"
+     },
+     {
+      "ref": "PORTEIRO",
+      "brows": "bravo"
+     }
+    ],
+    "chamada": "Marca quem desceria essa escada sozinho",
+    "caption": "{RESULTADO_SE_HOUVER_VOTOS}Eu empurrei o médico de volta pro espelho... e o espelho escreveu: ele mentiu. 🛗\n\nO Andar que Não Existe · Parte 3 — Alguém no meu lugar\n\nQuem está esperando lá na portaria? Teoria aqui 👇\n\n🅰️ Voltar e tirar o médico do espelho\n🅱️ Descer e encarar o porteiro\nA mais votada decide a Parte 4.\n\nMarca quem desceria essa escada sozinho 👀\n\nA Parte 4 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #elevador #historiasempartes #vocedecide #suspense #misterio",
+    "scenes": [
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "20"
+      },
+      "cam": "zoom_rosto",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Eu empurrei o médico de volta pro espelho. E ele *me olhou* enquanto afundava."
+     },
+     {
+      "bg": "escuro",
+      "cam": "in",
+      "prop": {
+       "type": "placa",
+       "title": "-1"
+      },
+      "text": "Nas partes anteriores: o elevador parou no *menos um*, o andar que não existe. Eu fiquei, como o porteiro mandou. E o médico do sétimo tentou me levar com ele."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "20"
+      },
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "A porta abriu no vigésimo andar e eu saí correndo. Atrás de mim, o vidro do espelho ainda *tremia*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "bilhete",
+       "lines": [
+        "ELE MENTIU.",
+        "!O -1 É A PORTARIA."
+       ]
+      },
+      "text": "No embaçado do espelho, alguém escreveu com o dedo, de dentro pra fora: *ele mentiu*. E embaixo: o menos um é a *portaria*."
+     },
+     {
+      "bg": "corredor_predio",
+      "filtro": "tv",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Muito bem. Fez a coisa certa. Agora desce aqui na portaria."
+       },
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "Por que eu? O que tem aí embaixo?"
+       }
+      ]
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "-1"
+      },
+      "filtro": "tv",
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "MEDICO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "bravo",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "Na câmera três, o elevador descia. E o médico batia no espelho."
+       },
+       {
+        "voz": "MEDICO",
+        "texto": "Não desce! Ele precisa de *alguém* no lugar dele!"
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "filtro": "tv",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Não escuta ele. Desce pela escada. A sua *mãe* está te esperando aqui."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "surpreso",
+        "mouth": "o"
+       }
+      ],
+      "text": "E aí eu gelei. A minha mãe *saiu desse prédio* faz dez anos. E nunca mais voltou."
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "zoom_tremido",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "No visor, o elevador já estava *subindo* de novo, com o médico dentro. Eu tinha um minuto. A: voltar pro elevador e tirar o médico do espelho, mesmo que ele me leve pro menos um. B: descer a escada e encarar o porteiro, deixando o médico pra trás. E você, o que faria?"
+     }
+    ]
+   },
+   "personagens_por_cena": [
+    [
+     "PROTAGONISTA"
+    ],
+    [],
+    [
+     "PROTAGONISTA"
+    ],
+    [],
+    [
+     "PORTEIRO"
+    ],
+    [
+     "MEDICO"
+    ],
+    [
+     "PORTEIRO"
+    ],
+    [
+     "PROTAGONISTA"
+    ],
+    [
+     "PROTAGONISTA"
+    ]
+   ]
+  },
+  "B": {
+   "resumo": "Escolheram correr pra porta: Você sai no 20º, o elevador desce sozinho com o médico, e o porteiro diz que alguém precisa entrar no lugar dele, dizendo que a mãe dele, que saiu do prédio há dez anos, espera na portaria.",
+   "retomada_gancho": "Cena 1: 'Eu corri pra porta primeiro e deixei o médico preso no espelho' (~3s).",
+   "palavras": 204,
+   "duracao_alvo_s": "50-60",
+   "momento_zoom_tensao": [
+    1,
+    6,
+    8,
+    9
+   ],
+   "final": "A mãe que sumiu há dez anos 'espera' na portaria; o elevador volta com o médico; um minuto pra escolher. Tela de votos 'Segue @mundoemhistorias pra ver a Parte 4'.",
+   "gatilho_compartilhar": "Chamada da tela de votos + legenda: 'Marca quem desceria essa escada sozinho'.",
+   "legenda": "{RESULTADO_SE_HOUVER_VOTOS}Eu corri pra porta primeiro... e deixei o médico preso no espelho. 🛗\n\nO Andar que Não Existe · Parte 3 — Alguém no meu lugar\n\nQuem está esperando lá na portaria? Teoria aqui 👇\n\n🅰️ Voltar e tirar o médico do espelho\n🅱️ Descer e encarar o porteiro\nA mais votada decide a Parte 4.\n\nMarca quem desceria essa escada sozinho 👀\n\nA Parte 4 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #elevador #historiasempartes #vocedecide #suspense #misterio",
+   "capa": {
+    "titulo": "O Andar que Não Existe",
+    "parte": "Parte 3",
+    "cover_text": "Alguém no meu lugar"
+   },
+   "script": {
+    "cover_text": "Alguém no meu lugar",
+    "opcoes": [
+     "Voltar e tirar o médico",
+     "Descer e encarar o porteiro"
+    ],
+    "opcoes_rostos": [
+     {
+      "ref": "MEDICO",
+      "eyes": "arregalado",
+      "brows": "preocupado",
+      "mouth": "o"
+     },
+     {
+      "ref": "PORTEIRO",
+      "brows": "bravo"
+     }
+    ],
+    "chamada": "Marca quem desceria essa escada sozinho",
+    "caption": "{RESULTADO_SE_HOUVER_VOTOS}Eu corri pra porta primeiro... e deixei o médico preso no espelho. 🛗\n\nO Andar que Não Existe · Parte 3 — Alguém no meu lugar\n\nQuem está esperando lá na portaria? Teoria aqui 👇\n\n🅰️ Voltar e tirar o médico do espelho\n🅱️ Descer e encarar o porteiro\nA mais votada decide a Parte 4.\n\nMarca quem desceria essa escada sozinho 👀\n\nA Parte 4 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #elevador #historiasempartes #vocedecide #suspense #misterio",
+    "scenes": [
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "20"
+      },
+      "cam": "zoom_rosto",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Eu corri pra porta primeiro. E deixei o médico *preso no espelho*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "in",
+      "prop": {
+       "type": "placa",
+       "title": "-1"
+      },
+      "text": "Nas partes anteriores: o elevador parou no *menos um*, o andar que não existe. Eu fiquei, como o porteiro mandou. E o médico do sétimo acabou preso *dentro do espelho*."
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "Eu caí de joelhos no corredor do vigésimo andar. Atrás de mim, a porta fechou. E o elevador começou a *descer sozinho*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "placa",
+       "title": "20... 10... 1... -1"
+      },
+      "text": "No visor do corredor, os números foram caindo. Dez. Cinco. Um. E parou no *menos um*."
+     },
+     {
+      "bg": "corredor_predio",
+      "filtro": "tv",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Muito bem. Você saiu. Agora *alguém* precisa entrar no seu lugar."
+       },
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "No meu lugar? Como assim, no meu lugar?"
+       }
+      ]
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "-1"
+      },
+      "filtro": "tv",
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "MEDICO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "bravo",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "Na câmera três, o médico batia no espelho, me chamando."
+       },
+       {
+        "voz": "MEDICO",
+        "texto": "Ele mente pra você desde o *primeiro andar*!"
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "filtro": "tv",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Não escuta ele. Desce pela escada e vem pra portaria. A sua *mãe* está te esperando aqui."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "surpreso",
+        "mouth": "o"
+       }
+      ],
+      "text": "E aí eu gelei. A minha mãe *saiu desse prédio* faz dez anos. E nunca mais voltou."
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "zoom_tremido",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "No visor, o elevador já estava *subindo* de novo. Com o médico dentro. Eu tinha um minuto. A: voltar pro elevador e tirar o médico do espelho, mesmo que ele me leve pro menos um. B: descer a escada e encarar o porteiro, deixando o médico pra trás. E você, o que faria?"
+     }
+    ]
+   },
+   "personagens_por_cena": [
+    [
+     "PROTAGONISTA"
+    ],
+    [],
+    [
+     "PROTAGONISTA"
+    ],
+    [],
+    [
+     "PORTEIRO"
+    ],
+    [
+     "MEDICO"
+    ],
+    [
+     "PORTEIRO"
+    ],
+    [
+     "PROTAGONISTA"
+    ],
+    [
+     "PROTAGONISTA"
+    ]
+   ]
+  }
+ },
+ "problemas": [],
+ "criado_em": "2026-11-23T11:08:11Z"
+}

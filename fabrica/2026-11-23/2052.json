@@ -1,0 +1,254 @@
+{
+ "data": "2026-11-23",
+ "horario": "2052",
+ "fuso": "America/Campo_Grande",
+ "historia": "o-sombra-da-sala-12",
+ "titulo": "O Sombra da Sala 12",
+ "parte": 2,
+ "status": "planejado",
+ "votacao": false,
+ "versao_padrao": "unica",
+ "estilo": "andar",
+ "observacao": "Roteiro 'pronta' mantido; só a cena 1 ganhou a retomada do gancho (prazo de 5 dias + chave perdida que a lousa previu) e a cena 9 troca 'A Parte Três fica no perfil' por um gancho pra noite na escola (P3) + gatilho de compartilhar. Aplicar essas 2 cenas no historia.json.",
+ "versoes": {
+  "unica": {
+   "resumo": "As chaves do Seu Bento somem como a lousa previu, o giz azul aponta para o professor Rui e um bilhete na letra do Teo mostra que o Sombra está sempre um passo à frente.",
+   "retomada_gancho": "Cena 1: 'Cinco dias pra provar que eu não sou o Sombra' (~3s).",
+   "palavras": 231,
+   "duracao_alvo_s": "50-60",
+   "momento_zoom_tensao": [
+    1,
+    9
+   ],
+   "final": "O Sombra sabia antes deles; para pegá-lo, Teo (que tem medo do escuro) vai ter que ficar na escola de noite.",
+   "gatilho_compartilhar": "Fala final + legenda: 'Manda pro amigo que sempre sabe tudo antes de você'.",
+   "legenda": "O giz era azul… e só um professor da escola usa giz azul. 🔵\n\nO Sombra da Sala 12 · Parte 2 — O giz azul\n\nVocê confiaria no professor Rui? Chuta quem é o Sombra 👇\n\nManda pro amigo que sempre sabe tudo antes de você 👀\n\nA Parte 3 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#misterio #escola #historiasempartes #detetive #comedia",
+   "capa": {
+    "titulo": "O Sombra da Sala 12",
+    "parte": "Parte 2",
+    "cover_text": "O giz azul"
+   },
+   "script": {
+    "cover_text": "O giz azul",
+    "caption": "O giz era azul… e só um professor da escola usa giz azul. 🔵\n\nO Sombra da Sala 12 · Parte 2 — O giz azul\n\nVocê confiaria no professor Rui? Chuta quem é o Sombra 👇\n\nManda pro amigo que sempre sabe tudo antes de você 👀\n\nA Parte 3 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#misterio #escola #historiasempartes #detetive #comedia",
+    "scenes": [
+     {
+      "bg": "corredor_predio",
+      "cam": "zoom_forte",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "BENTO",
+        "x": 0.5,
+        "scale": 0.95,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Cinco dias pra provar que eu não sou o Sombra. E às sete da manhã, o grito do *Seu Bento*: as chaves da escola tinham *sumido*."
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "BENTO",
+        "x": 0.3,
+        "scale": 0.9,
+        "mouth": "triste"
+       },
+       {
+        "ref": "TEO",
+        "x": 0.72,
+        "scale": 0.8,
+        "look": -1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "BENTO",
+        "texto": "Trinta anos nessa escola e eu nunca perdi uma chave. Nunca!"
+       },
+       {
+        "voz": "TEO",
+        "texto": "O senhor emprestou pra alguém, Seu Bento?"
+       },
+       {
+        "voz": "BENTO",
+        "texto": "Só pra quem pede *por favor*. E ontem muita gente pediu."
+       }
+      ]
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "CHAVE?"
+      },
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.35,
+        "scale": 0.85,
+        "look": 1
+       }
+      ],
+      "text": "Na lousa, o Sombra tinha escrito: *eu avisei*. Mas dessa vez a Nina notou um detalhe que ninguém mais viu. A turma inteira ficou olhando pra mim de novo."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "AZUL"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.5,
+        "scale": 0.9,
+        "eyes": "arregalado",
+        "mouth": "sorriso"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "NINA",
+        "texto": "Olha a cor, Teo. O giz é *azul*. Na escola inteira, só um professor usa giz azul."
+       }
+      ]
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "2 + 2 = ?"
+      },
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "RUI",
+        "x": 0.3,
+        "scale": 0.9,
+        "mouth": "neutra"
+       },
+       {
+        "ref": "TEO",
+        "x": 0.72,
+        "scale": 0.8,
+        "eyes": "normal",
+        "look": -1
+       }
+      ],
+      "text": "O *professor Rui*. Chegou esse ano, ensina matemática, e guarda o giz azul trancado na gaveta como se fosse ouro. Ele sempre chega antes de todo mundo e sai por último."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "2 + 2 = ?"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "RUI",
+        "x": 0.5,
+        "scale": 1.0,
+        "eyes": "normal",
+        "mouth": "triste",
+        "look": 1
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "RUI",
+        "texto": "Alguém mexeu na minha gaveta, eu sei. Faltam três caixas. E vocês dois estão me olhando muito estranho."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.3,
+        "scale": 0.8,
+        "look": 1
+       },
+       {
+        "ref": "TEO",
+        "x": 0.68,
+        "scale": 0.8,
+        "look": -1
+       }
+      ],
+      "text": "No intervalo, a gente voltou escondido pra sala dele. A gaveta estava *aberta*. Sem cadeado. Sem giz. Eu senti o estômago gelar. Se alguém visse a gente ali, era o fim."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "bilhete",
+       "lines": [
+        "FRIO.",
+        "TENTA DE NOVO,",
+        "TEO.",
+        "- O SOMBRA"
+       ]
+      },
+      "text": "No fundo, dobrado, tinha um bilhete. Escrito na *minha letra*."
+     },
+     {
+      "bg": "sala_aula",
+      "bg_params": {
+       "board": "FRIO"
+      },
+      "cam": "shake",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 1.0,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "O Sombra sabia que a gente vinha. Sabia *antes* da gente. Ou seja: estava perto. Muito perto. E pra pegar ele, eu ia ter que ficar na escola... *de noite*. Manda pro amigo que sempre sabe tudo antes de você."
+     }
+    ]
+   },
+   "personagens_por_cena": [
+    [
+     "BENTO"
+    ],
+    [
+     "BENTO",
+     "TEO"
+    ],
+    [
+     "TEO"
+    ],
+    [
+     "NINA"
+    ],
+    [
+     "RUI",
+     "TEO"
+    ],
+    [
+     "RUI"
+    ],
+    [
+     "NINA",
+     "TEO"
+    ],
+    [],
+    [
+     "TEO"
+    ]
+   ]
+  }
+ },
+ "problemas": [],
+ "criado_em": "2026-11-23T11:07:54Z"
+}

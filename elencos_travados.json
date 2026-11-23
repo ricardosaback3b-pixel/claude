@@ -1,0 +1,193 @@
+{
+ "_regra": "Elenco travado pelo dono: fisico (sprite, escuro) e voz (voz, pitch, speed) e nome de cada personagem NUNCA mudam. So pode ACRESCENTAR historia nova ou personagem novo; nunca alterar nem apagar o que ja esta aqui.",
+ "historias": {
+  "a-ponte-caida": {
+   "titulo": "A Ponte Caída",
+   "personagens": {
+    "RAFA": {
+     "nome": "Rafa",
+     "sprite": "fotografo",
+     "voz": "piper:cadu",
+     "pitch": 1.0,
+     "speed": 1.0
+    },
+    "CELIA": {
+     "nome": "Dona Célia",
+     "sprite": "vovozinha",
+     "voz": "kokoro:pf_dora",
+     "pitch": 0.88,
+     "speed": 0.9
+    },
+    "JUNIOR": {
+     "nome": "Júnior",
+     "sprite": "garoto_gorro_preto",
+     "voz": "kokoro:pm_alex",
+     "pitch": 1.12,
+     "speed": 1.06
+    },
+    "MARINA": {
+     "nome": "Marina",
+     "sprite": "moca_loira",
+     "voz": "kokoro:pf_dora",
+     "pitch": 1.02,
+     "speed": 1.0
+    }
+   }
+  },
+  "cidade-sirene": {
+   "titulo": "Nessa Cidade, a Sirene Toca às 18h",
+   "personagens": {
+    "PROTAGONISTA": {
+     "nome": "Eu",
+     "sprite": "protagonista",
+     "voz": "piper:cadu",
+     "pitch": 1.0,
+     "speed": 1.0
+    },
+    "OUTRO_EU": {
+     "nome": "O outro eu",
+     "sprite": "protagonista",
+     "escuro": true,
+     "voz": "piper:cadu",
+     "pitch": 0.88,
+     "speed": 0.92
+    },
+    "PREFEITO": {
+     "nome": "Prefeito",
+     "sprite": "prefeito",
+     "voz": "kokoro:pm_santa",
+     "pitch": 0.92,
+     "speed": 0.9
+    },
+    "POLICIAL": {
+     "nome": "Policial",
+     "sprite": "policial",
+     "voz": "piper:jeff",
+     "pitch": 0.97,
+     "speed": 1.0
+    }
+   }
+  },
+  "elevador": {
+   "titulo": "O Andar que Não Existe",
+   "personagens": {
+    "PROTAGONISTA": {
+     "nome": "Você",
+     "sprite": "andar_voce",
+     "voz": "kokoro:pm_alex",
+     "pitch": 1.04,
+     "speed": 1.0
+    },
+    "MEDICO": {
+     "nome": "Médico",
+     "sprite": "andar_medico",
+     "voz": "piper:faber",
+     "pitch": 0.95,
+     "speed": 0.95
+    },
+    "PORTEIRO": {
+     "nome": "Porteiro",
+     "sprite": "andar_porteiro",
+     "voz": "kokoro:pm_santa",
+     "pitch": 0.9,
+     "speed": 0.92
+    }
+   }
+  },
+  "o-sombra-da-sala-12": {
+   "titulo": "O Sombra da Sala 12",
+   "personagens": {
+    "TEO": {
+     "nome": "Teo",
+     "sprite": "andar_menino",
+     "voz": "kokoro:pm_alex",
+     "pitch": 1.12,
+     "speed": 1.04
+    },
+    "NINA": {
+     "nome": "Nina",
+     "sprite": "andar_leitora",
+     "voz": "kokoro:pf_dora",
+     "pitch": 1.14,
+     "speed": 1.05
+    },
+    "CAIO": {
+     "nome": "Caio",
+     "sprite": "andar_rival",
+     "voz": "piper:faber",
+     "pitch": 1.1,
+     "speed": 1.04
+    },
+    "BENTO": {
+     "nome": "Seu Bento",
+     "sprite": "andar_zelador",
+     "voz": "kokoro:pm_santa",
+     "pitch": 0.9,
+     "speed": 0.92
+    },
+    "RUI": {
+     "nome": "Prof. Rui",
+     "sprite": "andar_professor",
+     "voz": "piper:jeff",
+     "pitch": 0.98,
+     "speed": 1.0
+    },
+    "MARTA": {
+     "nome": "Diretora Marta",
+     "sprite": "andar_jornalista",
+     "voz": "kokoro:pf_dora",
+     "pitch": 0.92,
+     "speed": 0.95
+    }
+   }
+  },
+  "ultimo-onibus": {
+   "titulo": "O Último Ônibus",
+   "personagens": {
+    "LIA": {
+     "nome": "Lia",
+     "sprite": "garota_moletom_roxo",
+     "voz": "kokoro:pf_dora",
+     "pitch": 1.0,
+     "speed": 1.0
+    },
+    "IVO": {
+     "nome": "Seu Ivo",
+     "sprite": "porteiro",
+     "voz": "kokoro:pm_santa",
+     "pitch": 0.94,
+     "speed": 0.92
+    },
+    "MOTORISTA": {
+     "nome": "Motorista",
+     "sprite": "motorista",
+     "voz": "piper:jeff",
+     "pitch": 0.93,
+     "speed": 0.86,
+     "escuro": true
+    },
+    "LIA_VELHA": {
+     "nome": "Lia mais velha",
+     "sprite": "mulher_vestido_roxo",
+     "voz": "kokoro:mix:pf_dora*0.8+pm_santa*0.2",
+     "pitch": 0.95,
+     "speed": 0.88
+    },
+    "MENINA": {
+     "nome": "Menina",
+     "sprite": "menina_laco_vermelho",
+     "voz": "kokoro:pf_dora",
+     "pitch": 1.08,
+     "speed": 1.08
+    },
+    "BIA": {
+     "nome": "Bia",
+     "sprite": "menina_vestido_rosa",
+     "voz": "kokoro:mix:pf_dora*0.85+pm_alex*0.15",
+     "pitch": 1.05,
+     "speed": 1.0
+    }
+   }
+  }
+ }
+}

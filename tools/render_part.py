@@ -110,11 +110,54 @@ def checar_catalogos(story):
                     sys.exit("ERRO: personagem em cena sem 'ref'. Todo personagem em cena precisa vir de 'personagens'.")
 
 
+TRAVA_PATH = os.path.join(ROOT, "elencos_travados.json")
+# Chaves que mudam o físico ou a voz: não podem ser sobrescritas dentro de uma cena.
+PROIBIDAS_EM_CENA = ("sprite", "cloth", "skin", "hair", "hairstyle", "escuro", "voz", "pitch", "speed", "nome")
+
+
+def checar_travas(story, slug, gravar=False):
+    """Trava do dono: físico e voz de cada personagem ficam guardados em elencos_travados.json
+    e nunca mudam. Só é permitido acrescentar história nova ou personagem novo."""
+    trava = json.load(open(TRAVA_PATH)) if os.path.exists(TRAVA_PATH) else {"historias": {}}
+    hist = trava.setdefault("historias", {})
+    pers = story.get("personagens", {})
+    lock = story.get("personagens_travados") or {}
+    entrada = hist.get(slug)
+    novos = []
+    if entrada is None:
+        entrada = {"titulo": story.get("titulo"), "personagens": {}}
+        hist[slug] = entrada
+    for ref, spec in entrada["personagens"].items():
+        if pers.get(ref) != spec:
+            sys.exit(f"ERRO (trava do dono): o personagem {ref} de '{slug}' mudou de físico ou voz ou foi removido. "
+                     f"Restaure em 'personagens' exatamente o que está em elencos_travados.json.")
+        if ref in lock and lock[ref] != spec:
+            sys.exit(f"ERRO (trava do dono): 'personagens_travados' de {ref} em '{slug}' foi alterado. "
+                     f"Restaure igual a elencos_travados.json.")
+    for ref, spec in pers.items():
+        if ref not in entrada["personagens"]:
+            novos.append(ref)
+            entrada["personagens"][ref] = json.loads(json.dumps(spec))
+    for p in story.get("partes", []):
+        for sc in (p.get("script") or {}).get("scenes", []):
+            for c in sc.get("chars", []):
+                ruins = [k for k in PROIBIDAS_EM_CENA if k in c]
+                if ruins:
+                    sys.exit(f"ERRO (trava do dono): a parte {p['n']} de '{slug}' muda {ruins} do personagem "
+                             f"{c.get('ref')} dentro de uma cena. Físico e voz vêm só de 'personagens'.")
+    if novos and gravar:
+        with open(TRAVA_PATH, "w") as f:
+            json.dump(trava, f, ensure_ascii=False, indent=1)
+        print("trava: personagens novos guardados:", ", ".join(novos), file=sys.stderr)
+    return novos
+
+
 def main(slug, n):
     path = os.path.join(ROOT, "historias", slug, "historia.json")
     with open(path) as f:
         story = json.load(f)
     checar_catalogos(story)
+    checar_travas(story, slug, gravar=True)
     import preparar  # processo obrigatório: catálogo, falas e verificação
     erros, avisos, feito = preparar.preparar(slug, n)
     for x in feito + avisos:
@@ -123,6 +166,7 @@ def main(slug, n):
         sys.exit("ERRO na preparação: " + " | ".join(erros))
     with open(path) as f:
         story = json.load(f)
+    checar_travas(story, slug)
     part = next(p for p in story["partes"] if p["n"] == n)
     # Trava de personagens: na primeira renderização guarda uma cópia; depois, qualquer mudança
     # de visual ou voz de um personagem existente faz a renderização parar com erro.

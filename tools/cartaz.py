@@ -48,7 +48,8 @@ def base(slug, n):
     if os.path.exists(capa):
         return Image.open(capa).convert("RGBA"), "capa do vídeo"
     story = json.load(open(os.path.join(ROOT, "historias", slug, "historia.json")))
-    partes = [p for p in story["partes"] if (p.get("script") or {}).get("scenes")]
+    render_part.checar_travas(story, slug)  # trava do dono: físico e voz nunca mudam
+    partes =[p for p in story["partes"] if (p.get("script") or {}).get("scenes")]
     part = next((p for p in partes if p["n"] == n), None)
     origem = "roteiro da parte"
     if part is None:
@@ -88,6 +89,7 @@ def faixa(im, linhas, amarela):
 
 def main():
     slug, n, modo, out = sys.argv[1], int(sys.argv[2]), sys.argv[3], sys.argv[4]
+    render_part.checar_travas(json.load(open(os.path.join(ROOT, "historias", slug, "historia.json"))), slug)
     im, origem = base(slug, n)
     if modo == "embreve":
         faixa(im, ["EM BREVE", sys.argv[5].upper()], True)

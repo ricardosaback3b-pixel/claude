@@ -159,3 +159,8 @@ A capa sai sozinha com: **nome original da história** (o `titulo`, sempre igual
 ## Textos na tela no estilo `andar`
 
 Nas histórias de estilo `andar`, o vídeo usa o visual dos episódios originais: @ no canto de cima, faixa branca "PARTE N · VOCÊS ESCOLHERAM B" (ou "PARTE N · <título da parte>"), faixa amarela "NO FINAL VOCÊ DECIDE: A ou B" nas histórias com votação, legenda em letra normal branca com contorno azul-marinho e o nome de quem fala num selo azul-claro. Isso é automático; para trocar o texto da faixa branca use `script.faixa`.
+
+## Trava do elenco (regra do dono, 23/11)
+- `elencos_travados.json` guarda, para cada história, os personagens com físico (`sprite`, `escuro`), voz (`voz`, `pitch`, `speed`) e nome. **Nunca altere nem apague nada desse arquivo.** Só é permitido acrescentar história nova ou personagem novo (o `tools/render_part.py` faz isso sozinho na primeira renderização).
+- Em `historia.json`, `personagens` e `personagens_travados` têm que ficar idênticos ao arquivo. Nas cenas, nunca use `sprite`, `cloth`, `skin`, `hair`, `hairstyle`, `escuro`, `voz`, `pitch`, `speed` ou `nome` dentro de um personagem: físico e voz vêm só de `personagens`.
+- `render_part.py` e `cartaz.py` param com erro se algo disso mudar. Se der esse erro, restaure o personagem; nunca edite o arquivo da trava para "passar".

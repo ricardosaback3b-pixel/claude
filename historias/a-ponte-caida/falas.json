@@ -33,5 +33,108 @@
    "speed": 1.0
   }
  },
- "partes": {}
+ "partes": {
+  "1": [
+   {
+    "cena": 1,
+    "personagem": "RAFA",
+    "texto": "A ponte caiu *dez segundos* antes da gente atravessar."
+   },
+   {
+    "cena": 2,
+    "personagem": "RAFA",
+    "texto": "E quando eu puxei a corda do rio... ela estava *cortada*."
+   },
+   {
+    "cena": 3,
+    "personagem": "RAFA",
+    "texto": "Eu sou guia na Serra do Vento há oito anos."
+   },
+   {
+    "cena": 4,
+    "personagem": "RAFA",
+    "texto": "Hoje eu levava três pessoas numa trilha de um dia. Fácil. Volta antes do escuro."
+   },
+   {
+    "cena": 5,
+    "personagem": "RAFA",
+    "texto": "A Dona Célia, aposentada, que parava pra cheirar a terra. A Marina, que disse ser médica."
+   },
+   {
+    "cena": 6,
+    "personagem": "RAFA",
+    "texto": "E o Júnior, dezessete anos, que só queria sinal de celular."
+   },
+   {
+    "cena": 7,
+    "personagem": "RAFA",
+    "texto": "Do outro lado do rio, o carro e o caminho de volta."
+   },
+   {
+    "cena": 8,
+    "personagem": "RAFA",
+    "texto": "Do nosso lado, mata fechada. E um trovão que já roncava atrás do morro."
+   },
+   {
+    "cena": 9,
+    "personagem": "RAFA",
+    "texto": "Alguém cortou essa corda. Alguém aqui."
+   },
+   {
+    "cena": 10,
+    "personagem": "CELIA",
+    "texto": "Calma, rapaz. Às vezes, uma ponte que cai é *sorte*."
+   },
+   {
+    "cena": 11,
+    "personagem": "RAFA",
+    "texto": "Eu ia perguntar o que ela quis dizer. Mas a Marina gritou."
+   },
+   {
+    "cena": 12,
+    "personagem": "MARINA",
+    "texto": "Cadê o Júnior? Ele subiu a encosta procurando sinal faz vinte minutos!"
+   },
+   {
+    "cena": 13,
+    "personagem": "RAFA",
+    "texto": "Lá longe, no fundo do vale, um apito."
+   },
+   {
+    "cena": 14,
+    "personagem": "RAFA",
+    "texto": "O apito de emergência que eu dei pra cada um de manhã. Três vezes."
+   },
+   {
+    "cena": 15,
+    "personagem": "RAFA",
+    "texto": "E depois, *silêncio*."
+   },
+   {
+    "cena": 16,
+    "personagem": "MARINA",
+    "texto": "Eu torci o tornozelo, Rafa. Eu não consigo andar rápido."
+   },
+   {
+    "cena": 17,
+    "personagem": "RAFA",
+    "texto": "Se eu for atrás dele, deixo as duas sozinhas. Com quem cortou a corda, talvez."
+   },
+   {
+    "cena": 18,
+    "personagem": "RAFA",
+    "texto": "A chuva começou."
+   },
+   {
+    "cena": 19,
+    "personagem": "RAFA",
+    "texto": "Se eu for buscar o Júnior no escuro, a Marina e a Célia ficam sem abrigo."
+   },
+   {
+    "cena": 20,
+    "personagem": "RAFA",
+    "texto": "Se eu ficar, o Júnior passa a noite *sozinho* lá embaixo. E você, o que faria?"
+   }
+  ]
+ }
 }

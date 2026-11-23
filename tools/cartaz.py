@@ -40,7 +40,25 @@ def _cena_capa(story, part, n):
         else:
             y = int((c.get("y", 0.86) - 0.07) * engine.BH - spr.height)
         src.paste(spr, (x, y), spr)
-    return meta, engine.camera(src, sc.get("cam", "in"), 0.5)
+    return meta, engine.camera(src, "in", 0.0)  # cartaz: plano aberto, sem cortar personagens
+
+
+def _script_da_ficha(slug, n):
+    """Roteiro planejado da parte (fichas de fabrica/), versão padrão; None se não houver."""
+    import glob
+    for f in sorted(glob.glob(os.path.join(ROOT, "fabrica", "*", "*.json")), reverse=True):
+        try:
+            d = json.load(open(f))
+        except Exception:
+            continue
+        if d.get("historia") != slug or d.get("parte") != n:
+            continue
+        vs = d.get("versoes") or {}
+        v = vs.get(d.get("versao_padrao")) or (next(iter(vs.values())) if vs else None)
+        sc = (v or {}).get("script") or {}
+        if sc.get("scenes"):
+            return sc
+    return None
 
 
 def base(slug, n):
@@ -50,8 +68,12 @@ def base(slug, n):
     story = json.load(open(os.path.join(ROOT, "historias", slug, "historia.json")))
     render_part.checar_travas(story, slug)  # trava do dono: físico e voz nunca mudam
     partes =[p for p in story["partes"] if (p.get("script") or {}).get("scenes")]
-    part = next((p for p in partes if p["n"] == n), None)
-    origem = "roteiro da parte"
+    plano = _script_da_ficha(slug, n)  # o cronograma manda: a capa planejada na ficha vem primeiro
+    if plano:
+        part, origem = {"n": n, "script": plano}, "capa planejada na ficha do cronograma"
+    else:
+        part = next((p for p in partes if p["n"] == n), None)
+        origem = "roteiro da parte"
     if part is None:
         if partes:
             part = json.loads(json.dumps(max(partes, key=lambda p: p["n"])))

@@ -1,6 +1,6 @@
 {
  "horarios": "9h, 12h, 15h, 18h, 21h (America/Campo_Grande)",
- "vez": 0,
+ "vez": 1,
  "ativas": [
   {
    "slug": "ultimo-onibus",
@@ -71,6 +71,12 @@
    "slug": "a-ponte-caida",
    "parte": 1,
    "media_id": "18029895026874855"
+  },
+  {
+   "quando": "2026-11-23T15:55:29Z",
+   "slug": "ultimo-onibus",
+   "parte": 2,
+   "media_id": "18088148606330324"
   }
  ],
  "ultimo_estilo": "cartela"

@@ -5,7 +5,7 @@
  "historia": "ultimo-onibus",
  "titulo": "O Último Ônibus",
  "parte": 2,
- "status": "produzido",
+ "status": "publicado",
  "votacao": false,
  "versao_padrao": "unica",
  "estilo": "andar",
@@ -465,7 +465,8 @@
  "problemas": [
   "Elenco trocado com aprovação do dono às 08h31: estilo 'andar' (Seu Ivo = andar_porteiro, Lia = andar_adolescente_menina). O cartaz das 8h19 saiu com o desenho anterior.",
   "Produção 23/11 08h55: lista de passageiros sem o nome do Seu Ivo como 'desceu' (ele ainda está no ônibus — evitava contradição); nomes de cima = Rosa, Tião, Dalva. Boné/quepe sem cor citada.",
-  "ATENÇÃO DONO (não alterado, elenco travado): o Motorista 'escurecido' aparece com rosto marrom-escuro, que pode ser lido como outra cor de pele e não como sombra; na bíblia ele é a Lia 40 anos mais velha — a revelação pode soar incoerente. Decida antes da Parte 5/6."
+  "ATENÇÃO DONO (não alterado, elenco travado): o Motorista 'escurecido' aparece com rosto marrom-escuro, que pode ser lido como outra cor de pele e não como sombra; na bíblia ele é a Lia 40 anos mais velha — a revelação pode soar incoerente. Decida antes da Parte 5/6.",
+  "Publicação 11h53: ficha estava 'produzido' sem revisão do Controle de qualidade; a publicação conferiu quadros e rostos (1 boca/2 olhos OK) e usou o vídeo pronto da fábrica."
  ],
  "criado_em": "2026-11-23T11:08:11Z",
  "em_breve": {
@@ -476,5 +477,9 @@
   "imagem_corrigida": "videos/ultimo-onibus/embreve2b.jpg",
   "media_id_corrigido": "18008393352001160"
  },
- "produzido_em": "2026-11-23T13:10Z"
+ "produzido_em": "2026-11-23T13:10Z",
+ "versao_escolhida": "unica",
+ "placar": null,
+ "media_id": "18088148606330324",
+ "publicado_em": "2026-11-23T15:55:29Z"
 }

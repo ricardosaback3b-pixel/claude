@@ -5,7 +5,7 @@
  "historia": "cidade-sirene",
  "titulo": "Nessa Cidade, a Sirene Toca às 18h",
  "parte": 5,
- "status": "produzido",
+ "status": "aprovado",
  "votacao": true,
  "versao_padrao": "B",
  "estilo": "cartela",
@@ -13,9 +13,9 @@
  "versoes": {
   "A": {
    "resumo": "Escolheram ficar com o caderno: as regras dão até as 18h pra escrever um nome; ninguém merece sumir; no fim, a última página já tem um nome escrito pelo Prefeito: o Policial.",
-   "retomada_gancho": "Cena 1: 'Seis em ponto. A sirene tocou. E o caderno abriu sozinho.' (~3 s, fato novo)",
+   "retomada_gancho": "Cena 1: 'Sirene das seis. E o caderno que decide quem some abriu sozinho na minha mão.'",
    "cenas": 21,
-   "palavras": 209,
+   "palavras": 210,
    "duracao_alvo_s": "60-75",
    "momento_zoom_tensao": [
     1,
@@ -40,7 +40,7 @@
    ],
    "final": "Virada: o Prefeito (quem sabe mais) já tinha escrito 'PARA HOJE: O POLICIAL'; o Policial não se surpreende. 17:58. A/B com custo + 'Comenta A ou B'.",
    "gatilho_compartilhar": "Manda pra quem ia querer subir na torre",
-   "legenda": "Seis em ponto a sirene tocou... e o caderno abriu sozinho na minha mão. 🚨\n{RESULTADO_SE_HOUVER_VOTOS}\nNessa Cidade, a Sirene Toca às 18h · Parte 5 — O que tem lá em cima\n\nPor que o Prefeito já tinha escrito o nome do Policial? Teoria aqui 👇\n\n🅰️ Escrever o nome do Policial (e ele some no meu lugar)\n🅱️ Subir na torre e parar o relógio (e esquecer quem eu sou)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem não resiste quando mandam não olhar 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #misterio #suspense #vocedecide",
+   "legenda": "Sirene das seis... e o caderno que decide quem some abriu sozinho na minha mão. 🚨\nNessa Cidade, a Sirene Toca às 18h · Parte 5 — O que tem lá em cima\n\nPor que o Prefeito já tinha escrito o nome do Policial? Teoria aqui 👇\n\n{RESULTADO_SE_HOUVER_VOTOS}\n🅰️ Escrever o nome do Policial (e ele some no meu lugar)\n🅱️ Subir na torre e parar o relógio (e esquecer quem eu sou)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem não resiste quando mandam não olhar 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #misterio #suspense #vocedecide",
    "capa": {
     "titulo": "Nessa Cidade, a Sirene Toca às 18h",
     "parte": "Parte 5",
@@ -81,8 +81,8 @@
       "mouth": "triste"
      }
     ],
-    "chamada": "Manda pra quem ia querer subir na torre",
-    "caption": "Seis em ponto a sirene tocou... e o caderno abriu sozinho na minha mão. 🚨\n{RESULTADO_SE_HOUVER_VOTOS}\nNessa Cidade, a Sirene Toca às 18h · Parte 5 — O que tem lá em cima\n\nPor que o Prefeito já tinha escrito o nome do Policial? Teoria aqui 👇\n\n🅰️ Escrever o nome do Policial (e ele some no meu lugar)\n🅱️ Subir na torre e parar o relógio (e esquecer quem eu sou)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem não resiste quando mandam não olhar 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #misterio #suspense #vocedecide",
+    "chamada": "Manda pra quem não resiste quando mandam não olhar",
+    "caption": "Sirene das seis... e o caderno que decide quem some abriu sozinho na minha mão. 🚨\nNessa Cidade, a Sirene Toca às 18h · Parte 5 — O que tem lá em cima\n\nPor que o Prefeito já tinha escrito o nome do Policial? Teoria aqui 👇\n\n{RESULTADO_SE_HOUVER_VOTOS}\n🅰️ Escrever o nome do Policial (e ele some no meu lugar)\n🅱️ Subir na torre e parar o relógio (e esquecer quem eu sou)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem não resiste quando mandam não olhar 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #misterio #suspense #vocedecide",
     "scenes": [
      {
       "bg": "rua_amanhecer",
@@ -102,7 +102,7 @@
         "mouth": "o"
        }
       ],
-      "text": "Seis em ponto. A sirene tocou. E o caderno *abriu sozinho* na minha mão."
+      "text": "Sirene das seis. E o caderno que decide quem some abriu sozinho *na minha mão*."
      },
      {
       "bg": "escuro",
@@ -447,19 +447,31 @@
        "relogio": true,
        "relogio_hora": "17:58"
       },
-      "cam": "zoom_forte",
+      "cam": "in",
       "prop": {
        "type": "placa",
        "title": "17:58",
-       "y": 700
+       "y": 960
       },
-      "text": "Cinco e cinquenta e oito. O ponteiro vermelho apontava *pra mim*."
+      "text": "Cinco e cinquenta e oito. O ponteiro vermelho apontava *pra mim*.",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.7,
+        "scale": 0.55,
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ]
      },
      {
-      "bg": "beco",
+      "bg": "praca",
       "bg_params": {
        "hora": "tarde",
-       "texto": "NÃO OLHE"
+       "seed": 7,
+       "alerta": true,
+       "relogio": true,
+       "relogio_hora": "17:58"
       },
       "cam": "zoom_rosto",
       "hook": true,
@@ -468,7 +480,8 @@
         "ref": "POLICIAL",
         "x": 0.5,
         "scale": 0.9,
-        "brows": "preocupado"
+        "brows": "preocupado",
+        "mouth": "triste"
        }
       ],
       "text": "A: escrevo o nome do Policial, como o Prefeito deixou. E *ele some*."
@@ -515,14 +528,14 @@
    },
    "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/parte5A.mp4",
    "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/capa5A.jpg",
-   "duracao": 73.8,
-   "roteiro": "Seis em ponto. A sirene tocou. E o caderno abriu sozinho na minha mão. Primeira página: as regras. E a terceira estava em vermelho. Doze horas, menino. Até a sirene da tarde. Escreve o meu nome. Eu levo o resto de você junto. Nem pensar. Metade já é demais. Ele riu. E foi andando pra rua nove. A minha rua. Entrou numa casa sem número. E eu não sabia se era a minha. Passei o dia lendo trinta anos de nomes. Ninguém merecia sumir. Cinco e quarenta e um. A caneta começou a tremer sozinha. Aí todos os celulares da cidade tocaram juntos. Eles já sabem. Escreve logo, menino! Eu virei a última página. E já tinha um nome lá. Na letra do Prefeito. Pra hoje: o Policial. Ele leu por cima do meu ombro. E não pareceu surpreso. Ele sempre disse que um dia ia ser eu. Por quê? O que você fez? Ele não respondeu. Só olhou pro relógio da praça. Cinco e cinquenta e oito. O ponteiro vermelho apontava pra mim. A: escrevo o nome do Policial, como o Prefeito deixou. E ele some. B: subo na torre e paro o relógio. E esqueço quem eu sou. E você, o que faria? Comenta A ou B."
+   "duracao": 74.3,
+   "roteiro": "Sirene das seis. E o caderno que decide quem some abriu sozinho na minha mão. Primeira página: as regras. E a terceira estava em vermelho. Doze horas, menino. Até a sirene da tarde. Escreve o meu nome. Eu levo o resto de você junto. Nem pensar. Metade já é demais. Ele riu. E foi andando pra rua nove. A minha rua. Entrou numa casa sem número. E eu não sabia se era a minha. Passei o dia lendo trinta anos de nomes. Ninguém merecia sumir. Cinco e quarenta e um. A caneta começou a tremer sozinha. Aí todos os celulares da cidade tocaram juntos. Eles já sabem. Escreve logo, menino! Eu virei a última página. E já tinha um nome lá. Na letra do Prefeito. Pra hoje: o Policial. Ele leu por cima do meu ombro. E não pareceu surpreso. Ele sempre disse que um dia ia ser eu. Por quê? O que você fez? Ele não respondeu. Só olhou pro relógio da praça. Cinco e cinquenta e oito. O ponteiro vermelho apontava pra mim. A: escrevo o nome do Policial, como o Prefeito deixou. E ele some. B: subo na torre e paro o relógio. E esqueço quem eu sou. E você, o que faria? Comenta A ou B."
   },
   "B": {
    "resumo": "Escolheram olhar pra cima: o céu é a cidade de cabeça pra baixo com todos os sumidos; o outro eu é puxado de volta e o narrador recupera a lembrança da porta azul; agora 'eles' vêm buscá-lo às 18h; um bilhete do Prefeito manda escrever o nome do Policial.",
-   "retomada_gancho": "Cena 1: 'Seis em ponto. A sirene tocou. E eu olhei pra cima.' (~3 s, fato novo)",
-   "cenas": 20,
-   "palavras": 194,
+   "retomada_gancho": "Cena 1: 'Seis em ponto. A sirene tocou. E eu fiz o proibido: olhei pra cima.'",
+   "cenas": 21,
+   "palavras": 197,
    "duracao_alvo_s": "60-75",
    "momento_zoom_tensao": [
     1,
@@ -547,7 +560,7 @@
    ],
    "final": "Virada: bilhete do Prefeito (quem sabe mais) escrito hoje: 'ESCREVE O NOME DO POLICIAL. ELE SABE POR QUÊ.'; o Policial: 'Então ele lembrou'. 17:58. A/B com custo + 'Comenta A ou B'.",
    "gatilho_compartilhar": "Manda pra quem ia querer subir na torre",
-   "legenda": "Seis em ponto a sirene tocou... e eu olhei pra cima. 🚨\n{RESULTADO_SE_HOUVER_VOTOS}\nNessa Cidade, a Sirene Toca às 18h · Parte 5 — O que tem lá em cima\n\nPor que o Prefeito quer o nome do Policial? Teoria aqui 👇\n\n🅰️ Escrever o nome do Policial (e ele some no meu lugar)\n🅱️ Subir na torre e parar o relógio (e esquecer quem eu sou)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem não resiste quando mandam não olhar 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #misterio #suspense #vocedecide",
+   "legenda": "Seis em ponto a sirene tocou... e eu fiz o proibido: olhei pra cima. 🚨\nNessa Cidade, a Sirene Toca às 18h · Parte 5 — O que tem lá em cima\n\nPor que o Prefeito quer o nome do Policial? Teoria aqui 👇\n\n{RESULTADO_SE_HOUVER_VOTOS}\n🅰️ Escrever o nome do Policial (e ele some no meu lugar)\n🅱️ Subir na torre e parar o relógio (e esquecer quem eu sou)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem não resiste quando mandam não olhar 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #misterio #suspense #vocedecide",
    "capa": {
     "titulo": "Nessa Cidade, a Sirene Toca às 18h",
     "parte": "Parte 5",
@@ -587,8 +600,8 @@
       "mouth": "triste"
      }
     ],
-    "chamada": "Manda pra quem ia querer subir na torre",
-    "caption": "Seis em ponto a sirene tocou... e eu olhei pra cima. 🚨\n{RESULTADO_SE_HOUVER_VOTOS}\nNessa Cidade, a Sirene Toca às 18h · Parte 5 — O que tem lá em cima\n\nPor que o Prefeito quer o nome do Policial? Teoria aqui 👇\n\n🅰️ Escrever o nome do Policial (e ele some no meu lugar)\n🅱️ Subir na torre e parar o relógio (e esquecer quem eu sou)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem não resiste quando mandam não olhar 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #misterio #suspense #vocedecide",
+    "chamada": "Manda pra quem não resiste quando mandam não olhar",
+    "caption": "Seis em ponto a sirene tocou... e eu fiz o proibido: olhei pra cima. 🚨\nNessa Cidade, a Sirene Toca às 18h · Parte 5 — O que tem lá em cima\n\nPor que o Prefeito quer o nome do Policial? Teoria aqui 👇\n\n{RESULTADO_SE_HOUVER_VOTOS}\n🅰️ Escrever o nome do Policial (e ele some no meu lugar)\n🅱️ Subir na torre e parar o relógio (e esquecer quem eu sou)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem não resiste quando mandam não olhar 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #misterio #suspense #vocedecide",
     "scenes": [
      {
       "bg": "rua_amanhecer",
@@ -608,7 +621,7 @@
         "mouth": "o"
        }
       ],
-      "text": "Seis em ponto. A sirene tocou. E eu *olhei pra cima*."
+      "text": "Seis em ponto. A sirene tocou. E eu fiz o proibido: *olhei pra cima*."
      },
      {
       "bg": "praca",
@@ -623,7 +636,29 @@
       },
       "cam": "zoom_forte",
       "tensao": true,
-      "text": "O céu era um espelho. A nossa cidade inteira, *de cabeça pra baixo*."
+      "text": "O céu era um espelho."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "amanhecer",
+       "seed": 7,
+       "neblina": true,
+       "relogio": true,
+       "relogio_hora": "06:00",
+       "ceu_espelho": true
+      },
+      "cam": "out",
+      "text": "A nossa cidade inteira, *de cabeça pra baixo*.",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.62,
+        "scale": 0.6,
+        "brows": "surpreso",
+        "mouth": "o"
+       }
+      ]
      },
      {
       "bg": "praca",
@@ -927,19 +962,31 @@
        "relogio": true,
        "relogio_hora": "17:58"
       },
-      "cam": "zoom_forte",
+      "cam": "in",
       "prop": {
        "type": "placa",
        "title": "17:58",
-       "y": 700
+       "y": 960
       },
-      "text": "Cinco e cinquenta e oito. O ponteiro vermelho apontava *pra mim*."
+      "text": "Cinco e cinquenta e oito. O ponteiro vermelho apontava *pra mim*.",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.7,
+        "scale": 0.55,
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ]
      },
      {
-      "bg": "beco",
+      "bg": "praca",
       "bg_params": {
        "hora": "tarde",
-       "texto": "NÃO OLHE"
+       "seed": 7,
+       "alerta": true,
+       "relogio": true,
+       "relogio_hora": "17:58"
       },
       "cam": "zoom_rosto",
       "hook": true,
@@ -948,7 +995,8 @@
         "ref": "POLICIAL",
         "x": 0.5,
         "scale": 0.9,
-        "brows": "preocupado"
+        "brows": "preocupado",
+        "mouth": "triste"
        }
       ],
       "text": "A: escrevo o nome do Policial. E *ele some* no meu lugar."
@@ -995,8 +1043,8 @@
    },
    "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/parte5B.mp4",
    "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/capa5B.jpg",
-   "duracao": 68.6,
-   "roteiro": "Seis em ponto. A sirene tocou. E eu olhei pra cima. O céu era um espelho. A nossa cidade inteira, de cabeça pra baixo. Fecha os olhos, menino! Agora! Eu não fechei. Lá em cima tinha gente. Centenas, olhando pra mim. Todo mundo que sumiu nesses trinta anos. Do meu lado, o outro eu começou a subir. Como fumaça. Não! Eu ainda não terminei você! Ele sumiu no céu. E na hora eu lembrei: a minha porta é azul. Você olhou. Agora eles sabem o seu nome. Eu só olhei uma vez. Uma vez só! Às sete, todos os celulares da cidade tocaram juntos. Quem olha, eles vêm buscar. Hoje, às seis da tarde. Cinco e quarenta e um. Passei o dia trancado em casa. Até que alguém passou um papel por baixo da porta. Era a letra do Prefeito. Escrita hoje. Então ele lembrou. Depois de trinta anos. Cinco e cinquenta e oito. O ponteiro vermelho apontava pra mim. A: escrevo o nome do Policial. E ele some no meu lugar. B: subo na torre e paro o relógio. E esqueço quem eu sou. E você, o que faria? Comenta A ou B."
+   "duracao": 70.2,
+   "roteiro": "Seis em ponto. A sirene tocou. E eu fiz o proibido: olhei pra cima. O céu era um espelho. A nossa cidade inteira, de cabeça pra baixo. Fecha os olhos, menino! Agora! Eu não fechei. Lá em cima tinha gente. Centenas, olhando pra mim. Todo mundo que sumiu nesses trinta anos. Do meu lado, o outro eu começou a subir. Como fumaça. Não! Eu ainda não terminei você! Ele sumiu no céu. E na hora eu lembrei: a minha porta é azul. Você olhou. Agora eles sabem o seu nome. Eu só olhei uma vez. Uma vez só! Às sete, todos os celulares da cidade tocaram juntos. Quem olha, eles vêm buscar. Hoje, às seis da tarde. Cinco e quarenta e um. Passei o dia trancado em casa. Até que alguém passou um papel por baixo da porta. Era a letra do Prefeito. Escrita hoje. Então ele lembrou. Depois de trinta anos. Cinco e cinquenta e oito. O ponteiro vermelho apontava pra mim. A: escrevo o nome do Policial. E ele some no meu lugar. B: subo na torre e paro o relógio. E esqueço quem eu sou. E você, o que faria? Comenta A ou B."
   }
  },
  "problemas": [
@@ -1027,5 +1075,70 @@
   "B: 'a minha porta é azul' agora aparece (casa nº 9 com porta azul; novo parâmetro porta em cenarios.py casa).",
   "Props: celular agora mostra linha com '!' em vermelho (antes aparecia o '!' escrito); linhas longas da carta/celular encolhem pra não passar da borda ('3. Página em branco: eles descem.' estava cortada); cartas descidas (y=640) e bilhete (y=700) pra sair de baixo das faixas do topo.",
   "Cena de capa (cover) igual nas duas versões e igual ao cartaz EM BREVE (rua_amanhecer PRAÇA, Eu em close) — não alterada."
- ]
+ ],
+ "regras_virais_ok": {
+  "A": {
+   "1_frase1_conflito": "corrigido (A e B: frase 1 agora diz o que está em jogo para quem não viu as partes anteriores)",
+   "2_sem_curriculo": "ok",
+   "3_primeiros_15s_fato_novo": "ok (B: cena 2 dividida, nada passa de 4 s nos primeiros 15 s; máx. 15 palavras por cena)",
+   "4_relogio_na_tela": "ok (torre 06:00→06:03 / celular / placa 17:41 → torre e placa 17:58; placa 17:58 descida para não cobrir a torre)",
+   "5_celular_papel": "ok",
+   "6_virada": "ok (Prefeito sabe mais: 'PARA HOJE: O POLICIAL' / bilhete 'ELE SABE POR QUÊ')",
+   "7_chamada": "ok (A/B com custo + 'Comenta A ou B')",
+   "8_legenda": "corrigido (linha 1 = novo gancho; {RESULTADO_SE_HOUVER_VOTOS} saiu da linha 2 e foi para logo antes das opções, teste do APRENDIZADOS)",
+   "9_primeiro_quadro": "ok (close do Eu + gancho grande no terço de cima + fala em 0,0 s; sem faixa A/B; nenhuma imagem parada por 3 s)"
+  },
+  "B": {
+   "1_frase1_conflito": "corrigido (A e B: frase 1 agora diz o que está em jogo para quem não viu as partes anteriores)",
+   "2_sem_curriculo": "ok",
+   "3_primeiros_15s_fato_novo": "ok (B: cena 2 dividida, nada passa de 4 s nos primeiros 15 s; máx. 15 palavras por cena)",
+   "4_relogio_na_tela": "ok (torre 06:00→06:03 / celular / placa 17:41 → torre e placa 17:58; placa 17:58 descida para não cobrir a torre)",
+   "5_celular_papel": "ok",
+   "6_virada": "ok (Prefeito sabe mais: 'PARA HOJE: O POLICIAL' / bilhete 'ELE SABE POR QUÊ')",
+   "7_chamada": "ok (A/B com custo + 'Comenta A ou B')",
+   "8_legenda": "corrigido (linha 1 = novo gancho; {RESULTADO_SE_HOUVER_VOTOS} saiu da linha 2 e foi para logo antes das opções, teste do APRENDIZADOS)",
+   "9_primeiro_quadro": "ok (close do Eu + gancho grande no terço de cima + fala em 0,0 s; sem faixa A/B; nenhuma imagem parada por 3 s)"
+  }
+ },
+ "nota_viral": {
+  "B": {
+   "nota": 9,
+   "antes": 7,
+   "itens": {
+    "a_parada_dedo": 2,
+    "b_gancho": 2,
+    "c_ritmo": 2,
+    "d_curiosidade": 2,
+    "e_final_envio": 1
+   },
+   "motivo": "Antes 7 (gancho sem o que está em jogo; cena 2 com 5 s de praça sem personagem; envio fraco). Corrigido: 'Seis em ponto. A sirene tocou. E eu fiz o proibido: olhei pra cima.'; cena 2 dividida (céu-espelho + plano aberto do Eu); chamada da tela de votos = 'Manda pra quem não resiste quando mandam não olhar' (liga ao ato do gancho). e=1: o momento de envio só aparece na tela final."
+  },
+  "A": {
+   "nota": 8,
+   "antes": 7,
+   "itens": {
+    "a_parada_dedo": 2,
+    "b_gancho": 2,
+    "c_ritmo": 1,
+    "d_curiosidade": 2,
+    "e_final_envio": 1
+   },
+   "motivo": "Antes 7 (gancho 'o caderno abriu sozinho' não diz o que está em jogo). Corrigido: 'Sirene das seis. E o caderno que decide quem some abriu sozinho na minha mão.' c=1: cena 1 com ~5 s e cartão AS REGRAS com 4 s. e=1: envio só na tela final."
+  }
+ },
+ "controle_qualidade": {
+  "quando": "2026-11-24 ~16:05 CG",
+  "resultado": "aprovado com correções (A e B re-renderizadas)",
+  "checado": [
+   "ficha x cartaz embreve5.jpg: mesmo título, Parte 5, Eu na rua_amanhecer PRAÇA (cena de capa intocada)",
+   "personagens só da trava (Eu, O outro eu, Policial), mesmo físico; vozes registradas; 1 boca e 2 olhos nos closes",
+   "continuidade: P4 terminou às 5:59 com B escolhido (1 a 0) -> P5 abre às seis em ponto; versão B = olhar pra cima; A = ficar com o caderno",
+   "cenários de cada cena (quadro a cada 1 s): céu-espelho visível nas cenas 2-7 (B); escuro: A=3, B=2; nenhum window",
+   "cena 'A: escrevo o nome' trocada de beco (pichação 'NÃO OLHE' cortada na borda) para a praça com alerta e torre 17:58; Policial com boca triste",
+   "placa 17:58 descida (y 960) para não cobrir a torre do relógio; Eu pequeno ao lado olhando o ponteiro",
+   "áudio: A 74,3 s / B 70,2 s, com áudio, fala desde 0,0 s, sem silêncio > 0,8 s",
+   "preparar.py sem erros (aviso da cena 3 da A ignorado: o Policial fala da sirene da tarde, que ainda não tocou); checar_catalogos ok; links raw 200 (conferir de novo após o push)",
+   "parte5.mp4/capa5.jpg = cópia da B (padrão); historia.json com o script B"
+  ]
+ }
 }

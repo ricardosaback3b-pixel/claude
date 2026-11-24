@@ -735,8 +735,8 @@
       "mouth": "triste"
      }
     ],
-    "chamada": "Manda pra quem ia querer subir na torre",
-    "caption": "Seis em ponto a sirene tocou... e eu olhei pra cima. 🚨\n{RESULTADO_SE_HOUVER_VOTOS}\nNessa Cidade, a Sirene Toca às 18h · Parte 5 — O que tem lá em cima\n\nPor que o Prefeito quer o nome do Policial? Teoria aqui 👇\n\n🅰️ Escrever o nome do Policial (e ele some no meu lugar)\n🅱️ Subir na torre e parar o relógio (e esquecer quem eu sou)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem não resiste quando mandam não olhar 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #misterio #suspense #vocedecide",
+    "chamada": "Manda pra quem não resiste quando mandam não olhar",
+    "caption": "Seis em ponto a sirene tocou... e eu fiz o proibido: olhei pra cima. 🚨\nNessa Cidade, a Sirene Toca às 18h · Parte 5 — O que tem lá em cima\n\nPor que o Prefeito quer o nome do Policial? Teoria aqui 👇\n\n{RESULTADO_SE_HOUVER_VOTOS}\n🅰️ Escrever o nome do Policial (e ele some no meu lugar)\n🅱️ Subir na torre e parar o relógio (e esquecer quem eu sou)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem não resiste quando mandam não olhar 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#distopia #sirene #historiasempartes #misterio #suspense #vocedecide",
     "scenes": [
      {
       "bg": "rua_amanhecer",
@@ -756,7 +756,7 @@
         "mouth": "o"
        }
       ],
-      "text": "Seis em ponto. A sirene tocou. E eu *olhei pra cima*."
+      "text": "Seis em ponto. A sirene tocou. E eu fiz o proibido: *olhei pra cima*."
      },
      {
       "bg": "praca",
@@ -771,7 +771,29 @@
       },
       "cam": "zoom_forte",
       "tensao": true,
-      "text": "O céu era um espelho. A nossa cidade inteira, *de cabeça pra baixo*."
+      "text": "O céu era um espelho."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "amanhecer",
+       "seed": 7,
+       "neblina": true,
+       "relogio": true,
+       "relogio_hora": "06:00",
+       "ceu_espelho": true
+      },
+      "cam": "out",
+      "text": "A nossa cidade inteira, *de cabeça pra baixo*.",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.62,
+        "scale": 0.6,
+        "brows": "surpreso",
+        "mouth": "o"
+       }
+      ]
      },
      {
       "bg": "praca",
@@ -1075,19 +1097,31 @@
        "relogio": true,
        "relogio_hora": "17:58"
       },
-      "cam": "zoom_forte",
+      "cam": "in",
       "prop": {
        "type": "placa",
        "title": "17:58",
-       "y": 700
+       "y": 960
       },
-      "text": "Cinco e cinquenta e oito. O ponteiro vermelho apontava *pra mim*."
+      "text": "Cinco e cinquenta e oito. O ponteiro vermelho apontava *pra mim*.",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.7,
+        "scale": 0.55,
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ]
      },
      {
-      "bg": "beco",
+      "bg": "praca",
       "bg_params": {
        "hora": "tarde",
-       "texto": "NÃO OLHE"
+       "seed": 7,
+       "alerta": true,
+       "relogio": true,
+       "relogio_hora": "17:58"
       },
       "cam": "zoom_rosto",
       "hook": true,
@@ -1096,7 +1130,8 @@
         "ref": "POLICIAL",
         "x": 0.5,
         "scale": 0.9,
-        "brows": "preocupado"
+        "brows": "preocupado",
+        "mouth": "triste"
        }
       ],
       "text": "A: escrevo o nome do Policial. E *ele some* no meu lugar."

@@ -1,0 +1,989 @@
+{
+ "data": "2026-11-24",
+ "horario": "1152",
+ "fuso": "America/Sao_Paulo",
+ "historia": "elevador",
+ "titulo": "O Andar que Não Existe",
+ "parte": 4,
+ "status": "planejado",
+ "votacao": true,
+ "versao_padrao": "B",
+ "estilo": "andar",
+ "observacao": "Votos da Parte 3 (media 18137593846679833) ainda chegando: a Produção e a Publicação recontam. Padrão B (descer e encarar o porteiro): a série teve B em todas as votações e B abre a linha da mãe. As duas versões convergem no mesmo dilema da Parte 5 (A ficar no -1 pra mãe sair / B prender o porteiro no -1) e no mesmo fato novo: a mãe entrou no -1 no lugar do Você há 10 anos, o porteiro apertou o botão e também já saiu do -1. SEM recapitulação 'Nas partes anteriores' (APRENDIZADOS). Faixa do topo = 'PARTE 4 · O livro da portaria'. Legenda: linha 1 = gancho; {RESULTADO_SE_HOUVER_VOTOS} na linha 2 vira 'Vocês escolheram X (a a b)!' ou some (nunca dizer que ninguém votou). Cena de capa igual nas duas versões (Você em close no corredor escuro).",
+ "versoes": {
+  "A": {
+   "resumo": "Escolheram voltar: o Você tira o médico do espelho, o elevador despenca no -1 (o prédio ao contrário), acha o bilhete da mãe e descobre que o porteiro apertou o botão e também já morou no -1.",
+   "retomada_gancho": "Cena 1: 'Eu voltei pelo médico. E o espelho me puxou.' (~3 s, fato novo: 23:51 e o puxão)",
+   "cenas": 22,
+   "palavras": 204,
+   "duracao_alvo_s": "60-75",
+   "momento_zoom_tensao": [
+    1,
+    2,
+    3,
+    9,
+    10,
+    17,
+    18,
+    20
+   ],
+   "cenas_relogio": [
+    "cena 4 placa '-1 · 23:53'",
+    "cena 13 placa '23:55'",
+    "cena 19 placa '23:58'"
+   ],
+   "cena_celular_papel": [
+    "cena 9 bilhete da mãe 'FILHO, NÃO DEIXA ELE APERTAR O BOTÃO.'",
+    "cena 17 placa 'PORTEIRO · SAIU'"
+   ],
+   "final": "Virada: a porta riscada 'PORTEIRO · SAIU' + o médico (quem sabe mais): ele precisa de alguém no lugar dele. 23:58. A/B com custo + 'Comenta A ou B'.",
+   "gatilho_compartilhar": "Manda pra quem faria tudo pela mãe",
+   "legenda": "Onze e cinquenta e um... e o andar -1 era o meu prédio ao contrário. 🛗\n{RESULTADO_SE_HOUVER_VOTOS}\nO Andar que Não Existe · Parte 4 — O livro da portaria\n\nO porteiro também saiu do -1. Quem você acha que ele quer lá embaixo? 👇\n\n🅰️ Ficar no -1 pra minha mãe sair (e eu fico preso)\n🅱️ Prender o porteiro no -1 (mas só ele sabe tirar ela)\nA mais votada decide a Parte 5.\n\nManda pra quem faria tudo pela mãe 👀\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #elevador #historiasempartes #misterio #suspense #comentaAouB",
+   "capa": {
+    "titulo": "O Andar que Não Existe",
+    "parte": "Parte 4",
+    "cover_text": "O livro da portaria"
+   },
+   "cenarios": [
+    "corredor_predio {\"luz\": \"apagada\"}",
+    "elevador {\"floor\": \"20\"}",
+    "elevador {\"floor\": \"-1\"}",
+    "corredor_predio {\"luz\": \"apagada\"}",
+    "escuro",
+    "corredor_predio {\"luz\": \"apagada\"}",
+    "elevador {\"floor\": \"-1\"}",
+    "recepcao_hotel {\"texto\": \"PORTARIA\", \"hora\": \"noite\"}",
+    "corredor_predio {\"luz\": \"apagada\"}",
+    "escuro",
+    "corredor_predio {\"luz\": \"apagada\"}",
+    "elevador {\"floor\": \"-1\"}",
+    "recepcao_hotel {\"texto\": \"PORTARIA\", \"hora\": \"noite\"}",
+    "corredor_predio {\"luz\": \"apagada\"}"
+   ],
+   "script": {
+    "cover_text": "O livro da portaria",
+    "faixa": "PARTE 4 · O livro da portaria",
+    "opcoes": [
+     "Ficar no -1 pra mãe sair",
+     "Prender o porteiro no -1"
+    ],
+    "opcoes_rostos": [
+     {
+      "ref": "PROTAGONISTA",
+      "brows": "preocupado",
+      "mouth": "triste"
+     },
+     {
+      "ref": "PORTEIRO",
+      "brows": "bravo"
+     }
+    ],
+    "chamada": "Manda pra quem faria tudo pela mãe",
+    "caption": "Onze e cinquenta e um... e o andar -1 era o meu prédio ao contrário. 🛗\n{RESULTADO_SE_HOUVER_VOTOS}\nO Andar que Não Existe · Parte 4 — O livro da portaria\n\nO porteiro também saiu do -1. Quem você acha que ele quer lá embaixo? 👇\n\n🅰️ Ficar no -1 pra minha mãe sair (e eu fico preso)\n🅱️ Prender o porteiro no -1 (mas só ele sabe tirar ela)\nA mais votada decide a Parte 5.\n\nManda pra quem faria tudo pela mãe 👀\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #elevador #historiasempartes #misterio #suspense #comentaAouB",
+    "scenes": [
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "zoom_rosto",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "Onze e cinquenta e um. Eu voltei pelo médico. E o espelho *me puxou*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "20"
+      },
+      "cam": "zoom_tremido",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "MEDICO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MEDICO",
+        "texto": "Segura firme! Se soltar, *nós dois* ficamos!"
+       }
+      ]
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "20"
+      },
+      "cam": "shake",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.21,
+        "eyes": "arregalado",
+        "mouth": "o"
+       },
+       {
+        "ref": "MEDICO",
+        "x": 0.67,
+        "brows": "surpreso"
+       }
+      ],
+      "text": "Eu puxei. Ele caiu pra fora. E o elevador *despencou*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "-1"
+      },
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "placa",
+       "title": "-1 · 23:53",
+       "y": 820
+      },
+      "text": "Vinte. Sete. Um. Menos um. A porta *abriu sozinha*."
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "zoom_rosto",
+      "tint": [
+       150,
+       60,
+       60
+      ],
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Era o corredor do meu prédio. Só que *tudo ao contrário*."
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "zoom_rosto",
+      "tint": [
+       150,
+       60,
+       60
+      ],
+      "chars": [
+       {
+        "ref": "MEDICO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MEDICO",
+        "texto": "Aqui fica todo mundo que *saiu* do prédio."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "zoom_rosto",
+      "tint": [
+       150,
+       60,
+       60
+      ],
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "Todo mundo? Até a *minha mãe*?"
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "pan_r",
+      "tint": [
+       150,
+       60,
+       60
+      ],
+      "text": "Em cada porta, um nome escrito à mão. Uns de *quarenta anos atrás*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "bilhete",
+       "lines": [
+        "FILHO,",
+        "!NÃO DEIXA ELE",
+        "!APERTAR O BOTÃO."
+       ]
+      },
+      "text": "Na porta do fim, a letra que eu conheço *desde criança*."
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "shake",
+      "tint": [
+       150,
+       60,
+       60
+      ],
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Trancada. E do outro lado, alguém *bateu três vezes*."
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "zoom_rosto",
+      "tint": [
+       150,
+       60,
+       60
+      ],
+      "chars": [
+       {
+        "ref": "MEDICO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MEDICO",
+        "texto": "Dez anos atrás, ela entrou *no seu lugar*."
+       }
+      ]
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "-1"
+      },
+      "cam": "in",
+      "filtro": "tv",
+      "text": "Câmera três: quem apertou o botão naquela noite foi *o porteiro*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "-1"
+      },
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "placa",
+       "title": "23:55",
+       "y": 820
+      },
+      "text": "Onze e cinquenta e cinco. O interfone do elevador *chiou*."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "in",
+      "filtro": "tv",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Achou ela? Ótimo. À meia-noite, *alguém fica*."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "zoom_rosto",
+      "tint": [
+       150,
+       60,
+       60
+      ],
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "Então eu fico. E ela *sai*."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "zoom_rosto",
+      "tint": [
+       150,
+       60,
+       60
+      ],
+      "chars": [
+       {
+        "ref": "MEDICO",
+        "x": 0.5,
+        "brows": "preocupado"
+       }
+      ],
+      "text": "O médico apontou a última porta. Um nome riscado: *PORTEIRO*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "placa",
+       "title": "PORTEIRO · SAIU",
+       "y": 820
+      },
+      "text": "E embaixo, na mesma letra: *saiu*."
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "zoom_tremido",
+      "tint": [
+       150,
+       60,
+       60
+      ],
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "MEDICO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MEDICO",
+        "texto": "Ele já morou aqui. E precisa de alguém *no lugar dele*."
+       }
+      ]
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "-1"
+      },
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "placa",
+       "title": "23:58",
+       "y": 820
+      },
+      "text": "Onze e cinquenta e oito. *Dois minutos*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "-1"
+      },
+      "cam": "zoom_rosto",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "A: fico no menos um, pra minha mãe *sair*."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "text": "B: prendo o porteiro aqui embaixo. Mas só ele sabe *tirar ela*."
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "E você, o que faria? Comenta *A ou B*."
+     }
+    ]
+   }
+  },
+  "B": {
+   "resumo": "Escolheram descer: na portaria, o livro 'SAÍDAS DO PRÉDIO' mostra que a mãe entrou no -1 no lugar do Você há 10 anos; o porteiro quer que ele entre à meia-noite, mas o espelho avisa que o porteiro também saiu de lá.",
+   "retomada_gancho": "Cena 1: 'Vinte andares de escada até a minha mãe.' (~3 s, fato novo: 23:51 e as luzes apagando)",
+   "cenas": 21,
+   "palavras": 221,
+   "duracao_alvo_s": "60-75",
+   "momento_zoom_tensao": [
+    1,
+    2,
+    4,
+    8,
+    11,
+    15,
+    16,
+    17,
+    19
+   ],
+   "cenas_relogio": [
+    "cena 2 placa 'ANDAR 7 · 23:52'",
+    "cena 12 placa '23:55'",
+    "cena 18 placa '23:58'"
+   ],
+   "cena_celular_papel": [
+    "cena 7 livro 'SAÍDAS DO PRÉDIO' com a mãe às 23:59",
+    "cena 15 escrito no espelho 'ELE TAMBÉM SAIU DE LÁ.'"
+   ],
+   "final": "Virada: no vapor do espelho 'ELE TAMBÉM SAIU DE LÁ' + o médico (quem sabe mais) confirma; o porteiro tranca a porta da rua. 23:58. A/B com custo + 'Comenta A ou B'.",
+   "gatilho_compartilhar": "Manda pra quem faria tudo pela mãe",
+   "legenda": "Onze e cinquenta e um... e o livro da portaria tinha o nome da minha mãe. 🛗\n{RESULTADO_SE_HOUVER_VOTOS}\nO Andar que Não Existe · Parte 4 — O livro da portaria\n\nO porteiro também saiu do -1. Quem você acha que ele quer lá embaixo? 👇\n\n🅰️ Ficar no -1 pra minha mãe sair (e eu fico preso)\n🅱️ Prender o porteiro no -1 (mas só ele sabe tirar ela)\nA mais votada decide a Parte 5.\n\nManda pra quem faria tudo pela mãe 👀\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #elevador #historiasempartes #misterio #suspense #comentaAouB",
+   "capa": {
+    "titulo": "O Andar que Não Existe",
+    "parte": "Parte 4",
+    "cover_text": "O livro da portaria"
+   },
+   "cenarios": [
+    "corredor_predio {\"luz\": \"apagada\"}",
+    "recepcao_hotel {\"texto\": \"PORTARIA\", \"hora\": \"noite\"}",
+    "escuro",
+    "recepcao_hotel {\"texto\": \"PORTARIA\", \"hora\": \"noite\"}",
+    "elevador {\"floor\": \"T\"}",
+    "recepcao_hotel {\"texto\": \"PORTARIA\", \"hora\": \"noite\"}",
+    "corredor_predio {\"luz\": \"acesa\"}",
+    "recepcao_hotel {\"texto\": \"PORTARIA\", \"hora\": \"noite\"}",
+    "elevador {\"floor\": \"T\"}",
+    "recepcao_hotel {\"texto\": \"PORTARIA\", \"hora\": \"noite\"}",
+    "elevador {\"floor\": \"T\"}",
+    "elevador {\"floor\": \"-1\"}",
+    "porao {\"texto\": \"SUBSOLO\"}",
+    "corredor_predio {\"luz\": \"apagada\"}"
+   ],
+   "script": {
+    "cover_text": "O livro da portaria",
+    "faixa": "PARTE 4 · O livro da portaria",
+    "opcoes": [
+     "Ficar no -1 pra mãe sair",
+     "Prender o porteiro no -1"
+    ],
+    "opcoes_rostos": [
+     {
+      "ref": "PROTAGONISTA",
+      "brows": "preocupado",
+      "mouth": "triste"
+     },
+     {
+      "ref": "PORTEIRO",
+      "brows": "bravo"
+     }
+    ],
+    "chamada": "Manda pra quem faria tudo pela mãe",
+    "caption": "Onze e cinquenta e um... e o livro da portaria tinha o nome da minha mãe. 🛗\n{RESULTADO_SE_HOUVER_VOTOS}\nO Andar que Não Existe · Parte 4 — O livro da portaria\n\nO porteiro também saiu do -1. Quem você acha que ele quer lá embaixo? 👇\n\n🅰️ Ficar no -1 pra minha mãe sair (e eu fico preso)\n🅱️ Prender o porteiro no -1 (mas só ele sabe tirar ela)\nA mais votada decide a Parte 5.\n\nManda pra quem faria tudo pela mãe 👀\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #elevador #historiasempartes #misterio #suspense #comentaAouB",
+    "scenes": [
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "zoom_rosto",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "Onze e cinquenta e um. Vinte andares de escada até a *minha mãe*."
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "pan_l",
+      "tensao": true,
+      "prop": {
+       "type": "placa",
+       "title": "ANDAR 7 · 23:52",
+       "y": 700
+      },
+      "text": "No sétimo, a porta do médico estava aberta. E as luzes *apagando atrás de mim*."
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Lá dentro, todos os espelhos da casa estavam *virados pra parede*."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Demorou. Ela não aguenta esperar até a *meia-noite*."
+       }
+      ]
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "Cadê ela? Cadê a *minha mãe*?"
+       }
+      ]
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "out",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.21
+       },
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.67,
+        "brows": "preocupado"
+       }
+      ],
+      "text": "Ele não respondeu. Só abriu um livro grosso *em cima do balcão*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "carta",
+       "title": "SAÍDAS DO PRÉDIO",
+       "lines": [
+        "MÉDICO · 7º ANDAR · ONTEM",
+        "!SUA MÃE · HÁ 10 ANOS · 23:59"
+       ]
+      },
+      "text": "Saídas do prédio. Na última linha, *o nome da minha mãe*."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "zoom_tremido",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Ela não saiu, garoto. Ela *entrou no seu lugar*."
+       }
+      ]
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "in",
+      "filtro": "tv",
+      "text": "Câmera três, dez anos atrás: ela entrou no elevador. E eu *fiquei do lado de fora*."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Naquela noite, quem tinha que descer era *você*."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "acesa"
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "E hoje eu fugi do espelho. Eu *quebrei a troca*."
+       }
+      ]
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "pan_r",
+      "prop": {
+       "type": "placa",
+       "title": "23:55",
+       "y": 700
+      },
+      "text": "Onze e cinquenta e cinco. O elevador *desceu sozinho* até a portaria."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Entra à meia-noite, e ela sai. *Simples assim*."
+       }
+      ]
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "eyes": "arregalado"
+       }
+      ],
+      "text": "A porta abriu. Vazio. Só o espelho, *embaçado*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "bilhete",
+       "lines": [
+        "NO ESPELHO:",
+        "!ELE TAMBÉM",
+        "!SAIU DE LÁ."
+       ],
+       "y": 900
+      },
+      "text": "No vapor do espelho, alguém escreveu com o dedo."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "zoom_tremido",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "MEDICO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MEDICO",
+        "texto": "O porteiro também saiu do *menos um*. Ele precisa de alguém lá!"
+       }
+      ]
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "shake",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "text": "Atrás de mim, o porteiro *trancou a porta da rua*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "placa",
+       "title": "23:58",
+       "y": 700
+      },
+      "text": "Onze e cinquenta e oito. *Dois minutos*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "-1"
+      },
+      "cam": "zoom_rosto",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "A: entro no elevador e fico no menos um, pra minha mãe *sair*."
+     },
+     {
+      "bg": "porao",
+      "bg_params": {
+       "texto": "SUBSOLO"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "text": "B: tranco o porteiro lá embaixo. Mas só ele sabe *tirar ela de lá*."
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "E você, o que faria? Comenta *A ou B*."
+     }
+    ]
+   }
+  }
+ },
+ "problemas": [
+  "TRAVA DE 20 H (aviso): a Parte 3 do Elevador saiu 23/11 18:55 UTC e 11:52 de Brasília = 14:52 UTC (19h57 depois). Com a mudança de Campo Grande para Brasília, nenhuma das 3 histórias cabe às 11:52 com 20 h completas; o Elevador é o que fica mais perto (3 min). Horário fixo da Semana Econômica pedido pelo dono: publicar às 11:52 (a publicação normalmente sai ~14:55 UTC, já com 20 h)."
+ ],
+ "criado_em": "2026-11-24T01:50:00Z"
+}

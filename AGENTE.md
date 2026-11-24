@@ -109,7 +109,7 @@ Antes de escrever qualquer parte, leia `APRENDIZADOS.md` e aplique as recomenda�
 }
 ```
 
-- **8 a 10 cenas** por parte, **190 a 240 palavras** no total (vídeo de ~60 a 90 s). Se uma parte já `pronta` tiver menos de 190 palavras, expanda antes de renderizar (mais detalhes, mais uma fala, tensão crescendo) sem mudar os fatos nem o gancho final. Cena 1 = gancho forte nos 3 primeiros segundos (`hook: true`, `cover: true`). Última cena = gancho/dilema (`hook: true`).
+- **14 a 22 cenas curtas** por parte, **190 a 240 palavras** no total (vídeo de ~60 a 90 s). Se uma parte já `pronta` tiver menos de 190 palavras, expanda antes de renderizar (mais detalhes, mais uma fala, tensão crescendo) sem mudar os fatos nem o gancho final. Cena 1 = gancho forte nos 3 primeiros segundos (`hook: true`, `cover: true`). Última cena = gancho/dilema (`hook: true`).
 - `bg`: `rua_noite`, `rua_amanhecer` (`bg_params.sign`), `onibus_dentro`, `onibus_fora` (`bg_params.number`), `casa_noite` (+ `"window": true` para ver por uma janela), `escuro`, `corredor_predio`, `elevador` (`bg_params.floor`), `quarto_noite`, `floresta_noite`, `sala_aula`.
 - `cam`: `in`, `out`, `zoom_forte`, `pan_l`, `pan_r`, `shake` (sustos), `zoom_rosto` (aproxima rápido no rosto do personagem) e `zoom_tremido` (zoom no rosto tremendo). **Cenas de tensão** (`"tensao": true`, `hook`, susto, revelação, ameaça) devem ter zoom no rosto; se a cena tiver personagem e `hook`/`tensao` sem `cam`, o zoom no rosto entra sozinho. `"foco_em": "REF"` escolhe em qual personagem o zoom foca.
 - **Gancho visual na abertura (obrigatório):** a cena 1 tem `"hook": true` e mostra a imagem mais forte da parte já no primeiro segundo (personagem assustado em close, ameaça, objeto revelador), com a primeira frase sendo o gancho. O vídeo entra sozinho com flash, zoom forte e tremida nos primeiros 0,6 s.
@@ -223,3 +223,15 @@ Como os rostos funcionam agora (`sprites.py`): nos personagens da cartela os olh
 **Contagem obrigatória em cada personagem, em cada imagem de conferência:** conte **1 boca** e **2 olhos** (iguais ao desenho original; com óculos, 2 olhos dentro das 2 lentes). Mais de uma boca, boca sem lugar, olho a mais, a menos ou cortado = refazer.
 **A animação tem que fazer sentido:** só mexe a boca quem está falando naquela fala; a boca combina com a emoção da frase (triste não sorri, susto abre "o"); quem escuta fica com a boca original; o personagem não troca de lado, tamanho nem roupa entre cenas seguidas sem motivo; o cenário combina com o que está sendo narrado naquele momento. Se algo não fizer sentido, corrija o roteiro (`mouth`, `chars`, `bg_params`) e renderize de novo.
 Se um personagem novo mostrar erro na imagem de rostos, corrija a posição dos olhos/boca dele em `assets/personagens/rostos.json` (ou marque `sem_boca: true`) e confira de novo; não publique com o erro.
+
+## Regras dos virais (regra do dono, 23/11)
+Tiradas dos 3 vídeos virais de referência e dos insights ruins da A Ponte Caída P1 e do Último Ônibus P2. Valem para TODO pré-roteiro e toda história nova:
+1. Frase 1 = o conflito já acontecendo, com algo pessoal em jogo e um detalhe concreto (hora, número, prazo). Ex.: "Às 6h20 todos os celulares da cidade tocaram ao mesmo tempo." Nada de abrir com clima, nada de apresentação. Nas partes 2+, a retomada (máx. 3 s) já traz um fato NOVO.
+2. Proibido apresentar personagem com currículo ("sou X há N anos", "trinta anos nessa escola", "essa é a fulana"). Cada personagem entra em 1 frase curta pelo que pode perder ou pelo prazo que tem. Ex.: "Tiago tem 17 horas. E uma avó que não sobrevive sem insulina."
+3. Nos primeiros 15 s, cada cena traz um fato novo ou uma ameaça; nenhuma cena só descreve clima. Frases curtas (máx. 15 palavras por cena).
+4. Relógio na tela: toda parte tem um prazo concreto (hora, contagem regressiva, "faltam N minutos", "puxada 38/40") mostrado NA IMAGEM em pelo menos 3 cenas (prop celular/placa com o horário), avançando até o fim. Toda história nova nasce com um prazo no centro (ex.: "17 horas até a nuvem chegar", "5 dias pra provar").
+5. Pelo menos 1 cena de tela de celular ou papel para revelar informação (alerta de emergência, mensagem de número desconhecido, notas com "AS REGRAS", bilhete), legível em 1 segundo.
+6. Final = virada que muda tudo, de preferência alguém que sabe mais que o protagonista (bilhete "Eu avisei.", voz no rádio, mensagem). Nunca terminar com resumo ou explicação.
+7. Chamada final: em história SEM votação, a última frase é "Comenta PARTE N+1 pra saber [o mistério, em até 6 palavras]". Em história COM votação, cada opção A/B tem um custo claro ("ficar com o poder, sem saber o preço") e a chamada continua "Comenta A ou B".
+8. Legenda: linha 1 = o gancho da parte; inclua uma linha "Manda pra quem..." ligada ao tema.
+9. Histórias novas: prefira premissas em segunda pessoa ("você") ou com regras de sobrevivência ("Regra nº 1: ..."), que dão vontade de mandar pra um amigo.

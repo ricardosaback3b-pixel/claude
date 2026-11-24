@@ -5,7 +5,7 @@
  "historia": "o-sombra-da-sala-12",
  "titulo": "O Sombra da Sala 12",
  "parte": 3,
- "status": "produzido",
+ "status": "aprovado",
  "votacao": false,
  "versao_padrao": "unica",
  "estilo": "andar",
@@ -14,7 +14,7 @@
   "unica": {
    "resumo": "A noite na escola: a luz apaga às 19h, Teo fica no escuro sem correr, a pegada de tênis com estrela inocenta o Prof. Rui, a lousa da sala trancada ganha recado novo e o Sombra manda mensagem: 'Agora eu preciso de você'.",
    "retomada_gancho": "Cena 1: 'Sete da noite. A luz da escola apagou.' (~3 s, fato novo: o apagão marcado no bilhete)",
-   "cenas": 20,
+   "cenas": 21,
    "palavras": 230,
    "duracao_alvo_s": "60-75",
    "momento_zoom_tensao": [
@@ -77,7 +77,26 @@
         "mouth": "o"
        }
       ],
-      "text": "Sete da noite. A luz da escola *apagou*. E eu tenho pavor de escuro."
+      "text": "Sete da noite. A luz da escola *apagou*."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "desvio": 160
+      },
+      "cam": "out",
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.75,
+        "eyes": "arregalado",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "E eu tenho *pavor* de escuro."
      },
      {
       "bg": "corredor_escola",
@@ -442,14 +461,16 @@
       },
       "text": "Comenta PARTE QUATRO pra saber o que tem *debaixo do doze*."
      }
-    ]
+    ],
+    "gancho_tela": "A LUZ DA ESCOLA APAGOU"
    },
    "video": "videos/o-sombra-da-sala-12/parte3.mp4",
    "video_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/o-sombra-da-sala-12/parte3.mp4",
    "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/o-sombra-da-sala-12/capa3.jpg",
-   "duracao": 76.2,
+   "duracao": 76.8,
    "roteiro": [
-    "Sete da noite. A luz da escola *apagou*. E eu tenho pavor de escuro.",
+    "Sete da noite. A luz da escola *apagou*.",
+    "E eu tenho *pavor* de escuro.",
     "Sete em ponto. Do jeitinho que o bilhete do Sombra *marcou*.",
     "Se eu fugir agora, a escola inteira vai ter certeza: *o Sombra sou eu*.",
     "Sem as chaves, eu perco o emprego. Ninguém sai do *meu lado*.",
@@ -482,5 +503,53 @@
  "produzido_em": "2026-11-24T22:30:00Z",
  "placar_parcial": null,
  "regras_virais": "Pré-roteiro já cumpria as 8 regras; ajustes: nova cena 3 com o que Teo pode perder ('Se eu fugir agora, a escola inteira vai ter certeza: o Sombra sou eu'); fala de entrada do Seu Bento pelo que ele perde ('Sem as chaves, eu perco o emprego...'); cena 8 mostra a reação da Nina em vez de revelar o Rui antes da fala; cena 'sapato social' virou prova na placa; lousa e relógio de ponteiro na imagem (19:15, 19:22); 20 cenas, chamada final 'Comenta PARTE QUATRO pra saber o que tem debaixo do doze'.",
- "cenarios_novos": "corredor_escola e sala_escola criados em cenarios.py (corredor com armários, mural, porta SALA 12, SAÍDA; sala com lousa em giz, relógio de ponteiro, armário do fundo). Cena 1 (capa) mantida em corredor_predio por causa do cartaz EM BREVE."
+ "cenarios_novos": "corredor_escola e sala_escola criados em cenarios.py (corredor com armários, mural, porta SALA 12, SAÍDA; sala com lousa em giz, relógio de ponteiro, armário do fundo). Cena 1 (capa) mantida em corredor_predio por causa do cartaz EM BREVE.",
+ "aprovado_em": "2026-11-24T18:50:00-04:00",
+ "regras_virais_ok": {
+  "1_frase1_conflito": "ok ('Sete da noite. A luz da escola apagou.' + pavor de escuro na cena 2; fato novo: o apagão marcado)",
+  "2_sem_curriculo": "ok (Bento entra pelo que perde: o emprego)",
+  "3_15s_fatos_curtos": "ok (máx. 15 palavras/cena; 0-15 s: apagão, pavor, 19:00 do bilhete, risco de virar o Sombra, Bento)",
+  "4_relogio_na_tela": "ok (19:00, 19:07, relógio 19:15, celular 19:21, SALA 12 · 19:22)",
+  "5_celular_papel": "ok (lousa 'DEBAIXO DO 12' e celular do Sombra)",
+  "6_final_virada": "ok (mensagem do Sombra: 'Agora eu preciso de você' — ele estava olhando)",
+  "7_chamada": "ok ('Comenta PARTE QUATRO pra saber o que tem debaixo do doze')",
+  "8_legenda": "ok (linha 1 gancho + 'Manda pra quem ainda dorme de luz acesa')",
+  "9_primeiro_quadro": "corrigido (faltava script.gancho_tela: 0,0 s saía lavado de branco e sem gancho escrito; agora close do Teo + 'A LUZ DA ESCOLA APAGOU' grande no terço de cima, fala desde 0,05 s; sem faixas de votação)"
+ },
+ "nota_viral": {
+  "nota": 10,
+  "itens": {
+   "a_parada_do_dedo": 2,
+   "b_gancho": 2,
+   "c_ritmo_3_15s": 2,
+   "d_curiosidade": 2,
+   "e_final_envio": 2
+  },
+  "antes": {
+   "nota": 8,
+   "itens": {
+    "a_parada_do_dedo": 1,
+    "b_gancho": 2,
+    "c_ritmo_3_15s": 1,
+    "d_curiosidade": 2,
+    "e_final_envio": 2
+   }
+  },
+  "motivo": "Antes: 1º quadro lavado de branco sem gancho escrito (a=1) e cena 1 de 4,1 s com 2 frases (c=1). Corrigido: gancho_tela + cena 1 dividida (close 2,7 s 'Sete da noite. A luz da escola apagou.' + plano aberto do Teo no corredor escuro 'E eu tenho pavor de escuro.'); cortes 0-16 s: 2,7/2,0/3,5/4,1/4,0 s. Pergunta aberta (quem escreveu na sala trancada / o que tem debaixo do 12) com relógio avançando; final com o Sombra que sabe mais + envio ligado ao medo do escuro."
+ },
+ "controle_qualidade": {
+  "checado": [
+   "ficha x cartaz embreve3.jpg x capa3.jpg: mesmo título, Parte 3, Teo com o mesmo físico (capa mantida em corredor_predio)",
+   "quadro de cada cena olhado: 1 boca e 2 olhos em todos, legendas inteiras, boca mexe só em quem fala, cenários corredor_escola/sala_escola personalizados (luz apagada até a luz voltar, depois acesa), 'escuro' só 1 cena (celular)",
+   "ritmo: 21 cenas + cartão final, 2-4 s cada, planos alternando close/aberto/placa/two-shot, nenhuma cena igual à anterior",
+   "áudio: 76,8 s, com áudio, sem silêncio >0,8 s; vozes iguais às travadas (Teo pm_alex 1.12, Nina pf_dora 1.14, Bento pm_santa 0.9, Rui piper:jeff); falas = roteiro (preparar.py ok)",
+   "coerência: continua a P2 (bilhete 'sete da noite, sala doze, sem luz'); Rui inocente; Caio não aparece; sem 'já está no perfil'",
+   "técnica: preparar.py sem erros/avisos; checar_catalogos ok; links raw conferidos após o push"
+  ],
+  "correcoes": [
+   "regra 9: script.gancho_tela 'A LUZ DA ESCOLA APAGOU' (sem flash branco no 1º quadro)",
+   "cena 1 dividida em 2 (close + plano aberto no corredor escuro) para cortes ≤4 s no gancho",
+   "sala_escola (cenarios.py): placa SALA 12 e relógio de parede desceram 200 px — estavam por trás/cortados pela faixa 'PARTE 3' do topo; lousa começa em 730"
+  ]
+ }
 }

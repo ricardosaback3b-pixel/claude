@@ -696,7 +696,26 @@
         "mouth": "o"
        }
       ],
-      "text": "Sete da noite. A luz da escola *apagou*. E eu tenho pavor de escuro."
+      "text": "Sete da noite. A luz da escola *apagou*."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "desvio": 160
+      },
+      "cam": "out",
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.75,
+        "eyes": "arregalado",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "E eu tenho *pavor* de escuro."
      },
      {
       "bg": "corredor_escola",
@@ -1061,7 +1080,8 @@
       },
       "text": "Comenta PARTE QUATRO pra saber o que tem *debaixo do doze*."
      }
-    ]
+    ],
+    "gancho_tela": "A LUZ DA ESCOLA APAGOU"
    }
   },
   {

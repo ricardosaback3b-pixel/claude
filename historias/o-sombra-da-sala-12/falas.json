@@ -213,105 +213,110 @@
    {
     "cena": 1,
     "personagem": "TEO",
-    "texto": "Sete da noite. A luz da escola *apagou*. E eu tenho pavor de escuro."
+    "texto": "Sete da noite. A luz da escola *apagou*."
    },
    {
     "cena": 2,
     "personagem": "TEO",
-    "texto": "Sete em ponto. Do jeitinho que o bilhete do Sombra *marcou*."
+    "texto": "E eu tenho *pavor* de escuro."
    },
    {
     "cena": 3,
     "personagem": "TEO",
-    "texto": "Se eu fugir agora, a escola inteira vai ter certeza: *o Sombra sou eu*."
+    "texto": "Sete em ponto. Do jeitinho que o bilhete do Sombra *marcou*."
    },
    {
     "cena": 4,
+    "personagem": "TEO",
+    "texto": "Se eu fugir agora, a escola inteira vai ter certeza: *o Sombra sou eu*."
+   },
+   {
+    "cena": 5,
     "personagem": "BENTO",
     "texto": "Sem as chaves, eu perco o emprego. Ninguém sai do *meu lado*."
    },
    {
-    "cena": 5,
+    "cena": 6,
     "personagem": "TEO",
     "texto": "Aí vieram os passos. Lá do fundo. *Perto da sala doze*."
    },
    {
-    "cena": 6,
+    "cena": 7,
     "personagem": "TEO",
     "texto": "A lanterna da Nina achou uma pegada. Um tênis com uma *estrela* na sola."
    },
    {
-    "cena": 7,
+    "cena": 8,
     "personagem": "TEO",
     "texto": "Uma estrela... Eu já vi esse tênis *em algum lugar*."
    },
    {
-    "cena": 8,
+    "cena": 9,
     "personagem": "TEO",
     "texto": "Uma sombra virou o corredor. E a Nina *gritou*."
    },
    {
-    "cena": 9,
+    "cena": 10,
     "personagem": "RUI",
     "texto": "Calma! Eu vim atrás do meu giz! Achei que o ladrão *voltava hoje*."
    },
    {
-    "cena": 10,
+    "cena": 11,
     "personagem": "TEO",
     "texto": "Olhei pro pé dele. Sapato social. *Nada de estrela*."
    },
    {
-    "cena": 11,
+    "cena": 12,
     "personagem": "TEO",
     "texto": "Ele não era o Sombra. Era só mais um enganado, *igual a mim*."
    },
    {
-    "cena": 12,
+    "cena": 13,
     "personagem": "TEO",
     "texto": "Sete e sete. E eu percebi: eu ainda *não tinha corrido*."
    },
    {
-    "cena": 13,
+    "cena": 14,
     "personagem": "BENTO",
     "texto": "Você ficou no escuro e *não fugiu*, garoto."
    },
    {
-    "cena": 13,
+    "cena": 14,
     "personagem": "TEO",
     "texto": "Tava ocupado demais com medo do *Sombra*."
    },
    {
-    "cena": 14,
+    "cena": 15,
     "personagem": "TEO",
     "texto": "Aí a luz voltou. E a gente correu pra *sala doze*."
    },
    {
-    "cena": 15,
+    "cena": 16,
     "personagem": "TEO",
     "texto": "A porta continuava trancada. Mas pelo vidro, dava pra ver a lousa."
    },
    {
-    "cena": 16,
+    "cena": 17,
     "personagem": "TEO",
     "texto": "Debaixo do número doze tem uma história. Na *minha letra*, de novo."
    },
    {
-    "cena": 17,
+    "cena": 18,
     "personagem": "NINA",
     "texto": "Teo... ninguém passou por esse corredor. *Ninguém*."
    },
    {
-    "cena": 18,
+    "cena": 19,
     "personagem": "TEO",
     "texto": "Sete e vinte e um. Meu celular vibrou. *Número desconhecido*."
    },
    {
-    "cena": 19,
+    "cena": 20,
     "personagem": "TEO",
     "texto": "Ele sabia que eu não tinha corrido. Ele estava *me olhando*."
    },
    {
-    "cena": 20,
+    "cena": 21,
     "personagem": "TEO",
     "texto": "Comenta PARTE QUATRO pra saber o que tem *debaixo do doze*."
    }

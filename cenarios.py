@@ -1051,11 +1051,12 @@ def sala_escola(p):
     d = ImageDraw.Draw(img)
     W_ = E.BW
     # placa da sala e relógio em cima da lousa
-    d.rounded_rectangle([W_ // 2 - 150, 380, W_ // 2 + 150, 460], 12, fill=(250, 250, 240), outline=(40, 40, 40), width=5)
-    txt(d, (W_ // 2, 420), p.get("placa", "SALA 12"), 280, 54, (30, 30, 30))
-    relogio_parede(img, W_ - 210, 400, 85, p.get("relogio_hora", "19:00"))
+    # (CQ 24/11) placa e relógio mais baixos: no alto ficavam por trás da faixa "PARTE N" do vídeo
+    d.rounded_rectangle([W_ // 2 - 150, 560, W_ // 2 + 150, 640], 12, fill=(250, 250, 240), outline=(40, 40, 40), width=5)
+    txt(d, (W_ // 2, 600), p.get("placa", "SALA 12"), 280, 54, (30, 30, 30))
+    relogio_parede(img, W_ - 210, 600, 85, p.get("relogio_hora", "19:00"))
     # lousa
-    x0, y0, x1, y1 = 90, 540, W_ - 90, 1130
+    x0, y0, x1, y1 = 90, 730, W_ - 90, 1130
     d.rectangle([x0 - 26, y0 - 26, x1 + 26, y1 + 26], fill=(130, 84, 46))
     d.rectangle([x0, y0, x1, y1], fill=(34, 70, 52))
     rng = random.Random(p.get("seed", 7))

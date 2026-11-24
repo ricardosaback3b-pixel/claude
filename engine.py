@@ -688,13 +688,35 @@ def overlay_static_ep(meta):
     tw = f1.getlength(t1)
     d.rounded_rectangle([W / 2 - tw / 2 - 30, y - 42, W / 2 + tw / 2 + 30, y + 42], 20, fill=(248, 248, 248, 250))
     d.text((W / 2, y), t1, font=f1, fill=(28, 28, 34), anchor="mm")
-    if meta.get("vote"):
+    if meta.get("vote") and meta.get("faixa_voto"):  # regra 9 (23/11): sem faixa "NO FINAL VOCÊ DECIDE" durante o vídeo
         y += 92
         t2 = "NO FINAL VOCÊ DECIDE: A ou B"
         f2 = font(MONT, 44, True)
         tw = f2.getlength(t2)
         d.rounded_rectangle([W / 2 - tw / 2 - 30, y - 40, W / 2 + tw / 2 + 30, y + 40], 20, fill=(246, 206, 72, 250))
         d.text((W / 2, y), t2, font=f2, fill=(28, 28, 34), anchor="mm")
+    return lay
+
+
+_GANCHO = {}
+
+
+def gancho_img(texto):
+    """Gancho da 1ª cena: até 5 palavras, letras grandes amarelas com contorno, terço de cima (y ~330-620)."""
+    if texto in _GANCHO:
+        return _GANCHO[texto]
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    f = font(ANTON, 150)
+    linhas = wrap(texto.upper(), f, W - 110)
+    while len(linhas) > 2 and f.size > 90:
+        f = font(ANTON, f.size - 8)
+        linhas = wrap(texto.upper(), f, W - 110)
+    y = 330 + f.size * 0.55
+    for ln in linhas:
+        d.text((W / 2, y), ln, font=f, fill=YELLOW, anchor="mm", stroke_width=12, stroke_fill=(0, 0, 0))
+        y += f.size * 1.08
+    _GANCHO[texto] = lay
     return lay
 
 
@@ -1070,13 +1092,15 @@ def render(script, out_dir):
         if ft < 0.6:
             sh = (1 - ft / 0.6) * 18
             frame = frame.transform(frame.size, Image.AFFINE, (1, 0, math.sin(ft * 80) * sh, 0, 1, math.cos(ft * 65) * sh))
-        if ft < 0.22:
+        if ft < 0.22 and not meta.get("gancho_tela"):
             frame.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, int(200 * (1 - ft / 0.22)))))
         if sc.get("filtro") == "tv":
             frame = filtro_tv(frame, ft)
         if ft - st < 0.12 and k > 0:
             frame.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, int(110 * (1 - (ft - st) / 0.12)))))
         frame.alpha_composite(over)
+        if k == 0 and meta.get("gancho_tela"):  # regra 9: gancho escrito GRANDE no terço de cima desde o 1º quadro
+            frame.alpha_composite(gancho_img(meta["gancho_tela"]))
         for words, es, ed, label, col in events:
             if es <= ft < es + ed:
                 ep = meta.get("estilo") == "andar"

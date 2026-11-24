@@ -5,7 +5,7 @@
  "historia": "elevador",
  "titulo": "O Andar que Não Existe",
  "parte": 4,
- "status": "produzido",
+ "status": "aprovado",
  "votacao": true,
  "versao_padrao": "B",
  "estilo": "andar",
@@ -514,7 +514,8 @@
       ],
       "text": "E você, o que faria? Comenta *A ou B*."
      }
-    ]
+    ],
+    "gancho_tela": "O ESPELHO ME PUXOU"
    },
    "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/parte4A.mp4",
    "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/capa4A.jpg",
@@ -1031,7 +1032,8 @@
       ],
       "text": "E você, o que faria? Comenta *A ou B*."
      }
-    ]
+    ],
+    "gancho_tela": "20 ANDARES ATÉ MINHA MÃE"
    },
    "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/parte4B.mp4",
    "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/capa4B.jpg",
@@ -1089,5 +1091,64 @@
   "B: livro 'SAÍDAS DO PRÉDIO' tinha linhas cortadas na borda e título escondido pela faixa -> linhas curtas em 5 linhas, y=640, câmera 'in'.",
   "A: bilhete da mãe tinha 'FILHO,' escondido atrás da faixa amarela -> bilhete descido (y=900).",
   "Cena de capa (cover) igual nas duas versões e igual ao cartaz EM BREVE (não alterada)."
- ]
+ ],
+ "controle_qualidade": {
+  "feito_em": "2026-11-24T13:35Z",
+  "corrigido": [
+   "Regra 9: faixa amarela \"NO FINAL VOCÊ DECIDE: A ou B\" aparecia o vídeo inteiro nas duas versões -> removida (engine: só com meta faixa_voto).",
+   "Regra 9: 1º quadro sem gancho escrito e lavado de branco (flash em 0,0 s) -> gancho GRANDE no terço de cima durante a 1ª cena (A \"O ESPELHO ME PUXOU\", B \"20 ANDARES ATÉ MINHA MÃE\"; script.gancho_tela) e sem flash branco quando há gancho.",
+   "A e B re-renderizadas (A 75,7 s; B 80,1 s); parte4.mp4/capa4.jpg = B."
+  ],
+  "checado": [
+   "ficha x cartaz embreve4.jpg: mesmo título, Parte 4, Você no corredor (cover inalterada)",
+   "continuidade: Parte 3 terminou no A/B (voltar pelo médico / descer e encarar o porteiro), A e B seguem a opção certa",
+   "personagens dos catálogos, mesmo físico, boca mexendo, vozes registradas (preparar: 0 erros, 0 avisos; checar_catalogos ok)",
+   "áudio: tem áudio, 75,7/80,1 s, sem silêncio >0,7 s, fala em 0,0 s",
+   "cenários: corredor/elevador/portaria/sala/porão coerentes com a narração; fundo escuro só nos cartões do bilhete/placa e livro",
+   "relógio 23:52/53 -> 23:55 -> 23:58 em placas; bilhete/livro/espelho legíveis",
+   "final A/B com custo + Comenta A ou B; legenda com gancho na linha 1 e Manda pra quem faria tudo pela mãe",
+   "links raw de vídeo e capa: 200"
+  ],
+  "observacoes": [
+   "B cena 2 (placa ANDAR 7 · 23:52 com pan) dura ~5 s: um pouco longa, mas tem movimento e fato novo.",
+   "Letreiro PORTARIA fica cortado no topo nos zooms da portaria (leve)."
+  ]
+ },
+ "regras_virais_ok": {
+  "1_frase1_conflito": "ok",
+  "2_sem_curriculo": "ok",
+  "3_primeiros_15s": "ok",
+  "4_relogio_na_tela": "ok",
+  "5_celular_papel": "ok",
+  "6_virada_final": "ok",
+  "7_chamada_AouB": "ok",
+  "8_legenda": "ok",
+  "9_primeiro_quadro_sem_faixas": "corrigido"
+ },
+ "nota_viral": {
+  "A": {
+   "nota": 9,
+   "antes": 8,
+   "itens": {
+    "parada_do_dedo": 2,
+    "gancho": 1,
+    "ritmo": 2,
+    "curiosidade": 2,
+    "final_envio": 2
+   },
+   "motivo": "Antes a=1 (sem texto do gancho, quadro 0 lavado). Gancho depende de ter visto a Parte 3 (médico/espelho) -> 1."
+  },
+  "B": {
+   "nota": 9,
+   "antes": 8,
+   "itens": {
+    "parada_do_dedo": 2,
+    "gancho": 2,
+    "ritmo": 1,
+    "curiosidade": 2,
+    "final_envio": 2
+   },
+   "motivo": "Antes a=1. Ritmo 1: cena 2 com ~5 s e 14 palavras."
+  }
+ }
 }

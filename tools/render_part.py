@@ -79,6 +79,7 @@ def resolve(story, part):
         "voto_rostos": _rostos_voto(story, script, chars),
         "voto_chamada": script.get("chamada"),
         "faixa": script.get("faixa") or _faixa(story, n, script),
+        "gancho_tela": script.get("gancho_tela"),
     }
     caption = script["caption"].strip()
     if "#" not in caption:

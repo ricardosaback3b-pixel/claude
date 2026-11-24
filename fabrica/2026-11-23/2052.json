@@ -5,7 +5,7 @@
  "historia": "o-sombra-da-sala-12",
  "titulo": "O Sombra da Sala 12",
  "parte": 2,
- "status": "aprovado",
+ "status": "publicado",
  "votacao": false,
  "versao_padrao": "unica",
  "estilo": "andar",
@@ -564,5 +564,9 @@
    "última cena tinha ~10 s (2 frases + chamada) → dividida: Teo 'escolheu justo o escuro' + nova cena placa 'HOJE 19:00' com a chamada (relógio avança até o fim)",
    "re-renderizado (parte2.mp4 73,9 s; capa2 igual)"
   ]
- }
+ },
+ "versao_escolhida": "unica",
+ "placar": null,
+ "media_id": "17917481604551583",
+ "publicado_em": "2026-11-24T00:55:08Z"
 }

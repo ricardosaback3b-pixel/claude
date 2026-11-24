@@ -5,7 +5,7 @@
  "genero": "comédia de mistério escolar",
  "status": "ativa",
  "narrador": "TEO",
- "biblia": "Gênero: comédia de mistério escolar, sem sobrenatural. Teo (narrador, 1ª pessoa, aluno da turma da sala 12, tem medo do escuro) é acusado de ser 'O Sombra', que toda manhã escreve na lousa da sala 12 (trancada) um segredo bobo de alguém, com a letra igual à do Teo. A Diretora Marta dá 6 dias (até sexta) para ele provar a inocência. Nina (melhor amiga, caderno verde, detetive) ajuda. Pistas: chaves do zelador Seu Bento somem (P2); giz azul do professor Rui (P2, Rui é inocente, P3); pegada de tênis com estrela na sola (P3); ladrilho solto sob a placa 'SALA 12' com chave pequena e foto da turma de 1996 onde está Marta criança (P4); a sala 12 será demolida no mês que vem e a turma dividida (P4); Caio tem tênis de estrela e copia o caderno do Teo o ano inteiro (P5). Segredos: Caio = O Sombra; entra pela porta do armário do fundo, que tem alçapão para o porão. Motivo: ouviu sobre a demolição e quis que todos olhassem para a sala; usou a letra do Teo porque todos escutam o Teo. Final (P6, sexta 19h): luz apaga, Teo não foge do escuro, Caio confessa, devolve chaves e giz; a chave abre a cápsula do tempo atrás da lousa com carta da Marta aos 12 anos; a sala vira patrimônio, a turma não é dividida, Teo não é suspenso; Caio ajuda o Seu Bento por um mês. Última lousa: 'Obrigado, turma. O Sombra, aposentado'. Teo dorme de luz apagada.",
+ "biblia": "Gênero: comédia de mistério escolar, sem sobrenatural. Teo (narrador, 1ª pessoa, aluno da turma da sala 12, tem medo do escuro) é acusado de ser 'O Sombra', que toda manhã escreve na lousa da sala 12 (trancada) um segredo bobo de alguém, com a letra igual à do Teo. A Diretora Marta dá 6 dias (até sexta) para ele provar a inocência. Nina (melhor amiga, caderno verde, detetive) ajuda. Pistas: chaves do zelador Seu Bento somem (P2); giz azul do professor Rui (P2, Rui é inocente, P3); pegada de tênis com estrela na sola (P3); ladrilho solto sob a placa 'SALA 12' com chave pequena e foto da turma de 1996 onde está Marta criança (P4); a sala 12 será demolida no mês que vem e a turma dividida (P4); Caio tem tênis de estrela e copia o caderno do Teo o ano inteiro (P5). Segredos: Caio = O Sombra; entra pela porta do armário do fundo, que tem alçapão para o porão. Motivo: ouviu sobre a demolição e quis que todos olhassem para a sala; usou a letra do Teo porque todos escutam o Teo. Final (P6, sexta 19h): luz apaga, Teo não foge do escuro, Caio confessa, devolve chaves e giz; a chave abre a cápsula do tempo atrás da lousa com carta da Marta aos 12 anos; a sala vira patrimônio, a turma não é dividida, Teo não é suspenso; Caio ajuda o Seu Bento por um mês. Última lousa: 'Obrigado, turma. O Sombra, aposentado'. Teo dorme de luz apagada. Parte 2 (publicada): chaves do Seu Bento somem; giz azul aponta para o prof. Rui; bilhete na letra do Teo no gabinete ('Frio. Tenta de novo, Teo'); verso: 'HOJE, 19H. SALA 12. SEM LUZ.'",
  "personagens": {
   "TEO": {
    "nome": "Teo",
@@ -243,7 +243,7 @@
   },
   {
    "n": 2,
-   "status": "pronta",
+   "status": "publicada",
    "script": {
     "cover_text": "O giz azul",
     "caption": "Às 7h as chaves da escola sumiram… exatamente como a lousa avisou. 🔑\n\nO Sombra da Sala 12 · Parte 2 — O giz azul\n\nO giz azul aponta pro professor Rui. Mas quem escreveria na letra do Teo? Chuta quem é o Sombra 👇\n\nManda pra quem tem medo do escuro e nunca admite 👀\n\nA Parte 3 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#misterio #escola #historiasempartes #detetive #comedia",
@@ -666,7 +666,9 @@
       "text": "Comenta PARTE TRÊS pra saber quem escreveu na minha letra."
      }
     ]
-   }
+   },
+   "media_id": "17917481604551583",
+   "publicada_em": "2026-11-24T00:55:08Z"
   },
   {
    "n": 3,

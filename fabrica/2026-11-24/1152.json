@@ -985,5 +985,10 @@
  "problemas": [
   "TRAVA DE 20 H (aviso): a Parte 3 do Elevador saiu 23/11 18:55 UTC e 11:52 de Brasília = 14:52 UTC (19h57 depois). Com a mudança de Campo Grande para Brasília, nenhuma das 3 histórias cabe às 11:52 com 20 h completas; o Elevador é o que fica mais perto (3 min). Horário fixo da Semana Econômica pedido pelo dono: publicar às 11:52 (a publicação normalmente sai ~14:55 UTC, já com 20 h)."
  ],
- "criado_em": "2026-11-24T01:50:00Z"
+ "criado_em": "2026-11-24T01:50:00Z",
+ "em_breve": {
+  "postado_em": "2026-11-24T09:19:11+00:00",
+  "imagem": "videos/elevador/embreve4.jpg",
+  "media_id": "18092373872659149"
+ }
 }

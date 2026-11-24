@@ -447,7 +447,7 @@
   },
   {
    "n": 4,
-   "status": "pronta",
+   "status": "publicada",
    "opcoes": [
     "Ficar no -1 pra mãe sair",
     "Prender o porteiro no -1"
@@ -892,7 +892,14 @@
      }
     ],
     "gancho_tela": "20 ANDARES ATÉ MINHA MÃE"
-   }
+   },
+   "media_id": "18077993924592764",
+   "publicada_em": "2026-11-24T15:55:12Z",
+   "votos": {
+    "A": 0,
+    "B": 1
+   },
+   "escolha": "B"
   }
  ],
  "personagens_travados": {

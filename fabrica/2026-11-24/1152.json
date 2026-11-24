@@ -5,7 +5,7 @@
  "historia": "elevador",
  "titulo": "O Andar que Não Existe",
  "parte": 4,
- "status": "aprovado",
+ "status": "publicado",
  "votacao": true,
  "versao_padrao": "B",
  "estilo": "andar",
@@ -1150,5 +1150,12 @@
    },
    "motivo": "Antes a=1. Ritmo 1: cena 2 com ~5 s e 14 palavras."
   }
- }
+ },
+ "versao_escolhida": "B",
+ "placar": {
+  "A": 0,
+  "B": 1
+ },
+ "media_id": "18077993924592764",
+ "publicada_em": "2026-11-24T15:55:12Z"
 }

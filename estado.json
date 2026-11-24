@@ -1,6 +1,6 @@
 {
  "horarios": "9h, 12h, 15h, 18h, 21h (America/Campo_Grande)",
- "vez": 4,
+ "vez": 0,
  "ativas": [
   {
    "slug": "ultimo-onibus",
@@ -95,6 +95,12 @@
    "slug": "o-sombra-da-sala-12",
    "parte": 2,
    "media_id": "17917481604551583"
+  },
+  {
+   "quando": "2026-11-24T15:55:12Z",
+   "slug": "elevador",
+   "parte": 4,
+   "media_id": "18077993924592764"
   }
  ],
  "ultimo_estilo": "cartela"

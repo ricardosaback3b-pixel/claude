@@ -5,7 +5,7 @@
  "historia": "cidade-sirene",
  "titulo": "Nessa Cidade, a Sirene Toca às 18h",
  "parte": 5,
- "status": "aprovado",
+ "status": "publicado",
  "votacao": true,
  "versao_padrao": "B",
  "estilo": "cartela",
@@ -1140,5 +1140,17 @@
    "preparar.py sem erros (aviso da cena 3 da A ignorado: o Policial fala da sirene da tarde, que ainda não tocou); checar_catalogos ok; links raw 200 (conferir de novo após o push)",
    "parte5.mp4/capa5.jpg = cópia da B (padrão); historia.json com o script B"
   ]
+ },
+ "publicacao": {
+  "versao": "B",
+  "placar": {
+   "A": 0,
+   "B": 0
+  },
+  "motivo": "sem votos: padrão B",
+  "media_id": "18038856656667788",
+  "publicada_em": "2026-11-24T21:55:03Z",
+  "primeiro_comentario_id": "18092578730701329",
+  "story": "videos/cidade-sirene/story5.jpg"
  }
 }

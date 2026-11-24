@@ -663,7 +663,65 @@ def praca(p):
         d = ImageDraw.Draw(img)
     d.rounded_rectangle([px - 90, 960, px + 110, 1060], 14, fill=(20, 90, 60), outline=(240, 240, 240), width=6)
     txt(d, (px + 10, 1010), p.get("texto", "PRAÇA"), 180, 56, (255, 255, 255))
+    if p.get("ceu_espelho"):
+        ceu_espelho(img, p)
+    if p.get("relogio"):
+        torre_relogio(img, p)
     return img
+
+
+def torre_relogio(img, p, cx=260, base=1460):
+    """Torre do relógio da praça; ponteiro vermelho (hora em p['relogio_hora'], ex. '17:58')."""
+    d = ImageDraw.Draw(img)
+    n = noite(p)
+    pedra = (150, 140, 128) if not n else (58, 56, 62)
+    d.rectangle([cx - 95, 640, cx + 95, base], fill=pedra, outline=sh(pedra, 0.6), width=8)
+    for y in range(700, base, 90):
+        d.line([cx - 95, y, cx + 95, y], fill=sh(pedra, 0.8), width=3)
+    d.polygon([(cx - 120, 640), (cx + 120, 640), (cx, 470)], fill=(110, 40, 40) if not n else (50, 22, 26))
+    r = 92
+    cy = 760
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(245, 240, 225), outline=(40, 34, 30), width=10)
+    for k in range(12):
+        a = math.radians(k * 30)
+        d.line([cx + math.sin(a) * (r - 22), cy - math.cos(a) * (r - 22), cx + math.sin(a) * (r - 8), cy - math.cos(a) * (r - 8)],
+               fill=(40, 34, 30), width=6)
+    hh, mm = (str(p.get("relogio_hora", "17:58")) + ":0").split(":")[:2]
+    hh, mm = int(hh) % 12, int(mm)
+    ah = math.radians((hh + mm / 60) * 30)
+    am = math.radians(mm * 6)
+    d.line([cx, cy, cx + math.sin(ah) * 50, cy - math.cos(ah) * 50], fill=(30, 26, 24), width=12)
+    d.line([cx, cy, cx + math.sin(am) * 78, cy - math.cos(am) * 78], fill=(220, 20, 30), width=9)
+    d.ellipse([cx - 12, cy - 12, cx + 12, cy + 12], fill=(220, 20, 30))
+    d.rectangle([cx - 30, base - 150, cx + 30, base], fill=(60, 40, 30))  # porta da torre
+
+
+def ceu_espelho(img, p):
+    """O céu vira espelho: a mesma cidade de cabeça pra baixo no terço de cima, com gente olhando pra baixo."""
+    corte = img.crop((0, 700, E.BW, 1500)).transpose(Image.FLIP_TOP_BOTTOM)
+    roxo = Image.new("RGBA", corte.size, (110, 80, 170, 80))
+    corte = Image.alpha_composite(corte, roxo)
+    mask = Image.new("L", corte.size, 0)
+    dm = ImageDraw.Draw(mask)
+    h = corte.size[1]
+    for y in range(h):  # some aos poucos perto do horizonte (y = distância do topo do espelho)
+        dm.line([0, y, E.BW, y], fill=int(240 * max(0.0, 1 - y / h) ** 0.45))
+    img.paste(corte, (0, 170), mask)  # abaixo das faixas do topo, pra aparecer no vídeo
+    d = ImageDraw.Draw(img)
+    rng = random.Random(p.get("seed", 7) + 5)
+    for _ in range(38):  # gente de cabeça pra baixo no céu, olhando pra cá
+        x, y = rng.randint(60, E.BW - 60), rng.randint(300, 700)
+        s = rng.uniform(1.6, 2.5)
+        c = (36, 26, 64, 235)
+        d.rectangle([x - 9 * s, y, x - 2 * s, y + 26 * s], fill=c)  # pernas (pra cima)
+        d.rectangle([x + 2 * s, y, x + 9 * s, y + 26 * s], fill=c)
+        d.rounded_rectangle([x - 12 * s, y + 24 * s, x + 12 * s, y + 52 * s], int(4 * s), fill=c)  # tronco
+        d.line([x - 12 * s, y + 30 * s, x - 20 * s, y + 52 * s], fill=c, width=int(5 * s))  # braços
+        d.line([x + 12 * s, y + 30 * s, x + 20 * s, y + 52 * s], fill=c, width=int(5 * s))
+        d.ellipse([x - 11 * s, y + 51 * s, x + 11 * s, y + 73 * s], fill=c)  # cabeça (embaixo)
+        d.ellipse([x - 6 * s, y + 63 * s, x - 2 * s, y + 67 * s], fill=(255, 240, 200))
+        d.ellipse([x + 2 * s, y + 63 * s, x + 6 * s, y + 67 * s], fill=(255, 240, 200))
+    E.glow(img, (E.BW // 2, 650), 420, (190, 160, 255), 60)
 
 
 def parque_diversoes(p):
@@ -861,7 +919,7 @@ def casa(p):
             E.glow(img, ((a + b) // 2, top + 250), 200, luz, 90)
             d = ImageDraw.Draw(img)
     dx = (x0 + x1) // 2
-    d.rectangle([dx - 90, top + 260, dx + 90, 1430], fill=(110, 64, 40) if not n else (60, 36, 24))  # porta
+    d.rectangle([dx - 90, top + 260, dx + 90, 1430], fill=(_p(p, "porta", (110, 64, 40)) if not n else sh(_p(p, "porta", (110, 64, 40)), 0.55)))  # porta (porta = [r,g,b])
     d.ellipse([dx + 50, top + 520, dx + 70, top + 540], fill=(220, 190, 90))
     d.rectangle([x0 - 30, 1400, x1 + 30, 1440], fill=sh(parede, 0.7))  # degrau/varanda
     if p.get("texto"):
@@ -910,7 +968,7 @@ CENARIOS = {
     "ponte": {"o_que": "ponte suspensa de madeira entre penhascos, rio lá embaixo", "extras": "quebrada = true (ponte caída); texto = placa"},
     "rio": {"o_que": "margem de rio com árvores e pedras", "extras": "texto = placa"},
     "praia": {"o_que": "praia com mar, coqueiro e guarda-sol", "extras": "texto = escrito na areia; cor = guarda-sol"},
-    "praca": {"o_que": "praça com coreto, bancos, árvores e poste", "extras": "texto = placa (padrão PRAÇA)"},
+    "praca": {"o_que": "praça com coreto, bancos, árvores e poste", "extras": "texto = placa (padrão PRAÇA); relogio = true (torre do relógio, relogio_hora \"17:58\" com ponteiro vermelho); ceu_espelho = true (a cidade de cabeça pra baixo no céu, com gente)"},
     "parque_diversoes": {"o_que": "parque de diversões com roda-gigante e barraca listrada", "extras": "texto = nome na barraca; cor = listras"},
     "estrada": {"o_que": "estrada deserta até o horizonte com placa", "extras": "texto = placa (padrão KM 47)"},
     "posto_gasolina": {"o_que": "posto de gasolina com bombas e painel de preços", "extras": "texto = nome do posto; cor = cobertura"},
@@ -918,7 +976,7 @@ CENARIOS = {
     "beco": {"o_que": "beco entre prédios com escada de incêndio, caçamba e pichação", "extras": "texto = pichação (padrão NÃO OLHE); cor = paredes"},
     "telhado": {"o_que": "telhado de prédio com caixa d'água e cidade ao fundo", "extras": "texto = escrito na caixa d'água"},
     "fazenda": {"o_que": "fazenda com celeiro, cerca e campo", "extras": "texto = nome no celeiro; cor = celeiro"},
-    "casa": {"o_que": "casa de rua com telhado, varanda, janelas com cortina, cerca, árvore e poste", "extras": "texto = número da casa; cor = parede; luz apagada = janela da direita apagada"},
+    "casa": {"o_que": "casa de rua com telhado, varanda, janelas com cortina, cerca, árvore e poste", "extras": "texto = número da casa; cor = parede; porta = cor da porta; luz apagada = janela da direita apagada"},
 }
 
 

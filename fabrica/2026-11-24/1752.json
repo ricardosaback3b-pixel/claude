@@ -5,7 +5,7 @@
  "historia": "cidade-sirene",
  "titulo": "Nessa Cidade, a Sirene Toca às 18h",
  "parte": 5,
- "status": "planejado",
+ "status": "produzido",
  "votacao": true,
  "versao_padrao": "B",
  "estilo": "cartela",
@@ -115,7 +115,8 @@
         "1. Um nome antes das 18h.",
         "2. Nunca o seu.",
         "!3. Página em branco: eles descem."
-       ]
+       ],
+       "y": 640
       },
       "text": "Primeira página: as regras. E a terceira estava *em vermelho*."
      },
@@ -123,7 +124,9 @@
       "bg": "praca",
       "bg_params": {
        "hora": "amanhecer",
-       "seed": 7
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "06:01"
       },
       "cam": "zoom_rosto",
       "tensao": true,
@@ -147,7 +150,9 @@
       "bg_params": {
        "hora": "amanhecer",
        "seed": 7,
-       "neblina": true
+       "neblina": true,
+       "relogio": true,
+       "relogio_hora": "06:02"
       },
       "cam": "zoom_tremido",
       "tensao": true,
@@ -170,7 +175,9 @@
       "bg": "praca",
       "bg_params": {
        "hora": "amanhecer",
-       "seed": 7
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "06:03"
       },
       "cam": "in",
       "chars": [
@@ -277,7 +284,9 @@
       "bg": "praca",
       "bg_params": {
        "hora": "tarde",
-       "seed": 7
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "17:46"
       },
       "cam": "zoom_rosto",
       "tensao": true,
@@ -301,7 +310,9 @@
       "bg": "praca",
       "bg_params": {
        "hora": "tarde",
-       "seed": 7
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "17:47"
       },
       "cam": "in",
       "chars": [
@@ -332,7 +343,8 @@
         "!O POLICIAL",
         "",
         "— PREFEITO"
-       ]
+       ],
+       "y": 640
       },
       "text": "Pra hoje: *o Policial*."
      },
@@ -340,7 +352,9 @@
       "bg": "praca",
       "bg_params": {
        "hora": "tarde",
-       "seed": 7
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "17:50"
       },
       "cam": "zoom_tremido",
       "tensao": true,
@@ -359,7 +373,9 @@
       "bg": "praca",
       "bg_params": {
        "hora": "tarde",
-       "seed": 7
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "17:52"
       },
       "cam": "zoom_rosto",
       "chars": [
@@ -382,7 +398,9 @@
       "bg": "praca",
       "bg_params": {
        "hora": "tarde",
-       "seed": 7
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "17:54"
       },
       "cam": "in",
       "chars": [
@@ -405,7 +423,9 @@
       "bg": "praca",
       "bg_params": {
        "hora": "tarde",
-       "seed": 7
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "17:56"
       },
       "cam": "out",
       "chars": [
@@ -423,7 +443,9 @@
       "bg_params": {
        "hora": "tarde",
        "seed": 7,
-       "alerta": true
+       "alerta": true,
+       "relogio": true,
+       "relogio_hora": "17:58"
       },
       "cam": "zoom_forte",
       "prop": {
@@ -455,7 +477,9 @@
       "bg": "praca",
       "bg_params": {
        "hora": "tarde",
-       "seed": 7
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "17:59"
       },
       "cam": "in",
       "chars": [
@@ -486,8 +510,13 @@
       ],
       "text": "E você, o que faria? Comenta *A ou B*."
      }
-    ]
-   }
+    ],
+    "gancho_tela": "O CADERNO ABRIU SOZINHO"
+   },
+   "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/parte5A.mp4",
+   "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/capa5A.jpg",
+   "duracao": 73.8,
+   "roteiro": "Seis em ponto. A sirene tocou. E o caderno abriu sozinho na minha mão. Primeira página: as regras. E a terceira estava em vermelho. Doze horas, menino. Até a sirene da tarde. Escreve o meu nome. Eu levo o resto de você junto. Nem pensar. Metade já é demais. Ele riu. E foi andando pra rua nove. A minha rua. Entrou numa casa sem número. E eu não sabia se era a minha. Passei o dia lendo trinta anos de nomes. Ninguém merecia sumir. Cinco e quarenta e um. A caneta começou a tremer sozinha. Aí todos os celulares da cidade tocaram juntos. Eles já sabem. Escreve logo, menino! Eu virei a última página. E já tinha um nome lá. Na letra do Prefeito. Pra hoje: o Policial. Ele leu por cima do meu ombro. E não pareceu surpreso. Ele sempre disse que um dia ia ser eu. Por quê? O que você fez? Ele não respondeu. Só olhou pro relógio da praça. Cinco e cinquenta e oito. O ponteiro vermelho apontava pra mim. A: escrevo o nome do Policial, como o Prefeito deixou. E ele some. B: subo na torre e paro o relógio. E esqueço quem eu sou. E você, o que faria? Comenta A ou B."
   },
   "B": {
    "resumo": "Escolheram olhar pra cima: o céu é a cidade de cabeça pra baixo com todos os sumidos; o outro eu é puxado de volta e o narrador recupera a lembrança da porta azul; agora 'eles' vêm buscá-lo às 18h; um bilhete do Prefeito manda escrever o nome do Policial.",
@@ -587,7 +616,10 @@
        "hora": "amanhecer",
        "seed": 7,
        "neblina": true,
-       "alerta": true
+       "alerta": true,
+       "relogio": true,
+       "relogio_hora": "06:00",
+       "ceu_espelho": true
       },
       "cam": "zoom_forte",
       "tensao": true,
@@ -597,7 +629,10 @@
       "bg": "praca",
       "bg_params": {
        "hora": "amanhecer",
-       "seed": 7
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "06:00",
+       "ceu_espelho": true
       },
       "cam": "shake",
       "tensao": true,
@@ -622,7 +657,10 @@
       "bg_params": {
        "hora": "amanhecer",
        "seed": 7,
-       "neblina": true
+       "neblina": true,
+       "relogio": true,
+       "relogio_hora": "06:01",
+       "ceu_espelho": true
       },
       "cam": "zoom_tremido",
       "tensao": true,
@@ -642,7 +680,10 @@
       "bg_params": {
        "hora": "amanhecer",
        "seed": 7,
-       "neblina": true
+       "neblina": true,
+       "relogio": true,
+       "relogio_hora": "06:01",
+       "ceu_espelho": true
       },
       "cam": "pan_r",
       "tint": [
@@ -657,7 +698,10 @@
       "bg_params": {
        "hora": "amanhecer",
        "seed": 7,
-       "neblina": true
+       "neblina": true,
+       "relogio": true,
+       "relogio_hora": "06:01",
+       "ceu_espelho": true
       },
       "cam": "in",
       "chars": [
@@ -676,7 +720,10 @@
       "bg_params": {
        "hora": "amanhecer",
        "seed": 7,
-       "neblina": true
+       "neblina": true,
+       "relogio": true,
+       "relogio_hora": "06:02",
+       "ceu_espelho": true
       },
       "cam": "zoom_tremido",
       "tensao": true,
@@ -701,7 +748,12 @@
       "bg_params": {
        "hora": "amanhecer",
        "luz": "acesa",
-       "texto": "9"
+       "texto": "9",
+       "porta": [
+        40,
+        110,
+        210
+       ]
       },
       "cam": "in",
       "text": "Ele sumiu no céu. E na hora eu lembrei: a minha porta é *azul*."
@@ -791,7 +843,12 @@
       "bg_params": {
        "hora": "tarde",
        "luz": "acesa",
-       "texto": "9"
+       "texto": "9",
+       "porta": [
+        40,
+        110,
+        210
+       ]
       },
       "cam": "in",
       "prop": {
@@ -806,7 +863,12 @@
       "bg_params": {
        "hora": "tarde",
        "luz": "acesa",
-       "texto": "9"
+       "texto": "9",
+       "porta": [
+        40,
+        110,
+        210
+       ]
       },
       "cam": "zoom_rosto",
       "chars": [
@@ -831,7 +893,8 @@
         "!DO POLICIAL.",
         "ELE SABE POR QUÊ.",
         "— PREFEITO"
-       ]
+       ],
+       "y": 700
       },
       "text": "Era a letra do Prefeito. *Escrita hoje*."
      },
@@ -860,7 +923,9 @@
       "bg_params": {
        "hora": "tarde",
        "seed": 7,
-       "alerta": true
+       "alerta": true,
+       "relogio": true,
+       "relogio_hora": "17:58"
       },
       "cam": "zoom_forte",
       "prop": {
@@ -892,7 +957,9 @@
       "bg": "praca",
       "bg_params": {
        "hora": "tarde",
-       "seed": 7
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "17:59"
       },
       "cam": "in",
       "chars": [
@@ -923,15 +990,42 @@
       ],
       "text": "E você, o que faria? Comenta *A ou B*."
      }
-    ]
-   }
+    ],
+    "gancho_tela": "EU OLHEI PRA CIMA"
+   },
+   "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/parte5B.mp4",
+   "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/capa5B.jpg",
+   "duracao": 68.6,
+   "roteiro": "Seis em ponto. A sirene tocou. E eu olhei pra cima. O céu era um espelho. A nossa cidade inteira, de cabeça pra baixo. Fecha os olhos, menino! Agora! Eu não fechei. Lá em cima tinha gente. Centenas, olhando pra mim. Todo mundo que sumiu nesses trinta anos. Do meu lado, o outro eu começou a subir. Como fumaça. Não! Eu ainda não terminei você! Ele sumiu no céu. E na hora eu lembrei: a minha porta é azul. Você olhou. Agora eles sabem o seu nome. Eu só olhei uma vez. Uma vez só! Às sete, todos os celulares da cidade tocaram juntos. Quem olha, eles vêm buscar. Hoje, às seis da tarde. Cinco e quarenta e um. Passei o dia trancado em casa. Até que alguém passou um papel por baixo da porta. Era a letra do Prefeito. Escrita hoje. Então ele lembrou. Depois de trinta anos. Cinco e cinquenta e oito. O ponteiro vermelho apontava pra mim. A: escrevo o nome do Policial. E ele some no meu lugar. B: subo na torre e paro o relógio. E esqueço quem eu sou. E você, o que faria? Comenta A ou B."
   }
  },
- "problemas": [],
+ "problemas": [
+  "Conferência visual feita (quadros das 2 versões + rostos): 1 boca e 2 olhos em todos, legendas inteiras. Observações leves: na cena 'AS REGRAS' a marca @mundoemhistorias encosta no título do papel; a placa 17:58 cobre a torre do relógio na cena final da praça.",
+  "Ficha diz fuso 'America/Sao_Paulo', mas os horários da fábrica são de Campo Grande; não alterei (só aviso). Trava de 20 h ok: Parte 4 saiu 23/11 21:55 UTC, Parte 5 às 17:52 CG = 21:52 UTC (23h57 depois)."
+ ],
  "criado_em": "2026-11-24T01:50:00Z",
  "em_breve": {
   "postado_em": "2026-11-24T10:19:00-04:00",
   "imagem": "videos/cidade-sirene/embreve5.jpg",
   "media_id": "18148596877582838"
- }
+ },
+ "produzido_em": "2026-11-24T19:45Z",
+ "placar_parcial": {
+  "A": 0,
+  "B": 0,
+  "fonte": "Produção 24/11 ~15h CG: Windsor (media 18133967224835332, last_3dT) só tem o 1º comentário da própria @mundoemhistorias; nenhum voto e nenhum comentário para responder. Se continuar 0x0, vale o padrão B (empate/zero = a mais dramática) e a legenda não cita resultado."
+ },
+ "arquivos": {
+  "parte5.mp4/capa5.jpg": "cópia da versão B (padrão)",
+  "historia.json": "parte 5 com o script B (status produzida); se A vencer, trocar pelo script A da ficha (ou usar parte5A.mp4/capa5A.jpg)"
+ },
+ "regras_virais": [
+  "Pré-roteiro do Planejamento já cumpria as 8 regras nas duas versões (frase 1 'Seis em ponto. A sirene tocou...' com fato novo; sem currículo; relógio na tela 17:41→17:45→17:58 (A) e 07:00→17:41→17:58 (B); AS REGRAS/alerta/bilhete legíveis; virada do Prefeito que sabe mais; A/B com custo + 'Comenta A ou B'; legenda com gancho na linha 1 e 'Manda pra quem não resiste quando mandam não olhar'). Nenhuma cena passa de 15 palavras.",
+  "Regra 4 reforçada: nova torre do relógio na praça (cenarios.py praca relogio/relogio_hora) com o ponteiro vermelho marcando a hora de cada cena (06:00→06:03 de manhã, 17:46→17:59 à tarde) nas cenas da praça das duas versões.",
+  "Regra 9: gancho grande no 1º quadro (script.gancho_tela): A 'O CADERNO ABRIU SOZINHO', B 'EU OLHEI PRA CIMA'.",
+  "CÉU-ESPELHO (B, cenas 2-7): novo efeito ceu_espelho na praça (a mesma praça de cabeça pra baixo no céu, com dezenas de pessoas de cabeça pra baixo olhando pra baixo), com neblina; cena 2 em alerta.",
+  "B: 'a minha porta é azul' agora aparece (casa nº 9 com porta azul; novo parâmetro porta em cenarios.py casa).",
+  "Props: celular agora mostra linha com '!' em vermelho (antes aparecia o '!' escrito); linhas longas da carta/celular encolhem pra não passar da borda ('3. Página em branco: eles descem.' estava cortada); cartas descidas (y=640) e bilhete (y=700) pra sair de baixo das faixas do topo.",
+  "Cena de capa (cover) igual nas duas versões e igual ao cartaz EM BREVE (rua_amanhecer PRAÇA, Eu em close) — não alterada."
+ ]
 }

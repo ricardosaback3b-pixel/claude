@@ -135,6 +135,108 @@
     "personagem": "PROTAGONISTA",
     "texto": "E você, o que faria? Comenta *A ou B*."
    }
+  ],
+  "5": [
+   {
+    "cena": 1,
+    "personagem": "PROTAGONISTA",
+    "texto": "Seis em ponto. A sirene tocou. E eu *olhei pra cima*."
+   },
+   {
+    "cena": 2,
+    "personagem": "PROTAGONISTA",
+    "texto": "O céu era um espelho. A nossa cidade inteira, *de cabeça pra baixo*."
+   },
+   {
+    "cena": 3,
+    "personagem": "POLICIAL",
+    "texto": "Fecha os olhos, menino! *Agora!*"
+   },
+   {
+    "cena": 4,
+    "personagem": "PROTAGONISTA",
+    "texto": "Eu não fechei. Lá em cima tinha gente. *Centenas*, olhando pra mim."
+   },
+   {
+    "cena": 5,
+    "personagem": "PROTAGONISTA",
+    "texto": "Todo mundo que *sumiu* nesses trinta anos."
+   },
+   {
+    "cena": 6,
+    "personagem": "PROTAGONISTA",
+    "texto": "Do meu lado, o outro eu começou a *subir*. Como fumaça."
+   },
+   {
+    "cena": 7,
+    "personagem": "OUTRO_EU",
+    "texto": "Não! Eu ainda não terminei *você*!"
+   },
+   {
+    "cena": 8,
+    "personagem": "PROTAGONISTA",
+    "texto": "Ele sumiu no céu. E na hora eu lembrei: a minha porta é *azul*."
+   },
+   {
+    "cena": 9,
+    "personagem": "POLICIAL",
+    "texto": "Você olhou. Agora eles sabem *o seu nome*."
+   },
+   {
+    "cena": 10,
+    "personagem": "PROTAGONISTA",
+    "texto": "Eu só olhei uma vez. *Uma vez só!*"
+   },
+   {
+    "cena": 11,
+    "personagem": "PROTAGONISTA",
+    "texto": "Às sete, todos os celulares da cidade *tocaram juntos*."
+   },
+   {
+    "cena": 12,
+    "personagem": "POLICIAL",
+    "texto": "Quem olha, eles vêm buscar. Hoje, às *seis da tarde*."
+   },
+   {
+    "cena": 13,
+    "personagem": "PROTAGONISTA",
+    "texto": "Cinco e quarenta e um. Passei o dia *trancado em casa*."
+   },
+   {
+    "cena": 14,
+    "personagem": "PROTAGONISTA",
+    "texto": "Até que alguém passou um papel *por baixo da porta*."
+   },
+   {
+    "cena": 15,
+    "personagem": "PROTAGONISTA",
+    "texto": "Era a letra do Prefeito. *Escrita hoje*."
+   },
+   {
+    "cena": 16,
+    "personagem": "POLICIAL",
+    "texto": "Então ele lembrou. Depois de *trinta anos*."
+   },
+   {
+    "cena": 17,
+    "personagem": "PROTAGONISTA",
+    "texto": "Cinco e cinquenta e oito. O ponteiro vermelho apontava *pra mim*."
+   },
+   {
+    "cena": 18,
+    "personagem": "PROTAGONISTA",
+    "texto": "A: escrevo o nome do Policial. E *ele some* no meu lugar."
+   },
+   {
+    "cena": 19,
+    "personagem": "PROTAGONISTA",
+    "texto": "B: subo na torre e paro o relógio. E *esqueço quem eu sou*."
+   },
+   {
+    "cena": 20,
+    "personagem": "PROTAGONISTA",
+    "texto": "E você, o que faria? Comenta *A ou B*."
+   }
   ]
  }
 }

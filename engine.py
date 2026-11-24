@@ -469,7 +469,11 @@ def prop_layer(prop):
             hl = line.startswith("!")
             txt = line.lstrip("!")
             col = (190, 20, 30) if hl else (50, 40, 40)
-            d.text((x0 + 60, y), txt, font=f, fill=col)
+            fl, sz = f, 46
+            while sz > 28 and fl.getlength(txt) > pw - 100:  # linha nunca passa da borda do papel
+                sz -= 2
+                fl = font(MONT, sz, True)
+            d.text((x0 + 60, y), txt, font=fl, fill=col)
             if line.startswith("~"):
                 d.line([x0 + 50, y + 30, x0 + pw - 60, y + 30], fill=(40, 30, 30), width=6)
             y += 78
@@ -481,7 +485,13 @@ def prop_layer(prop):
         ft = font(ANTON, 84)
         d.text((x0 + pw // 2, y0 + 300), prop.get("title", ""), font=ft, fill=(255, 255, 255), anchor="mm")
         for i, line in enumerate(prop.get("lines", [])):
-            d.text((x0 + pw // 2, y0 + 440 + i * 80), line, font=f, fill=(200, 210, 230), anchor="mm")
+            hl = line.startswith("!")  # "!" = linha em vermelho (alerta)
+            txt = line.lstrip("!")
+            fl, sz = f, 52
+            while sz > 30 and fl.getlength(txt) > pw - 70:
+                sz -= 2
+                fl = font(MONT, sz, True)
+            d.text((x0 + pw // 2, y0 + 440 + i * 80), txt, font=fl, fill=(255, 90, 90) if hl else (200, 210, 230), anchor="mm")
         d.ellipse([x0 + 90, y0 + ph - 240, x0 + 230, y0 + ph - 100], fill=(220, 50, 50))
         d.ellipse([x0 + pw - 230, y0 + ph - 240, x0 + pw - 90, y0 + ph - 100], fill=(40, 200, 90))
     elif kind == "placa":

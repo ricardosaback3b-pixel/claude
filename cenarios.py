@@ -935,6 +935,167 @@ def casa(p):
     return img
 
 
+
+# ------------------------------------------------------------- escola (O Sombra da Sala 12)
+GIZ = "/usr/share/fonts/truetype/google-fonts/ofl/comicrelief/ComicRelief-Bold.ttf"
+
+
+def relogio_parede(img, cx, cy, r, hora):
+    d = ImageDraw.Draw(img)
+    d.ellipse([cx - r - 10, cy - r - 10, cx + r + 10, cy + r + 10], fill=(40, 40, 46))
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(245, 242, 230))
+    for k in range(12):
+        a = math.radians(k * 30)
+        d.line([cx + math.sin(a) * r * 0.8, cy - math.cos(a) * r * 0.8, cx + math.sin(a) * r * 0.93, cy - math.cos(a) * r * 0.93],
+               fill=(30, 30, 30), width=8 if k % 3 == 0 else 4)
+    try:
+        hh, mm = [int(v) for v in str(hora).split(":")]
+    except Exception:
+        hh, mm = 19, 0
+    am = math.radians(mm * 6)
+    ah = math.radians((hh % 12) * 30 + mm * 0.5)
+    d.line([cx, cy, cx + math.sin(ah) * r * 0.5, cy - math.cos(ah) * r * 0.5], fill=(20, 20, 20), width=14)
+    d.line([cx, cy, cx + math.sin(am) * r * 0.78, cy - math.cos(am) * r * 0.78], fill=(200, 30, 30), width=8)
+    d.ellipse([cx - 12, cy - 12, cx + 12, cy + 12], fill=(20, 20, 20))
+
+
+def corredor_escola(p):
+    """Corredor de escola em perspectiva: armários coloridos, porta da SALA 12, mural, luzes no teto e placa SAÍDA."""
+    rng = random.Random(p.get("seed", 12))
+    W_, H_ = E.BW, E.BH
+    vx, vy = W_ // 2 + p.get("desvio", 0), 900
+    bw, bh = 150, 200
+    parede = _p(p, "cor", (214, 200, 160))
+    faixa = (52, 110, 120)
+    img = Image.new("RGBA", (W_, H_), sh(parede, 0.9))
+    d = ImageDraw.Draw(img)
+    d.polygon([(0, 0), (W_, 0), (vx + bw, vy - bh), (vx - bw, vy - bh)], fill=(200, 196, 184))  # teto
+    d.polygon([(0, H_), (W_, H_), (vx + bw, vy + bh), (vx - bw, vy + bh)], fill=(150, 150, 146))  # chão
+    for k in range(1, 9):  # rejunte do piso
+        f = 1 - 1 / (1 + k * 0.45)
+        y = H_ - (H_ - vy - bh) * f
+        xl = 0 + (vx - bw) * f
+        xr = W_ - (W_ - vx - bw) * f
+        d.line([xl, y, xr, y], fill=(120, 120, 118), width=3)
+    for x in range(-600, W_ + 700, 190):
+        d.line([x, H_, vx + (x - W_ / 2) * 0.12, vy + bh], fill=(122, 122, 120), width=3)
+    d.polygon([(0, 0), (vx - bw, vy - bh), (vx - bw, vy + bh), (0, H_)], fill=parede)  # parede esq
+    d.polygon([(W_, 0), (vx + bw, vy - bh), (vx + bw, vy + bh), (W_, H_)], fill=sh(parede, 0.9))  # parede dir
+    # faixa colorida na metade de baixo das paredes
+    yb0 = 1250
+    d.polygon([(0, yb0), (vx - bw, vy + bh * 0.25), (vx - bw, vy + bh), (0, H_)], fill=faixa)
+    d.polygon([(W_, yb0), (vx + bw, vy + bh * 0.25), (vx + bw, vy + bh), (W_, H_)], fill=sh(faixa, 0.85))
+    # parede do fundo com placa SAÍDA e janela
+    d.rectangle([vx - bw, vy - bh, vx + bw, vy + bh], fill=sh(parede, 0.75))
+    janela(img, (vx - 90, vy - 120, vx + 90, vy + 40), {"hora": "noite", "seed": 4})
+    d = ImageDraw.Draw(img)
+    d.rectangle([vx - 60, vy - 185, vx + 60, vy - 140], fill=(20, 140, 60))
+    txt(d, (vx, vy - 162), "SAÍDA", 110, 34, (230, 255, 230))
+
+    def ponto(lado, f, y0):
+        """lado -1 esq, +1 dir; f 0 perto -> 1 fundo; y0 altura na borda da tela."""
+        xe = 0 if lado < 0 else W_
+        xf = vx - bw if lado < 0 else vx + bw
+        yf = vy + (y0 - H_ / 2) / (H_ / 2) * bh
+        return (xe + (xf - xe) * f, y0 + (yf - y0) * f)
+
+    def quad(lado, f0, f1, ya, yb, cor, borda=(30, 30, 34), w=5):
+        pts = [ponto(lado, f0, ya), ponto(lado, f1, ya), ponto(lado, f1, yb), ponto(lado, f0, yb)]
+        d.polygon(pts, fill=cor, outline=borda, width=w)
+        return pts
+
+    # armários na parede da esquerda
+    cores = [(200, 60, 50), (40, 90, 170), (230, 170, 40), (50, 140, 90)]
+    fs = [1 - 1 / (1 + k * 0.22) for k in range(0, 26)]
+    for k in range(len(fs) - 1):
+        cor = cores[(k // 3) % len(cores)]
+        pts = quad(-1, fs[k], fs[k + 1], 560, 1700, cor, w=4)
+        if fs[k + 1] - fs[k] > 0.03:
+            for j in range(3):
+                a = ponto(-1, fs[k] + (fs[k + 1] - fs[k]) * 0.2, 680 + j * 40)
+                b = ponto(-1, fs[k] + (fs[k + 1] - fs[k]) * 0.8, 680 + j * 40)
+                d.line([a, b], fill=sh(cor, 0.6), width=5)
+            c = ponto(-1, fs[k] + (fs[k + 1] - fs[k]) * 0.8, 1120)
+            d.ellipse([c[0] - 8, c[1] - 8, c[0] + 8, c[1] + 8], fill=(220, 220, 220))
+    # parede da direita: mural de avisos perto, porta SALA 11 e porta SALA 12 mais longe
+    quad(1, 0.0, 0.17, 420, 1050, (150, 100, 60), (90, 60, 30), 10)
+    for j in range(4):
+        f = 0.025 + j * 0.036
+        a, b = ponto(1, f, 480 + (j % 2) * 120), ponto(1, f + 0.03, 640 + (j % 2) * 120)
+        d.polygon([a, (b[0], a[1] + (b[1] - a[1]) * 0.1), b, (a[0], b[1])], fill=rng.choice([(250, 250, 240), (255, 230, 120), (180, 220, 255), (255, 190, 200)]))
+    for f0, f1, nome in ((0.25, 0.4, p.get("texto", "SALA 12")), (0.6, 0.7, p.get("porta_longe", "SALA 13"))):
+        quad(1, f0, f1, 520, 1640, (120, 70, 40), (50, 28, 14), 8)
+        quad(1, f0 + (f1 - f0) * 0.2, f0 + (f1 - f0) * 0.8, 640, 900, (150, 190, 210), (50, 28, 14), 5)
+        c = ponto(1, f0 + (f1 - f0) * 0.18, 1120)
+        d.ellipse([c[0] - 10, c[1] - 10, c[0] + 10, c[1] + 10], fill=(230, 200, 90))
+        pa, pb = ponto(1, f0, 400), ponto(1, f1, 480)
+        d.rectangle([min(pa[0], pb[0]) - 10, pa[1] - 10, max(pa[0], pb[0]) + 10, pb[1]], fill=(250, 250, 240), outline=(40, 40, 40), width=4)
+        txt(d, ((pa[0] + pb[0]) / 2, (pa[1] - 10 + pb[1]) / 2), nome, abs(pb[0] - pa[0]) + 10, 60 * (1 - f0 * 0.7), (30, 30, 30))
+    # luzes fluorescentes no teto
+    acesa = p.get("luz", "acesa") != "apagada"
+    for f in (0.15, 0.45, 0.68, 0.82):
+        y = (vy - bh) * f
+        hw = (W_ / 2 - bw) * (1 - f) * 0.5 + 40
+        d.rectangle([vx - hw, y + 10, vx + hw, y + 10 + 40 * (1 - f) + 8], fill=(250, 250, 235) if acesa else (90, 92, 100))
+        if acesa:
+            E.glow(img, (vx, int(y + 30)), int(220 * (1 - f) + 60), (255, 250, 220), 70)
+            d = ImageDraw.Draw(img)
+    if not acesa and p.get("lanterna", True):
+        pass
+    return img
+
+
+def sala_escola(p):
+    """Sala de aula vista da frente: lousa grande (texto em giz), relógio de ponteiro, janela, armário do fundo, carteiras."""
+    img = sala(p, (196, 184, 150), (120, 86, 60), 1480)
+    d = ImageDraw.Draw(img)
+    W_ = E.BW
+    # placa da sala e relógio em cima da lousa
+    d.rounded_rectangle([W_ // 2 - 150, 380, W_ // 2 + 150, 460], 12, fill=(250, 250, 240), outline=(40, 40, 40), width=5)
+    txt(d, (W_ // 2, 420), p.get("placa", "SALA 12"), 280, 54, (30, 30, 30))
+    relogio_parede(img, W_ - 210, 400, 85, p.get("relogio_hora", "19:00"))
+    # lousa
+    x0, y0, x1, y1 = 90, 540, W_ - 90, 1130
+    d.rectangle([x0 - 26, y0 - 26, x1 + 26, y1 + 26], fill=(130, 84, 46))
+    d.rectangle([x0, y0, x1, y1], fill=(34, 70, 52))
+    rng = random.Random(p.get("seed", 7))
+    for _ in range(14):  # marcas de apagador
+        x, y = rng.randint(x0 + 40, x1 - 300), rng.randint(y0 + 30, y1 - 80)
+        d.rounded_rectangle([x, y, x + rng.randint(160, 320), y + 40], 18, fill=(44, 82, 62))
+    d.rectangle([x0 - 10, y1 + 26, x1 + 10, y1 + 50], fill=(110, 70, 40))
+    d.rectangle([x0 + 120, y1 + 14, x0 + 180, y1 + 30], fill=(80, 140, 230))  # giz azul
+    d.rectangle([x0 + 210, y1 + 14, x0 + 260, y1 + 30], fill=(240, 240, 230))
+    texto = p.get("texto", p.get("board", ""))
+    if texto:
+        linhas = str(texto).split("\n")
+        size = 120
+        f = E.font(GIZ, size)
+        while size > 50 and max(f.getlength(l) for l in linhas) > (x1 - x0 - 80):
+            size -= 6
+            f = E.font(GIZ, size)
+        tot = len(linhas) * size * 1.15
+        for i, l in enumerate(linhas):
+            yy = (y0 + y1) / 2 - tot / 2 + size * 0.58 + i * size * 1.15
+            d.text((W_ // 2, yy), l, font=f, fill=_p(p, "giz", (225, 232, 255)), anchor="mm")
+    janela(img, (W_ - 320, 1190, W_ - 70, 1450), {"hora": p.get("hora", "noite"), "seed": 5})
+    d = ImageDraw.Draw(img)
+    # armário do fundo (madeira)
+    d.rectangle([60, 1190, 300, 1480], fill=(110, 70, 40), outline=(50, 30, 16), width=8)
+    d.line([180, 1195, 180, 1475], fill=(50, 30, 16), width=6)
+    for x in (160, 200):
+        d.ellipse([x - 9, 1330, x + 9, 1348], fill=(220, 190, 90))
+    # carteiras em primeiro plano
+    for cx, cy, s in ((200, 1600, 1.0), (W_ - 230, 1600, 1.0), (W_ // 2, 1700, 1.15)):
+        w = 230 * s
+        d.polygon([(cx - w, cy), (cx + w, cy), (cx + w * 0.9, cy - 70 * s), (cx - w * 0.9, cy - 70 * s)], fill=(190, 140, 80), outline=(80, 50, 24))
+        d.rectangle([cx - w * 0.8, cy, cx - w * 0.8 + 20, cy + 300], fill=(70, 70, 76))
+        d.rectangle([cx + w * 0.8 - 20, cy, cx + w * 0.8, cy + 300], fill=(70, 70, 76))
+    acesa = p.get("luz", "acesa") != "apagada"
+    if acesa:
+        E.glow(img, (W_ // 2, 60), 380, (255, 250, 225), 80)
+    return img
+
+
 FUNCOES = {
     "cozinha": cozinha, "sala_estar": sala_estar, "banheiro": banheiro, "porao": porao, "sotao": sotao,
     "hospital_quarto": hospital, "delegacia": delegacia, "escritorio": escritorio, "biblioteca": biblioteca,
@@ -943,6 +1104,7 @@ FUNCOES = {
     "estacao_metro": metro, "caverna": caverna, "ponte": ponte, "rio": rio, "praia": praia, "praca": praca,
     "parque_diversoes": parque_diversoes, "estrada": estrada, "posto_gasolina": posto, "cemiterio": cemiterio,
     "beco": beco, "telhado": telhado, "fazenda": fazenda, "casa": casa,
+    "corredor_escola": corredor_escola, "sala_escola": sala_escola,
 }
 
 CENARIOS = {
@@ -976,6 +1138,8 @@ CENARIOS = {
     "beco": {"o_que": "beco entre prédios com escada de incêndio, caçamba e pichação", "extras": "texto = pichação (padrão NÃO OLHE); cor = paredes"},
     "telhado": {"o_que": "telhado de prédio com caixa d'água e cidade ao fundo", "extras": "texto = escrito na caixa d'água"},
     "fazenda": {"o_que": "fazenda com celeiro, cerca e campo", "extras": "texto = nome no celeiro; cor = celeiro"},
+    "corredor_escola": {"o_que": "corredor de escola com armários coloridos, mural de avisos, portas numeradas, luzes no teto e placa SAÍDA", "extras": "texto = placa da porta em destaque (padrão SALA 12); porta_longe = placa da porta do fundo (padrão SALA 13); desvio = desloca o ponto de fuga em px"},
+    "sala_escola": {"o_que": "sala de aula vista da frente: lousa verde com texto em giz, relógio de ponteiro, janela, armário do fundo e carteiras", "extras": "texto = escrito na lousa (use \\n para quebrar linha); relogio_hora \"19:22\" (ponteiros); placa (padrão SALA 12); giz = cor do giz"},
     "casa": {"o_que": "casa de rua com telhado, varanda, janelas com cortina, cerca, árvore e poste", "extras": "texto = número da casa; cor = parede; porta = cor da porta; luz apagada = janela da direita apagada"},
 }
 

@@ -5,7 +5,7 @@
  "historia": "o-sombra-da-sala-12",
  "titulo": "O Sombra da Sala 12",
  "parte": 3,
- "status": "planejado",
+ "status": "produzido",
  "votacao": false,
  "versao_padrao": "unica",
  "estilo": "andar",
@@ -14,8 +14,8 @@
   "unica": {
    "resumo": "A noite na escola: a luz apaga às 19h, Teo fica no escuro sem correr, a pegada de tênis com estrela inocenta o Prof. Rui, a lousa da sala trancada ganha recado novo e o Sombra manda mensagem: 'Agora eu preciso de você'.",
    "retomada_gancho": "Cena 1: 'Sete da noite. A luz da escola apagou.' (~3 s, fato novo: o apagão marcado no bilhete)",
-   "cenas": 19,
-   "palavras": 216,
+   "cenas": 20,
+   "palavras": 230,
    "duracao_alvo_s": "60-75",
    "momento_zoom_tensao": [
     1,
@@ -29,22 +29,19 @@
    ],
    "cenas_relogio": [
     "cena 2 placa '19:00'",
-    "cena 11 placa '19:07'",
-    "cena 17 celular '19:21'",
-    "cena 19 placa 'SALA 12 · 19:22'"
+    "cena 12 placa '19:07'",
+    "cena 16 relógio de parede 19:15",
+    "cena 18 celular '19:21'",
+    "cena 20 placa 'SALA 12 · 19:22' + relógio 19:22"
    ],
    "cena_celular_papel": [
-    "cena 15 bilhete 'DEBAIXO DO NÚMERO 12 TEM UMA HISTÓRIA.'",
-    "cena 17 celular do Sombra"
+    "cena 16 lousa 'DEBAIXO DO 12 / TEM UMA HISTÓRIA.'",
+    "cena 18 celular do Sombra"
    ],
    "final": "Virada: mensagem de número desconhecido assinada O SOMBRA ('Você não correu do escuro. Agora eu preciso de você.') — ele sabe mais e estava olhando. Chamada 'Comenta PARTE QUATRO pra saber o que tem debaixo do doze'.",
    "gatilho_compartilhar": "Legenda: 'Manda pra quem ainda dorme de luz acesa'",
    "legenda": "Às 19h a luz da escola apagou… e eu tenho pavor de escuro. 🔦\n\nO Sombra da Sala 12 · Parte 3 — A noite na escola\n\nA sala estava trancada e alguém escreveu na lousa. Como? Teoria aqui 👇\n\nManda pra quem ainda dorme de luz acesa 👀\n\nA Parte 4 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#misterio #escola #historiasempartes #medodoescuro #detetive",
-   "capa": {
-    "titulo": "O Sombra da Sala 12",
-    "parte": "Parte 3",
-    "cover_text": "A noite na escola"
-   },
+   "capa": "videos/o-sombra-da-sala-12/capa3.jpg",
    "cenarios": [
     "corredor_predio {\"luz\": \"apagada\"}",
     "escuro",
@@ -83,9 +80,10 @@
       "text": "Sete da noite. A luz da escola *apagou*. E eu tenho pavor de escuro."
      },
      {
-      "bg": "corredor_predio",
+      "bg": "corredor_escola",
       "bg_params": {
-       "luz": "apagada"
+       "luz": "apagada",
+       "seed": 3
       },
       "cam": "zoom_forte",
       "tensao": true,
@@ -97,9 +95,30 @@
       "text": "Sete em ponto. Do jeitinho que o bilhete do Sombra *marcou*."
      },
      {
-      "bg": "corredor_predio",
+      "bg": "corredor_escola",
       "bg_params": {
-       "luz": "apagada"
+       "luz": "apagada",
+       "desvio": -120
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "Se eu fugir agora, a escola inteira vai ter certeza: *o Sombra sou eu*."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "desvio": 80
       },
       "cam": "in",
       "chars": [
@@ -117,12 +136,16 @@
       "linhas": [
        {
         "voz": "BENTO",
-        "texto": "Ninguém sai do meu lado. Eu quero minhas chaves *de volta*."
+        "texto": "Sem as chaves, eu perco o emprego. Ninguém sai do *meu lado*."
        }
       ]
      },
      {
-      "bg": "escuro",
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "desvio": -60
+      },
       "cam": "shake",
       "tensao": true,
       "prop": {
@@ -133,22 +156,24 @@
       "text": "Aí vieram os passos. Lá do fundo. *Perto da sala doze*."
      },
      {
-      "bg": "corredor_predio",
+      "bg": "corredor_escola",
       "bg_params": {
-       "luz": "apagada"
+       "luz": "apagada",
+       "desvio": 140
       },
       "cam": "zoom_forte",
       "prop": {
        "type": "placa",
-       "title": "PEGADA ★",
-       "y": 820
+       "title": "PEGADA DE ESTRELA",
+       "y": 700
       },
       "text": "A lanterna da Nina achou uma pegada. Um tênis com uma *estrela* na sola."
      },
      {
-      "bg": "corredor_predio",
+      "bg": "corredor_escola",
       "bg_params": {
-       "luz": "apagada"
+       "luz": "apagada",
+       "desvio": -120
       },
       "cam": "zoom_rosto",
       "chars": [
@@ -157,7 +182,7 @@
         "x": 0.5,
         "scale": 0.9,
         "enquadramento": "busto",
-        "brows": "preocupado"
+        "brows": "surpreso"
        }
       ],
       "linhas": [
@@ -168,42 +193,42 @@
       ]
      },
      {
-      "bg": "corredor_predio",
+      "bg": "corredor_escola",
       "bg_params": {
-       "luz": "apagada"
+       "luz": "apagada",
+       "desvio": 60
       },
       "cam": "shake",
       "tensao": true,
       "chars": [
        {
-        "ref": "RUI",
+        "ref": "NINA",
         "x": 0.5,
-        "brows": "surpreso",
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado",
         "mouth": "o"
-       }
-      ],
-      "linhas": [
-       {
-        "voz": "NINA",
-        "texto": "Professor Rui?!"
        }
       ],
       "text": "Uma sombra virou o corredor. E a Nina *gritou*."
      },
      {
-      "bg": "corredor_predio",
+      "bg": "corredor_escola",
       "bg_params": {
-       "luz": "apagada"
+       "luz": "apagada",
+       "desvio": -80
       },
       "cam": "zoom_rosto",
+      "tensao": true,
       "chars": [
        {
         "ref": "RUI",
         "x": 0.5,
         "scale": 0.9,
         "enquadramento": "busto",
-        "brows": "surpreso",
-        "mouth": "o"
+        "eyes": "arregalado",
+        "brows": "surpreso"
        }
       ],
       "linhas": [
@@ -214,26 +239,24 @@
       ]
      },
      {
-      "bg": "corredor_predio",
+      "bg": "corredor_escola",
       "bg_params": {
-       "luz": "apagada"
+       "luz": "apagada",
+       "desvio": 100
       },
-      "cam": "out",
-      "chars": [
-       {
-        "ref": "RUI",
-        "x": 0.5,
-        "scale": 1.1,
-        "enquadramento": "corpo",
-        "brows": "neutro"
-       }
-      ],
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "placa",
+       "title": "SAPATO SOCIAL",
+       "y": 700
+      },
       "text": "Olhei pro pé dele. Sapato social. *Nada de estrela*."
      },
      {
-      "bg": "corredor_predio",
+      "bg": "corredor_escola",
       "bg_params": {
-       "luz": "apagada"
+       "luz": "apagada",
+       "desvio": -140
       },
       "cam": "in",
       "chars": [
@@ -254,9 +277,10 @@
       ]
      },
      {
-      "bg": "corredor_predio",
+      "bg": "corredor_escola",
       "bg_params": {
-       "luz": "apagada"
+       "luz": "apagada",
+       "seed": 8
       },
       "cam": "zoom_forte",
       "prop": {
@@ -267,9 +291,10 @@
       "text": "Sete e sete. E eu percebi: eu ainda *não tinha corrido*."
      },
      {
-      "bg": "corredor_predio",
+      "bg": "corredor_escola",
       "bg_params": {
-       "luz": "apagada"
+       "luz": "apagada",
+       "desvio": 40
       },
       "cam": "in",
       "chars": [
@@ -296,9 +321,10 @@
       ]
      },
      {
-      "bg": "corredor_predio",
+      "bg": "corredor_escola",
       "bg_params": {
-       "luz": "acesa"
+       "luz": "acesa",
+       "desvio": -100
       },
       "cam": "pan_r",
       "chars": [
@@ -316,32 +342,31 @@
       "text": "Aí a luz voltou. E a gente correu pra *sala doze*."
      },
      {
-      "bg": "sala_aula",
+      "bg": "corredor_escola",
       "bg_params": {
-       "board": "DEBAIXO DO 12"
+       "luz": "acesa",
+       "desvio": 160
       },
       "cam": "zoom_forte",
       "tensao": true,
-      "text": "A porta continuava trancada. Mas na lousa tinha um recado *novo*."
+      "text": "A porta continuava trancada. Mas pelo vidro, dava pra ver a lousa."
      },
      {
-      "bg": "escuro",
-      "cam": "zoom_forte",
-      "prop": {
-       "type": "bilhete",
-       "lines": [
-        "DEBAIXO DO",
-        "NÚMERO 12",
-        "TEM UMA",
-        "HISTÓRIA."
-       ]
+      "bg": "sala_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "texto": "DEBAIXO DO 12\nTEM UMA HISTÓRIA.",
+       "relogio_hora": "19:15"
       },
+      "cam": "in",
+      "tensao": true,
       "text": "Debaixo do número doze tem uma história. Na *minha letra*, de novo."
      },
      {
-      "bg": "sala_aula",
+      "bg": "corredor_escola",
       "bg_params": {
-       "board": "DEBAIXO DO 12"
+       "luz": "acesa",
+       "desvio": 120
       },
       "cam": "zoom_rosto",
       "tensao": true,
@@ -380,9 +405,10 @@
       "text": "Sete e vinte e um. Meu celular vibrou. *Número desconhecido*."
      },
      {
-      "bg": "corredor_predio",
+      "bg": "corredor_escola",
       "bg_params": {
-       "luz": "acesa"
+       "luz": "acesa",
+       "desvio": -160
       },
       "cam": "zoom_tremido",
       "tensao": true,
@@ -401,20 +427,49 @@
       "text": "Ele sabia que eu não tinha corrido. Ele estava *me olhando*."
      },
      {
-      "bg": "sala_aula",
+      "bg": "sala_escola",
       "bg_params": {
-       "board": "19:22"
+       "luz": "acesa",
+       "texto": "DEBAIXO DO 12\nTEM UMA HISTÓRIA.",
+       "relogio_hora": "19:22"
       },
       "cam": "in",
+      "hook": true,
       "prop": {
        "type": "placa",
        "title": "SALA 12 · 19:22",
-       "y": 1300
+       "y": 1180
       },
       "text": "Comenta PARTE QUATRO pra saber o que tem *debaixo do doze*."
      }
     ]
-   }
+   },
+   "video": "videos/o-sombra-da-sala-12/parte3.mp4",
+   "video_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/o-sombra-da-sala-12/parte3.mp4",
+   "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/o-sombra-da-sala-12/capa3.jpg",
+   "duracao": 76.2,
+   "roteiro": [
+    "Sete da noite. A luz da escola *apagou*. E eu tenho pavor de escuro.",
+    "Sete em ponto. Do jeitinho que o bilhete do Sombra *marcou*.",
+    "Se eu fugir agora, a escola inteira vai ter certeza: *o Sombra sou eu*.",
+    "Sem as chaves, eu perco o emprego. Ninguém sai do *meu lado*.",
+    "Aí vieram os passos. Lá do fundo. *Perto da sala doze*.",
+    "A lanterna da Nina achou uma pegada. Um tênis com uma *estrela* na sola.",
+    "Uma estrela... Eu já vi esse tênis *em algum lugar*.",
+    "Uma sombra virou o corredor. E a Nina *gritou*.",
+    "Calma! Eu vim atrás do meu giz! Achei que o ladrão *voltava hoje*.",
+    "Olhei pro pé dele. Sapato social. *Nada de estrela*.",
+    "Ele não era o Sombra. Era só mais um enganado, *igual a mim*.",
+    "Sete e sete. E eu percebi: eu ainda *não tinha corrido*.",
+    "Você ficou no escuro e *não fugiu*, garoto. Tava ocupado demais com medo do *Sombra*.",
+    "Aí a luz voltou. E a gente correu pra *sala doze*.",
+    "A porta continuava trancada. Mas pelo vidro, dava pra ver a lousa.",
+    "Debaixo do número doze tem uma história. Na *minha letra*, de novo.",
+    "Teo... ninguém passou por esse corredor. *Ninguém*.",
+    "Sete e vinte e um. Meu celular vibrou. *Número desconhecido*.",
+    "Ele sabia que eu não tinha corrido. Ele estava *me olhando*.",
+    "Comenta PARTE QUATRO pra saber o que tem *debaixo do doze*."
+   ]
   }
  },
  "problemas": [],
@@ -423,5 +478,9 @@
   "postado_em": "2026-11-24T07:19:00-04:00",
   "imagem": "videos/o-sombra-da-sala-12/embreve3.jpg",
   "media_id": "18112421126256124"
- }
+ },
+ "produzido_em": "2026-11-24T22:30:00Z",
+ "placar_parcial": null,
+ "regras_virais": "Pré-roteiro já cumpria as 8 regras; ajustes: nova cena 3 com o que Teo pode perder ('Se eu fugir agora, a escola inteira vai ter certeza: o Sombra sou eu'); fala de entrada do Seu Bento pelo que ele perde ('Sem as chaves, eu perco o emprego...'); cena 8 mostra a reação da Nina em vez de revelar o Rui antes da fala; cena 'sapato social' virou prova na placa; lousa e relógio de ponteiro na imagem (19:15, 19:22); 20 cenas, chamada final 'Comenta PARTE QUATRO pra saber o que tem debaixo do doze'.",
+ "cenarios_novos": "corredor_escola e sala_escola criados em cenarios.py (corredor com armários, mural, porta SALA 12, SAÍDA; sala com lousa em giz, relógio de ponteiro, armário do fundo). Cena 1 (capa) mantida em corredor_predio por causa do cartaz EM BREVE."
 }

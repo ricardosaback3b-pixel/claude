@@ -199,6 +199,8 @@ Parâmetros em `bg_params` (todos opcionais, valem para todos): `hora` (dia, tar
 - `beco`: beco entre prédios com escada de incêndio, caçamba e pichação (texto = pichação (padrão NÃO OLHE); cor = paredes)
 - `telhado`: telhado de prédio com caixa d'água e cidade ao fundo (texto = escrito na caixa d'água)
 - `fazenda`: fazenda com celeiro, cerca e campo (texto = nome no celeiro; cor = celeiro)
+- `corredor_escola`: corredor de escola com armários coloridos, mural, portas numeradas com vidro, luzes no teto e placa SAÍDA (texto = placa da porta em destaque, padrão SALA 12; porta_longe = placa da porta do fundo; desvio = desloca o ponto de fuga em px para variar o plano; luz apagada = lâmpadas apagadas)
+- `sala_escola`: sala de aula vista da frente com lousa verde (texto em letra de giz, `\n` quebra linha), relógio de ponteiro (`relogio_hora` "19:22", bom para o relógio na tela), janela, armário do fundo e carteiras (placa = placa acima da lousa, padrão SALA 12)
 
 ## Cenário, zoom e efeitos (regra do dono, 23/11)
 Nada artificial e nada forçado, mas com regras de bom senso:

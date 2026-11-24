@@ -675,174 +675,393 @@
    "status": "pronta",
    "script": {
     "cover_text": "A noite na escola",
+    "caption": "Às 19h a luz da escola apagou… e eu tenho pavor de escuro. 🔦\n\nO Sombra da Sala 12 · Parte 3 — A noite na escola\n\nA sala estava trancada e alguém escreveu na lousa. Como? Teoria aqui 👇\n\nManda pra quem ainda dorme de luz acesa 👀\n\nA Parte 4 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#misterio #escola #historiasempartes #medodoescuro #detetive",
     "scenes": [
      {
-      "bg": "escuro",
-      "cam": "zoom_forte",
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "zoom_tremido",
       "hook": true,
       "cover": true,
-      "prop": {
-       "type": "placa",
-       "title": "19:00"
-      },
-      "text": "Pra pegar o Sombra, eu tinha que fazer a coisa que eu *mais odeio*: ficar no escuro."
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Sete da noite. A luz da escola *apagou*. E eu tenho pavor de escuro."
      },
      {
-      "bg": "corredor_predio",
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "seed": 3
+      },
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "placa",
+       "title": "19:00",
+       "y": 700
+      },
+      "text": "Sete em ponto. Do jeitinho que o bilhete do Sombra *marcou*."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "desvio": -120
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "Se eu fugir agora, a escola inteira vai ter certeza: *o Sombra sou eu*."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "desvio": 80
+      },
       "cam": "in",
       "chars": [
        {
         "ref": "BENTO",
-        "x": 0.3,
-        "scale": 0.9,
-        "mouth": "sorriso"
+        "x": 0.21,
+        "brows": "bravo"
        },
        {
         "ref": "NINA",
-        "x": 0.72,
-        "scale": 0.8,
-        "look": -1
+        "x": 0.67,
+        "brows": "preocupado"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "BENTO",
+        "texto": "Sem as chaves, eu perco o emprego. Ninguém sai do *meu lado*."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "desvio": -60
+      },
+      "cam": "shake",
+      "tensao": true,
+      "prop": {
+       "type": "placa",
+       "title": "TAC. TAC. TAC.",
+       "y": 820
+      },
+      "text": "Aí vieram os passos. Lá do fundo. *Perto da sala doze*."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "desvio": 140
+      },
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "placa",
+       "title": "PEGADA DE ESTRELA",
+       "y": 700
+      },
+      "text": "A lanterna da Nina achou uma pegada. Um tênis com uma *estrela* na sola."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "desvio": -120
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "surpreso"
        }
       ],
       "linhas": [
        {
         "voz": "TEO",
-        "texto": "O Seu Bento topou ficar com a gente depois da aula, desde que os nossos pais soubessem."
-       },
-       {
-        "voz": "BENTO",
-        "texto": "Eu quero minhas chaves de volta. Ninguém sai do meu lado."
+        "texto": "Uma estrela... Eu já vi esse tênis *em algum lugar*."
        }
       ]
      },
      {
-      "bg": "corredor_predio",
-      "cam": "pan_r",
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "desvio": 60
+      },
+      "cam": "shake",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Uma sombra virou o corredor. E a Nina *gritou*."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "desvio": -80
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "RUI",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "surpreso"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "RUI",
+        "texto": "Calma! Eu vim atrás do meu giz! Achei que o ladrão *voltava hoje*."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "desvio": 100
+      },
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "placa",
+       "title": "SAPATO SOCIAL",
+       "y": 700
+      },
+      "text": "Olhei pro pé dele. Sapato social. *Nada de estrela*."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "desvio": -140
+      },
+      "cam": "in",
       "chars": [
        {
         "ref": "TEO",
         "x": 0.5,
-        "scale": 0.85,
-        "eyes": "arregalado",
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
         "mouth": "triste"
        }
       ],
-      "text": "Às sete em ponto, a luz do corredor *apagou*. Disjuntor desligado. Eu fiquei paralisado, contando a minha respiração."
+      "linhas": [
+       {
+        "voz": "TEO",
+        "texto": "Ele não era o Sombra. Era só mais um enganado, *igual a mim*."
+       }
+      ]
      },
      {
-      "bg": "escuro",
-      "cam": "shake",
-      "hook": true,
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "seed": 8
+      },
+      "cam": "zoom_forte",
       "prop": {
        "type": "placa",
-       "title": "TAC. TAC. TAC."
+       "title": "19:07",
+       "y": 700
       },
-      "text": "Passos. Lá no fundo, perto da sala doze. Devagar. E a lanterna da Nina mostrou uma pegada no chão: um tênis com uma *estrela* na sola."
+      "text": "Sete e sete. E eu percebi: eu ainda *não tinha corrido*."
      },
      {
-      "bg": "corredor_predio",
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "apagada",
+       "desvio": 40
+      },
       "cam": "in",
       "chars": [
        {
-        "ref": "RUI",
-        "x": 0.3,
-        "scale": 0.9,
-        "eyes": "arregalado",
-        "mouth": "o"
+        "ref": "BENTO",
+        "x": 0.21,
+        "brows": "surpreso"
        },
        {
+        "ref": "TEO",
+        "x": 0.67,
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "BENTO",
+        "texto": "Você ficou no escuro e *não fugiu*, garoto."
+       },
+       {
+        "voz": "TEO",
+        "texto": "Tava ocupado demais com medo do *Sombra*."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "desvio": -100
+      },
+      "cam": "pan_r",
+      "chars": [
+       {
         "ref": "NINA",
-        "x": 0.72,
-        "scale": 0.8,
+        "x": 0.21,
+        "brows": "surpreso"
+       },
+       {
+        "ref": "TEO",
+        "x": 0.67,
+        "eyes": "arregalado"
+       }
+      ],
+      "text": "Aí a luz voltou. E a gente correu pra *sala doze*."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "desvio": 160
+      },
+      "cam": "zoom_forte",
+      "tensao": true,
+      "text": "A porta continuava trancada. Mas pelo vidro, dava pra ver a lousa."
+     },
+     {
+      "bg": "sala_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "texto": "DEBAIXO DO 12\nTEM UMA HISTÓRIA.",
+       "relogio_hora": "19:15"
+      },
+      "cam": "in",
+      "tensao": true,
+      "text": "Debaixo do número doze tem uma história. Na *minha letra*, de novo."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "desvio": 120
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
         "eyes": "arregalado",
-        "look": -1
+        "brows": "preocupado",
+        "mouth": "o"
        }
       ],
       "linhas": [
        {
         "voz": "NINA",
-        "texto": "Professor Rui?!"
-       },
-       {
-        "voz": "RUI",
-        "texto": "Calma! Eu vim atrás do meu giz! Achei que o ladrão voltava hoje."
+        "texto": "Teo... ninguém passou por esse corredor. *Ninguém*."
        }
       ]
-     },
-     {
-      "bg": "corredor_predio",
-      "cam": "pan_l",
-      "chars": [
-       {
-        "ref": "RUI",
-        "x": 0.5,
-        "scale": 0.9,
-        "mouth": "triste"
-       }
-      ],
-      "text": "O professor usava *sapato social*. Nada de estrela. Ele não era o Sombra. Era só mais um enganado, igual a mim."
-     },
-     {
-      "bg": "corredor_predio",
-      "cam": "in",
-      "chars": [
-       {
-        "ref": "BENTO",
-        "x": 0.3,
-        "scale": 0.85,
-        "mouth": "neutra"
-       },
-       {
-        "ref": "TEO",
-        "x": 0.7,
-        "scale": 0.85,
-        "look": -1
-       }
-      ],
-      "linhas": [
-       {
-        "voz": "BENTO",
-        "texto": "Teo, você ficou no escuro e não saiu correndo."
-       },
-       {
-        "voz": "TEO",
-        "texto": "Eu nem percebi, Seu Bento. Tava ocupado demais com medo do Sombra."
-       }
-      ]
-     },
-     {
-      "bg": "sala_aula",
-      "bg_params": {
-       "board": "DEBAIXO DO 12"
-      },
-      "cam": "zoom_forte",
-      "chars": [
-       {
-        "ref": "TEO",
-        "x": 0.5,
-        "scale": 0.9,
-        "eyes": "arregalado",
-        "mouth": "o"
-       }
-      ],
-      "text": "Quando a luz voltou, a gente correu pra sala doze. A porta estava trancada. Mas a lousa tinha um recado *novo*."
      },
      {
       "bg": "escuro",
-      "cam": "shake",
-      "hook": true,
+      "cam": "zoom_forte",
+      "tensao": true,
       "prop": {
-       "type": "bilhete",
+       "type": "celular",
+       "title": "19:21",
        "lines": [
-        "DEBAIXO DO",
-        "NÚMERO 12 TEM",
-        "UMA HISTÓRIA."
+        "NÚMERO DESCONHECIDO",
+        "Você não correu do escuro.",
+        "!Agora eu preciso de você.",
+        "— O SOMBRA"
        ]
       },
-      "text": "Debaixo do número doze tem uma história. Enquanto a gente vigiava o corredor, alguém escreveu lá dentro. *Como?* A Parte Quatro fica no perfil."
+      "text": "Sete e vinte e um. Meu celular vibrou. *Número desconhecido*."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "desvio": -160
+      },
+      "cam": "zoom_tremido",
+      "tensao": true,
+      "hook": true,
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Ele sabia que eu não tinha corrido. Ele estava *me olhando*."
+     },
+     {
+      "bg": "sala_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "texto": "DEBAIXO DO 12\nTEM UMA HISTÓRIA.",
+       "relogio_hora": "19:22"
+      },
+      "cam": "in",
+      "hook": true,
+      "prop": {
+       "type": "placa",
+       "title": "SALA 12 · 19:22",
+       "y": 1180
+      },
+      "text": "Comenta PARTE QUATRO pra saber o que tem *debaixo do doze*."
      }
-    ],
-    "caption": "Pra pegar o Sombra, eu tive que encarar o escuro… 🔦\n\nO Sombra da Sala 12 · Parte 3 — A noite na escola\n\nComo alguém escreve numa sala trancada? Teoria aqui 👇\n\nA Parte 4 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#misterio #historiasempartes #escola #medodoescuro #contos"
+    ]
    }
   },
   {

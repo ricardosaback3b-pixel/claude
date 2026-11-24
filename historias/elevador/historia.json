@@ -1,467 +1,921 @@
 {
-  "slug": "elevador",
-  "titulo": "O Andar que Não Existe",
-  "tipo": "votacao",
-  "genero": "terror psicológico em prédio",
-  "status": "ativa",
-  "narrador": "PROTAGONISTA",
-  "biblia": "Série antiga retomada (partes 1 e 2 já publicadas no estilo de desenho anterior; a partir da parte 3 continua no estilo atual, mantendo personagens e fatos). Premissa: num prédio de 20 andares, o elevador às vezes para num andar que não existe, o -1. Regra do prédio: nunca saia no andar que não existe. Protagonista (narrador, 1ª pessoa, jovem morador) fica preso no elevador com o Médico do 7º andar e o Porteiro fala pelo interfone. Parte 1: dilema A) sair no -1 com o médico ou B) ficar e confiar no porteiro. Venceu B (ficar). Parte 2: o médico tentou levar o protagonista pro -1 e acabou preso dentro do espelho do elevador; só um deles pode sair quando a porta abrir no 20º andar. Dilema: A) empurrar o médico de volta pro espelho ou B) correr pra porta primeiro. Votos até agora: B 2 x 0 A (nathalia_5003, kevin_12_zn). Ideias para o resto: o -1 guarda as pessoas que 'saíram' do prédio; o Porteiro sabe mais do que diz; o reflexo do espelho pode ser uma cópia do protagonista. Final planejado em aberto, decidido pelos votos, fechando o mistério do -1 na parte 6. VISUAL (igual aos vídeos originais, obrigatório): Você = cabelo castanho em tigela, moletom azul com cordões brancos e alças de mochila vermelhas; Médico = jaleco branco com crachá e camisa azul, cabelo grisalho; Porteiro = farda verde-oliva com botões dourados, quepe verde e bigode grisalho. Cenários de elevador e câmera de segurança (CAM 03) combinam com os originais. VISUAL DEFINITIVO (catálogo do dono): Você = Ricardo; Porteiro = Sargento Alves (farda verde, bigode); Médico = Guilherme (jaleco). VISUAL DEFINITIVO (catálogo próprio no estilo dos episódios): Você = andar_voce (tigela castanha, moletom azul, alças vermelhas); Médico = andar_medico (jaleco, cabelo grisalho em tigela); Porteiro = andar_porteiro (farda e quepe verdes, bigode grisalho). Parte 3 (produzida 23/11, versão conforme votos; padrão B): a mãe do Você saiu do prédio há 10 anos e nunca voltou; o porteiro diz que ela espera na portaria; o elevador volta subindo com o médico; dilema A) voltar e tirar o médico do espelho ou B) descer a escada e encarar o porteiro. PLANO P4-P6 (Planejamento 24/11): P4 nas duas versões revela que a mãe do Você entrou no -1 no lugar dele há 10 anos (o porteiro apertou o botão) e que o porteiro também já saiu do -1 e precisa de alguém no lugar dele; prazo meia-noite. Dilema P4: A) ficar no -1 pra mãe sair (fica preso) / B) prender o porteiro no -1 (só ele sabe tirar a mãe). Final P6 planejado: o -1 guarda quem 'saiu' do prédio e só libera alguém se outro entra por vontade própria; o médico (que sabe mais) ajuda a fechar o -1 de vez; A leva a um final agridoce (mãe sai, Você fica e o médico promete buscá-lo), B a um final de virada (porteiro preso, a mãe sai pelo espelho com ajuda do médico, mas o reflexo do Você fica lá embaixo).",
-  "personagens": {
-    "PROTAGONISTA": {
-      "nome": "Você",
-      "sprite": "andar_voce",
-      "voz": "kokoro:pm_alex",
-      "pitch": 1.04,
-      "speed": 1.0
-    },
-    "MEDICO": {
-      "nome": "Médico",
-      "sprite": "andar_medico",
-      "voz": "piper:faber",
-      "pitch": 0.95,
-      "speed": 0.95
-    },
-    "PORTEIRO": {
-      "nome": "Porteiro",
-      "sprite": "andar_porteiro",
-      "voz": "kokoro:pm_santa",
-      "pitch": 0.9,
-      "speed": 0.92
-    }
+ "slug": "elevador",
+ "titulo": "O Andar que Não Existe",
+ "tipo": "votacao",
+ "genero": "terror psicológico em prédio",
+ "status": "ativa",
+ "narrador": "PROTAGONISTA",
+ "biblia": "Série antiga retomada (partes 1 e 2 já publicadas no estilo de desenho anterior; a partir da parte 3 continua no estilo atual, mantendo personagens e fatos). Premissa: num prédio de 20 andares, o elevador às vezes para num andar que não existe, o -1. Regra do prédio: nunca saia no andar que não existe. Protagonista (narrador, 1ª pessoa, jovem morador) fica preso no elevador com o Médico do 7º andar e o Porteiro fala pelo interfone. Parte 1: dilema A) sair no -1 com o médico ou B) ficar e confiar no porteiro. Venceu B (ficar). Parte 2: o médico tentou levar o protagonista pro -1 e acabou preso dentro do espelho do elevador; só um deles pode sair quando a porta abrir no 20º andar. Dilema: A) empurrar o médico de volta pro espelho ou B) correr pra porta primeiro. Votos até agora: B 2 x 0 A (nathalia_5003, kevin_12_zn). Ideias para o resto: o -1 guarda as pessoas que 'saíram' do prédio; o Porteiro sabe mais do que diz; o reflexo do espelho pode ser uma cópia do protagonista. Final planejado em aberto, decidido pelos votos, fechando o mistério do -1 na parte 6. VISUAL (igual aos vídeos originais, obrigatório): Você = cabelo castanho em tigela, moletom azul com cordões brancos e alças de mochila vermelhas; Médico = jaleco branco com crachá e camisa azul, cabelo grisalho; Porteiro = farda verde-oliva com botões dourados, quepe verde e bigode grisalho. Cenários de elevador e câmera de segurança (CAM 03) combinam com os originais. VISUAL DEFINITIVO (catálogo do dono): Você = Ricardo; Porteiro = Sargento Alves (farda verde, bigode); Médico = Guilherme (jaleco). VISUAL DEFINITIVO (catálogo próprio no estilo dos episódios): Você = andar_voce (tigela castanha, moletom azul, alças vermelhas); Médico = andar_medico (jaleco, cabelo grisalho em tigela); Porteiro = andar_porteiro (farda e quepe verdes, bigode grisalho). Parte 3 (produzida 23/11, versão conforme votos; padrão B): a mãe do Você saiu do prédio há 10 anos e nunca voltou; o porteiro diz que ela espera na portaria; o elevador volta subindo com o médico; dilema A) voltar e tirar o médico do espelho ou B) descer a escada e encarar o porteiro. PLANO P4-P6 (Planejamento 24/11): P4 nas duas versões revela que a mãe do Você entrou no -1 no lugar dele há 10 anos (o porteiro apertou o botão) e que o porteiro também já saiu do -1 e precisa de alguém no lugar dele; prazo meia-noite. Dilema P4: A) ficar no -1 pra mãe sair (fica preso) / B) prender o porteiro no -1 (só ele sabe tirar a mãe). Final P6 planejado: o -1 guarda quem 'saiu' do prédio e só libera alguém se outro entra por vontade própria; o médico (que sabe mais) ajuda a fechar o -1 de vez; A leva a um final agridoce (mãe sai, Você fica e o médico promete buscá-lo), B a um final de virada (porteiro preso, a mãe sai pelo espelho com ajuda do médico, mas o reflexo do Você fica lá embaixo).",
+ "personagens": {
+  "PROTAGONISTA": {
+   "nome": "Você",
+   "sprite": "andar_voce",
+   "voz": "kokoro:pm_alex",
+   "pitch": 1.04,
+   "speed": 1.0
   },
-  "partes": [
-    {
-      "n": 1,
-      "status": "publicada",
-      "media_id": "18125470915985816",
-      "publicada_em": "2026-11-21T19:45:47Z",
-      "opcoes": [
-        "Sair no -1 com o médico",
-        "Ficar e confiar no porteiro"
-      ],
-      "escolha": "B",
-      "votos": {
-        "A": 1,
-        "B": 3
-      },
-      "resumo": "Elevador para no -1; médico chama pra sair; porteiro manda ficar."
-    },
-    {
-      "n": 2,
-      "status": "publicada",
-      "media_id": "18094501607231847",
-      "publicada_em": "2026-11-22T13:55:28Z",
-      "opcoes": [
-        "Empurrar o médico de volta pro espelho",
-        "Correr pra porta primeiro"
-      ],
-      "resumo": "Escolheram ficar. Médico tenta levar o protagonista pro -1 e fica preso no espelho; só um sai no 20º andar.",
-      "votos": {
-        "A": 0,
-        "B": 2
-      },
-      "escolha": "B",
-      "votos_obs": "parcial 23/11 11:55 (Produção); Publicação reconta e confirma a escolha"
-    },
-    {
-      "n": 3,
-      "status": "publicada",
-      "opcoes": [
-        "Voltar e tirar o médico",
-        "Descer e encarar o porteiro"
-      ],
-      "script": {
-        "cover_text": "Alguém no meu lugar",
-        "opcoes": [
-          "Voltar e tirar o médico",
-          "Descer e encarar o porteiro"
-        ],
-        "opcoes_rostos": [
-          {
-            "ref": "MEDICO",
-            "eyes": "arregalado",
-            "brows": "preocupado",
-            "mouth": "o"
-          },
-          {
-            "ref": "PORTEIRO",
-            "brows": "bravo"
-          }
-        ],
-        "chamada": "Marca quem desceria essa escada sozinho",
-        "caption": "Vocês escolheram B (2 a 0)! Eu corri pra porta primeiro... e deixei o médico preso no espelho. 🛗\n\nO Andar que Não Existe · Parte 3 — Alguém no meu lugar\n\nQuem está esperando lá na portaria? Teoria aqui 👇\n\n🅰️ Voltar e tirar o médico do espelho\n🅱️ Descer e encarar o porteiro\nA mais votada decide a Parte 4.\n\nMarca quem desceria essa escada sozinho 👀\n\nA Parte 4 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #elevador #historiasempartes #vocedecide #suspense #misterio",
-        "scenes": [
-          {
-            "bg": "elevador",
-            "bg_params": {
-              "floor": "20"
-            },
-            "cam": "zoom_rosto",
-            "hook": true,
-            "cover": true,
-            "chars": [
-              {
-                "ref": "PROTAGONISTA",
-                "x": 0.5,
-                "scale": 0.9,
-                "enquadramento": "busto",
-                "eyes": "arregalado",
-                "brows": "preocupado",
-                "mouth": "o"
-              }
-            ],
-            "text": "Eu corri pra porta primeiro. E deixei o médico *preso no espelho*."
-          },
-          {
-            "bg": "escuro",
-            "cam": "in",
-            "prop": {
-              "type": "placa",
-              "title": "-1"
-            },
-            "text": "Nas partes anteriores: o elevador parou no *menos um*, o andar que não existe."
-          },
-          {
-            "bg": "elevador",
-            "bg_params": {
-              "floor": "-1"
-            },
-            "cam": "pan_l",
-            "chars": [
-              {
-                "ref": "MEDICO",
-                "x": 0.5,
-                "scale": 0.9,
-                "enquadramento": "busto",
-                "eyes": "arregalado",
-                "brows": "preocupado",
-                "mouth": "o"
-              }
-            ],
-            "text": "Eu fiquei, como o porteiro mandou. E o médico do sétimo acabou *dentro do espelho*."
-          },
-          {
-            "bg": "corredor_predio",
-            "cam": "out",
-            "chars": [
-              {
-                "ref": "PROTAGONISTA",
-                "x": 0.5,
-                "scale": 1.1,
-                "enquadramento": "corpo",
-                "brows": "preocupado",
-                "mouth": "triste"
-              }
-            ],
-            "text": "Eu caí de joelhos no corredor do vigésimo andar."
-          },
-          {
-            "bg": "elevador",
-            "bg_params": {
-              "floor": "20"
-            },
-            "cam": "zoom_forte",
-            "text": "Atrás de mim, a porta fechou. E o elevador começou a *descer sozinho*."
-          },
-          {
-            "bg": "escuro",
-            "cam": "zoom_forte",
-            "tensao": true,
-            "prop": {
-              "type": "placa",
-              "title": "10... 5... 1... -1",
-              "y": 820
-            },
-            "text": "No visor, os números foram caindo. Dez. Cinco. Um. E parou no *menos um*."
-          },
-          {
-            "bg": "recepcao_hotel",
-            "bg_params": {
-              "texto": "PORTARIA",
-              "hora": "noite"
-            },
-            "cam": "in",
-            "chars": [
-              {
-                "ref": "PORTEIRO",
-                "x": 0.5,
-                "scale": 1.1,
-                "enquadramento": "corpo",
-                "brows": "neutro"
-              }
-            ],
-            "linhas": [
-              {
-                "voz": "PROTAGONISTA",
-                "texto": "O interfone do corredor tocou."
-              },
-              {
-                "voz": "PORTEIRO",
-                "texto": "Muito bem. Você saiu."
-              }
-            ]
-          },
-          {
-            "bg": "recepcao_hotel",
-            "bg_params": {
-              "texto": "PORTARIA",
-              "hora": "noite"
-            },
-            "cam": "zoom_rosto",
-            "tensao": true,
-            "chars": [
-              {
-                "ref": "PORTEIRO",
-                "x": 0.5,
-                "scale": 0.9,
-                "enquadramento": "busto",
-                "brows": "bravo"
-              }
-            ],
-            "linhas": [
-              {
-                "voz": "PORTEIRO",
-                "texto": "Agora *alguém* precisa entrar no seu lugar."
-              }
-            ]
-          },
-          {
-            "bg": "corredor_predio",
-            "cam": "in",
-            "chars": [
-              {
-                "ref": "PROTAGONISTA",
-                "x": 0.5,
-                "scale": 0.9,
-                "enquadramento": "busto",
-                "brows": "preocupado",
-                "mouth": "o"
-              }
-            ],
-            "linhas": [
-              {
-                "voz": "PROTAGONISTA",
-                "texto": "No meu lugar? Como assim, no meu lugar?"
-              }
-            ]
-          },
-          {
-            "bg": "elevador",
-            "bg_params": {
-              "floor": "-1"
-            },
-            "filtro": "tv",
-            "cam": "in",
-            "text": "Na telinha do interfone, a câmera três mostrava o médico batendo no espelho."
-          },
-          {
-            "bg": "elevador",
-            "bg_params": {
-              "floor": "-1"
-            },
-            "filtro": "tv",
-            "cam": "zoom_rosto",
-            "tensao": true,
-            "chars": [
-              {
-                "ref": "MEDICO",
-                "x": 0.5,
-                "scale": 0.9,
-                "enquadramento": "busto",
-                "eyes": "arregalado",
-                "brows": "bravo",
-                "mouth": "o"
-              }
-            ],
-            "linhas": [
-              {
-                "voz": "MEDICO",
-                "texto": "Ele mente pra você desde o *primeiro andar*!"
-              }
-            ]
-          },
-          {
-            "bg": "recepcao_hotel",
-            "bg_params": {
-              "texto": "PORTARIA",
-              "hora": "noite"
-            },
-            "cam": "pan_r",
-            "chars": [
-              {
-                "ref": "PORTEIRO",
-                "x": 0.5,
-                "scale": 0.9,
-                "enquadramento": "busto",
-                "brows": "bravo"
-              }
-            ],
-            "linhas": [
-              {
-                "voz": "PORTEIRO",
-                "texto": "Não escuta ele. Desce pela escada e vem pra portaria."
-              }
-            ]
-          },
-          {
-            "bg": "recepcao_hotel",
-            "bg_params": {
-              "texto": "PORTARIA",
-              "hora": "noite"
-            },
-            "cam": "zoom_forte",
-            "tensao": true,
-            "tint": [
-              120,
-              0,
-              0
-            ],
-            "chars": [
-              {
-                "ref": "PORTEIRO",
-                "x": 0.5,
-                "scale": 1.1,
-                "enquadramento": "corpo",
-                "brows": "neutro"
-              }
-            ],
-            "linhas": [
-              {
-                "voz": "PORTEIRO",
-                "texto": "A sua *mãe* está te esperando aqui."
-              }
-            ]
-          },
-          {
-            "bg": "corredor_predio",
-            "cam": "zoom_tremido",
-            "tensao": true,
-            "chars": [
-              {
-                "ref": "PROTAGONISTA",
-                "x": 0.5,
-                "scale": 0.9,
-                "enquadramento": "busto",
-                "eyes": "arregalado",
-                "brows": "surpreso",
-                "mouth": "o"
-              }
-            ],
-            "text": "E aí eu *gelei*."
-          },
-          {
-            "bg": "recepcao_hotel",
-            "bg_params": {
-              "texto": "PORTARIA",
-              "hora": "dia"
-            },
-            "cam": "pan_r",
-            "text": "A minha mãe *saiu desse prédio* faz dez anos. E nunca mais voltou."
-          },
-          {
-            "bg": "elevador",
-            "bg_params": {
-              "floor": "5"
-            },
-            "cam": "zoom_forte",
-            "tensao": true,
-            "text": "No visor, o elevador já estava *subindo* de novo. Com o médico dentro.",
-            "prop": {
-              "type": "placa",
-              "title": "SUBINDO... 5",
-              "y": 820
-            }
-          },
-          {
-            "bg": "corredor_predio",
-            "cam": "zoom_rosto",
-            "tensao": true,
-            "chars": [
-              {
-                "ref": "PROTAGONISTA",
-                "x": 0.5,
-                "scale": 0.9,
-                "enquadramento": "busto",
-                "eyes": "arregalado",
-                "brows": "preocupado"
-              }
-            ],
-            "text": "Eu tinha *um minuto*."
-          },
-          {
-            "bg": "elevador",
-            "bg_params": {
-              "floor": "20"
-            },
-            "cam": "in",
-            "chars": [
-              {
-                "ref": "MEDICO",
-                "x": 0.5,
-                "scale": 0.9,
-                "enquadramento": "busto",
-                "eyes": "arregalado",
-                "brows": "preocupado",
-                "mouth": "o"
-              }
-            ],
-            "text": "A: voltar pro elevador e tirar o médico do espelho, mesmo que ele me leve pro *menos um*."
-          },
-          {
-            "bg": "porao",
-            "bg_params": {
-              "texto": "SUBSOLO"
-            },
-            "cam": "pan_l",
-            "text": "B: descer a escada e encarar o porteiro, deixando o médico *pra trás*."
-          },
-          {
-            "bg": "corredor_predio",
-            "cam": "zoom_tremido",
-            "hook": true,
-            "chars": [
-              {
-                "ref": "PROTAGONISTA",
-                "x": 0.5,
-                "scale": 0.9,
-                "enquadramento": "busto",
-                "eyes": "arregalado",
-                "brows": "preocupado",
-                "mouth": "o"
-              }
-            ],
-            "text": "E você, o que faria?"
-          }
-        ]
-      },
-      "media_id": "18137593846679833",
-      "publicada_em": "2026-11-23T18:55:21Z",
-      "versao": "B",
-      "primeiro_comentario_id": "18360961804220453"
-    }
-  ],
-  "personagens_travados": {
-    "PROTAGONISTA": {
-      "nome": "Você",
-      "sprite": "andar_voce",
-      "voz": "kokoro:pm_alex",
-      "pitch": 1.04,
-      "speed": 1.0
-    },
-    "MEDICO": {
-      "nome": "Médico",
-      "sprite": "andar_medico",
-      "voz": "piper:faber",
-      "pitch": 0.95,
-      "speed": 0.95
-    },
-    "PORTEIRO": {
-      "nome": "Porteiro",
-      "sprite": "andar_porteiro",
-      "voz": "kokoro:pm_santa",
-      "pitch": 0.9,
-      "speed": 0.92
-    }
+  "MEDICO": {
+   "nome": "Médico",
+   "sprite": "andar_medico",
+   "voz": "piper:faber",
+   "pitch": 0.95,
+   "speed": 0.95
   },
-  "estilo": "andar"
+  "PORTEIRO": {
+   "nome": "Porteiro",
+   "sprite": "andar_porteiro",
+   "voz": "kokoro:pm_santa",
+   "pitch": 0.9,
+   "speed": 0.92
+  }
+ },
+ "partes": [
+  {
+   "n": 1,
+   "status": "publicada",
+   "media_id": "18125470915985816",
+   "publicada_em": "2026-11-21T19:45:47Z",
+   "opcoes": [
+    "Sair no -1 com o médico",
+    "Ficar e confiar no porteiro"
+   ],
+   "escolha": "B",
+   "votos": {
+    "A": 1,
+    "B": 3
+   },
+   "resumo": "Elevador para no -1; médico chama pra sair; porteiro manda ficar."
+  },
+  {
+   "n": 2,
+   "status": "publicada",
+   "media_id": "18094501607231847",
+   "publicada_em": "2026-11-22T13:55:28Z",
+   "opcoes": [
+    "Empurrar o médico de volta pro espelho",
+    "Correr pra porta primeiro"
+   ],
+   "resumo": "Escolheram ficar. Médico tenta levar o protagonista pro -1 e fica preso no espelho; só um sai no 20º andar.",
+   "votos": {
+    "A": 0,
+    "B": 2
+   },
+   "escolha": "B",
+   "votos_obs": "parcial 23/11 11:55 (Produção); Publicação reconta e confirma a escolha"
+  },
+  {
+   "n": 3,
+   "status": "publicada",
+   "opcoes": [
+    "Voltar e tirar o médico",
+    "Descer e encarar o porteiro"
+   ],
+   "script": {
+    "cover_text": "Alguém no meu lugar",
+    "opcoes": [
+     "Voltar e tirar o médico",
+     "Descer e encarar o porteiro"
+    ],
+    "opcoes_rostos": [
+     {
+      "ref": "MEDICO",
+      "eyes": "arregalado",
+      "brows": "preocupado",
+      "mouth": "o"
+     },
+     {
+      "ref": "PORTEIRO",
+      "brows": "bravo"
+     }
+    ],
+    "chamada": "Marca quem desceria essa escada sozinho",
+    "caption": "Vocês escolheram B (2 a 0)! Eu corri pra porta primeiro... e deixei o médico preso no espelho. 🛗\n\nO Andar que Não Existe · Parte 3 — Alguém no meu lugar\n\nQuem está esperando lá na portaria? Teoria aqui 👇\n\n🅰️ Voltar e tirar o médico do espelho\n🅱️ Descer e encarar o porteiro\nA mais votada decide a Parte 4.\n\nMarca quem desceria essa escada sozinho 👀\n\nA Parte 4 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #elevador #historiasempartes #vocedecide #suspense #misterio",
+    "scenes": [
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "20"
+      },
+      "cam": "zoom_rosto",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Eu corri pra porta primeiro. E deixei o médico *preso no espelho*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "in",
+      "prop": {
+       "type": "placa",
+       "title": "-1"
+      },
+      "text": "Nas partes anteriores: o elevador parou no *menos um*, o andar que não existe."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "-1"
+      },
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "MEDICO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Eu fiquei, como o porteiro mandou. E o médico do sétimo acabou *dentro do espelho*."
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "out",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 1.1,
+        "enquadramento": "corpo",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "Eu caí de joelhos no corredor do vigésimo andar."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "20"
+      },
+      "cam": "zoom_forte",
+      "text": "Atrás de mim, a porta fechou. E o elevador começou a *descer sozinho*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "placa",
+       "title": "10... 5... 1... -1",
+       "y": 820
+      },
+      "text": "No visor, os números foram caindo. Dez. Cinco. Um. E parou no *menos um*."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 1.1,
+        "enquadramento": "corpo",
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "O interfone do corredor tocou."
+       },
+       {
+        "voz": "PORTEIRO",
+        "texto": "Muito bem. Você saiu."
+       }
+      ]
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Agora *alguém* precisa entrar no seu lugar."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "No meu lugar? Como assim, no meu lugar?"
+       }
+      ]
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "-1"
+      },
+      "filtro": "tv",
+      "cam": "in",
+      "text": "Na telinha do interfone, a câmera três mostrava o médico batendo no espelho."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "-1"
+      },
+      "filtro": "tv",
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "MEDICO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "bravo",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MEDICO",
+        "texto": "Ele mente pra você desde o *primeiro andar*!"
+       }
+      ]
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "pan_r",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Não escuta ele. Desce pela escada e vem pra portaria."
+       }
+      ]
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "zoom_forte",
+      "tensao": true,
+      "tint": [
+       120,
+       0,
+       0
+      ],
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 1.1,
+        "enquadramento": "corpo",
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "A sua *mãe* está te esperando aqui."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "zoom_tremido",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "surpreso",
+        "mouth": "o"
+       }
+      ],
+      "text": "E aí eu *gelei*."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "dia"
+      },
+      "cam": "pan_r",
+      "text": "A minha mãe *saiu desse prédio* faz dez anos. E nunca mais voltou."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "5"
+      },
+      "cam": "zoom_forte",
+      "tensao": true,
+      "text": "No visor, o elevador já estava *subindo* de novo. Com o médico dentro.",
+      "prop": {
+       "type": "placa",
+       "title": "SUBINDO... 5",
+       "y": 820
+      }
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "Eu tinha *um minuto*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "20"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "MEDICO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "text": "A: voltar pro elevador e tirar o médico do espelho, mesmo que ele me leve pro *menos um*."
+     },
+     {
+      "bg": "porao",
+      "bg_params": {
+       "texto": "SUBSOLO"
+      },
+      "cam": "pan_l",
+      "text": "B: descer a escada e encarar o porteiro, deixando o médico *pra trás*."
+     },
+     {
+      "bg": "corredor_predio",
+      "cam": "zoom_tremido",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "text": "E você, o que faria?"
+     }
+    ]
+   },
+   "media_id": "18137593846679833",
+   "publicada_em": "2026-11-23T18:55:21Z",
+   "versao": "B",
+   "primeiro_comentario_id": "18360961804220453",
+   "escolha": "B",
+   "votos": {
+    "A": 0,
+    "B": 1
+   },
+   "votos_obs": "Parcial (Produção 24/11 ~09:55 BRT): 1 voto B (kevin_12_zn, 3x). Escolha provisória; a Publicação reconta na hora."
+  },
+  {
+   "n": 4,
+   "status": "pronta",
+   "opcoes": [
+    "Ficar no -1 pra mãe sair",
+    "Prender o porteiro no -1"
+   ],
+   "versao": "B",
+   "script": {
+    "cover_text": "O livro da portaria",
+    "faixa": "PARTE 4 · O livro da portaria",
+    "opcoes": [
+     "Ficar no -1 pra mãe sair",
+     "Prender o porteiro no -1"
+    ],
+    "opcoes_rostos": [
+     {
+      "ref": "PROTAGONISTA",
+      "brows": "preocupado",
+      "mouth": "triste"
+     },
+     {
+      "ref": "PORTEIRO",
+      "brows": "bravo"
+     }
+    ],
+    "chamada": "Manda pra quem faria tudo pela mãe",
+    "caption": "Onze e cinquenta e um... e o livro da portaria tinha o nome da minha mãe. 🛗\n{RESULTADO_SE_HOUVER_VOTOS}\nO Andar que Não Existe · Parte 4 — O livro da portaria\n\nO porteiro também saiu do -1. Quem você acha que ele quer lá embaixo? 👇\n\n🅰️ Ficar no -1 pra minha mãe sair (e eu fico preso)\n🅱️ Prender o porteiro no -1 (mas só ele sabe tirar ela)\nA mais votada decide a Parte 5.\n\nManda pra quem faria tudo pela mãe 👀\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #elevador #historiasempartes #misterio #suspense #comentaAouB",
+    "scenes": [
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "zoom_rosto",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "Onze e cinquenta e um. Vinte andares de escada até a *minha mãe*."
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "pan_l",
+      "tensao": true,
+      "prop": {
+       "type": "placa",
+       "title": "ANDAR 7 · 23:52",
+       "y": 700
+      },
+      "text": "No sétimo, a porta do médico estava aberta. E as luzes *apagando atrás de mim*."
+     },
+     {
+      "bg": "sala_estar",
+      "bg_params": {
+       "luz": "apagada",
+       "hora": "noite"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "eyes": "arregalado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Lá dentro, todos os espelhos da casa estavam *virados pra parede*."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Demorou. Ela não aguenta esperar até a *meia-noite*."
+       }
+      ]
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "Cadê ela? Cadê a *minha mãe*?"
+       }
+      ]
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "out",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.21
+       },
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.67,
+        "brows": "preocupado"
+       }
+      ],
+      "text": "Ele não respondeu. Só abriu um livro grosso *em cima do balcão*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "in",
+      "prop": {
+       "type": "carta",
+       "title": "SAÍDAS DO PRÉDIO",
+       "lines": [
+        "MÉDICO · 7º ANDAR",
+        "SAIU ONTEM",
+        "",
+        "!SUA MÃE",
+        "!HÁ 10 ANOS · 23:59"
+       ],
+       "y": 640
+      },
+      "text": "Saídas do prédio. Na última linha, *o nome da minha mãe*."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "zoom_tremido",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Ela não saiu, garoto. Ela *entrou no seu lugar*."
+       }
+      ]
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "in",
+      "filtro": "tv",
+      "text": "Câmera três, dez anos atrás: ela entrou no elevador."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "E eu fiquei ali fora, *olhando a porta fechar*."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Naquela noite, quem tinha que descer era *você*."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "acesa"
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "E hoje eu fugi do espelho. Eu *quebrei a troca*."
+       }
+      ]
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "pan_r",
+      "prop": {
+       "type": "placa",
+       "title": "23:55",
+       "y": 700
+      },
+      "text": "Onze e cinquenta e cinco. O elevador *desceu sozinho* até a portaria."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Entra à meia-noite, e ela sai. *Simples assim*."
+       }
+      ]
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "eyes": "arregalado"
+       }
+      ],
+      "text": "A porta abriu. Vazio. Só o espelho, *embaçado*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "bilhete",
+       "lines": [
+        "NO ESPELHO:",
+        "!ELE TAMBÉM",
+        "!SAIU DE LÁ."
+       ],
+       "y": 900
+      },
+      "text": "No vapor do espelho, alguém escreveu com o dedo."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "zoom_tremido",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "MEDICO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MEDICO",
+        "texto": "O porteiro também saiu do *menos um*. Ele precisa de alguém lá!"
+       }
+      ]
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "shake",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "text": "Atrás de mim, o porteiro *trancou a porta da rua*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "placa",
+       "title": "23:58",
+       "y": 700
+      },
+      "text": "Onze e cinquenta e oito. *Dois minutos*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "-1"
+      },
+      "cam": "zoom_rosto",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "A: entro no elevador e fico no menos um, pra minha mãe *sair*."
+     },
+     {
+      "bg": "porao",
+      "bg_params": {
+       "texto": "SUBSOLO"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "text": "B: tranco o porteiro lá embaixo. Mas só ele sabe *tirar ela de lá*."
+     },
+     {
+      "bg": "corredor_predio",
+      "bg_params": {
+       "luz": "apagada"
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "E você, o que faria? Comenta *A ou B*."
+     }
+    ]
+   }
+  }
+ ],
+ "personagens_travados": {
+  "PROTAGONISTA": {
+   "nome": "Você",
+   "sprite": "andar_voce",
+   "voz": "kokoro:pm_alex",
+   "pitch": 1.04,
+   "speed": 1.0
+  },
+  "MEDICO": {
+   "nome": "Médico",
+   "sprite": "andar_medico",
+   "voz": "piper:faber",
+   "pitch": 0.95,
+   "speed": 0.95
+  },
+  "PORTEIRO": {
+   "nome": "Porteiro",
+   "sprite": "andar_porteiro",
+   "voz": "kokoro:pm_santa",
+   "pitch": 0.9,
+   "speed": 0.92
+  }
+ },
+ "estilo": "andar"
 }

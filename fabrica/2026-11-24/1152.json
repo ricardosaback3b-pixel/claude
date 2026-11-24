@@ -5,7 +5,7 @@
  "historia": "elevador",
  "titulo": "O Andar que Não Existe",
  "parte": 4,
- "status": "planejado",
+ "status": "produzido",
  "votacao": true,
  "versao_padrao": "B",
  "estilo": "andar",
@@ -15,7 +15,7 @@
    "resumo": "Escolheram voltar: o Você tira o médico do espelho, o elevador despenca no -1 (o prédio ao contrário), acha o bilhete da mãe e descobre que o porteiro apertou o botão e também já morou no -1.",
    "retomada_gancho": "Cena 1: 'Eu voltei pelo médico. E o espelho me puxou.' (~3 s, fato novo: 23:51 e o puxão)",
    "cenas": 22,
-   "palavras": 204,
+   "palavras": 205,
    "duracao_alvo_s": "60-75",
    "momento_zoom_tensao": [
     1,
@@ -259,7 +259,8 @@
         "FILHO,",
         "!NÃO DEIXA ELE",
         "!APERTAR O BOTÃO."
-       ]
+       ],
+       "y": 900
       },
       "text": "Na porta do fim, a letra que eu conheço *desde criança*."
      },
@@ -514,13 +515,40 @@
       "text": "E você, o que faria? Comenta *A ou B*."
      }
     ]
-   }
+   },
+   "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/parte4A.mp4",
+   "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/capa4A.jpg",
+   "duracao": 75.7,
+   "roteiro": [
+    "Onze e cinquenta e um. Eu voltei pelo médico. E o espelho *me puxou*.",
+    "MEDICO: Segura firme! Se soltar, *nós dois* ficamos!",
+    "Eu puxei. Ele caiu pra fora. E o elevador *despencou*.",
+    "Vinte. Sete. Um. Menos um. A porta *abriu sozinha*.",
+    "Era o corredor do meu prédio. Só que *tudo ao contrário*.",
+    "MEDICO: Aqui fica todo mundo que *saiu* do prédio.",
+    "PROTAGONISTA: Todo mundo? Até a *minha mãe*?",
+    "Em cada porta, um nome escrito à mão. Uns de *quarenta anos atrás*.",
+    "Na porta do fim, a letra que eu conheço *desde criança*.",
+    "Trancada. E do outro lado, alguém *bateu três vezes*.",
+    "MEDICO: Dez anos atrás, ela entrou *no seu lugar*.",
+    "Câmera três: quem apertou o botão naquela noite foi *o porteiro*.",
+    "Onze e cinquenta e cinco. O interfone do elevador *chiou*.",
+    "PORTEIRO: Achou ela? Ótimo. À meia-noite, *alguém fica*.",
+    "PROTAGONISTA: Então eu fico. E ela *sai*.",
+    "O médico apontou a última porta. Um nome riscado: *PORTEIRO*.",
+    "E embaixo, na mesma letra: *saiu*.",
+    "MEDICO: Ele já morou aqui. E precisa de alguém *no lugar dele*.",
+    "Onze e cinquenta e oito. *Dois minutos*.",
+    "A: fico no menos um, pra minha mãe *sair*.",
+    "B: prendo o porteiro aqui embaixo. Mas só ele sabe *tirar ela*.",
+    "E você, o que faria? Comenta *A ou B*."
+   ]
   },
   "B": {
    "resumo": "Escolheram descer: na portaria, o livro 'SAÍDAS DO PRÉDIO' mostra que a mãe entrou no -1 no lugar do Você há 10 anos; o porteiro quer que ele entre à meia-noite, mas o espelho avisa que o porteiro também saiu de lá.",
    "retomada_gancho": "Cena 1: 'Vinte andares de escada até a minha mãe.' (~3 s, fato novo: 23:51 e as luzes apagando)",
-   "cenas": 21,
-   "palavras": 221,
+   "cenas": 22,
+   "palavras": 225,
    "duracao_alvo_s": "60-75",
    "momento_zoom_tensao": [
     1,
@@ -622,9 +650,10 @@
       "text": "No sétimo, a porta do médico estava aberta. E as luzes *apagando atrás de mim*."
      },
      {
-      "bg": "corredor_predio",
+      "bg": "sala_estar",
       "bg_params": {
-       "luz": "apagada"
+       "luz": "apagada",
+       "hora": "noite"
       },
       "cam": "in",
       "chars": [
@@ -707,14 +736,18 @@
      },
      {
       "bg": "escuro",
-      "cam": "zoom_forte",
+      "cam": "in",
       "prop": {
        "type": "carta",
        "title": "SAÍDAS DO PRÉDIO",
        "lines": [
-        "MÉDICO · 7º ANDAR · ONTEM",
-        "!SUA MÃE · HÁ 10 ANOS · 23:59"
-       ]
+        "MÉDICO · 7º ANDAR",
+        "SAIU ONTEM",
+        "",
+        "!SUA MÃE",
+        "!HÁ 10 ANOS · 23:59"
+       ],
+       "y": 640
       },
       "text": "Saídas do prédio. Na última linha, *o nome da minha mãe*."
      },
@@ -749,7 +782,27 @@
       },
       "cam": "in",
       "filtro": "tv",
-      "text": "Câmera três, dez anos atrás: ela entrou no elevador. E eu *fiquei do lado de fora*."
+      "text": "Câmera três, dez anos atrás: ela entrou no elevador."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "E eu fiquei ali fora, *olhando a porta fechar*."
      },
      {
       "bg": "recepcao_hotel",
@@ -979,16 +1032,62 @@
       "text": "E você, o que faria? Comenta *A ou B*."
      }
     ]
-   }
+   },
+   "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/parte4B.mp4",
+   "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/capa4B.jpg",
+   "duracao": 80.1,
+   "roteiro": [
+    "Onze e cinquenta e um. Vinte andares de escada até a *minha mãe*.",
+    "No sétimo, a porta do médico estava aberta. E as luzes *apagando atrás de mim*.",
+    "Lá dentro, todos os espelhos da casa estavam *virados pra parede*.",
+    "PORTEIRO: Demorou. Ela não aguenta esperar até a *meia-noite*.",
+    "PROTAGONISTA: Cadê ela? Cadê a *minha mãe*?",
+    "Ele não respondeu. Só abriu um livro grosso *em cima do balcão*.",
+    "Saídas do prédio. Na última linha, *o nome da minha mãe*.",
+    "PORTEIRO: Ela não saiu, garoto. Ela *entrou no seu lugar*.",
+    "Câmera três, dez anos atrás: ela entrou no elevador.",
+    "E eu fiquei ali fora, *olhando a porta fechar*.",
+    "PORTEIRO: Naquela noite, quem tinha que descer era *você*.",
+    "PROTAGONISTA: E hoje eu fugi do espelho. Eu *quebrei a troca*.",
+    "Onze e cinquenta e cinco. O elevador *desceu sozinho* até a portaria.",
+    "PORTEIRO: Entra à meia-noite, e ela sai. *Simples assim*.",
+    "A porta abriu. Vazio. Só o espelho, *embaçado*.",
+    "No vapor do espelho, alguém escreveu com o dedo.",
+    "MEDICO: O porteiro também saiu do *menos um*. Ele precisa de alguém lá!",
+    "Atrás de mim, o porteiro *trancou a porta da rua*.",
+    "Onze e cinquenta e oito. *Dois minutos*.",
+    "A: entro no elevador e fico no menos um, pra minha mãe *sair*.",
+    "B: tranco o porteiro lá embaixo. Mas só ele sabe *tirar ela de lá*.",
+    "E você, o que faria? Comenta *A ou B*."
+   ]
   }
  },
  "problemas": [
-  "TRAVA DE 20 H (aviso): a Parte 3 do Elevador saiu 23/11 18:55 UTC e 11:52 de Brasília = 14:52 UTC (19h57 depois). Com a mudança de Campo Grande para Brasília, nenhuma das 3 histórias cabe às 11:52 com 20 h completas; o Elevador é o que fica mais perto (3 min). Horário fixo da Semana Econômica pedido pelo dono: publicar às 11:52 (a publicação normalmente sai ~14:55 UTC, já com 20 h)."
+  "TRAVA DE 20 H (aviso): a Parte 3 do Elevador saiu 23/11 18:55 UTC e 11:52 de Brasília = 14:52 UTC (19h57 depois). Com a mudança de Campo Grande para Brasília, nenhuma das 3 histórias cabe às 11:52 com 20 h completas; o Elevador é o que fica mais perto (3 min). Horário fixo da Semana Econômica pedido pelo dono: publicar às 11:52 (a publicação normalmente sai ~14:55 UTC, já com 20 h).",
+  "Conferência visual feita (quadros + rostos): 1 boca e 2 olhos em todos, sem cortes de legenda. Observação leve: corredor 'tudo ao contrário' (A) não tem efeito de espelhamento, só a luz apagada."
  ],
  "criado_em": "2026-11-24T01:50:00Z",
  "em_breve": {
   "postado_em": "2026-11-24T09:19:11+00:00",
   "imagem": "videos/elevador/embreve4.jpg",
   "media_id": "18092373872659149"
- }
+ },
+ "produzido_em": "2026-11-24T13:20Z",
+ "placar_parcial": {
+  "A": 0,
+  "B": 1,
+  "fonte": "Produção 24/11 ~10h BRT: Windsor (media 18137593846679833, last_3dT) só tem kevin_12_zn votando B (3 comentários iguais), já respondido (18090167252309729; os 2 duplicados registrados). Nenhum comentário novo sem resposta. Se nada mudar, vence B (= padrão)."
+ },
+ "arquivos": {
+  "parte4.mp4/capa4.jpg": "cópia da versão B (padrão e líder no placar parcial)",
+  "historia.json": "parte 4 com o script B e parte 3 escolha 'B' provisória (votos 0x1); se A vencer, trocar pelo script A da ficha e escolha 'A' (ou usar parte4A.mp4/capa4A.jpg)"
+ },
+ "regras_virais": [
+  "Pré-roteiro do Planejamento já cumpria as 8 regras (frase 1 com 23:51 e conflito; sem currículo; relógio 23:52/23:53→23:55→23:58 em placas; bilhete/livro/espelho legíveis; virada de quem sabe mais (médico/espelho); A/B com custo + 'Comenta A ou B'; legenda com gancho na linha 1 e 'Manda pra quem faria tudo pela mãe').",
+  "B: cena 9 tinha 16 palavras -> dividida em 2 ('Câmera três, dez anos atrás: ela entrou no elevador.' + close do Você 'E eu fiquei ali fora, olhando a porta fechar.'). B ficou com 22 cenas.",
+  "B: cena 3 (espelhos virados dentro da casa do médico) passou de corredor_predio para sala_estar com luz apagada (o lugar onde acontece).",
+  "B: livro 'SAÍDAS DO PRÉDIO' tinha linhas cortadas na borda e título escondido pela faixa -> linhas curtas em 5 linhas, y=640, câmera 'in'.",
+  "A: bilhete da mãe tinha 'FILHO,' escondido atrás da faixa amarela -> bilhete descido (y=900).",
+  "Cena de capa (cover) igual nas duas versões e igual ao cartaz EM BREVE (não alterada)."
+ ]
 }

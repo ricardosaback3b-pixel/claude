@@ -132,6 +132,118 @@
     "personagem": "PROTAGONISTA",
     "texto": "E você, o que faria?"
    }
+  ],
+  "4": [
+   {
+    "cena": 1,
+    "personagem": "PROTAGONISTA",
+    "texto": "Onze e cinquenta e um. Vinte andares de escada até a *minha mãe*."
+   },
+   {
+    "cena": 2,
+    "personagem": "PROTAGONISTA",
+    "texto": "No sétimo, a porta do médico estava aberta. E as luzes *apagando atrás de mim*."
+   },
+   {
+    "cena": 3,
+    "personagem": "PROTAGONISTA",
+    "texto": "Lá dentro, todos os espelhos da casa estavam *virados pra parede*."
+   },
+   {
+    "cena": 4,
+    "personagem": "PORTEIRO",
+    "texto": "Demorou. Ela não aguenta esperar até a *meia-noite*."
+   },
+   {
+    "cena": 5,
+    "personagem": "PROTAGONISTA",
+    "texto": "Cadê ela? Cadê a *minha mãe*?"
+   },
+   {
+    "cena": 6,
+    "personagem": "PROTAGONISTA",
+    "texto": "Ele não respondeu. Só abriu um livro grosso *em cima do balcão*."
+   },
+   {
+    "cena": 7,
+    "personagem": "PROTAGONISTA",
+    "texto": "Saídas do prédio. Na última linha, *o nome da minha mãe*."
+   },
+   {
+    "cena": 8,
+    "personagem": "PORTEIRO",
+    "texto": "Ela não saiu, garoto. Ela *entrou no seu lugar*."
+   },
+   {
+    "cena": 9,
+    "personagem": "PROTAGONISTA",
+    "texto": "Câmera três, dez anos atrás: ela entrou no elevador."
+   },
+   {
+    "cena": 10,
+    "personagem": "PROTAGONISTA",
+    "texto": "E eu fiquei ali fora, *olhando a porta fechar*."
+   },
+   {
+    "cena": 11,
+    "personagem": "PORTEIRO",
+    "texto": "Naquela noite, quem tinha que descer era *você*."
+   },
+   {
+    "cena": 12,
+    "personagem": "PROTAGONISTA",
+    "texto": "E hoje eu fugi do espelho. Eu *quebrei a troca*."
+   },
+   {
+    "cena": 13,
+    "personagem": "PROTAGONISTA",
+    "texto": "Onze e cinquenta e cinco. O elevador *desceu sozinho* até a portaria."
+   },
+   {
+    "cena": 14,
+    "personagem": "PORTEIRO",
+    "texto": "Entra à meia-noite, e ela sai. *Simples assim*."
+   },
+   {
+    "cena": 15,
+    "personagem": "PROTAGONISTA",
+    "texto": "A porta abriu. Vazio. Só o espelho, *embaçado*."
+   },
+   {
+    "cena": 16,
+    "personagem": "PROTAGONISTA",
+    "texto": "No vapor do espelho, alguém escreveu com o dedo."
+   },
+   {
+    "cena": 17,
+    "personagem": "MEDICO",
+    "texto": "O porteiro também saiu do *menos um*. Ele precisa de alguém lá!"
+   },
+   {
+    "cena": 18,
+    "personagem": "PROTAGONISTA",
+    "texto": "Atrás de mim, o porteiro *trancou a porta da rua*."
+   },
+   {
+    "cena": 19,
+    "personagem": "PROTAGONISTA",
+    "texto": "Onze e cinquenta e oito. *Dois minutos*."
+   },
+   {
+    "cena": 20,
+    "personagem": "PROTAGONISTA",
+    "texto": "A: entro no elevador e fico no menos um, pra minha mãe *sair*."
+   },
+   {
+    "cena": 21,
+    "personagem": "PROTAGONISTA",
+    "texto": "B: tranco o porteiro lá embaixo. Mas só ele sabe *tirar ela de lá*."
+   },
+   {
+    "cena": 22,
+    "personagem": "PROTAGONISTA",
+    "texto": "E você, o que faria? Comenta *A ou B*."
+   }
   ]
  }
 }

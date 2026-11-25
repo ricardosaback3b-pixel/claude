@@ -1,0 +1,510 @@
+{
+ "data": "2026-11-25",
+ "horario": "2052",
+ "fuso": "America/Sao_Paulo",
+ "historia": "o-sombra-da-sala-12",
+ "titulo": "O Sombra da Sala 12",
+ "parte": 4,
+ "status": "planejado",
+ "votacao": false,
+ "versao_padrao": "unica",
+ "estilo": "andar",
+ "observacao": "O script 'pronta' da Parte 4 no historia.json tinha 9 cenas longas, cenários antigos (corredor_predio/sala_aula) e terminava com 'A Parte Cinco fica no perfil' (proibido). Este pré-roteiro reescreve em 20 cenas com as regras dos virais, mantendo os fatos da bíblia (ladrilho solto sob a placa SALA 12, chave pequena, foto TURMA 12 · 1996 com a Marta criança, demolição no mês que vem, turma dividida em 3, tênis de estrela do Caio). Continua direto da P3 (19:22 na porta da sala 12). Fato novo pequeno: SMS do Sombra 12:21 'Viu a estrela, né? Não conta pra ninguém. Ainda.' (coerente com Caio querendo salvar a sala). Relógio: 19:24 → QUARTA 07:30 FALTAM 2 DIAS → 12:20 → 12:21. A Produção deve substituir o script da parte 4 no historia.json por este. Caio só aparece no fim (não confessa antes da P6).",
+ "versoes": {
+  "unica": {
+   "resumo": "Debaixo da placa da sala 12: chave e foto de 1996 com a Marta criança; ela revela a demolição e a turma dividida; na saída, Teo vê a estrela no tênis do Caio e o Sombra manda: 'Não conta pra ninguém. Ainda.'",
+   "retomada_gancho": "Cena 1: 'Sete e vinte e quatro. Debaixo da placa da sala doze, o chão fez oco.' (~3 s, fato novo: o ladrilho oco)",
+   "cenas": 20,
+   "palavras": 193,
+   "duracao_alvo_s": "60-80",
+   "momento_zoom_tensao": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    8,
+    10,
+    11,
+    13,
+    14,
+    17,
+    18,
+    19,
+    20
+   ],
+   "cenas_relogio": [
+    "cena 4 relógio do cenário 19:26",
+    "cena 7 placa 'QUARTA · 07:30 · FALTAM 2 DIAS'",
+    "cena 15 placa '12:20'",
+    "cena 19 celular '12:21 · DESCONHECIDO'"
+   ],
+   "cena_celular_papel": [
+    "cena 3 lista 'DEBAIXO DO 12': 1 chave pequena / !1 foto: TURMA 12 · 1996",
+    "cena 11 carta 'OFÍCIO DA ESCOLA': SALA 12: DEMOLIÇÃO / !DEZEMBRO / TURMA 12: DIVIDIDA EM 3",
+    "cena 19 celular '12:21 · DESCONHECIDO': Viu a estrela, né? / !Não conta pra ninguém. / Ainda. / — O SOMBRA"
+   ],
+   "final": "Virada: no segundo em que Teo vê a estrela no tênis do Caio, o Sombra (quem sabe mais, estava olhando) manda SMS 'Viu a estrela, né? Não conta pra ninguém. Ainda.' Chamada 'Comenta PARTE CINCO pra saber se o Caio é o Sombra'.",
+   "gatilho_compartilhar": "Manda pra quem ia ficar arrasado se a turma fosse dividida",
+   "legenda": "Debaixo da placa da sala 12 tinha uma foto... e a menina de trança era a diretora. 🔦\n\nO Sombra da Sala 12 · Parte 4 — Debaixo do número 12\n\nO Caio é o Sombra ou tá sendo usado? Teoria aqui 👇\n\nManda pra quem ia ficar arrasado se a turma fosse dividida 👀\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#misterio #escola #historiasempartes #detetive #amizade",
+   "capa": {
+    "titulo": "O Sombra da Sala 12",
+    "parte": "Parte 4",
+    "cover_text": "Debaixo do número 12"
+   },
+   "cenarios": [
+    "corredor_escola",
+    "escuro",
+    "gabinete",
+    "sala_escola"
+   ],
+   "script": {
+    "cover_text": "Debaixo do número 12",
+    "faixa": "PARTE 4 · Debaixo do número 12",
+    "gancho_tela": "O CHÃO FEZ OCO",
+    "caption": "Debaixo da placa da sala 12 tinha uma foto... e a menina de trança era a diretora. 🔦\n\nO Sombra da Sala 12 · Parte 4 — Debaixo do número 12\n\nO Caio é o Sombra ou tá sendo usado? Teoria aqui 👇\n\nManda pra quem ia ficar arrasado se a turma fosse dividida 👀\n\nA Parte 5 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#misterio #escola #historiasempartes #detetive #amizade",
+    "scenes": [
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "texto": "SALA 12",
+       "desvio": 120
+      },
+      "cam": "zoom_tremido",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "surpreso",
+        "mouth": "o"
+       }
+      ],
+      "text": "Sete e vinte e quatro. Debaixo da placa da sala doze, o chão fez *oco*."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "texto": "SALA 12",
+       "desvio": -120
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "NINA",
+        "texto": "O rejunte tá raspado. Alguém já *abriu isso*."
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "lista",
+       "title": "DEBAIXO DO 12",
+       "lines": [
+        "1 chave pequena",
+        "!1 foto: TURMA 12 · 1996"
+       ]
+      },
+      "text": "Lá embaixo, uma chave enferrujada. E uma foto de *noventa e seis*."
+     },
+     {
+      "bg": "sala_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "texto": "TURMA 12\n1996",
+       "relogio_hora": "19:26"
+      },
+      "cam": "pan_r",
+      "text": "Uma turma inteira na frente da sala doze. Os nomes, *riscados*."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "texto": "SALA 12",
+       "desvio": 60
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "surpreso",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "TEO",
+        "texto": "Essa menina de trança... é a *Diretora Marta*!"
+       }
+      ]
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "texto": "SALA 12",
+       "desvio": -60
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "BENTO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "BENTO",
+        "texto": "Guarda isso. Amanhã cedo ela decide a sua *suspensão*."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "texto": "SALA 12",
+       "seed": 4
+      },
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "placa",
+       "title": "QUARTA · 07:30 · FALTAM 2 DIAS",
+       "y": 700
+      },
+      "text": "Quarta, sete e meia. Faltavam *dois dias* pra eu provar tudo."
+     },
+     {
+      "bg": "gabinete",
+      "bg_params": {
+       "texto": "DIRETORIA",
+       "hora": "dia",
+       "cor": [
+        40,
+        90,
+        170
+       ]
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "MARTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MARTA",
+        "texto": "Onde vocês acharam *essa foto*?"
+       }
+      ]
+     },
+     {
+      "bg": "gabinete",
+      "bg_params": {
+       "texto": "DIRETORIA",
+       "hora": "dia",
+       "cor": [
+        40,
+        90,
+        170
+       ]
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "TEO",
+        "texto": "Debaixo da sala doze. A senhora estudou *lá*?"
+       }
+      ]
+     },
+     {
+      "bg": "gabinete",
+      "bg_params": {
+       "texto": "DIRETORIA",
+       "hora": "dia",
+       "cor": [
+        40,
+        90,
+        170
+       ]
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "MARTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MARTA",
+        "texto": "Estudei. E no mês que vem, ela vai ser *demolida*."
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "carta",
+       "title": "OFÍCIO DA ESCOLA",
+       "lines": [
+        "SALA 12: DEMOLIÇÃO",
+        "!DEZEMBRO",
+        "TURMA 12: DIVIDIDA EM 3"
+       ]
+      },
+      "text": "Vai virar estacionamento. E a nossa turma, *dividida em três*."
+     },
+     {
+      "bg": "gabinete",
+      "bg_params": {
+       "texto": "DIRETORIA",
+       "hora": "dia",
+       "cor": [
+        40,
+        90,
+        170
+       ]
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.21,
+        "brows": "preocupado",
+        "mouth": "triste"
+       },
+       {
+        "ref": "TEO",
+        "x": 0.67,
+        "brows": "surpreso",
+        "mouth": "o"
+       }
+      ],
+      "text": "Eu e a Nina, em salas diferentes. *Ninguém* tinha contado."
+     },
+     {
+      "bg": "gabinete",
+      "bg_params": {
+       "texto": "DIRETORIA",
+       "hora": "dia",
+       "cor": [
+        40,
+        90,
+        170
+       ]
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "MARTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MARTA",
+        "texto": "Eu tentei impedir e perdi. E isso não te livra da *suspensão*, Teo."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "desvio": 140
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "NINA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "surpreso",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "NINA",
+        "texto": "Teo... o Sombra sabia da demolição *antes da gente*."
+       }
+      ]
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "texto": "SAÍDA",
+       "seed": 9
+      },
+      "cam": "out",
+      "prop": {
+       "type": "placa",
+       "title": "12:20",
+       "y": 700
+      },
+      "text": "Meio-dia e vinte. Sinal da saída. E alguém veio *correndo*."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "desvio": -140
+      },
+      "cam": "pan_l",
+      "chars": [
+       {
+        "ref": "CAIO",
+        "x": 0.21,
+        "brows": "neutro"
+       },
+       {
+        "ref": "TEO",
+        "x": 0.67,
+        "brows": "surpreso"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "CAIO",
+        "texto": "Sai da frente, Teo! *Tô com pressa*!"
+       }
+      ]
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "seed": 11
+      },
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "placa",
+       "title": "★",
+       "y": 820
+      },
+      "text": "Eu olhei pro chão. Na sola do tênis dele: *uma estrela*."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "desvio": 100
+      },
+      "cam": "zoom_tremido",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "surpreso",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "TEO",
+        "texto": "A mesma estrela. Da pegada *no escuro*."
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "hook": true,
+      "prop": {
+       "type": "celular",
+       "title": "12:21 · DESCONHECIDO",
+       "lines": [
+        "Viu a estrela, né?",
+        "!Não conta pra ninguém.",
+        "Ainda.",
+        "— O SOMBRA"
+       ]
+      },
+      "text": "No mesmo segundo, meu celular vibrou. *Número desconhecido*."
+     },
+     {
+      "bg": "corredor_escola",
+      "bg_params": {
+       "luz": "acesa",
+       "texto": "SALA 12",
+       "desvio": -100
+      },
+      "cam": "zoom_rosto",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "TEO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Comenta PARTE CINCO pra saber se o Caio é *o Sombra*."
+     }
+    ]
+   }
+  }
+ },
+ "problemas": [],
+ "criado_em": "2026-11-25T00:47:00Z"
+}

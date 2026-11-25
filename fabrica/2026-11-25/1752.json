@@ -1,0 +1,970 @@
+{
+ "data": "2026-11-25",
+ "horario": "1752",
+ "fuso": "America/Sao_Paulo",
+ "historia": "cidade-sirene",
+ "titulo": "Nessa Cidade, a Sirene Toca às 18h",
+ "parte": 6,
+ "status": "planejado",
+ "votacao": true,
+ "final": true,
+ "versao_padrao": "B",
+ "estilo": "cartela",
+ "observacao": "PARTE 6 = FINAL (capa 'PARTE 6 · FINAL'). A versão depende dos votos da Parte 5 (media 18038856656667788): a Produção e a Publicação recontam. Padrão B (parar o relógio): é a mais dramática e a série vem de B. Sem tela de votos no fim (não há Parte 7): o vídeo termina na virada. Legenda: linha 1 = gancho; {RESULTADO_SE_HOUVER_VOTOS} na linha 2 vira 'Vocês escolheram X (a a b)!' ou some. Fecha o mistério (céu-espelho = sumidos; Prefeito escrevia nomes pra esconder o Policial, que olhou pra cima com ele aos 8 anos). B termina em LOOP (ponteiro volta pra 17:59 = 1ª frase), teste de reassistida do APRENDIZADOS; A termina com o outro eu (quem sabe mais) achando outro caderno. ATENÇÃO: depois desta parte a Sirene acaba e, na Semana Econômica, não pode entrar história nova; o horário 17:52 de 26/11 fica vago até o dono decidir.",
+ "versoes": {
+  "B": {
+   "resumo": "Escolheram parar o relógio: às 18h o ponteiro trava, os sumidos descem (o Prefeito primeiro), o narrador esquece o próprio nome; o Policial escreve o nome dele pela última vez e ele lembra; o Prefeito avisa que basta alguém dar corda e o ponteiro volta pra 17:59.",
+   "retomada_gancho": "Cena 1: 'Cinco e cinquenta e nove. Eu subi a torre do relógio correndo.' (~3 s, fato novo: ele está na torre)",
+   "cenas": 19,
+   "palavras": 194,
+   "duracao_alvo_s": "60-80",
+   "momento_zoom_tensao": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    11,
+    12,
+    13,
+    16,
+    17,
+    18,
+    19
+   ],
+   "cenas_relogio": [
+    "cena 1 relógio do cenário 17:59",
+    "cena 2 relógio do cenário 17:59",
+    "cena 3 placa '17:59:50'",
+    "cena 4 relógio do cenário 18:00",
+    "cena 5 relógio do cenário 18:00",
+    "cena 6 relógio do cenário 18:00",
+    "cena 7 relógio do cenário 18:01",
+    "cena 10 relógio do cenário 18:02",
+    "cena 11 relógio do cenário 18:02",
+    "cena 12 relógio do cenário 18:03",
+    "cena 13 placa '18:03'",
+    "cena 15 relógio do cenário 18:03",
+    "cena 16 relógio do cenário 18:04",
+    "cena 17 relógio do cenário 18:04",
+    "cena 18 relógio do cenário 18:04",
+    "cena 19 placa '17:59'"
+   ],
+   "cena_celular_papel": [
+    "cena 9 carta 'O CADERNO': Nome não se apaga. / Só se troca. /  / !SEU NOME: ________"
+   ],
+   "final": "Virada + loop: o Prefeito (quem sabe mais) avisa que o relógio parado só segura até alguém dar corda; 'Tic' e o ponteiro volta pra 17:59, ecoando a 1ª frase. Sem resumo.",
+   "gatilho_compartilhar": "Manda pra quem esquece o próprio nome quando tá nervoso",
+   "legenda": "Eu parei o relógio da sirene... e esqueci o meu próprio nome. 🚨\n{RESULTADO_SE_HOUVER_VOTOS}\nNessa Cidade, a Sirene Toca às 18h · Parte 6 — FINAL: O relógio parado\n\nVocê pararia o relógio sabendo o preço? 👇\n\nManda pra quem esquece o próprio nome quando tá nervoso 👀\n\nFIM. Começa da Parte 1 no perfil @mundoemhistorias. Nova história em breve 🔔\n\n#distopia #sirene #historiasempartes #final #misterio",
+   "capa": {
+    "titulo": "Nessa Cidade, a Sirene Toca às 18h",
+    "parte": "Parte 6 · FINAL",
+    "cover_text": "O relógio parado"
+   },
+   "cenarios": [
+    "casa",
+    "escuro",
+    "praca",
+    "rua_noite"
+   ],
+   "script": {
+    "cover_text": "O relógio parado",
+    "faixa": "PARTE 6 · FINAL",
+    "gancho_tela": "PAREI O RELÓGIO",
+    "caption": "Eu parei o relógio da sirene... e esqueci o meu próprio nome. 🚨\n{RESULTADO_SE_HOUVER_VOTOS}\nNessa Cidade, a Sirene Toca às 18h · Parte 6 — FINAL: O relógio parado\n\nVocê pararia o relógio sabendo o preço? 👇\n\nManda pra quem esquece o próprio nome quando tá nervoso 👀\n\nFIM. Começa da Parte 1 no perfil @mundoemhistorias. Nova história em breve 🔔\n\n#distopia #sirene #historiasempartes #final #misterio",
+    "scenes": [
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "17:59",
+       "alerta": true
+      },
+      "cam": "zoom_tremido",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "text": "Cinco e cinquenta e nove. Eu subi a torre do relógio *correndo*."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "17:59"
+      },
+      "cam": "shake",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "POLICIAL",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "bravo",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "POLICIAL",
+        "texto": "Se parar o relógio, você esquece o *próprio nome*!"
+       }
+      ]
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "17:59"
+      },
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "placa",
+       "title": "17:59:50",
+       "y": 700
+      },
+      "text": "Dez segundos. Eu agarrei o ponteiro *vermelho* com as duas mãos."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:00",
+       "alerta": true
+      },
+      "cam": "shake",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "surpreso",
+        "mouth": "o"
+       }
+      ],
+      "text": "Seis em ponto. A sirene tocou. E o ponteiro *travou*."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:00",
+       "neblina": true,
+       "ceu_espelho": true
+      },
+      "cam": "zoom_forte",
+      "tensao": true,
+      "text": "Lá em cima, a cidade de cabeça pra baixo começou a *descer*. Devagar."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:00",
+       "ceu_espelho": true
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PREFEITO",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "surpreso"
+       }
+      ],
+      "text": "O primeiro a pisar na praça foi o *Prefeito*. Inteiro."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:01",
+       "ceu_espelho": true
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "PREFEITO",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PREFEITO",
+        "texto": "Você parou o relógio? Sabe o que isso *te custa*?"
+       }
+      ]
+     },
+     {
+      "bg": "rua_noite",
+      "cam": "zoom_tremido",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "Quem é você? E... quem sou *eu*?"
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "hook": true,
+      "prop": {
+       "type": "carta",
+       "title": "O CADERNO",
+       "lines": [
+        "Nome não se apaga.",
+        "Só se troca.",
+        "",
+        "!SEU NOME: ________"
+       ]
+      },
+      "text": "Abri o caderno. Na linha do meu nome, *só um borrão*."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:02",
+       "ceu_espelho": true
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "POLICIAL",
+        "x": 0.3,
+        "scale": 0.95,
+        "brows": "preocupado"
+       },
+       {
+        "ref": "PREFEITO",
+        "x": 0.72,
+        "scale": 0.95,
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PREFEITO",
+        "texto": "Ele olhou pra cima comigo. A gente tinha *oito anos*."
+       }
+      ]
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:02"
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "PREFEITO",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PREFEITO",
+        "texto": "Escrevi trinta anos de nomes pra ninguém *levar ele*."
+       }
+      ]
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:03"
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "POLICIAL",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "POLICIAL",
+        "texto": "Me dá a caneta, menino. É a *última vez*."
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "placa",
+       "title": "18:03",
+       "y": 700
+      },
+      "text": "Seis e três. Ele escreveu um nome, letra por letra. *O meu*."
+     },
+     {
+      "bg": "casa",
+      "bg_params": {
+       "hora": "noite",
+       "luz": "acesa",
+       "texto": "9",
+       "porta": [
+        40,
+        110,
+        210
+       ]
+      },
+      "cam": "in",
+      "text": "A porta azul. A rua nove. Eu *lembrei de tudo*."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:03"
+      },
+      "cam": "out",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.3,
+        "scale": 0.95,
+        "brows": "surpreso",
+        "mouth": "o"
+       },
+       {
+        "ref": "POLICIAL",
+        "x": 0.72,
+        "scale": 0.95,
+        "brows": "neutro"
+       }
+      ],
+      "text": "Na praça, os sumidos se abraçavam. Centenas de famílias, *voltando pra casa*."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:04"
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "POLICIAL",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "POLICIAL",
+        "texto": "Agora sim. Ninguém mais some *nessa cidade*."
+       }
+      ]
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:04"
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PREFEITO",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "preocupado"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PREFEITO",
+        "texto": "Relógio parado segura eles. Até alguém *dar corda* de novo."
+       }
+      ]
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:04"
+      },
+      "cam": "zoom_tremido",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "surpreso",
+        "mouth": "o"
+       }
+      ],
+      "text": "Aí, atrás de mim, a torre fez um barulho. *Tic*."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "17:59",
+       "alerta": true
+      },
+      "cam": "zoom_forte",
+      "hook": true,
+      "prop": {
+       "type": "placa",
+       "title": "17:59",
+       "y": 700
+      },
+      "text": "O ponteiro andou pra trás. E marcou *cinco e cinquenta e nove*."
+     }
+    ]
+   }
+  },
+  "A": {
+   "resumo": "Escolheram escrever o nome do Policial: ele olha pra cima de propósito e sobe por vontade própria; os sumidos descem (o Prefeito primeiro), o narrador rasga o caderno e a sirene nunca mais toca; mas o outro eu manda mensagem: achou outro caderno na cidade vizinha.",
+   "retomada_gancho": "Cena 1: 'Cinco e cinquenta e nove. Eu escrevi o nome do Policial.' (~3 s, fato novo: o nome escrito)",
+   "cenas": 20,
+   "palavras": 191,
+   "duracao_alvo_s": "60-80",
+   "momento_zoom_tensao": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    10,
+    13,
+    14,
+    15,
+    18,
+    19,
+    20
+   ],
+   "cenas_relogio": [
+    "cena 1 relógio do cenário 17:59",
+    "cena 3 relógio do cenário 17:59",
+    "cena 4 relógio do cenário 18:00",
+    "cena 5 relógio do cenário 18:00",
+    "cena 6 relógio do cenário 18:00",
+    "cena 7 relógio do cenário 18:00",
+    "cena 8 relógio do cenário 18:01",
+    "cena 9 relógio do cenário 18:01",
+    "cena 10 relógio do cenário 18:02",
+    "cena 11 relógio do cenário 18:02",
+    "cena 13 placa '18:03'",
+    "cena 14 relógio do cenário 18:03",
+    "cena 16 relógio do cenário 18:05",
+    "cena 19 celular '18:00 · DESCONHECIDO'"
+   ],
+   "cena_celular_papel": [
+    "cena 2 carta 'O CADERNO': Nome não se apaga. / Só se troca. /  / !O POLICIAL",
+    "cena 15 carta 'O CADERNO': !RASGADO / página por página",
+    "cena 19 celular '18:00 · DESCONHECIDO': Achei outro caderno. / !Na cidade vizinha. / — O OUTRO EU"
+   ],
+   "final": "Virada: mensagem do outro eu (quem sabe mais) 'Achei outro caderno. Na cidade vizinha.' + 'Eu ainda não terminei você.' (eco da Parte 5). Sem resumo.",
+   "gatilho_compartilhar": "Manda pra quem guardaria um segredo por trinta anos",
+   "legenda": "Eu escrevi o nome do Policial... e ele olhou pra cima de propósito. 🚨\n{RESULTADO_SE_HOUVER_VOTOS}\nNessa Cidade, a Sirene Toca às 18h · Parte 6 — FINAL: O último nome\n\nQuem você escreveria no caderno? 👇\n\nManda pra quem guardaria um segredo por trinta anos 👀\n\nFIM. Começa da Parte 1 no perfil @mundoemhistorias. Nova história em breve 🔔\n\n#distopia #sirene #historiasempartes #final #suspense",
+   "capa": {
+    "titulo": "Nessa Cidade, a Sirene Toca às 18h",
+    "parte": "Parte 6 · FINAL",
+    "cover_text": "O último nome"
+   },
+   "cenarios": [
+    "casa",
+    "escuro",
+    "praca",
+    "rua_noite"
+   ],
+   "script": {
+    "cover_text": "O último nome",
+    "faixa": "PARTE 6 · FINAL",
+    "gancho_tela": "ESCREVI O NOME DELE",
+    "caption": "Eu escrevi o nome do Policial... e ele olhou pra cima de propósito. 🚨\n{RESULTADO_SE_HOUVER_VOTOS}\nNessa Cidade, a Sirene Toca às 18h · Parte 6 — FINAL: O último nome\n\nQuem você escreveria no caderno? 👇\n\nManda pra quem guardaria um segredo por trinta anos 👀\n\nFIM. Começa da Parte 1 no perfil @mundoemhistorias. Nova história em breve 🔔\n\n#distopia #sirene #historiasempartes #final #suspense",
+    "scenes": [
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "17:59",
+       "alerta": true
+      },
+      "cam": "zoom_tremido",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "Cinco e cinquenta e nove. Eu escrevi o nome *do Policial*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "carta",
+       "title": "O CADERNO",
+       "lines": [
+        "Nome não se apaga.",
+        "Só se troca.",
+        "",
+        "!O POLICIAL"
+       ]
+      },
+      "text": "A tinta ficou vermelha na hora. E o Policial *sorriu*."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "17:59"
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "POLICIAL",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "POLICIAL",
+        "texto": "Tudo bem, menino. Eu esperei trinta anos por *esse nome*."
+       }
+      ]
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:00",
+       "alerta": true
+      },
+      "cam": "shake",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "POLICIAL",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "neutro"
+       }
+      ],
+      "text": "Seis em ponto. A sirene tocou. E ele *não correu*."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:00",
+       "neblina": true,
+       "ceu_espelho": true
+      },
+      "cam": "zoom_forte",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "POLICIAL",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "surpreso"
+       }
+      ],
+      "text": "Ele olhou pra cima. *De propósito*."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:00",
+       "ceu_espelho": true
+      },
+      "cam": "zoom_tremido",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "bravo",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "Não! Fecha os olhos! Foi você que me *ensinou isso*!"
+       }
+      ]
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:00",
+       "ceu_espelho": true
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "POLICIAL",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "POLICIAL",
+        "texto": "Eu olhei com oito anos. O Prefeito escreveu nomes pra *me esconder*."
+       }
+      ]
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:01",
+       "neblina": true,
+       "ceu_espelho": true
+      },
+      "cam": "out",
+      "text": "Ele começou a subir. E os sumidos começaram a *descer*."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:01",
+       "ceu_espelho": true
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PREFEITO",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "surpreso"
+       }
+      ],
+      "text": "O primeiro a pisar na praça foi o *Prefeito*. Inteiro."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:02",
+       "ceu_espelho": true
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "PREFEITO",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PREFEITO",
+        "texto": "Trinta anos de nomes. Pra ele subir *por vontade própria*."
+       }
+      ]
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:02",
+       "ceu_espelho": true
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.3,
+        "scale": 0.95,
+        "brows": "preocupado"
+       },
+       {
+        "ref": "PREFEITO",
+        "x": 0.72,
+        "scale": 0.95,
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "E o meu nome? Ficou *pela metade*."
+       },
+       {
+        "voz": "PREFEITO",
+        "texto": "Olha pra sua *porta*, menino."
+       }
+      ]
+     },
+     {
+      "bg": "casa",
+      "bg_params": {
+       "hora": "noite",
+       "luz": "acesa",
+       "texto": "9",
+       "porta": [
+        40,
+        110,
+        210
+       ]
+      },
+      "cam": "in",
+      "text": "A porta azul. A rua nove. O meu nome inteiro *voltou*."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:03",
+       "ceu_espelho": true
+      },
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "placa",
+       "title": "18:03",
+       "y": 700
+      },
+      "text": "Seis e três. Centenas de pessoas na praça. *Voltando pra casa*."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "tarde",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:03",
+       "ceu_espelho": true
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "POLICIAL",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "POLICIAL",
+        "texto": "Rasga o caderno, menino. Ninguém mais *escreve nome*."
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "carta",
+       "title": "O CADERNO",
+       "lines": [
+        "!RASGADO",
+        "página por página"
+       ]
+      },
+      "text": "Eu rasguei. Página por página. *Nome por nome*."
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:05"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.3,
+        "scale": 0.95,
+        "brows": "surpreso"
+       },
+       {
+        "ref": "PREFEITO",
+        "x": 0.72,
+        "scale": 0.95,
+        "brows": "neutro"
+       }
+      ],
+      "text": "O ponteiro vermelho parou. E a sirene *nunca mais tocou*."
+     },
+     {
+      "bg": "rua_noite",
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "neutro"
+       }
+      ],
+      "text": "No dia seguinte, às seis, eu fiquei na rua. Olhando pra cima. *Sem medo*."
+     },
+     {
+      "bg": "rua_noite",
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "surpreso",
+        "mouth": "o"
+       }
+      ],
+      "text": "Até o meu celular vibrar. *Número desconhecido*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "hook": true,
+      "prop": {
+       "type": "celular",
+       "title": "18:00 · DESCONHECIDO",
+       "lines": [
+        "Achei outro caderno.",
+        "!Na cidade vizinha.",
+        "— O OUTRO EU"
+       ]
+      },
+      "text": "Achei outro caderno. Na cidade *vizinha*."
+     },
+     {
+      "bg": "rua_noite",
+      "bg_params": {
+       "alerta": true
+      },
+      "cam": "zoom_tremido",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "OUTRO_EU",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "bravo"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "OUTRO_EU",
+        "texto": "Eu ainda não terminei *você*."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "problemas": [
+  "Última parte da Sirene: em 26/11 o horário 17:52 fica sem história (Semana Econômica proíbe história nova; Ponte e Ônibus pausadas). Precisa de decisão do dono."
+ ],
+ "criado_em": "2026-11-25T00:47:00Z"
+}

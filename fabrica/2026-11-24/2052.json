@@ -5,7 +5,7 @@
  "historia": "o-sombra-da-sala-12",
  "titulo": "O Sombra da Sala 12",
  "parte": 3,
- "status": "aprovado",
+ "status": "publicado",
  "votacao": false,
  "versao_padrao": "unica",
  "estilo": "andar",
@@ -551,5 +551,10 @@
    "cena 1 dividida em 2 (close + plano aberto no corredor escuro) para cortes ≤4 s no gancho",
    "sala_escola (cenarios.py): placa SALA 12 e relógio de parede desceram 200 px — estavam por trás/cortados pela faixa 'PARTE 3' do topo; lousa começa em 730"
   ]
- }
+ },
+ "versao_escolhida": "unica",
+ "placar": null,
+ "media_id": "17935027599167844",
+ "publicado_em": "2026-11-25T00:55:24Z",
+ "primeiro_comentario_id": "17920464192498489"
 }

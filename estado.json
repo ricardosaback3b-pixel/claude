@@ -1,119 +1,125 @@
 {
- "horarios": "9h, 12h, 15h, 18h, 21h (America/Campo_Grande)",
- "vez": 4,
- "ativas": [
-  {
-   "slug": "ultimo-onibus",
-   "tipo": "continua"
-  },
-  {
-   "slug": "elevador",
-   "tipo": "votacao"
-  },
-  {
-   "slug": "cidade-sirene",
-   "tipo": "votacao"
-  },
-  {
-   "slug": "o-sombra-da-sala-12",
-   "tipo": "continua"
-  },
-  {
-   "slug": "a-ponte-caida",
-   "tipo": "votacao"
-  }
- ],
- "historico": [
-  {
-   "quando": "2026-11-21T16:30:59Z",
-   "slug": "cidade-sirene",
-   "parte": 1,
-   "media_id": "18139054078658808"
-  },
-  {
-   "quando": "2026-11-21T19:45:47Z",
-   "slug": "elevador",
-   "parte": 1,
-   "media_id": "18125470915985816"
-  },
-  {
-   "quando": "2026-11-21T23:57:51Z",
-   "slug": "cidade-sirene",
-   "parte": 2,
-   "media_id": "17961883587257936"
-  },
-  {
-   "quando": "2026-11-22T13:55:28Z",
-   "slug": "elevador",
-   "parte": 2,
-   "media_id": "18094501607231847"
-  },
-  {
-   "quando": "2026-11-22T18:59:34Z",
-   "slug": "ultimo-onibus",
-   "parte": 1,
-   "media_id": "18116734688138689"
-  },
-  {
-   "quando": "2026-11-22T21:57:00Z",
-   "slug": "cidade-sirene",
-   "parte": 3,
-   "media_id": "18276159127306573"
-  },
-  {
-   "quando": "2026-11-23T00:59:07Z",
-   "slug": "o-sombra-da-sala-12",
-   "parte": 1,
-   "media_id": "18405150862204741"
-  },
-  {
-   "quando": "2026-11-23T13:03:29Z",
-   "slug": "a-ponte-caida",
-   "parte": 1,
-   "media_id": "18029895026874855"
-  },
-  {
-   "quando": "2026-11-23T15:55:29Z",
-   "slug": "ultimo-onibus",
-   "parte": 2,
-   "media_id": "18088148606330324"
-  },
-  {
-   "quando": "2026-11-23T18:55:21Z",
-   "slug": "elevador",
-   "parte": 3,
-   "media_id": "18137593846679833"
-  },
-  {
-   "quando": "2026-11-23T21:55:10Z",
-   "slug": "cidade-sirene",
-   "parte": 4,
-   "media_id": "18133967224835332"
-  },
-  {
-   "quando": "2026-11-24T00:55:08Z",
-   "slug": "o-sombra-da-sala-12",
-   "parte": 2,
-   "media_id": "17917481604551583"
-  },
-  {
-   "quando": "2026-11-24T15:55:12Z",
-   "slug": "elevador",
-   "parte": 4,
-   "media_id": "18077993924592764"
-  },
-  {
-   "quando": "2026-11-24T21:55:03Z",
-   "slug": "cidade-sirene",
-   "parte": 5,
-   "media_id": "18038856656667788"
-  },
-  {
-   "quando": "2026-11-25T00:55:24Z",
-   "slug": "o-sombra-da-sala-12",
-   "parte": 3,
-   "media_id": "17935027599167844"
-  }
- ],
- "ultimo_estilo": "cartela"
+  "horarios": "9h, 12h, 15h, 18h, 21h (America/Campo_Grande)",
+  "vez": 2,
+  "ativas": [
+    {
+      "slug": "ultimo-onibus",
+      "tipo": "continua"
+    },
+    {
+      "slug": "elevador",
+      "tipo": "votacao"
+    },
+    {
+      "slug": "cidade-sirene",
+      "tipo": "votacao"
+    },
+    {
+      "slug": "o-sombra-da-sala-12",
+      "tipo": "continua"
+    },
+    {
+      "slug": "a-ponte-caida",
+      "tipo": "votacao"
+    }
+  ],
+  "historico": [
+    {
+      "quando": "2026-11-21T16:30:59Z",
+      "slug": "cidade-sirene",
+      "parte": 1,
+      "media_id": "18139054078658808"
+    },
+    {
+      "quando": "2026-11-21T19:45:47Z",
+      "slug": "elevador",
+      "parte": 1,
+      "media_id": "18125470915985816"
+    },
+    {
+      "quando": "2026-11-21T23:57:51Z",
+      "slug": "cidade-sirene",
+      "parte": 2,
+      "media_id": "17961883587257936"
+    },
+    {
+      "quando": "2026-11-22T13:55:28Z",
+      "slug": "elevador",
+      "parte": 2,
+      "media_id": "18094501607231847"
+    },
+    {
+      "quando": "2026-11-22T18:59:34Z",
+      "slug": "ultimo-onibus",
+      "parte": 1,
+      "media_id": "18116734688138689"
+    },
+    {
+      "quando": "2026-11-22T21:57:00Z",
+      "slug": "cidade-sirene",
+      "parte": 3,
+      "media_id": "18276159127306573"
+    },
+    {
+      "quando": "2026-11-23T00:59:07Z",
+      "slug": "o-sombra-da-sala-12",
+      "parte": 1,
+      "media_id": "18405150862204741"
+    },
+    {
+      "quando": "2026-11-23T13:03:29Z",
+      "slug": "a-ponte-caida",
+      "parte": 1,
+      "media_id": "18029895026874855"
+    },
+    {
+      "quando": "2026-11-23T15:55:29Z",
+      "slug": "ultimo-onibus",
+      "parte": 2,
+      "media_id": "18088148606330324"
+    },
+    {
+      "quando": "2026-11-23T18:55:21Z",
+      "slug": "elevador",
+      "parte": 3,
+      "media_id": "18137593846679833"
+    },
+    {
+      "quando": "2026-11-23T21:55:10Z",
+      "slug": "cidade-sirene",
+      "parte": 4,
+      "media_id": "18133967224835332"
+    },
+    {
+      "quando": "2026-11-24T00:55:08Z",
+      "slug": "o-sombra-da-sala-12",
+      "parte": 2,
+      "media_id": "17917481604551583"
+    },
+    {
+      "quando": "2026-11-24T15:55:12Z",
+      "slug": "elevador",
+      "parte": 4,
+      "media_id": "18077993924592764"
+    },
+    {
+      "quando": "2026-11-24T21:55:03Z",
+      "slug": "cidade-sirene",
+      "parte": 5,
+      "media_id": "18038856656667788"
+    },
+    {
+      "quando": "2026-11-25T00:55:24Z",
+      "slug": "o-sombra-da-sala-12",
+      "parte": 3,
+      "media_id": "17935027599167844"
+    },
+    {
+      "quando": "2026-11-25T15:56:00Z",
+      "slug": "elevador",
+      "parte": 5,
+      "media_id": "18114810845142582"
+    }
+  ],
+  "ultimo_estilo": "cartela"
 }

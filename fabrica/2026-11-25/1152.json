@@ -1,981 +1,988 @@
 {
- "data": "2026-11-25",
- "horario": "1152",
- "fuso": "America/Sao_Paulo",
- "historia": "elevador",
- "titulo": "O Andar que Não Existe",
- "parte": 5,
- "status": "aprovado",
- "votacao": true,
- "versao_padrao": "B",
- "estilo": "andar",
- "observacao": "Votos da Parte 4 (media 18077993924592764) ainda chegando: a Produção e a Publicação recontam. Padrão B (prender o porteiro no -1): a série teve B em todas as votações e B lidera (kevin_12_zn). SEM recapitulação. Faixa do topo = 'PARTE 5 · <título>'. Legenda: linha 1 = gancho; {RESULTADO_SE_HOUVER_VOTOS} na linha 2 vira 'Vocês escolheram X (a a b)!' ou some (nunca dizer que ninguém votou). Quem sabe mais: na B, a mensagem da mãe ('não confia no médico') contra o médico; na A, o porteiro que já saiu do -1. A mãe NÃO tem personagem nem voz (só aparece em mensagem/câmera), porque andar_mae já é da Lia mais velha no Último Ônibus. Cena de capa: Você em close (B na portaria, A no elevador -1).",
- "versoes": {
-  "B": {
-   "resumo": "Escolheram prender o porteiro: à meia-noite a mãe não sai; o médico diz que o espelho solta ela em troca do reflexo do Você (fecha às 00:06), mas chega mensagem da mãe: 'não confia no médico'.",
-   "retomada_gancho": "Cena 1: 'Onze e cinquenta e nove. Eu empurrei o porteiro pro elevador.' (~3 s, fato novo: o empurrão)",
-   "cenas": 20,
-   "palavras": 198,
-   "duracao_alvo_s": "60-80",
-   "momento_zoom_tensao": [
-    1,
-    2,
-    3,
-    6,
-    8,
-    10,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    20
-   ],
-   "cenas_relogio": [
-    "cena 3 placa '-1 · 00:00'",
-    "cena 5 placa '00:02'",
-    "cena 12 carta 'NO ESPELHO:'",
-    "cena 15 celular '00:04 · DESCONHECIDO'",
-    "cena 17 placa '00:05'"
-   ],
-   "cena_celular_papel": [
-    "cena 12 carta 'NO ESPELHO:': !O ESPELHO FECHA / !ÀS 00:06",
-    "cena 15 celular '00:04 · DESCONHECIDO': Filho, não confia / !no médico. / Ele quer o seu lugar. / — MÃE"
-   ],
-   "final": "Virada: mensagem de número desconhecido assinada MÃE ('Filho, não confia no médico. Ele quer o seu lugar.') contra o médico, que diz que é o porteiro escrevendo. 00:05, espelho embaçando. A/B com custo + 'Comenta A ou B'.",
-   "gatilho_compartilhar": "Manda pra quem nunca confia em ninguém",
-   "legenda": "Meia-noite. Eu prendi o porteiro no -1... e a minha mãe não saiu. 🛗\n{RESULTADO_SE_HOUVER_VOTOS}\nO Andar que Não Existe · Parte 5 — O espelho cobra\n\nO médico ou a mensagem: quem tá mentindo? Teoria aqui 👇\n\n🅰️ Confiar no médico e dar meu reflexo (nunca mais me ver)\n🅱️ Confiar na mensagem e soltar o porteiro (ele pode me prender)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem nunca confia em ninguém 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #espelho #historiasempartes #misterio #suspense #vocedecide",
-   "capa": {
-    "titulo": "O Andar que Não Existe",
-    "parte": "Parte 5",
-    "cover_text": "O espelho cobra"
-   },
-   "cenarios": [
-    "elevador",
-    "escuro",
-    "porao",
-    "recepcao_hotel"
-   ],
-   "script": {
-    "cover_text": "O espelho cobra",
-    "faixa": "PARTE 5 · O espelho cobra",
-    "gancho_tela": "PRENDI O PORTEIRO",
-    "caption": "Meia-noite. Eu prendi o porteiro no -1... e a minha mãe não saiu. 🛗\n{RESULTADO_SE_HOUVER_VOTOS}\nO Andar que Não Existe · Parte 5 — O espelho cobra\n\nO médico ou a mensagem: quem tá mentindo? Teoria aqui 👇\n\n🅰️ Confiar no médico e dar meu reflexo (nunca mais me ver)\n🅱️ Confiar na mensagem e soltar o porteiro (ele pode me prender)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem nunca confia em ninguém 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #espelho #historiasempartes #misterio #suspense #vocedecide",
-    "scenes": [
-     {
-      "bg": "recepcao_hotel",
-      "bg_params": {
-       "texto": "PORTARIA",
-       "hora": "noite"
-      },
-      "cam": "zoom_tremido",
-      "hook": true,
-      "cover": true,
-      "chars": [
-       {
-        "ref": "PROTAGONISTA",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "eyes": "arregalado",
-        "brows": "bravo",
-        "mouth": "o"
-       }
+  "data": "2026-11-25",
+  "horario": "1152",
+  "fuso": "America/Sao_Paulo",
+  "historia": "elevador",
+  "titulo": "O Andar que Não Existe",
+  "parte": 5,
+  "status": "publicado",
+  "votacao": true,
+  "versao_padrao": "B",
+  "estilo": "andar",
+  "observacao": "Votos da Parte 4 (media 18077993924592764) ainda chegando: a Produção e a Publicação recontam. Padrão B (prender o porteiro no -1): a série teve B em todas as votações e B lidera (kevin_12_zn). SEM recapitulação. Faixa do topo = 'PARTE 5 · <título>'. Legenda: linha 1 = gancho; {RESULTADO_SE_HOUVER_VOTOS} na linha 2 vira 'Vocês escolheram X (a a b)!' ou some (nunca dizer que ninguém votou). Quem sabe mais: na B, a mensagem da mãe ('não confia no médico') contra o médico; na A, o porteiro que já saiu do -1. A mãe NÃO tem personagem nem voz (só aparece em mensagem/câmera), porque andar_mae já é da Lia mais velha no Último Ônibus. Cena de capa: Você em close (B na portaria, A no elevador -1).",
+  "versoes": {
+    "B": {
+      "resumo": "Escolheram prender o porteiro: à meia-noite a mãe não sai; o médico diz que o espelho solta ela em troca do reflexo do Você (fecha às 00:06), mas chega mensagem da mãe: 'não confia no médico'.",
+      "retomada_gancho": "Cena 1: 'Onze e cinquenta e nove. Eu empurrei o porteiro pro elevador.' (~3 s, fato novo: o empurrão)",
+      "cenas": 20,
+      "palavras": 198,
+      "duracao_alvo_s": "60-80",
+      "momento_zoom_tensao": [
+        1,
+        2,
+        3,
+        6,
+        8,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20
       ],
-      "text": "Meia-noite menos um. Prendi o porteiro no elevador. Pra minha mãe *voltar*."
-     },
-     {
-      "bg": "elevador",
-      "bg_params": {
-       "floor": "T"
-      },
-      "cam": "shake",
-      "tensao": true,
-      "chars": [
-       {
-        "ref": "PORTEIRO",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "bravo",
-        "mouth": "o"
-       }
+      "cenas_relogio": [
+        "cena 3 placa '-1 · 00:00'",
+        "cena 5 placa '00:02'",
+        "cena 12 carta 'NO ESPELHO:'",
+        "cena 15 celular '00:04 · DESCONHECIDO'",
+        "cena 17 placa '00:05'"
       ],
-      "linhas": [
-       {
-        "voz": "PORTEIRO",
-        "texto": "Garoto, não! Sem mim, *ninguém sai* de lá!"
-       }
-      ]
-     },
-     {
-      "bg": "escuro",
-      "cam": "zoom_forte",
-      "tensao": true,
-      "prop": {
-       "type": "placa",
-       "title": "-1 · 00:00",
-       "y": 700
-      },
-      "text": "A porta fechou. O visor caiu direto no *menos um*. Meia-noite."
-     },
-     {
-      "bg": "recepcao_hotel",
-      "bg_params": {
-       "texto": "PORTARIA",
-       "hora": "noite"
-      },
-      "cam": "in",
-      "chars": [
-       {
-        "ref": "PROTAGONISTA",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "preocupado"
-       }
+      "cena_celular_papel": [
+        "cena 12 carta 'NO ESPELHO:': !O ESPELHO FECHA / !ÀS 00:06",
+        "cena 15 celular '00:04 · DESCONHECIDO': Filho, não confia / !no médico. / Ele quer o seu lugar. / — MÃE"
       ],
-      "text": "À meia-noite, ela tinha que entrar *por aquela porta*."
-     },
-     {
-      "bg": "recepcao_hotel",
-      "bg_params": {
-       "texto": "PORTARIA",
-       "hora": "noite"
+      "final": "Virada: mensagem de número desconhecido assinada MÃE ('Filho, não confia no médico. Ele quer o seu lugar.') contra o médico, que diz que é o porteiro escrevendo. 00:05, espelho embaçando. A/B com custo + 'Comenta A ou B'.",
+      "gatilho_compartilhar": "Manda pra quem nunca confia em ninguém",
+      "legenda": "Meia-noite. Eu prendi o porteiro no -1... e a minha mãe não saiu. 🛗\n{RESULTADO_SE_HOUVER_VOTOS}\nO Andar que Não Existe · Parte 5 — O espelho cobra\n\nO médico ou a mensagem: quem tá mentindo? Teoria aqui 👇\n\n🅰️ Confiar no médico e dar meu reflexo (nunca mais me ver)\n🅱️ Confiar na mensagem e soltar o porteiro (ele pode me prender)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem nunca confia em ninguém 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #espelho #historiasempartes #misterio #suspense #vocedecide",
+      "capa": {
+        "titulo": "O Andar que Não Existe",
+        "parte": "Parte 5",
+        "cover_text": "O espelho cobra"
       },
-      "cam": "out",
-      "prop": {
-       "type": "placa",
-       "title": "00:02",
-       "y": 700
-      },
-      "text": "Meia-noite e dois. *Ninguém* entrou."
-     },
-     {
-      "bg": "elevador",
-      "bg_params": {
-       "floor": "-1"
-      },
-      "cam": "zoom_rosto",
-      "filtro": "tv",
-      "tensao": true,
-      "chars": [
-       {
-        "ref": "PORTEIRO",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "bravo"
-       }
+      "cenarios": [
+        "elevador",
+        "escuro",
+        "porao",
+        "recepcao_hotel"
       ],
-      "linhas": [
-       {
-        "voz": "PORTEIRO",
-        "texto": "Eu avisei. Quem prende o porteiro, *prende ela também*."
-       }
+      "script": {
+        "cover_text": "O espelho cobra",
+        "faixa": "PARTE 5 · O espelho cobra",
+        "gancho_tela": "PRENDI O PORTEIRO",
+        "caption": "Meia-noite. Eu prendi o porteiro no -1... e a minha mãe não saiu. 🛗\n{RESULTADO_SE_HOUVER_VOTOS}\nO Andar que Não Existe · Parte 5 — O espelho cobra\n\nO médico ou a mensagem: quem tá mentindo? Teoria aqui 👇\n\n🅰️ Confiar no médico e dar meu reflexo (nunca mais me ver)\n🅱️ Confiar na mensagem e soltar o porteiro (ele pode me prender)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem nunca confia em ninguém 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #espelho #historiasempartes #misterio #suspense #vocedecide",
+        "scenes": [
+          {
+            "bg": "recepcao_hotel",
+            "bg_params": {
+              "texto": "PORTARIA",
+              "hora": "noite"
+            },
+            "cam": "zoom_tremido",
+            "hook": true,
+            "cover": true,
+            "chars": [
+              {
+                "ref": "PROTAGONISTA",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "eyes": "arregalado",
+                "brows": "bravo",
+                "mouth": "o"
+              }
+            ],
+            "text": "Meia-noite menos um. Prendi o porteiro no elevador. Pra minha mãe *voltar*."
+          },
+          {
+            "bg": "elevador",
+            "bg_params": {
+              "floor": "T"
+            },
+            "cam": "shake",
+            "tensao": true,
+            "chars": [
+              {
+                "ref": "PORTEIRO",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "bravo",
+                "mouth": "o"
+              }
+            ],
+            "linhas": [
+              {
+                "voz": "PORTEIRO",
+                "texto": "Garoto, não! Sem mim, *ninguém sai* de lá!"
+              }
+            ]
+          },
+          {
+            "bg": "escuro",
+            "cam": "zoom_forte",
+            "tensao": true,
+            "prop": {
+              "type": "placa",
+              "title": "-1 · 00:00",
+              "y": 700
+            },
+            "text": "A porta fechou. O visor caiu direto no *menos um*. Meia-noite."
+          },
+          {
+            "bg": "recepcao_hotel",
+            "bg_params": {
+              "texto": "PORTARIA",
+              "hora": "noite"
+            },
+            "cam": "in",
+            "chars": [
+              {
+                "ref": "PROTAGONISTA",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "preocupado"
+              }
+            ],
+            "text": "À meia-noite, ela tinha que entrar *por aquela porta*."
+          },
+          {
+            "bg": "recepcao_hotel",
+            "bg_params": {
+              "texto": "PORTARIA",
+              "hora": "noite"
+            },
+            "cam": "out",
+            "prop": {
+              "type": "placa",
+              "title": "00:02",
+              "y": 700
+            },
+            "text": "Meia-noite e dois. *Ninguém* entrou."
+          },
+          {
+            "bg": "elevador",
+            "bg_params": {
+              "floor": "-1"
+            },
+            "cam": "zoom_rosto",
+            "filtro": "tv",
+            "tensao": true,
+            "chars": [
+              {
+                "ref": "PORTEIRO",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "bravo"
+              }
+            ],
+            "linhas": [
+              {
+                "voz": "PORTEIRO",
+                "texto": "Eu avisei. Quem prende o porteiro, *prende ela também*."
+              }
+            ],
+            "tv_hora": "00:02"
+          },
+          {
+            "bg": "recepcao_hotel",
+            "bg_params": {
+              "texto": "PORTARIA",
+              "hora": "noite"
+            },
+            "cam": "in",
+            "chars": [
+              {
+                "ref": "PROTAGONISTA",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "bravo",
+                "mouth": "o"
+              }
+            ],
+            "linhas": [
+              {
+                "voz": "PROTAGONISTA",
+                "texto": "Então me fala como *tirar ela*!"
+              }
+            ]
+          },
+          {
+            "bg": "recepcao_hotel",
+            "bg_params": {
+              "texto": "PORTARIA",
+              "hora": "noite",
+              "luz": "apagada"
+            },
+            "cam": "shake",
+            "tensao": true,
+            "text": "O interfone chiou e morreu. E a luz da portaria *apagou*."
+          },
+          {
+            "bg": "elevador",
+            "bg_params": {
+              "floor": "T"
+            },
+            "cam": "pan_l",
+            "text": "Aí o elevador voltou. Vazio. E o espelho *batendo de dentro*."
+          },
+          {
+            "bg": "elevador",
+            "bg_params": {
+              "floor": "T"
+            },
+            "cam": "zoom_rosto",
+            "chars": [
+              {
+                "ref": "MEDICO",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "preocupado"
+              }
+            ],
+            "linhas": [
+              {
+                "voz": "MEDICO",
+                "texto": "Ela tá aqui comigo. Do lado de cá do *espelho*."
+              }
+            ]
+          },
+          {
+            "bg": "elevador",
+            "bg_params": {
+              "floor": "T"
+            },
+            "cam": "in",
+            "chars": [
+              {
+                "ref": "PROTAGONISTA",
+                "x": 0.21,
+                "brows": "surpreso",
+                "mouth": "o"
+              },
+              {
+                "ref": "MEDICO",
+                "x": 0.67,
+                "brows": "neutro"
+              }
+            ],
+            "linhas": [
+              {
+                "voz": "PROTAGONISTA",
+                "texto": "Então puxa ela!"
+              },
+              {
+                "voz": "MEDICO",
+                "texto": "O espelho só solta alguém se você der o seu *reflexo*."
+              }
+            ]
+          },
+          {
+            "bg": "escuro",
+            "cam": "in",
+            "prop": {
+              "type": "carta",
+              "title": "NO ESPELHO:",
+              "lines": [
+                "!FECHA ÀS 00:06"
+              ],
+              "y": 900,
+              "grande": true
+            },
+            "text": "No vapor, mais um recado. Com hora *marcada*."
+          },
+          {
+            "bg": "elevador",
+            "bg_params": {
+              "floor": "T"
+            },
+            "cam": "zoom_rosto",
+            "chars": [
+              {
+                "ref": "PROTAGONISTA",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "eyes": "arregalado",
+                "brows": "preocupado"
+              }
+            ],
+            "text": "Meu reflexo. Eu nunca mais ia me ver em espelho *nenhum*."
+          },
+          {
+            "bg": "recepcao_hotel",
+            "bg_params": {
+              "texto": "PORTARIA",
+              "hora": "noite",
+              "luz": "apagada"
+            },
+            "cam": "zoom_rosto",
+            "tensao": true,
+            "chars": [
+              {
+                "ref": "PROTAGONISTA",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "surpreso",
+                "mouth": "o"
+              }
+            ],
+            "text": "Meia-noite e quatro. Meu celular vibrou. *Número desconhecido*."
+          },
+          {
+            "bg": "escuro",
+            "cam": "zoom_forte",
+            "hook": true,
+            "prop": {
+              "type": "celular",
+              "title": "00:04 · DESCONHECIDO",
+              "lines": [
+                "Filho, não confia",
+                "!no médico.",
+                "Ele quer o seu lugar.",
+                "— MÃE"
+              ]
+            },
+            "text": "Dez anos sem notícia. E agora, *uma mensagem dela*."
+          },
+          {
+            "bg": "elevador",
+            "bg_params": {
+              "floor": "T"
+            },
+            "cam": "shake",
+            "tensao": true,
+            "chars": [
+              {
+                "ref": "MEDICO",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "bravo",
+                "mouth": "o"
+              }
+            ],
+            "linhas": [
+              {
+                "voz": "MEDICO",
+                "texto": "É mentira! É o porteiro *escrevendo por ela*!"
+              }
+            ]
+          },
+          {
+            "bg": "elevador",
+            "bg_params": {
+              "floor": "T"
+            },
+            "cam": "zoom_forte",
+            "prop": {
+              "type": "placa",
+              "title": "00:05",
+              "y": 700
+            },
+            "text": "Meia-noite e cinco. O espelho começou a *embaçar de vez*."
+          },
+          {
+            "bg": "elevador",
+            "bg_params": {
+              "floor": "T"
+            },
+            "cam": "zoom_rosto",
+            "hook": true,
+            "chars": [
+              {
+                "ref": "MEDICO",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "preocupado",
+                "mouth": "triste"
+              }
+            ],
+            "text": "A: confio no médico e dou o meu reflexo pra minha mãe *sair*."
+          },
+          {
+            "bg": "porao",
+            "bg_params": {
+              "texto": "SUBSOLO"
+            },
+            "cam": "zoom_rosto",
+            "text": "B: confio na mensagem e solto o porteiro. Mas ele pode *me prender lá*.",
+            "chars": [
+              {
+                "ref": "PORTEIRO",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "bravo"
+              }
+            ]
+          },
+          {
+            "bg": "recepcao_hotel",
+            "bg_params": {
+              "texto": "PORTARIA",
+              "hora": "noite",
+              "luz": "apagada"
+            },
+            "cam": "zoom_rosto",
+            "hook": true,
+            "chars": [
+              {
+                "ref": "PROTAGONISTA",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "preocupado",
+                "mouth": "o"
+              }
+            ],
+            "text": "E você, em quem confiaria? Comenta *A ou B*."
+          }
+        ],
+        "opcoes": [
+          "Dar meu reflexo pra mãe sair",
+          "Soltar o porteiro e confiar nela"
+        ],
+        "opcoes_rostos": [
+          {
+            "ref": "MEDICO",
+            "brows": "preocupado"
+          },
+          {
+            "ref": "PORTEIRO",
+            "brows": "bravo"
+          }
+        ],
+        "chamada": "Manda pra quem nunca confia em ninguém"
+      },
+      "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/parte5B.mp4",
+      "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/capa5B.jpg",
+      "duracao": 74.6,
+      "roteiro": "Meia-noite menos um. Prendi o porteiro no elevador. Pra minha mãe voltar.\nPORTEIRO: Garoto, não! Sem mim, ninguém sai de lá!\nA porta fechou. O visor caiu direto no menos um. Meia-noite.\nÀ meia-noite, ela tinha que entrar por aquela porta.\nMeia-noite e dois. Ninguém entrou.\nPORTEIRO: Eu avisei. Quem prende o porteiro, prende ela também.\nPROTAGONISTA: Então me fala como tirar ela!\nO interfone chiou e morreu. E a luz da portaria apagou.\nAí o elevador voltou. Vazio. E o espelho batendo de dentro.\nMEDICO: Ela tá aqui comigo. Do lado de cá do espelho.\nPROTAGONISTA: Então puxa ela!\nMEDICO: O espelho só solta alguém se você der o seu reflexo.\nNo vapor, mais um recado. Com hora marcada.\nMeu reflexo. Eu nunca mais ia me ver em espelho nenhum.\nMeia-noite e quatro. Meu celular vibrou. Número desconhecido.\nDez anos sem notícia. E agora, uma mensagem dela.\nMEDICO: É mentira! É o porteiro escrevendo por ela!\nMeia-noite e cinco. O espelho começou a embaçar de vez.\nA: confio no médico e dou o meu reflexo pra minha mãe sair.\nB: confio na mensagem e solto o porteiro. Mas ele pode me prender lá.\nE você, em quem confiaria? Comenta A ou B."
+    },
+    "A": {
+      "resumo": "Escolheram ficar no -1: a mãe sai pela portaria, mas o porteiro (que saiu do -1 dez anos atrás) abre a porta pra ela sorrindo; o médico avisa que às 00:10 o Você esquece a mãe para sempre.",
+      "retomada_gancho": "Cena 1: 'Onze e cinquenta e nove. Eu entrei no elevador. E apertei o menos um.' (~3 s, fato novo: ele entrou)",
+      "cenas": 19,
+      "palavras": 203,
+      "duracao_alvo_s": "60-80",
+      "momento_zoom_tensao": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        19
       ],
-      "tv_hora": "00:02"
-     },
-     {
-      "bg": "recepcao_hotel",
-      "bg_params": {
-       "texto": "PORTARIA",
-       "hora": "noite"
-      },
-      "cam": "in",
-      "chars": [
-       {
-        "ref": "PROTAGONISTA",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "bravo",
-        "mouth": "o"
-       }
+      "cenas_relogio": [
+        "cena 2 placa '-1 · 00:00'",
+        "cena 8 placa '00:03'",
+        "cena 10 carta 'QUEM ENTROU NO -1'",
+        "cena 14 celular '00:06 · INTERFONE -1'",
+        "cena 16 placa '00:08'"
       ],
-      "linhas": [
-       {
-        "voz": "PROTAGONISTA",
-        "texto": "Então me fala como *tirar ela*!"
-       }
-      ]
-     },
-     {
-      "bg": "recepcao_hotel",
-      "bg_params": {
-       "texto": "PORTARIA",
-       "hora": "noite",
-       "luz": "apagada"
-      },
-      "cam": "shake",
-      "tensao": true,
-      "text": "O interfone chiou e morreu. E a luz da portaria *apagou*."
-     },
-     {
-      "bg": "elevador",
-      "bg_params": {
-       "floor": "T"
-      },
-      "cam": "pan_l",
-      "text": "Aí o elevador voltou. Vazio. E o espelho *batendo de dentro*."
-     },
-     {
-      "bg": "elevador",
-      "bg_params": {
-       "floor": "T"
-      },
-      "cam": "zoom_rosto",
-      "chars": [
-       {
-        "ref": "MEDICO",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "preocupado"
-       }
+      "cena_celular_papel": [
+        "cena 10 carta 'QUEM ENTROU NO -1': PORTEIRO · 1974 / !SAIU HÁ 10 ANOS /  / !VOCÊ · HOJE 00:00",
+        "cena 14 celular '00:06 · INTERFONE -1': Obrigado, garoto. / !Agora ela é minha / !lá em cima."
       ],
-      "linhas": [
-       {
-        "voz": "MEDICO",
-        "texto": "Ela tá aqui comigo. Do lado de cá do *espelho*."
-       }
-      ]
-     },
-     {
-      "bg": "elevador",
-      "bg_params": {
-       "floor": "T"
+      "final": "Virada: mensagem no interfone do -1, do porteiro (quem sabe mais): 'Obrigado, garoto. Agora ela é minha lá em cima.' 00:08. A/B com custo + 'Comenta A ou B'.",
+      "gatilho_compartilhar": "Manda pra quem faria tudo pela mãe",
+      "legenda": "Meia-noite. Eu entrei no -1 pra minha mãe sair... e o porteiro abriu a porta pra ela. 🛗\n{RESULTADO_SE_HOUVER_VOTOS}\nO Andar que Não Existe · Parte 5 — Quem entrou no -1\n\nO que o porteiro quer com ela lá em cima? Teoria aqui 👇\n\n🅰️ Ficar e esquecer minha mãe (ela fica livre, com ele)\n🅱️ Subir pelo espelho com o médico (ela volta pro -1)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem faria tudo pela mãe 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #elevador #historiasempartes #misterio #suspense #vocedecide",
+      "capa": {
+        "titulo": "O Andar que Não Existe",
+        "parte": "Parte 5",
+        "cover_text": "Quem entrou no -1"
       },
-      "cam": "in",
-      "chars": [
-       {
-        "ref": "PROTAGONISTA",
-        "x": 0.21,
-        "brows": "surpreso",
-        "mouth": "o"
-       },
-       {
-        "ref": "MEDICO",
-        "x": 0.67,
-        "brows": "neutro"
-       }
+      "cenarios": [
+        "corredor_predio",
+        "elevador",
+        "escuro",
+        "porao",
+        "recepcao_hotel"
       ],
-      "linhas": [
-       {
-        "voz": "PROTAGONISTA",
-        "texto": "Então puxa ela!"
-       },
-       {
-        "voz": "MEDICO",
-        "texto": "O espelho só solta alguém se você der o seu *reflexo*."
-       }
-      ]
-     },
-     {
-      "bg": "escuro",
-      "cam": "in",
-      "prop": {
-       "type": "carta",
-       "title": "NO ESPELHO:",
-       "lines": [
-        "!FECHA ÀS 00:06"
-       ],
-       "y": 900,
-       "grande": true
+      "script": {
+        "cover_text": "Quem entrou no -1",
+        "faixa": "PARTE 5 · Quem entrou no -1",
+        "gancho_tela": "EU ENTREI NO -1",
+        "caption": "Meia-noite. Eu entrei no -1 pra minha mãe sair... e o porteiro abriu a porta pra ela. 🛗\n{RESULTADO_SE_HOUVER_VOTOS}\nO Andar que Não Existe · Parte 5 — Quem entrou no -1\n\nO que o porteiro quer com ela lá em cima? Teoria aqui 👇\n\n🅰️ Ficar e esquecer minha mãe (ela fica livre, com ele)\n🅱️ Subir pelo espelho com o médico (ela volta pro -1)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem faria tudo pela mãe 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #elevador #historiasempartes #misterio #suspense #vocedecide",
+        "scenes": [
+          {
+            "bg": "elevador",
+            "bg_params": {
+              "floor": "-1"
+            },
+            "cam": "zoom_tremido",
+            "hook": true,
+            "cover": true,
+            "chars": [
+              {
+                "ref": "PROTAGONISTA",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "eyes": "arregalado",
+                "brows": "preocupado",
+                "mouth": "o"
+              }
+            ],
+            "text": "Onze e cinquenta e nove. Apertei o menos um. Pra minha mãe *sair*."
+          },
+          {
+            "bg": "elevador",
+            "bg_params": {
+              "floor": "-1"
+            },
+            "cam": "shake",
+            "tensao": true,
+            "prop": {
+              "type": "placa",
+              "title": "-1 · 00:00",
+              "y": 700
+            },
+            "text": "Meia-noite. A porta abriu no andar que *não existe*."
+          },
+          {
+            "bg": "corredor_predio",
+            "bg_params": {
+              "luz": "apagada"
+            },
+            "cam": "pan_l",
+            "chars": [
+              {
+                "ref": "PROTAGONISTA",
+                "x": 0.21,
+                "brows": "surpreso"
+              },
+              {
+                "ref": "MEDICO",
+                "x": 0.67,
+                "brows": "neutro"
+              }
+            ],
+            "text": "Era o corredor do meu prédio. E o médico, *me esperando*."
+          },
+          {
+            "bg": "recepcao_hotel",
+            "bg_params": {
+              "texto": "PORTARIA",
+              "hora": "noite"
+            },
+            "cam": "zoom_forte",
+            "filtro": "tv",
+            "tensao": true,
+            "text": "Na telinha do interfone, câmera três: minha mãe saindo na *portaria*.",
+            "tv_hora": "00:01"
+          },
+          {
+            "bg": "corredor_predio",
+            "bg_params": {
+              "luz": "apagada"
+            },
+            "cam": "zoom_rosto",
+            "chars": [
+              {
+                "ref": "PROTAGONISTA",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "preocupado",
+                "mouth": "triste"
+              }
+            ],
+            "linhas": [
+              {
+                "voz": "PROTAGONISTA",
+                "texto": "Ela saiu. Dez anos depois, ela *saiu*."
+              }
+            ]
+          },
+          {
+            "bg": "recepcao_hotel",
+            "bg_params": {
+              "texto": "PORTARIA",
+              "hora": "noite"
+            },
+            "cam": "in",
+            "filtro": "tv",
+            "chars": [
+              {
+                "ref": "PORTEIRO",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "neutro"
+              }
+            ],
+            "text": "Mas quem abriu a porta da rua pra ela foi o porteiro. *Sorrindo*.",
+            "tv_hora": "00:01"
+          },
+          {
+            "bg": "corredor_predio",
+            "bg_params": {
+              "luz": "apagada"
+            },
+            "cam": "zoom_rosto",
+            "tensao": true,
+            "chars": [
+              {
+                "ref": "MEDICO",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "preocupado"
+              }
+            ],
+            "linhas": [
+              {
+                "voz": "MEDICO",
+                "texto": "A troca tem preço. À meia-noite e dez, você *esquece ela*."
+              }
+            ]
+          },
+          {
+            "bg": "escuro",
+            "cam": "in",
+            "tensao": true,
+            "prop": {
+              "type": "placa",
+              "title": "00:03",
+              "y": 700
+            },
+            "text": "Meia-noite e três. Eu já não lembrava a *voz dela*."
+          },
+          {
+            "bg": "porao",
+            "bg_params": {
+              "texto": "SUBSOLO"
+            },
+            "cam": "in",
+            "chars": [
+              {
+                "ref": "MEDICO",
+                "x": 0.21,
+                "brows": "neutro"
+              },
+              {
+                "ref": "PROTAGONISTA",
+                "x": 0.67,
+                "brows": "preocupado"
+              }
+            ],
+            "text": "O médico me levou até o subsolo. Lá tinha um livro *aberto*."
+          },
+          {
+            "bg": "escuro",
+            "cam": "in",
+            "prop": {
+              "type": "carta",
+              "title": "QUEM ENTROU NO -1",
+              "lines": [
+                "PORTEIRO · 1974",
+                "!SAIU HÁ 10 ANOS",
+                "",
+                "!VOCÊ · HOJE 00:00"
+              ],
+              "y": 900
+            },
+            "text": "O porteiro entrou aqui em setenta e quatro. E saiu *quando ela entrou*."
+          },
+          {
+            "bg": "porao",
+            "bg_params": {
+              "texto": "SUBSOLO"
+            },
+            "cam": "zoom_rosto",
+            "chars": [
+              {
+                "ref": "PROTAGONISTA",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "bravo",
+                "mouth": "o"
+              }
+            ],
+            "linhas": [
+              {
+                "voz": "PROTAGONISTA",
+                "texto": "Tem que ter um jeito de sair *sem trocar*!"
+              }
+            ]
+          },
+          {
+            "bg": "porao",
+            "bg_params": {
+              "texto": "SUBSOLO"
+            },
+            "cam": "in",
+            "chars": [
+              {
+                "ref": "MEDICO",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "preocupado",
+                "mouth": "triste"
+              }
+            ],
+            "linhas": [
+              {
+                "voz": "MEDICO",
+                "texto": "Tem. Pelo espelho do elevador. Mas aí ela volta pro *seu lugar*."
+              }
+            ]
+          },
+          {
+            "bg": "porao",
+            "bg_params": {
+              "texto": "SUBSOLO",
+              "alerta": true
+            },
+            "cam": "shake",
+            "tensao": true,
+            "text": "Aí o interfone do subsolo acendeu. *Sozinho*."
+          },
+          {
+            "bg": "escuro",
+            "cam": "zoom_forte",
+            "hook": true,
+            "prop": {
+              "type": "celular",
+              "title": "00:06 · INTERFONE -1",
+              "lines": [
+                "Obrigado, garoto.",
+                "!Agora ela é minha",
+                "!lá em cima."
+              ]
+            },
+            "text": "Uma mensagem na telinha. Do único que *saiu* daqui."
+          },
+          {
+            "bg": "recepcao_hotel",
+            "bg_params": {
+              "texto": "PORTARIA",
+              "hora": "noite"
+            },
+            "cam": "zoom_tremido",
+            "filtro": "tv",
+            "tensao": true,
+            "chars": [
+              {
+                "ref": "PORTEIRO",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "neutro"
+              }
+            ],
+            "linhas": [
+              {
+                "voz": "PORTEIRO",
+                "texto": "Pode esquecer em paz. Eu cuido da sua mãe *aqui em cima*."
+              }
+            ],
+            "tv_hora": "00:07"
+          },
+          {
+            "bg": "elevador",
+            "bg_params": {
+              "floor": "-1"
+            },
+            "cam": "zoom_forte",
+            "prop": {
+              "type": "placa",
+              "title": "00:08",
+              "y": 700
+            },
+            "text": "Meia-noite e oito. Dois minutos pra eu *esquecer ela* pra sempre."
+          },
+          {
+            "bg": "porao",
+            "bg_params": {
+              "texto": "SUBSOLO"
+            },
+            "cam": "zoom_rosto",
+            "hook": true,
+            "chars": [
+              {
+                "ref": "PROTAGONISTA",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "preocupado",
+                "mouth": "triste"
+              }
+            ],
+            "text": "A: fico aqui e esqueço tudo. Ela fica livre... *com ele*."
+          },
+          {
+            "bg": "elevador",
+            "bg_params": {
+              "floor": "-1"
+            },
+            "cam": "in",
+            "chars": [
+              {
+                "ref": "MEDICO",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "preocupado"
+              }
+            ],
+            "text": "B: subo pelo espelho com o médico. E ela *volta pra cá*."
+          },
+          {
+            "bg": "corredor_predio",
+            "bg_params": {
+              "luz": "apagada"
+            },
+            "cam": "zoom_rosto",
+            "hook": true,
+            "chars": [
+              {
+                "ref": "PROTAGONISTA",
+                "x": 0.5,
+                "scale": 0.9,
+                "enquadramento": "busto",
+                "brows": "preocupado",
+                "mouth": "o"
+              }
+            ],
+            "text": "E você, o que faria? Comenta *A ou B*."
+          }
+        ],
+        "opcoes": [
+          "Ficar e esquecer minha mãe",
+          "Subir pelo espelho com o médico"
+        ],
+        "opcoes_rostos": [
+          {
+            "ref": "PROTAGONISTA",
+            "brows": "preocupado",
+            "mouth": "triste"
+          },
+          {
+            "ref": "MEDICO",
+            "brows": "preocupado"
+          }
+        ],
+        "chamada": "Manda pra quem faria tudo pela mãe"
       },
-      "text": "No vapor, mais um recado. Com hora *marcada*."
-     },
-     {
-      "bg": "elevador",
-      "bg_params": {
-       "floor": "T"
-      },
-      "cam": "zoom_rosto",
-      "chars": [
-       {
-        "ref": "PROTAGONISTA",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "eyes": "arregalado",
-        "brows": "preocupado"
-       }
-      ],
-      "text": "Meu reflexo. Eu nunca mais ia me ver em espelho *nenhum*."
-     },
-     {
-      "bg": "recepcao_hotel",
-      "bg_params": {
-       "texto": "PORTARIA",
-       "hora": "noite",
-       "luz": "apagada"
-      },
-      "cam": "zoom_rosto",
-      "tensao": true,
-      "chars": [
-       {
-        "ref": "PROTAGONISTA",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "surpreso",
-        "mouth": "o"
-       }
-      ],
-      "text": "Meia-noite e quatro. Meu celular vibrou. *Número desconhecido*."
-     },
-     {
-      "bg": "escuro",
-      "cam": "zoom_forte",
-      "hook": true,
-      "prop": {
-       "type": "celular",
-       "title": "00:04 · DESCONHECIDO",
-       "lines": [
-        "Filho, não confia",
-        "!no médico.",
-        "Ele quer o seu lugar.",
-        "— MÃE"
-       ]
-      },
-      "text": "Dez anos sem notícia. E agora, *uma mensagem dela*."
-     },
-     {
-      "bg": "elevador",
-      "bg_params": {
-       "floor": "T"
-      },
-      "cam": "shake",
-      "tensao": true,
-      "chars": [
-       {
-        "ref": "MEDICO",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "bravo",
-        "mouth": "o"
-       }
-      ],
-      "linhas": [
-       {
-        "voz": "MEDICO",
-        "texto": "É mentira! É o porteiro *escrevendo por ela*!"
-       }
-      ]
-     },
-     {
-      "bg": "elevador",
-      "bg_params": {
-       "floor": "T"
-      },
-      "cam": "zoom_forte",
-      "prop": {
-       "type": "placa",
-       "title": "00:05",
-       "y": 700
-      },
-      "text": "Meia-noite e cinco. O espelho começou a *embaçar de vez*."
-     },
-     {
-      "bg": "elevador",
-      "bg_params": {
-       "floor": "T"
-      },
-      "cam": "zoom_rosto",
-      "hook": true,
-      "chars": [
-       {
-        "ref": "MEDICO",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "preocupado",
-        "mouth": "triste"
-       }
-      ],
-      "text": "A: confio no médico e dou o meu reflexo pra minha mãe *sair*."
-     },
-     {
-      "bg": "porao",
-      "bg_params": {
-       "texto": "SUBSOLO"
-      },
-      "cam": "zoom_rosto",
-      "text": "B: confio na mensagem e solto o porteiro. Mas ele pode *me prender lá*.",
-      "chars": [
-       {
-        "ref": "PORTEIRO",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "bravo"
-       }
-      ]
-     },
-     {
-      "bg": "recepcao_hotel",
-      "bg_params": {
-       "texto": "PORTARIA",
-       "hora": "noite",
-       "luz": "apagada"
-      },
-      "cam": "zoom_rosto",
-      "hook": true,
-      "chars": [
-       {
-        "ref": "PROTAGONISTA",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "preocupado",
-        "mouth": "o"
-       }
-      ],
-      "text": "E você, em quem confiaria? Comenta *A ou B*."
-     }
-    ],
-    "opcoes": [
-     "Dar meu reflexo pra mãe sair",
-     "Soltar o porteiro e confiar nela"
-    ],
-    "opcoes_rostos": [
-     {
-      "ref": "MEDICO",
-      "brows": "preocupado"
-     },
-     {
-      "ref": "PORTEIRO",
-      "brows": "bravo"
-     }
-    ],
-    "chamada": "Manda pra quem nunca confia em ninguém"
-   },
-   "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/parte5B.mp4",
-   "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/capa5B.jpg",
-   "duracao": 74.6,
-   "roteiro": "Meia-noite menos um. Prendi o porteiro no elevador. Pra minha mãe voltar.\nPORTEIRO: Garoto, não! Sem mim, ninguém sai de lá!\nA porta fechou. O visor caiu direto no menos um. Meia-noite.\nÀ meia-noite, ela tinha que entrar por aquela porta.\nMeia-noite e dois. Ninguém entrou.\nPORTEIRO: Eu avisei. Quem prende o porteiro, prende ela também.\nPROTAGONISTA: Então me fala como tirar ela!\nO interfone chiou e morreu. E a luz da portaria apagou.\nAí o elevador voltou. Vazio. E o espelho batendo de dentro.\nMEDICO: Ela tá aqui comigo. Do lado de cá do espelho.\nPROTAGONISTA: Então puxa ela!\nMEDICO: O espelho só solta alguém se você der o seu reflexo.\nNo vapor, mais um recado. Com hora marcada.\nMeu reflexo. Eu nunca mais ia me ver em espelho nenhum.\nMeia-noite e quatro. Meu celular vibrou. Número desconhecido.\nDez anos sem notícia. E agora, uma mensagem dela.\nMEDICO: É mentira! É o porteiro escrevendo por ela!\nMeia-noite e cinco. O espelho começou a embaçar de vez.\nA: confio no médico e dou o meu reflexo pra minha mãe sair.\nB: confio na mensagem e solto o porteiro. Mas ele pode me prender lá.\nE você, em quem confiaria? Comenta A ou B."
-  },
-  "A": {
-   "resumo": "Escolheram ficar no -1: a mãe sai pela portaria, mas o porteiro (que saiu do -1 dez anos atrás) abre a porta pra ela sorrindo; o médico avisa que às 00:10 o Você esquece a mãe para sempre.",
-   "retomada_gancho": "Cena 1: 'Onze e cinquenta e nove. Eu entrei no elevador. E apertei o menos um.' (~3 s, fato novo: ele entrou)",
-   "cenas": 19,
-   "palavras": 203,
-   "duracao_alvo_s": "60-80",
-   "momento_zoom_tensao": [
-    1,
-    2,
-    4,
-    5,
-    7,
-    8,
-    10,
-    11,
-    13,
-    14,
-    15,
-    16,
-    17,
-    19
-   ],
-   "cenas_relogio": [
-    "cena 2 placa '-1 · 00:00'",
-    "cena 8 placa '00:03'",
-    "cena 10 carta 'QUEM ENTROU NO -1'",
-    "cena 14 celular '00:06 · INTERFONE -1'",
-    "cena 16 placa '00:08'"
-   ],
-   "cena_celular_papel": [
-    "cena 10 carta 'QUEM ENTROU NO -1': PORTEIRO · 1974 / !SAIU HÁ 10 ANOS /  / !VOCÊ · HOJE 00:00",
-    "cena 14 celular '00:06 · INTERFONE -1': Obrigado, garoto. / !Agora ela é minha / !lá em cima."
-   ],
-   "final": "Virada: mensagem no interfone do -1, do porteiro (quem sabe mais): 'Obrigado, garoto. Agora ela é minha lá em cima.' 00:08. A/B com custo + 'Comenta A ou B'.",
-   "gatilho_compartilhar": "Manda pra quem faria tudo pela mãe",
-   "legenda": "Meia-noite. Eu entrei no -1 pra minha mãe sair... e o porteiro abriu a porta pra ela. 🛗\n{RESULTADO_SE_HOUVER_VOTOS}\nO Andar que Não Existe · Parte 5 — Quem entrou no -1\n\nO que o porteiro quer com ela lá em cima? Teoria aqui 👇\n\n🅰️ Ficar e esquecer minha mãe (ela fica livre, com ele)\n🅱️ Subir pelo espelho com o médico (ela volta pro -1)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem faria tudo pela mãe 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #elevador #historiasempartes #misterio #suspense #vocedecide",
-   "capa": {
-    "titulo": "O Andar que Não Existe",
-    "parte": "Parte 5",
-    "cover_text": "Quem entrou no -1"
-   },
-   "cenarios": [
-    "corredor_predio",
-    "elevador",
-    "escuro",
-    "porao",
-    "recepcao_hotel"
-   ],
-   "script": {
-    "cover_text": "Quem entrou no -1",
-    "faixa": "PARTE 5 · Quem entrou no -1",
-    "gancho_tela": "EU ENTREI NO -1",
-    "caption": "Meia-noite. Eu entrei no -1 pra minha mãe sair... e o porteiro abriu a porta pra ela. 🛗\n{RESULTADO_SE_HOUVER_VOTOS}\nO Andar que Não Existe · Parte 5 — Quem entrou no -1\n\nO que o porteiro quer com ela lá em cima? Teoria aqui 👇\n\n🅰️ Ficar e esquecer minha mãe (ela fica livre, com ele)\n🅱️ Subir pelo espelho com o médico (ela volta pro -1)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem faria tudo pela mãe 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #elevador #historiasempartes #misterio #suspense #vocedecide",
-    "scenes": [
-     {
-      "bg": "elevador",
-      "bg_params": {
-       "floor": "-1"
-      },
-      "cam": "zoom_tremido",
-      "hook": true,
-      "cover": true,
-      "chars": [
-       {
-        "ref": "PROTAGONISTA",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "eyes": "arregalado",
-        "brows": "preocupado",
-        "mouth": "o"
-       }
-      ],
-      "text": "Onze e cinquenta e nove. Apertei o menos um. Pra minha mãe *sair*."
-     },
-     {
-      "bg": "elevador",
-      "bg_params": {
-       "floor": "-1"
-      },
-      "cam": "shake",
-      "tensao": true,
-      "prop": {
-       "type": "placa",
-       "title": "-1 · 00:00",
-       "y": 700
-      },
-      "text": "Meia-noite. A porta abriu no andar que *não existe*."
-     },
-     {
-      "bg": "corredor_predio",
-      "bg_params": {
-       "luz": "apagada"
-      },
-      "cam": "pan_l",
-      "chars": [
-       {
-        "ref": "PROTAGONISTA",
-        "x": 0.21,
-        "brows": "surpreso"
-       },
-       {
-        "ref": "MEDICO",
-        "x": 0.67,
-        "brows": "neutro"
-       }
-      ],
-      "text": "Era o corredor do meu prédio. E o médico, *me esperando*."
-     },
-     {
-      "bg": "recepcao_hotel",
-      "bg_params": {
-       "texto": "PORTARIA",
-       "hora": "noite"
-      },
-      "cam": "zoom_forte",
-      "filtro": "tv",
-      "tensao": true,
-      "text": "Na telinha do interfone, câmera três: minha mãe saindo na *portaria*.",
-      "tv_hora": "00:01"
-     },
-     {
-      "bg": "corredor_predio",
-      "bg_params": {
-       "luz": "apagada"
-      },
-      "cam": "zoom_rosto",
-      "chars": [
-       {
-        "ref": "PROTAGONISTA",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "preocupado",
-        "mouth": "triste"
-       }
-      ],
-      "linhas": [
-       {
-        "voz": "PROTAGONISTA",
-        "texto": "Ela saiu. Dez anos depois, ela *saiu*."
-       }
-      ]
-     },
-     {
-      "bg": "recepcao_hotel",
-      "bg_params": {
-       "texto": "PORTARIA",
-       "hora": "noite"
-      },
-      "cam": "in",
-      "filtro": "tv",
-      "chars": [
-       {
-        "ref": "PORTEIRO",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "neutro"
-       }
-      ],
-      "text": "Mas quem abriu a porta da rua pra ela foi o porteiro. *Sorrindo*.",
-      "tv_hora": "00:01"
-     },
-     {
-      "bg": "corredor_predio",
-      "bg_params": {
-       "luz": "apagada"
-      },
-      "cam": "zoom_rosto",
-      "tensao": true,
-      "chars": [
-       {
-        "ref": "MEDICO",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "preocupado"
-       }
-      ],
-      "linhas": [
-       {
-        "voz": "MEDICO",
-        "texto": "A troca tem preço. À meia-noite e dez, você *esquece ela*."
-       }
-      ]
-     },
-     {
-      "bg": "escuro",
-      "cam": "in",
-      "tensao": true,
-      "prop": {
-       "type": "placa",
-       "title": "00:03",
-       "y": 700
-      },
-      "text": "Meia-noite e três. Eu já não lembrava a *voz dela*."
-     },
-     {
-      "bg": "porao",
-      "bg_params": {
-       "texto": "SUBSOLO"
-      },
-      "cam": "in",
-      "chars": [
-       {
-        "ref": "MEDICO",
-        "x": 0.21,
-        "brows": "neutro"
-       },
-       {
-        "ref": "PROTAGONISTA",
-        "x": 0.67,
-        "brows": "preocupado"
-       }
-      ],
-      "text": "O médico me levou até o subsolo. Lá tinha um livro *aberto*."
-     },
-     {
-      "bg": "escuro",
-      "cam": "in",
-      "prop": {
-       "type": "carta",
-       "title": "QUEM ENTROU NO -1",
-       "lines": [
-        "PORTEIRO · 1974",
-        "!SAIU HÁ 10 ANOS",
-        "",
-        "!VOCÊ · HOJE 00:00"
-       ],
-       "y": 900
-      },
-      "text": "O porteiro entrou aqui em setenta e quatro. E saiu *quando ela entrou*."
-     },
-     {
-      "bg": "porao",
-      "bg_params": {
-       "texto": "SUBSOLO"
-      },
-      "cam": "zoom_rosto",
-      "chars": [
-       {
-        "ref": "PROTAGONISTA",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "bravo",
-        "mouth": "o"
-       }
-      ],
-      "linhas": [
-       {
-        "voz": "PROTAGONISTA",
-        "texto": "Tem que ter um jeito de sair *sem trocar*!"
-       }
-      ]
-     },
-     {
-      "bg": "porao",
-      "bg_params": {
-       "texto": "SUBSOLO"
-      },
-      "cam": "in",
-      "chars": [
-       {
-        "ref": "MEDICO",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "preocupado",
-        "mouth": "triste"
-       }
-      ],
-      "linhas": [
-       {
-        "voz": "MEDICO",
-        "texto": "Tem. Pelo espelho do elevador. Mas aí ela volta pro *seu lugar*."
-       }
-      ]
-     },
-     {
-      "bg": "porao",
-      "bg_params": {
-       "texto": "SUBSOLO",
-       "alerta": true
-      },
-      "cam": "shake",
-      "tensao": true,
-      "text": "Aí o interfone do subsolo acendeu. *Sozinho*."
-     },
-     {
-      "bg": "escuro",
-      "cam": "zoom_forte",
-      "hook": true,
-      "prop": {
-       "type": "celular",
-       "title": "00:06 · INTERFONE -1",
-       "lines": [
-        "Obrigado, garoto.",
-        "!Agora ela é minha",
-        "!lá em cima."
-       ]
-      },
-      "text": "Uma mensagem na telinha. Do único que *saiu* daqui."
-     },
-     {
-      "bg": "recepcao_hotel",
-      "bg_params": {
-       "texto": "PORTARIA",
-       "hora": "noite"
-      },
-      "cam": "zoom_tremido",
-      "filtro": "tv",
-      "tensao": true,
-      "chars": [
-       {
-        "ref": "PORTEIRO",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "neutro"
-       }
-      ],
-      "linhas": [
-       {
-        "voz": "PORTEIRO",
-        "texto": "Pode esquecer em paz. Eu cuido da sua mãe *aqui em cima*."
-       }
-      ],
-      "tv_hora": "00:07"
-     },
-     {
-      "bg": "elevador",
-      "bg_params": {
-       "floor": "-1"
-      },
-      "cam": "zoom_forte",
-      "prop": {
-       "type": "placa",
-       "title": "00:08",
-       "y": 700
-      },
-      "text": "Meia-noite e oito. Dois minutos pra eu *esquecer ela* pra sempre."
-     },
-     {
-      "bg": "porao",
-      "bg_params": {
-       "texto": "SUBSOLO"
-      },
-      "cam": "zoom_rosto",
-      "hook": true,
-      "chars": [
-       {
-        "ref": "PROTAGONISTA",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "preocupado",
-        "mouth": "triste"
-       }
-      ],
-      "text": "A: fico aqui e esqueço tudo. Ela fica livre... *com ele*."
-     },
-     {
-      "bg": "elevador",
-      "bg_params": {
-       "floor": "-1"
-      },
-      "cam": "in",
-      "chars": [
-       {
-        "ref": "MEDICO",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "preocupado"
-       }
-      ],
-      "text": "B: subo pelo espelho com o médico. E ela *volta pra cá*."
-     },
-     {
-      "bg": "corredor_predio",
-      "bg_params": {
-       "luz": "apagada"
-      },
-      "cam": "zoom_rosto",
-      "hook": true,
-      "chars": [
-       {
-        "ref": "PROTAGONISTA",
-        "x": 0.5,
-        "scale": 0.9,
-        "enquadramento": "busto",
-        "brows": "preocupado",
-        "mouth": "o"
-       }
-      ],
-      "text": "E você, o que faria? Comenta *A ou B*."
-     }
-    ],
-    "opcoes": [
-     "Ficar e esquecer minha mãe",
-     "Subir pelo espelho com o médico"
-    ],
-    "opcoes_rostos": [
-     {
-      "ref": "PROTAGONISTA",
-      "brows": "preocupado",
-      "mouth": "triste"
-     },
-     {
-      "ref": "MEDICO",
-      "brows": "preocupado"
-     }
-    ],
-    "chamada": "Manda pra quem faria tudo pela mãe"
-   },
-   "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/parte5A.mp4",
-   "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/capa5A.jpg",
-   "duracao": 72.1,
-   "roteiro": "Onze e cinquenta e nove. Apertei o menos um. Pra minha mãe sair.\nMeia-noite. A porta abriu no andar que não existe.\nEra o corredor do meu prédio. E o médico, me esperando.\nNa telinha do interfone, câmera três: minha mãe saindo na portaria.\nPROTAGONISTA: Ela saiu. Dez anos depois, ela saiu.\nMas quem abriu a porta da rua pra ela foi o porteiro. Sorrindo.\nMEDICO: A troca tem preço. À meia-noite e dez, você esquece ela.\nMeia-noite e três. Eu já não lembrava a voz dela.\nO médico me levou até o subsolo. Lá tinha um livro aberto.\nO porteiro entrou aqui em setenta e quatro. E saiu quando ela entrou.\nPROTAGONISTA: Tem que ter um jeito de sair sem trocar!\nMEDICO: Tem. Pelo espelho do elevador. Mas aí ela volta pro seu lugar.\nAí o interfone do subsolo acendeu. Sozinho.\nUma mensagem na telinha. Do único que saiu daqui.\nPORTEIRO: Pode esquecer em paz. Eu cuido da sua mãe aqui em cima.\nMeia-noite e oito. Dois minutos pra eu esquecer ela pra sempre.\nA: fico aqui e esqueço tudo. Ela fica livre... com ele.\nB: subo pelo espelho com o médico. E ela volta pra cá.\nE você, o que faria? Comenta A ou B."
-  }
- },
- "problemas": [
-  "Conferência visual feita nas duas versões (quadros + rostos): 1 boca e 2 olhos em todos, legendas inteiras, sem recortes. Observação leve: na B cena 13 ('Meu reflexo...') o Você aparece meio transparente no elevador (efeito de reflexo do motor) — combina com o tema, mantido.",
-  "A ficha diz fuso 'America/Sao_Paulo'; o pedido do dono fala em horário de Campo Grande. Não mudei (horário travado)."
- ],
- "criado_em": "2026-11-25T00:47:00Z",
- "em_breve": {
-  "postado_em": "2026-11-25T05:19-04:00",
-  "imagem": "videos/elevador/embreve5.jpg",
-  "media_id": "18103988591391063"
- },
- "produzido_em": "2026-11-25T09:20-04:00",
- "placar_parcial": {
-  "A": 0,
-  "B": 0,
-  "fonte": "Produção 25/11 ~08:55 Campo Grande: Windsor (media 18077993924592764, last_3dT, cache) só mostra o comentário-pergunta da própria @mundoemhistorias. Zero votos e nenhum comentário para responder. Sem votos, vale o padrão B (mais dramática); a legenda não deve citar resultado (o {RESULTADO_SE_HOUVER_VOTOS} some)."
- },
- "arquivos": {
-  "padrao": "videos/elevador/parte5.mp4 = parte5B.mp4 (historia.json com a versão B)",
-  "A": "videos/elevador/parte5A.mp4",
-  "B": "videos/elevador/parte5B.mp4"
- },
- "regras_virais": [
-  "Pré-roteiro do Planejamento já cumpria as 8 regras nas duas versões: frase 1 com 23:59 e o conflito (B: 'Eu empurrei o porteiro pro elevador'; A: 'Eu entrei no elevador. E apertei o menos um'), sem currículo, todas as cenas com no máximo 15 palavras, relógio na imagem avançando (B 00:00→00:02→00:04→00:05 + 'fecha às 00:06'; A 00:00→00:03→00:06→00:08), celular/carta legíveis, virada de quem sabe mais (B mensagem da MÃE; A mensagem do porteiro no interfone), A/B com custo + 'Comenta A ou B', legenda com gancho na linha 1 e 'Manda pra quem...'.",
-  "A cena 10: 'E saiu no lugar dela' -> 'E saiu quando ela entrou' (coerência com a P4: ela entrou no lugar do Você, não no do porteiro).",
-  "A cena 10: carta 'QUEM ENTROU NO -1' tinha o título escondido pela faixa no zoom -> y=900, câmera 'in'.",
-  "A cena 13: porão quase preto e vazio ('o interfone acendeu sozinho') -> porão com alerta (luz vermelha piscando).",
-  "B cena 12: carta 'NO ESPELHO:' descida (y=900, câmera 'in') para não ficar sob a faixa.",
-  "B cena 19 (opção B): porão vazio -> close do Porteiro bravo (a opção B é sobre ele).",
-  "Cena de capa (cover) não alterada nas duas versões (cartaz EM BREVE já saiu)."
- ],
- "regras_virais_ok": {
-  "1_frase1_conflito": "corrigido (B: 'Meia-noite menos um. Prendi o porteiro no elevador. Pra minha mãe voltar.'; A: 'Onze e cinquenta e nove. Apertei o menos um. Pra minha mãe sair.' — agora com a mãe em jogo)",
-  "2_sem_curriculo": "ok",
-  "3_primeiros_15s": "corrigido (B cena 4 'esperando a mãe' virou prazo: 'À meia-noite, ela tinha que entrar por aquela porta')",
-  "4_relogio_na_tela": "corrigido (relógio da câmera tv mostrava 23:59 depois da meia-noite; agora tv_hora 00:01/00:02/00:07; placas 00:00→00:08 avançando)",
-  "5_celular_papel": "corrigido (título do celular passava da borda: agora encolhe; B carta 'FECHA ÀS 00:06' em letra grande)",
-  "6_final_virada": "ok",
-  "7_chamada": "ok (A/B com custo + 'Comenta A ou B')",
-  "8_legenda": "ok",
-  "9_primeiro_quadro": "ok (close + gancho grande + fala em 0,0 s, sem faixas de votação, sem recapitulação)"
- },
- "nota_viral": {
-  "antes": {
-   "B": {
-    "nota": 7,
-    "itens": {
-     "a": 2,
-     "b": 1,
-     "c": 1,
-     "d": 2,
-     "e": 1
+      "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/parte5A.mp4",
+      "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/capa5A.jpg",
+      "duracao": 72.1,
+      "roteiro": "Onze e cinquenta e nove. Apertei o menos um. Pra minha mãe sair.\nMeia-noite. A porta abriu no andar que não existe.\nEra o corredor do meu prédio. E o médico, me esperando.\nNa telinha do interfone, câmera três: minha mãe saindo na portaria.\nPROTAGONISTA: Ela saiu. Dez anos depois, ela saiu.\nMas quem abriu a porta da rua pra ela foi o porteiro. Sorrindo.\nMEDICO: A troca tem preço. À meia-noite e dez, você esquece ela.\nMeia-noite e três. Eu já não lembrava a voz dela.\nO médico me levou até o subsolo. Lá tinha um livro aberto.\nO porteiro entrou aqui em setenta e quatro. E saiu quando ela entrou.\nPROTAGONISTA: Tem que ter um jeito de sair sem trocar!\nMEDICO: Tem. Pelo espelho do elevador. Mas aí ela volta pro seu lugar.\nAí o interfone do subsolo acendeu. Sozinho.\nUma mensagem na telinha. Do único que saiu daqui.\nPORTEIRO: Pode esquecer em paz. Eu cuido da sua mãe aqui em cima.\nMeia-noite e oito. Dois minutos pra eu esquecer ela pra sempre.\nA: fico aqui e esqueço tudo. Ela fica livre... com ele.\nB: subo pelo espelho com o médico. E ela volta pra cá.\nE você, o que faria? Comenta A ou B."
     }
-   },
-   "A": {
-    "nota": 7,
+  },
+  "problemas": [
+    "Conferência visual feita nas duas versões (quadros + rostos): 1 boca e 2 olhos em todos, legendas inteiras, sem recortes. Observação leve: na B cena 13 ('Meu reflexo...') o Você aparece meio transparente no elevador (efeito de reflexo do motor) — combina com o tema, mantido.",
+    "A ficha diz fuso 'America/Sao_Paulo'; o pedido do dono fala em horário de Campo Grande. Não mudei (horário travado)."
+  ],
+  "criado_em": "2026-11-25T00:47:00Z",
+  "em_breve": {
+    "postado_em": "2026-11-25T05:19-04:00",
+    "imagem": "videos/elevador/embreve5.jpg",
+    "media_id": "18103988591391063"
+  },
+  "produzido_em": "2026-11-25T09:20-04:00",
+  "placar_parcial": {
+    "A": 0,
+    "B": 0,
+    "fonte": "Produção 25/11 ~08:55 Campo Grande: Windsor (media 18077993924592764, last_3dT, cache) só mostra o comentário-pergunta da própria @mundoemhistorias. Zero votos e nenhum comentário para responder. Sem votos, vale o padrão B (mais dramática); a legenda não deve citar resultado (o {RESULTADO_SE_HOUVER_VOTOS} some)."
+  },
+  "arquivos": {
+    "padrao": "videos/elevador/parte5.mp4 = parte5B.mp4 (historia.json com a versão B)",
+    "A": "videos/elevador/parte5A.mp4",
+    "B": "videos/elevador/parte5B.mp4"
+  },
+  "regras_virais": [
+    "Pré-roteiro do Planejamento já cumpria as 8 regras nas duas versões: frase 1 com 23:59 e o conflito (B: 'Eu empurrei o porteiro pro elevador'; A: 'Eu entrei no elevador. E apertei o menos um'), sem currículo, todas as cenas com no máximo 15 palavras, relógio na imagem avançando (B 00:00→00:02→00:04→00:05 + 'fecha às 00:06'; A 00:00→00:03→00:06→00:08), celular/carta legíveis, virada de quem sabe mais (B mensagem da MÃE; A mensagem do porteiro no interfone), A/B com custo + 'Comenta A ou B', legenda com gancho na linha 1 e 'Manda pra quem...'.",
+    "A cena 10: 'E saiu no lugar dela' -> 'E saiu quando ela entrou' (coerência com a P4: ela entrou no lugar do Você, não no do porteiro).",
+    "A cena 10: carta 'QUEM ENTROU NO -1' tinha o título escondido pela faixa no zoom -> y=900, câmera 'in'.",
+    "A cena 13: porão quase preto e vazio ('o interfone acendeu sozinho') -> porão com alerta (luz vermelha piscando).",
+    "B cena 12: carta 'NO ESPELHO:' descida (y=900, câmera 'in') para não ficar sob a faixa.",
+    "B cena 19 (opção B): porão vazio -> close do Porteiro bravo (a opção B é sobre ele).",
+    "Cena de capa (cover) não alterada nas duas versões (cartaz EM BREVE já saiu)."
+  ],
+  "regras_virais_ok": {
+    "1_frase1_conflito": "corrigido (B: 'Meia-noite menos um. Prendi o porteiro no elevador. Pra minha mãe voltar.'; A: 'Onze e cinquenta e nove. Apertei o menos um. Pra minha mãe sair.' — agora com a mãe em jogo)",
+    "2_sem_curriculo": "ok",
+    "3_primeiros_15s": "corrigido (B cena 4 'esperando a mãe' virou prazo: 'À meia-noite, ela tinha que entrar por aquela porta')",
+    "4_relogio_na_tela": "corrigido (relógio da câmera tv mostrava 23:59 depois da meia-noite; agora tv_hora 00:01/00:02/00:07; placas 00:00→00:08 avançando)",
+    "5_celular_papel": "corrigido (título do celular passava da borda: agora encolhe; B carta 'FECHA ÀS 00:06' em letra grande)",
+    "6_final_virada": "ok",
+    "7_chamada": "ok (A/B com custo + 'Comenta A ou B')",
+    "8_legenda": "ok",
+    "9_primeiro_quadro": "ok (close + gancho grande + fala em 0,0 s, sem faixas de votação, sem recapitulação)"
+  },
+  "nota_viral": {
+    "antes": {
+      "B": {
+        "nota": 7,
+        "itens": {
+          "a": 2,
+          "b": 1,
+          "c": 1,
+          "d": 2,
+          "e": 1
+        }
+      },
+      "A": {
+        "nota": 7,
+        "itens": {
+          "a": 2,
+          "b": 1,
+          "c": 1,
+          "d": 2,
+          "e": 1
+        }
+      }
+    },
+    "nota": 8,
     "itens": {
-     "a": 2,
-     "b": 1,
-     "c": 1,
-     "d": 2,
-     "e": 1
-    }
-   }
+      "B": {
+        "a_parada_dedo": 2,
+        "b_gancho": 2,
+        "c_ritmo": 1,
+        "d_curiosidade": 2,
+        "e_final_envio": 1
+      },
+      "A": {
+        "a_parada_dedo": 2,
+        "b_gancho": 2,
+        "c_ritmo": 1,
+        "d_curiosidade": 2,
+        "e_final_envio": 1
+      }
+    },
+    "motivo": "Abre em close com gancho grande e fala em 0,0 s; frase 1 agora traz a mãe em jogo e a hora; relógio avança na tela; pergunta aberta clara (B: médico ou mensagem? A: o que o porteiro quer com ela?). Ritmo 1: cenas de 2,4–4,5 s (a 1ª passa de 4 s). Final 1: a virada vem ~20 s antes do fim, seguida das 2 opções."
   },
-  "nota": 8,
-  "itens": {
-   "B": {
-    "a_parada_dedo": 2,
-    "b_gancho": 2,
-    "c_ritmo": 1,
-    "d_curiosidade": 2,
-    "e_final_envio": 1
-   },
-   "A": {
-    "a_parada_dedo": 2,
-    "b_gancho": 2,
-    "c_ritmo": 1,
-    "d_curiosidade": 2,
-    "e_final_envio": 1
-   }
+  "controle_qualidade": {
+    "feito_em": "2026-11-25T10:20-04:00",
+    "checado": [
+      "Ficha x cartaz embreve5.jpg: mesma história, Parte 5, Você na portaria (capa igual, cena cover não alterada)",
+      "Quadro de cada cena (A 19, B 20 + cartão final): cenários de verdade (portaria, elevador T/-1, corredor, subsolo), escuro só em cartões (B 3, A 3), 1 boca e 2 olhos em todos",
+      "Corrigido: A cena 8 placa 00:03 cortada pelo zoom_forte -> câmera 'in'",
+      "Corrigido: câmera tv mostrava 23:59 depois da meia-noite (engine: novo tv_hora)",
+      "Corrigido: título do celular passava da borda (engine encolhe o título)",
+      "Corrigido: B carta do espelho pequena -> 'FECHA ÀS 00:06' grande",
+      "Áudio: A 72,1 s / B 74,6 s, sem silêncio >0,8 s, fala desde 0,0 s, vozes registradas (preparar.py ok)",
+      "Coerência: segue a P4 (votação, padrão B sem votos), legenda sem dizer que ninguém votou, sem 'já está no perfil'",
+      "checar_catalogos ok; preparar.py sem erros"
+    ]
   },
-  "motivo": "Abre em close com gancho grande e fala em 0,0 s; frase 1 agora traz a mãe em jogo e a hora; relógio avança na tela; pergunta aberta clara (B: médico ou mensagem? A: o que o porteiro quer com ela?). Ritmo 1: cenas de 2,4–4,5 s (a 1ª passa de 4 s). Final 1: a virada vem ~20 s antes do fim, seguida das 2 opções."
- },
- "controle_qualidade": {
-  "feito_em": "2026-11-25T10:20-04:00",
-  "checado": [
-   "Ficha x cartaz embreve5.jpg: mesma história, Parte 5, Você na portaria (capa igual, cena cover não alterada)",
-   "Quadro de cada cena (A 19, B 20 + cartão final): cenários de verdade (portaria, elevador T/-1, corredor, subsolo), escuro só em cartões (B 3, A 3), 1 boca e 2 olhos em todos",
-   "Corrigido: A cena 8 placa 00:03 cortada pelo zoom_forte -> câmera 'in'",
-   "Corrigido: câmera tv mostrava 23:59 depois da meia-noite (engine: novo tv_hora)",
-   "Corrigido: título do celular passava da borda (engine encolhe o título)",
-   "Corrigido: B carta do espelho pequena -> 'FECHA ÀS 00:06' grande",
-   "Áudio: A 72,1 s / B 74,6 s, sem silêncio >0,8 s, fala desde 0,0 s, vozes registradas (preparar.py ok)",
-   "Coerência: segue a P4 (votação, padrão B sem votos), legenda sem dizer que ninguém votou, sem 'já está no perfil'",
-   "checar_catalogos ok; preparar.py sem erros"
-  ]
- }
+  "versao_escolhida": "B",
+  "placar": {
+    "A": 0,
+    "B": 0
+  },
+  "media_id": "18114810845142582",
+  "publicado_em": "2026-11-25T15:56:00Z"
 }

@@ -935,7 +935,7 @@
         "mouth": "o"
        }
       ],
-      "text": "Onze e cinquenta e nove. Eu empurrei o porteiro *pro elevador*."
+      "text": "Meia-noite menos um. Prendi o porteiro no elevador. Pra minha mãe *voltar*."
      },
      {
       "bg": "elevador",
@@ -988,7 +988,7 @@
         "brows": "preocupado"
        }
       ],
-      "text": "Eu fiquei olhando a porta da rua. Esperando a minha mãe *entrar*."
+      "text": "À meia-noite, ela tinha que entrar *por aquela porta*."
      },
      {
       "bg": "recepcao_hotel",
@@ -1026,7 +1026,8 @@
         "voz": "PORTEIRO",
         "texto": "Eu avisei. Quem prende o porteiro, *prende ela também*."
        }
-      ]
+      ],
+      "tv_hora": "00:02"
      },
      {
       "bg": "recepcao_hotel",
@@ -1130,10 +1131,10 @@
        "type": "carta",
        "title": "NO ESPELHO:",
        "lines": [
-        "!O ESPELHO FECHA",
-        "!ÀS 00:06"
+        "!FECHA ÀS 00:06"
        ],
-       "y": 900
+       "y": 900,
+       "grande": true
       },
       "text": "No vapor, mais um recado. Com hora *marcada*."
      },

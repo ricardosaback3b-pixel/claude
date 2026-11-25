@@ -469,20 +469,25 @@ def prop_layer(prop):
             hl = line.startswith("!")
             txt = line.lstrip("!")
             col = (190, 20, 30) if hl else (50, 40, 40)
-            fl, sz = f, 46
+            sz = 64 if prop.get("grande") else 46  # "grande": linhas legíveis em 1 s
+            fl = font(MONT, sz, True)
             while sz > 28 and fl.getlength(txt) > pw - 100:  # linha nunca passa da borda do papel
                 sz -= 2
                 fl = font(MONT, sz, True)
             d.text((x0 + 60, y), txt, font=fl, fill=col)
             if line.startswith("~"):
                 d.line([x0 + 50, y + 30, x0 + pw - 60, y + 30], fill=(40, 30, 30), width=6)
-            y += 78
+            y += 100 if prop.get("grande") else 78
     elif kind == "celular":
         x0, y0, pw, ph = BW // 2 - 280, 460, 560, 1040
         d.rounded_rectangle([x0, y0, x0 + pw, y0 + ph], 60, fill=(14, 14, 18), outline=(80, 80, 90), width=10)
         d.rounded_rectangle([x0 + 26, y0 + 70, x0 + pw - 26, y0 + ph - 60], 30, fill=(30, 36, 50))
         f = font(MONT, 52, True)
         ft = font(ANTON, 84)
+        tsz = 84
+        while tsz > 44 and ft.getlength(prop.get("title", "")) > pw - 70:  # título nunca passa da borda do celular
+            tsz -= 2
+            ft = font(ANTON, tsz)
         d.text((x0 + pw // 2, y0 + 300), prop.get("title", ""), font=ft, fill=(255, 255, 255), anchor="mm")
         for i, line in enumerate(prop.get("lines", [])):
             hl = line.startswith("!")  # "!" = linha em vermelho (alerta)
@@ -652,7 +657,7 @@ def camera(img, cam, t, foco=None, extra=1.0):
 _tv_lines = None
 
 
-def filtro_tv(frame, ft, rng=np.random.default_rng(7)):
+def filtro_tv(frame, ft, rng=np.random.default_rng(7), hora="23:59"):
     """Filtro de câmera de segurança / TV velha: cor lavada, linhas, chiado, faixa rolando, CAM e REC."""
     global _tv_lines
     a = np.asarray(frame.convert("RGB")).astype(np.float32)
@@ -680,7 +685,7 @@ def filtro_tv(frame, ft, rng=np.random.default_rng(7)):
         d.ellipse([W - 230, 422, W - 200, 452], fill=(230, 40, 40))
     d.text((W - 185, 437), "REC", font=f, fill=(235, 235, 235), anchor="lm")
     seg = int(ft) % 60
-    d.text((50, 490), f"23:59:{seg:02d}", font=font(MONT, 34, True), fill=(220, 220, 220))
+    d.text((50, 490), f"{hora}:{seg:02d}", font=font(MONT, 34, True), fill=(220, 220, 220))
     return out
 
 
@@ -1105,7 +1110,7 @@ def render(script, out_dir):
         if ft < 0.22 and not meta.get("gancho_tela"):
             frame.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, int(200 * (1 - ft / 0.22)))))
         if sc.get("filtro") == "tv":
-            frame = filtro_tv(frame, ft)
+            frame = filtro_tv(frame, ft, hora=sc.get("tv_hora", "23:59"))  # tv_hora: relógio da câmera bate com o da história
         if ft - st < 0.12 and k > 0:
             frame.alpha_composite(Image.new("RGBA", (W, H), (255, 255, 255, int(110 * (1 - (ft - st) / 0.12)))))
         frame.alpha_composite(over)

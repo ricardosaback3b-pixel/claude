@@ -5,7 +5,7 @@
  "historia": "cidade-sirene",
  "titulo": "Nessa Cidade, a Sirene Toca às 18h",
  "parte": 6,
- "status": "planejado",
+ "status": "produzido",
  "votacao": true,
  "final": true,
  "versao_padrao": "B",
@@ -16,42 +16,32 @@
    "resumo": "Escolheram parar o relógio: às 18h o ponteiro trava, os sumidos descem (o Prefeito primeiro), o narrador esquece o próprio nome; o Policial escreve o nome dele pela última vez e ele lembra; o Prefeito avisa que basta alguém dar corda e o ponteiro volta pra 17:59.",
    "retomada_gancho": "Cena 1: 'Cinco e cinquenta e nove. Eu subi a torre do relógio correndo.' (~3 s, fato novo: ele está na torre)",
    "cenas": 19,
-   "palavras": 194,
-   "duracao_alvo_s": "60-80",
+   "palavras": 132,
+   "duracao_alvo_s": "45-60",
    "momento_zoom_tensao": [
     1,
     2,
     3,
     4,
     5,
-    7,
     8,
     9,
-    11,
-    12,
-    13,
-    16,
     17,
     18,
     19
    ],
    "cenas_relogio": [
-    "cena 1 relógio do cenário 17:59",
-    "cena 2 relógio do cenário 17:59",
-    "cena 3 placa '17:59:50'",
-    "cena 4 relógio do cenário 18:00",
-    "cena 5 relógio do cenário 18:00",
-    "cena 6 relógio do cenário 18:00",
-    "cena 7 relógio do cenário 18:01",
-    "cena 10 relógio do cenário 18:02",
-    "cena 11 relógio do cenário 18:02",
-    "cena 12 relógio do cenário 18:03",
+    "cena 1 banner 'SIRENE DA CIDADE · 17:59 / FALTAM 60 SEGUNDOS' + relógio da torre 17:59",
+    "cena 2 relógio 17:59",
+    "cena 3 etiqueta '17:59:50 · FALTAM 10 SEG' + relógio",
+    "cenas 4-6 relógio 18:00",
+    "cena 7 relógio 18:01",
+    "cenas 10-11 relógio 18:02",
+    "cena 12 relógio 18:03",
     "cena 13 placa '18:03'",
-    "cena 15 relógio do cenário 18:03",
-    "cena 16 relógio do cenário 18:04",
-    "cena 17 relógio do cenário 18:04",
-    "cena 18 relógio do cenário 18:04",
-    "cena 19 placa '17:59'"
+    "cena 15 relógio 18:03",
+    "cenas 16-18 relógio 18:04",
+    "cena 19 placa '17:59' + relógio 17:59 (loop)"
    ],
    "cena_celular_papel": [
     "cena 9 carta 'O CADERNO': Nome não se apaga. / Só se troca. /  / !SEU NOME: ________"
@@ -73,7 +63,6 @@
    "script": {
     "cover_text": "O relógio parado",
     "faixa": "PARTE 6 · FINAL",
-    "gancho_tela": "PAREI O RELÓGIO",
     "caption": "Eu parei o relógio da sirene... e esqueci o meu próprio nome. 🚨\n{RESULTADO_SE_HOUVER_VOTOS}\nNessa Cidade, a Sirene Toca às 18h · Parte 6 — FINAL: O relógio parado\n\nVocê pararia o relógio sabendo o preço? 👇\n\nManda pra quem esquece o próprio nome quando tá nervoso 👀\n\nFIM. Começa da Parte 1 no perfil @mundoemhistorias. Nova história em breve 🔔\n\n#distopia #sirene #historiasempartes #final #misterio",
     "scenes": [
      {
@@ -97,7 +86,7 @@
         "mouth": "o"
        }
       ],
-      "text": "Cinco e cinquenta e nove. Eu subi a torre do relógio *correndo*."
+      "text": "Cinco e cinquenta e nove. Subi a torre *correndo*."
      },
      {
       "bg": "praca",
@@ -121,7 +110,7 @@
       "linhas": [
        {
         "voz": "POLICIAL",
-        "texto": "Se parar o relógio, você esquece o *próprio nome*!"
+        "texto": "Para e você *se esquece*!"
        }
       ]
      },
@@ -135,12 +124,14 @@
       },
       "cam": "zoom_forte",
       "tensao": true,
-      "prop": {
-       "type": "placa",
-       "title": "17:59:50",
-       "y": 700
-      },
-      "text": "Dez segundos. Eu agarrei o ponteiro *vermelho* com as duas mãos."
+      "etiquetas": [
+       {
+        "texto": "17:59:50 · FALTAM 10 SEG",
+        "x": 560,
+        "y": 1010
+       }
+      ],
+      "text": "Dez segundos. Agarrei o ponteiro *vermelho*."
      },
      {
       "bg": "praca",
@@ -162,7 +153,7 @@
         "mouth": "o"
        }
       ],
-      "text": "Seis em ponto. A sirene tocou. E o ponteiro *travou*."
+      "text": "Seis em ponto. A sirene tocou. O ponteiro *travou*."
      },
      {
       "bg": "praca",
@@ -176,7 +167,19 @@
       },
       "cam": "zoom_forte",
       "tensao": true,
-      "text": "Lá em cima, a cidade de cabeça pra baixo começou a *descer*. Devagar."
+      "etiquetas": [
+       {
+        "texto": "SUMIDOS · 30 ANOS",
+        "x": 640,
+        "y": 930,
+        "cor": [
+         120,
+         30,
+         160
+        ]
+       }
+      ],
+      "text": "Lá em cima, a cidade invertida começou a *descer*."
      },
      {
       "bg": "praca",
@@ -196,7 +199,7 @@
         "brows": "surpreso"
        }
       ],
-      "text": "O primeiro a pisar na praça foi o *Prefeito*. Inteiro."
+      "text": "O primeiro a pisar na praça: o *Prefeito*. Inteiro."
      },
      {
       "bg": "praca",
@@ -220,7 +223,7 @@
       "linhas": [
        {
         "voz": "PREFEITO",
-        "texto": "Você parou o relógio? Sabe o que isso *te custa*?"
+        "texto": "Isso vai *te custar caro*."
        }
       ]
      },
@@ -240,7 +243,7 @@
       "linhas": [
        {
         "voz": "PROTAGONISTA",
-        "texto": "Quem é você? E... quem sou *eu*?"
+        "texto": "Quem... quem sou *eu*?"
        }
       ]
      },
@@ -258,7 +261,7 @@
         "!SEU NOME: ________"
        ]
       },
-      "text": "Abri o caderno. Na linha do meu nome, *só um borrão*."
+      "text": "Na linha do meu nome, no caderno: *um borrão*."
      },
      {
       "bg": "praca",
@@ -269,7 +272,7 @@
        "relogio_hora": "18:02",
        "ceu_espelho": true
       },
-      "cam": "in",
+      "cam": "pan_r",
       "chars": [
        {
         "ref": "POLICIAL",
@@ -288,7 +291,7 @@
       "linhas": [
        {
         "voz": "PREFEITO",
-        "texto": "Ele olhou pra cima comigo. A gente tinha *oito anos*."
+        "texto": "Ele olhou comigo. *Aos oito anos*."
        }
       ]
      },
@@ -313,7 +316,7 @@
       "linhas": [
        {
         "voz": "PREFEITO",
-        "texto": "Escrevi trinta anos de nomes pra ninguém *levar ele*."
+        "texto": "Trinta anos escondendo *ele*."
        }
       ]
      },
@@ -337,7 +340,7 @@
       "linhas": [
        {
         "voz": "POLICIAL",
-        "texto": "Me dá a caneta, menino. É a *última vez*."
+        "texto": "Me dá a caneta. *Última vez*."
        }
       ]
      },
@@ -349,7 +352,7 @@
        "title": "18:03",
        "y": 700
       },
-      "text": "Seis e três. Ele escreveu um nome, letra por letra. *O meu*."
+      "text": "Seis e três. Letra por letra, ele escreveu *o meu nome*."
      },
      {
       "bg": "casa",
@@ -364,7 +367,7 @@
        ]
       },
       "cam": "in",
-      "text": "A porta azul. A rua nove. Eu *lembrei de tudo*."
+      "text": "A porta azul. A rua nove. Eu *lembrei*."
      },
      {
       "bg": "praca",
@@ -390,7 +393,7 @@
         "brows": "neutro"
        }
       ],
-      "text": "Na praça, os sumidos se abraçavam. Centenas de famílias, *voltando pra casa*."
+      "text": "Na praça, centenas de sumidos *voltando pra casa*."
      },
      {
       "bg": "praca",
@@ -412,32 +415,7 @@
       "linhas": [
        {
         "voz": "POLICIAL",
-        "texto": "Agora sim. Ninguém mais some *nessa cidade*."
-       }
-      ]
-     },
-     {
-      "bg": "praca",
-      "bg_params": {
-       "hora": "noite",
-       "seed": 7,
-       "relogio": true,
-       "relogio_hora": "18:04"
-      },
-      "cam": "zoom_rosto",
-      "tensao": true,
-      "chars": [
-       {
-        "ref": "PREFEITO",
-        "x": 0.5,
-        "scale": 0.9,
-        "brows": "preocupado"
-       }
-      ],
-      "linhas": [
-       {
-        "voz": "PREFEITO",
-        "texto": "Relógio parado segura eles. Até alguém *dar corda* de novo."
+        "texto": "Ninguém mais some *aqui*."
        }
       ]
      },
@@ -453,6 +431,31 @@
       "tensao": true,
       "chars": [
        {
+        "ref": "PREFEITO",
+        "x": 0.5,
+        "scale": 0.9,
+        "brows": "preocupado"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PREFEITO",
+        "texto": "Só até alguém *dar corda*."
+       }
+      ]
+     },
+     {
+      "bg": "praca",
+      "bg_params": {
+       "hora": "noite",
+       "seed": 7,
+       "relogio": true,
+       "relogio_hora": "18:04"
+      },
+      "cam": "shake",
+      "tensao": true,
+      "chars": [
+       {
         "ref": "PROTAGONISTA",
         "x": 0.5,
         "scale": 0.9,
@@ -460,7 +463,7 @@
         "mouth": "o"
        }
       ],
-      "text": "Aí, atrás de mim, a torre fez um barulho. *Tic*."
+      "text": "Atrás de mim, a torre fez: *tic*."
      },
      {
       "bg": "praca",
@@ -478,47 +481,70 @@
        "title": "17:59",
        "y": 700
       },
-      "text": "O ponteiro andou pra trás. E marcou *cinco e cinquenta e nove*."
+      "text": "O ponteiro voltou. *Cinco e cinquenta e nove*."
      }
-    ]
-   }
+    ],
+    "banner": {
+     "remetente": "Sirene da cidade · 17:59",
+     "titulo": "FALTAM 60 SEGUNDOS",
+     "instrucao": "Entre em casa. Não olhe pra cima.",
+     "cor": [
+      200,
+      20,
+      40
+     ]
+    }
+   },
+   "roteiro": [
+    "1. NARRADOR: Cinco e cinquenta e nove. Subi a torre correndo.",
+    "2. POLICIAL: Para e você se esquece!",
+    "3. NARRADOR: Dez segundos. Agarrei o ponteiro vermelho.",
+    "4. NARRADOR: Seis em ponto. A sirene tocou. O ponteiro travou.",
+    "5. NARRADOR: Lá em cima, a cidade invertida começou a descer.",
+    "6. NARRADOR: O primeiro a pisar na praça: o Prefeito. Inteiro.",
+    "7. PREFEITO: Isso vai te custar caro.",
+    "8. PROTAGONISTA: Quem... quem sou eu?",
+    "9. NARRADOR: Na linha do meu nome, no caderno: um borrão.",
+    "10. PREFEITO: Ele olhou comigo. Aos oito anos.",
+    "11. PREFEITO: Trinta anos escondendo ele.",
+    "12. POLICIAL: Me dá a caneta. Última vez.",
+    "13. NARRADOR: Seis e três. Letra por letra, ele escreveu o meu nome.",
+    "14. NARRADOR: A porta azul. A rua nove. Eu lembrei.",
+    "15. NARRADOR: Na praça, centenas de sumidos voltando pra casa.",
+    "16. POLICIAL: Ninguém mais some aqui.",
+    "17. PREFEITO: Só até alguém dar corda.",
+    "18. NARRADOR: Atrás de mim, a torre fez: tic.",
+    "19. NARRADOR: O ponteiro voltou. Cinco e cinquenta e nove."
+   ],
+   "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/parte6B.mp4",
+   "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/capa6B.jpg",
+   "duracao": 52.8
   },
   "A": {
    "resumo": "Escolheram escrever o nome do Policial: ele olha pra cima de propósito e sobe por vontade própria; os sumidos descem (o Prefeito primeiro), o narrador rasga o caderno e a sirene nunca mais toca; mas o outro eu manda mensagem: achou outro caderno na cidade vizinha.",
    "retomada_gancho": "Cena 1: 'Cinco e cinquenta e nove. Eu escrevi o nome do Policial.' (~3 s, fato novo: o nome escrito)",
    "cenas": 20,
-   "palavras": 191,
-   "duracao_alvo_s": "60-80",
+   "palavras": 139,
+   "duracao_alvo_s": "45-60",
    "momento_zoom_tensao": [
     1,
     2,
-    3,
     4,
     5,
     6,
-    7,
-    10,
-    13,
-    14,
-    15,
     18,
     19,
     20
    ],
    "cenas_relogio": [
-    "cena 1 relógio do cenário 17:59",
-    "cena 3 relógio do cenário 17:59",
-    "cena 4 relógio do cenário 18:00",
-    "cena 5 relógio do cenário 18:00",
-    "cena 6 relógio do cenário 18:00",
-    "cena 7 relógio do cenário 18:00",
-    "cena 8 relógio do cenário 18:01",
-    "cena 9 relógio do cenário 18:01",
-    "cena 10 relógio do cenário 18:02",
-    "cena 11 relógio do cenário 18:02",
+    "cena 1 banner 'SIRENE DA CIDADE · 17:59 / FALTAM 60 SEGUNDOS' + relógio 17:59",
+    "cena 3 relógio 17:59",
+    "cenas 4-7 relógio 18:00",
+    "cenas 8-9 relógio 18:01",
+    "cenas 10-11 relógio 18:02",
     "cena 13 placa '18:03'",
-    "cena 14 relógio do cenário 18:03",
-    "cena 16 relógio do cenário 18:05",
+    "cena 14 relógio 18:03",
+    "cena 16 relógio 18:05",
     "cena 19 celular '18:00 · DESCONHECIDO'"
    ],
    "cena_celular_papel": [
@@ -543,7 +569,6 @@
    "script": {
     "cover_text": "O último nome",
     "faixa": "PARTE 6 · FINAL",
-    "gancho_tela": "ESCREVI O NOME DELE",
     "caption": "Eu escrevi o nome do Policial... e ele olhou pra cima de propósito. 🚨\n{RESULTADO_SE_HOUVER_VOTOS}\nNessa Cidade, a Sirene Toca às 18h · Parte 6 — FINAL: O último nome\n\nQuem você escreveria no caderno? 👇\n\nManda pra quem guardaria um segredo por trinta anos 👀\n\nFIM. Começa da Parte 1 no perfil @mundoemhistorias. Nova história em breve 🔔\n\n#distopia #sirene #historiasempartes #final #suspense",
     "scenes": [
      {
@@ -567,7 +592,7 @@
         "mouth": "triste"
        }
       ],
-      "text": "Cinco e cinquenta e nove. Eu escrevi o nome *do Policial*."
+      "text": "Cinco e cinquenta e nove. Escrevi o nome *do Policial*."
      },
      {
       "bg": "escuro",
@@ -583,7 +608,7 @@
         "!O POLICIAL"
        ]
       },
-      "text": "A tinta ficou vermelha na hora. E o Policial *sorriu*."
+      "text": "A tinta ficou vermelha. E ele *sorriu*."
      },
      {
       "bg": "praca",
@@ -605,7 +630,7 @@
       "linhas": [
        {
         "voz": "POLICIAL",
-        "texto": "Tudo bem, menino. Eu esperei trinta anos por *esse nome*."
+        "texto": "Esperei trinta anos *por isso*."
        }
       ]
      },
@@ -628,7 +653,7 @@
         "brows": "neutro"
        }
       ],
-      "text": "Seis em ponto. A sirene tocou. E ele *não correu*."
+      "text": "Seis em ponto. A sirene tocou. Ele *não correu*."
      },
      {
       "bg": "praca",
@@ -675,7 +700,7 @@
       "linhas": [
        {
         "voz": "PROTAGONISTA",
-        "texto": "Não! Fecha os olhos! Foi você que me *ensinou isso*!"
+        "texto": "Não! Fecha os *olhos*!"
        }
       ]
      },
@@ -701,7 +726,7 @@
       "linhas": [
        {
         "voz": "POLICIAL",
-        "texto": "Eu olhei com oito anos. O Prefeito escreveu nomes pra *me esconder*."
+        "texto": "Eu olhei aos *oito anos*."
        }
       ]
      },
@@ -716,7 +741,19 @@
        "ceu_espelho": true
       },
       "cam": "out",
-      "text": "Ele começou a subir. E os sumidos começaram a *descer*."
+      "etiquetas": [
+       {
+        "texto": "SUMIDOS · 30 ANOS",
+        "x": 640,
+        "y": 930,
+        "cor": [
+         120,
+         30,
+         160
+        ]
+       }
+      ],
+      "text": "Ele começou a subir. E os sumidos, a *descer*."
      },
      {
       "bg": "praca",
@@ -736,7 +773,7 @@
         "brows": "surpreso"
        }
       ],
-      "text": "O primeiro a pisar na praça foi o *Prefeito*. Inteiro."
+      "text": "O primeiro a pisar na praça: o *Prefeito*. Inteiro."
      },
      {
       "bg": "praca",
@@ -760,7 +797,7 @@
       "linhas": [
        {
         "voz": "PREFEITO",
-        "texto": "Trinta anos de nomes. Pra ele subir *por vontade própria*."
+        "texto": "Trinta anos escondendo *ele*."
        }
       ]
      },
@@ -773,7 +810,7 @@
        "relogio_hora": "18:02",
        "ceu_espelho": true
       },
-      "cam": "in",
+      "cam": "pan_r",
       "chars": [
        {
         "ref": "PROTAGONISTA",
@@ -791,11 +828,11 @@
       "linhas": [
        {
         "voz": "PROTAGONISTA",
-        "texto": "E o meu nome? Ficou *pela metade*."
+        "texto": "E o meu *nome*?"
        },
        {
         "voz": "PREFEITO",
-        "texto": "Olha pra sua *porta*, menino."
+        "texto": "Olha sua *porta*."
        }
       ]
      },
@@ -812,7 +849,7 @@
        ]
       },
       "cam": "in",
-      "text": "A porta azul. A rua nove. O meu nome inteiro *voltou*."
+      "text": "A porta azul. A rua nove. Meu nome *voltou inteiro*."
      },
      {
       "bg": "praca",
@@ -829,7 +866,7 @@
        "title": "18:03",
        "y": 700
       },
-      "text": "Seis e três. Centenas de pessoas na praça. *Voltando pra casa*."
+      "text": "Seis e três. Centenas de pessoas *voltando pra casa*."
      },
      {
       "bg": "praca",
@@ -852,7 +889,7 @@
       "linhas": [
        {
         "voz": "POLICIAL",
-        "texto": "Rasga o caderno, menino. Ninguém mais *escreve nome*."
+        "texto": "Rasga o caderno, *menino*."
        }
       ]
      },
@@ -867,7 +904,7 @@
         "página por página"
        ]
       },
-      "text": "Eu rasguei. Página por página. *Nome por nome*."
+      "text": "Rasguei. Página por página. *Nome por nome*."
      },
      {
       "bg": "praca",
@@ -892,11 +929,11 @@
         "brows": "neutro"
        }
       ],
-      "text": "O ponteiro vermelho parou. E a sirene *nunca mais tocou*."
+      "text": "O ponteiro parou. A sirene *nunca mais tocou*."
      },
      {
       "bg": "rua_noite",
-      "cam": "in",
+      "cam": "pan_l",
       "chars": [
        {
         "ref": "PROTAGONISTA",
@@ -905,7 +942,7 @@
         "brows": "neutro"
        }
       ],
-      "text": "No dia seguinte, às seis, eu fiquei na rua. Olhando pra cima. *Sem medo*."
+      "text": "No dia seguinte, às seis, olhei pra cima. *Sem medo*."
      },
      {
       "bg": "rua_noite",
@@ -920,7 +957,7 @@
         "mouth": "o"
        }
       ],
-      "text": "Até o meu celular vibrar. *Número desconhecido*."
+      "text": "Até o celular vibrar. *Número desconhecido*."
      },
      {
       "bg": "escuro",
@@ -955,21 +992,84 @@
       "linhas": [
        {
         "voz": "OUTRO_EU",
-        "texto": "Eu ainda não terminei *você*."
+        "texto": "Ainda não terminei *você*."
        }
       ]
      }
-    ]
-   }
+    ],
+    "banner": {
+     "remetente": "Sirene da cidade · 17:59",
+     "titulo": "FALTAM 60 SEGUNDOS",
+     "instrucao": "Entre em casa. Não olhe pra cima.",
+     "cor": [
+      200,
+      20,
+      40
+     ]
+    }
+   },
+   "roteiro": [
+    "1. NARRADOR: Cinco e cinquenta e nove. Escrevi o nome do Policial.",
+    "2. NARRADOR: A tinta ficou vermelha. E ele sorriu.",
+    "3. POLICIAL: Esperei trinta anos por isso.",
+    "4. NARRADOR: Seis em ponto. A sirene tocou. Ele não correu.",
+    "5. NARRADOR: Ele olhou pra cima. De propósito.",
+    "6. PROTAGONISTA: Não! Fecha os olhos!",
+    "7. POLICIAL: Eu olhei aos oito anos.",
+    "8. NARRADOR: Ele começou a subir. E os sumidos, a descer.",
+    "9. NARRADOR: O primeiro a pisar na praça: o Prefeito. Inteiro.",
+    "10. PREFEITO: Trinta anos escondendo ele.",
+    "11. PROTAGONISTA: E o meu nome?",
+    "11. PREFEITO: Olha sua porta.",
+    "12. NARRADOR: A porta azul. A rua nove. Meu nome voltou inteiro.",
+    "13. NARRADOR: Seis e três. Centenas de pessoas voltando pra casa.",
+    "14. POLICIAL: Rasga o caderno, menino.",
+    "15. NARRADOR: Rasguei. Página por página. Nome por nome.",
+    "16. NARRADOR: O ponteiro parou. A sirene nunca mais tocou.",
+    "17. NARRADOR: No dia seguinte, às seis, olhei pra cima. Sem medo.",
+    "18. NARRADOR: Até o celular vibrar. Número desconhecido.",
+    "19. NARRADOR: Achei outro caderno. Na cidade vizinha.",
+    "20. OUTRO_EU: Ainda não terminei você."
+   ],
+   "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/parte6A.mp4",
+   "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/cidade-sirene/capa6A.jpg",
+   "duracao": 57.1
   }
  },
  "problemas": [
-  "Última parte da Sirene: em 26/11 o horário 17:52 fica sem história (Semana Econômica proíbe história nova; Ponte e Ônibus pausadas). Precisa de decisão do dono."
+  "Última parte da Sirene: em 26/11 o horário 17:52 fica sem história (Semana Econômica proíbe história nova; Ponte e Ônibus pausadas). Precisa de decisão do dono.",
+  "Conferência visual das duas versões (quadros + rostos): 1 boca e 2 olhos em todos, legendas inteiras, banner sem cortar a faixa do topo. Etiquetas que batiam em cabeça/placa foram tiradas (B cenas 17 e 19, A cena 3) e re-renderizado.",
+  "Duração abaixo do mínimo antigo do AGENTE.md (50-100 s) só na B (52,8 s fica dentro); palavras abaixo de 190 por causa da R2/R6 (preparação só avisa)."
  ],
  "criado_em": "2026-11-25T00:47:00Z",
  "em_breve": {
   "postado_em": "2026-11-25T06:19-0400",
   "imagem": "videos/cidade-sirene/embreve6.jpg",
   "media_id": "18149344954587255"
- }
+ },
+ "produzido_em": "2026-11-25T15:40-04:00",
+ "teste": "alerta+POV 25/11",
+ "arquivos": {
+  "padrao": "videos/cidade-sirene/parte6.mp4 = parte6B.mp4 (historia.json com a versão B)",
+  "A": "videos/cidade-sirene/parte6A.mp4",
+  "B": "videos/cidade-sirene/parte6B.mp4",
+  "renderizar_de_novo": "Use python3 tools/sobreposicoes.py cidade-sirene 6 (NÃO o render_part.py direto, senão some o banner de alerta e as etiquetas). Para a A: troque a parte 6 de historia.json pelo script de versoes.A (e escolha da parte 5 = A)."
+ },
+ "placar_parcial": {
+  "A": 0,
+  "B": 0,
+  "fonte": "Produção 25/11 ~14:55 Campo Grande: Windsor (media 18038856656667788, last_3dT) só mostra o comentário-pergunta da própria @mundoemhistorias. Zero votos, nenhum comentário para responder. Sem votos vale o padrão B; na legenda o {RESULTADO_SE_HOUVER_VOTOS} some (ou vira \"Deu empate, então eu decidi...\" se a Publicação preferir). historia.json: parte 5 com escolha B e votos 0x0 provisórios (a preparação exige escolha registrada); a Publicação reconta."
+ },
+ "regras_virais": [
+  "Regras 1-8 (23/11): já cumpridas no pré-roteiro; mantidos fatos, personagens, vozes, final de cada versão (B loop 17:59; A mensagem do outro eu).",
+  "R1: banner de alerta ficcional em 0,0 s na cena 1 (faixa vermelha, remetente \"SIRENE DA CIDADE · 17:59\", título \"FALTAM 60 SEGUNDOS\", instrução \"Entre em casa. Não olhe pra cima.\"), no lugar do gancho_tela; rosto do Eu visível desde o 1º quadro. Sem marca/órgão real.",
+  "R2: todas as falas reescritas para 2-6 palavras (ex.: \"Se parar o relógio, você esquece o próprio nome!\" -> \"Para e você se esquece!\"; \"Escrevi trinta anos de nomes pra ninguém levar ele\" -> \"Trinta anos escondendo ele.\"); narração máx. 12 palavras por cena (era até 13).",
+  "R3: toda cena com câmera em movimento (in/out/pan/zoom); shake/zoom_tremido nas de perigo.",
+  "R4: o perigo atinge alguém com nome na cena (B: o Eu esquecendo o nome / o Prefeito; A: o Policial subindo).",
+  "R5: série SEM próxima votação (Parte 6 = FINAL): sem cartão \"O QUE VOCÊ FARIA?\" (não há Parte 7); vale a tela FIM do motor. Prazo como etiqueta com número: B cena 3 \"17:59:50 · FALTAM 10 SEG\" e cena 5 \"SUMIDOS · 30 ANOS\"; A cena 8 \"SUMIDOS · 30 ANOS\".",
+  "R6: B 19 cenas / 52,8 s / 132 palavras; A 20 cenas / 57,1 s / 139 palavras (antes 194/191 palavras, alvo 60-80 s).",
+  "R7: série em andamento -> não mudou para POV (continua 1ª pessoa).",
+  "R8: \"Manda pra quem...\" mantido nas duas legendas.",
+  "Motor sem banner/etiqueta/cartão: criado tools/sobreposicoes.py (PIL, reutilizável, liga só nesta renderização; engine.py e render_part.py intactos)."
+ ]
 }

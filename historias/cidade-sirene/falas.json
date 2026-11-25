@@ -242,6 +242,103 @@
     "personagem": "PROTAGONISTA",
     "texto": "E você, o que faria? Comenta *A ou B*."
    }
+  ],
+  "6": [
+   {
+    "cena": 1,
+    "personagem": "PROTAGONISTA",
+    "texto": "Cinco e cinquenta e nove. Subi a torre *correndo*."
+   },
+   {
+    "cena": 2,
+    "personagem": "POLICIAL",
+    "texto": "Para e você *se esquece*!"
+   },
+   {
+    "cena": 3,
+    "personagem": "PROTAGONISTA",
+    "texto": "Dez segundos. Agarrei o ponteiro *vermelho*."
+   },
+   {
+    "cena": 4,
+    "personagem": "PROTAGONISTA",
+    "texto": "Seis em ponto. A sirene tocou. O ponteiro *travou*."
+   },
+   {
+    "cena": 5,
+    "personagem": "PROTAGONISTA",
+    "texto": "Lá em cima, a cidade invertida começou a *descer*."
+   },
+   {
+    "cena": 6,
+    "personagem": "PROTAGONISTA",
+    "texto": "O primeiro a pisar na praça: o *Prefeito*. Inteiro."
+   },
+   {
+    "cena": 7,
+    "personagem": "PREFEITO",
+    "texto": "Isso vai *te custar caro*."
+   },
+   {
+    "cena": 8,
+    "personagem": "PROTAGONISTA",
+    "texto": "Quem... quem sou *eu*?"
+   },
+   {
+    "cena": 9,
+    "personagem": "PROTAGONISTA",
+    "texto": "Na linha do meu nome, no caderno: *um borrão*."
+   },
+   {
+    "cena": 10,
+    "personagem": "PREFEITO",
+    "texto": "Ele olhou comigo. *Aos oito anos*."
+   },
+   {
+    "cena": 11,
+    "personagem": "PREFEITO",
+    "texto": "Trinta anos escondendo *ele*."
+   },
+   {
+    "cena": 12,
+    "personagem": "POLICIAL",
+    "texto": "Me dá a caneta. *Última vez*."
+   },
+   {
+    "cena": 13,
+    "personagem": "PROTAGONISTA",
+    "texto": "Seis e três. Letra por letra, ele escreveu *o meu nome*."
+   },
+   {
+    "cena": 14,
+    "personagem": "PROTAGONISTA",
+    "texto": "A porta azul. A rua nove. Eu *lembrei*."
+   },
+   {
+    "cena": 15,
+    "personagem": "PROTAGONISTA",
+    "texto": "Na praça, centenas de sumidos *voltando pra casa*."
+   },
+   {
+    "cena": 16,
+    "personagem": "POLICIAL",
+    "texto": "Ninguém mais some *aqui*."
+   },
+   {
+    "cena": 17,
+    "personagem": "PREFEITO",
+    "texto": "Só até alguém *dar corda*."
+   },
+   {
+    "cena": 18,
+    "personagem": "PROTAGONISTA",
+    "texto": "Atrás de mim, a torre fez: *tic*."
+   },
+   {
+    "cena": 19,
+    "personagem": "PROTAGONISTA",
+    "texto": "O ponteiro voltou. *Cinco e cinquenta e nove*."
+   }
   ]
  }
 }

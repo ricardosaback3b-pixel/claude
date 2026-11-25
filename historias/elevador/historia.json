@@ -900,6 +900,409 @@
     "B": 1
    },
    "escolha": "B"
+  },
+  {
+   "n": 5,
+   "status": "pronta",
+   "opcoes": [
+    "Dar meu reflexo pra mãe sair",
+    "Soltar o porteiro e confiar nela"
+   ],
+   "versao": "B",
+   "script": {
+    "cover_text": "O espelho cobra",
+    "faixa": "PARTE 5 · O espelho cobra",
+    "gancho_tela": "PRENDI O PORTEIRO",
+    "caption": "Meia-noite. Eu prendi o porteiro no -1... e a minha mãe não saiu. 🛗\nO Andar que Não Existe · Parte 5 — O espelho cobra\n\nO médico ou a mensagem: quem tá mentindo? Teoria aqui 👇\n\n🅰️ Confiar no médico e dar meu reflexo (nunca mais me ver)\n🅱️ Confiar na mensagem e soltar o porteiro (ele pode me prender)\nA mais votada decide a Parte 6, o FINAL.\n\nManda pra quem nunca confia em ninguém 👀\n\nA Parte 6 fica no perfil @mundoemhistorias (sai em até 24h). Segue pra não perder 🔔\n\n#terror #espelho #historiasempartes #misterio #suspense #vocedecide",
+    "scenes": [
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "zoom_tremido",
+      "hook": true,
+      "cover": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "bravo",
+        "mouth": "o"
+       }
+      ],
+      "text": "Onze e cinquenta e nove. Eu empurrei o porteiro *pro elevador*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "shake",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Garoto, não! Sem mim, *ninguém sai* de lá!"
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "tensao": true,
+      "prop": {
+       "type": "placa",
+       "title": "-1 · 00:00",
+       "y": 700
+      },
+      "text": "A porta fechou. O visor caiu direto no *menos um*. Meia-noite."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "Eu fiquei olhando a porta da rua. Esperando a minha mãe *entrar*."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "out",
+      "prop": {
+       "type": "placa",
+       "title": "00:02",
+       "y": 700
+      },
+      "text": "Meia-noite e dois. *Ninguém* entrou."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "-1"
+      },
+      "cam": "zoom_rosto",
+      "filtro": "tv",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PORTEIRO",
+        "texto": "Eu avisei. Quem prende o porteiro, *prende ela também*."
+       }
+      ]
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "Então me fala como *tirar ela*!"
+       }
+      ]
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite",
+       "luz": "apagada"
+      },
+      "cam": "shake",
+      "tensao": true,
+      "text": "O interfone chiou e morreu. E a luz da portaria *apagou*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "pan_l",
+      "text": "Aí o elevador voltou. Vazio. E o espelho *batendo de dentro*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "MEDICO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MEDICO",
+        "texto": "Ela tá aqui comigo. Do lado de cá do *espelho*."
+       }
+      ]
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "in",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.21,
+        "brows": "surpreso",
+        "mouth": "o"
+       },
+       {
+        "ref": "MEDICO",
+        "x": 0.67,
+        "brows": "neutro"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "PROTAGONISTA",
+        "texto": "Então puxa ela!"
+       },
+       {
+        "voz": "MEDICO",
+        "texto": "O espelho só solta alguém se você der o seu *reflexo*."
+       }
+      ]
+     },
+     {
+      "bg": "escuro",
+      "cam": "in",
+      "prop": {
+       "type": "carta",
+       "title": "NO ESPELHO:",
+       "lines": [
+        "!O ESPELHO FECHA",
+        "!ÀS 00:06"
+       ],
+       "y": 900
+      },
+      "text": "No vapor, mais um recado. Com hora *marcada*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "zoom_rosto",
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "eyes": "arregalado",
+        "brows": "preocupado"
+       }
+      ],
+      "text": "Meu reflexo. Eu nunca mais ia me ver em espelho *nenhum*."
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite",
+       "luz": "apagada"
+      },
+      "cam": "zoom_rosto",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "surpreso",
+        "mouth": "o"
+       }
+      ],
+      "text": "Meia-noite e quatro. Meu celular vibrou. *Número desconhecido*."
+     },
+     {
+      "bg": "escuro",
+      "cam": "zoom_forte",
+      "hook": true,
+      "prop": {
+       "type": "celular",
+       "title": "00:04 · DESCONHECIDO",
+       "lines": [
+        "Filho, não confia",
+        "!no médico.",
+        "Ele quer o seu lugar.",
+        "— MÃE"
+       ]
+      },
+      "text": "Dez anos sem notícia. E agora, *uma mensagem dela*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "shake",
+      "tensao": true,
+      "chars": [
+       {
+        "ref": "MEDICO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo",
+        "mouth": "o"
+       }
+      ],
+      "linhas": [
+       {
+        "voz": "MEDICO",
+        "texto": "É mentira! É o porteiro *escrevendo por ela*!"
+       }
+      ]
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "zoom_forte",
+      "prop": {
+       "type": "placa",
+       "title": "00:05",
+       "y": 700
+      },
+      "text": "Meia-noite e cinco. O espelho começou a *embaçar de vez*."
+     },
+     {
+      "bg": "elevador",
+      "bg_params": {
+       "floor": "T"
+      },
+      "cam": "zoom_rosto",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "MEDICO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "triste"
+       }
+      ],
+      "text": "A: confio no médico e dou o meu reflexo pra minha mãe *sair*."
+     },
+     {
+      "bg": "porao",
+      "bg_params": {
+       "texto": "SUBSOLO"
+      },
+      "cam": "zoom_rosto",
+      "text": "B: confio na mensagem e solto o porteiro. Mas ele pode *me prender lá*.",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ]
+     },
+     {
+      "bg": "recepcao_hotel",
+      "bg_params": {
+       "texto": "PORTARIA",
+       "hora": "noite",
+       "luz": "apagada"
+      },
+      "cam": "zoom_rosto",
+      "hook": true,
+      "chars": [
+       {
+        "ref": "PROTAGONISTA",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "preocupado",
+        "mouth": "o"
+       }
+      ],
+      "text": "E você, em quem confiaria? Comenta *A ou B*."
+     }
+    ],
+    "opcoes": [
+     "Dar meu reflexo pra mãe sair",
+     "Soltar o porteiro e confiar nela"
+    ],
+    "opcoes_rostos": [
+     {
+      "ref": "MEDICO",
+      "brows": "preocupado"
+     },
+     {
+      "ref": "PORTEIRO",
+      "brows": "bravo"
+     }
+    ],
+    "chamada": "Manda pra quem nunca confia em ninguém"
+   }
   }
  ],
  "personagens_travados": {

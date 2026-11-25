@@ -5,7 +5,7 @@
  "historia": "elevador",
  "titulo": "O Andar que Não Existe",
  "parte": 5,
- "status": "planejado",
+ "status": "produzido",
  "votacao": true,
  "versao_padrao": "B",
  "estilo": "andar",
@@ -274,14 +274,15 @@
      },
      {
       "bg": "escuro",
-      "cam": "zoom_forte",
+      "cam": "in",
       "prop": {
        "type": "carta",
        "title": "NO ESPELHO:",
        "lines": [
         "!O ESPELHO FECHA",
         "!ÀS 00:06"
-       ]
+       ],
+       "y": 900
       },
       "text": "No vapor, mais um recado. Com hora *marcada*."
      },
@@ -401,8 +402,17 @@
       "bg_params": {
        "texto": "SUBSOLO"
       },
-      "cam": "pan_r",
-      "text": "B: confio na mensagem e solto o porteiro. Mas ele pode *me prender lá*."
+      "cam": "zoom_rosto",
+      "text": "B: confio na mensagem e solto o porteiro. Mas ele pode *me prender lá*.",
+      "chars": [
+       {
+        "ref": "PORTEIRO",
+        "x": 0.5,
+        "scale": 0.9,
+        "enquadramento": "busto",
+        "brows": "bravo"
+       }
+      ]
      },
      {
       "bg": "recepcao_hotel",
@@ -441,7 +451,11 @@
      }
     ],
     "chamada": "Manda pra quem nunca confia em ninguém"
-   }
+   },
+   "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/parte5B.mp4",
+   "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/capa5B.jpg",
+   "duracao": 74.5,
+   "roteiro": "Onze e cinquenta e nove. Eu empurrei o porteiro pro elevador.\nPORTEIRO: Garoto, não! Sem mim, ninguém sai de lá!\nA porta fechou. O visor caiu direto no menos um. Meia-noite.\nEu fiquei olhando a porta da rua. Esperando a minha mãe entrar.\nMeia-noite e dois. Ninguém entrou.\nPORTEIRO: Eu avisei. Quem prende o porteiro, prende ela também.\nPROTAGONISTA: Então me fala como tirar ela!\nO interfone chiou e morreu. E a luz da portaria apagou.\nAí o elevador voltou. Vazio. E o espelho batendo de dentro.\nMEDICO: Ela tá aqui comigo. Do lado de cá do espelho.\nPROTAGONISTA: Então puxa ela!\nMEDICO: O espelho só solta alguém se você der o seu reflexo.\nNo vapor, mais um recado. Com hora marcada.\nMeu reflexo. Eu nunca mais ia me ver em espelho nenhum.\nMeia-noite e quatro. Meu celular vibrou. Número desconhecido.\nDez anos sem notícia. E agora, uma mensagem dela.\nMEDICO: É mentira! É o porteiro escrevendo por ela!\nMeia-noite e cinco. O espelho começou a embaçar de vez.\nA: confio no médico e dou o meu reflexo pra minha mãe sair.\nB: confio na mensagem e solto o porteiro. Mas ele pode me prender lá.\nE você, em quem confiaria? Comenta A ou B."
   },
   "A": {
    "resumo": "Escolheram ficar no -1: a mãe sai pela portaria, mas o porteiro (que saiu do -1 dez anos atrás) abre a porta pra ela sorrindo; o médico avisa que às 00:10 o Você esquece a mãe para sempre.",
@@ -661,7 +675,7 @@
      },
      {
       "bg": "escuro",
-      "cam": "zoom_forte",
+      "cam": "in",
       "prop": {
        "type": "carta",
        "title": "QUEM ENTROU NO -1",
@@ -670,9 +684,10 @@
         "!SAIU HÁ 10 ANOS",
         "",
         "!VOCÊ · HOJE 00:00"
-       ]
+       ],
+       "y": 900
       },
-      "text": "O porteiro entrou aqui em setenta e quatro. E saiu *no lugar dela*."
+      "text": "O porteiro entrou aqui em setenta e quatro. E saiu *quando ela entrou*."
      },
      {
       "bg": "porao",
@@ -724,7 +739,7 @@
       "bg": "porao",
       "bg_params": {
        "texto": "SUBSOLO",
-       "luz": "apagada"
+       "alerta": true
       },
       "cam": "shake",
       "tensao": true,
@@ -855,14 +870,41 @@
      }
     ],
     "chamada": "Manda pra quem faria tudo pela mãe"
-   }
+   },
+   "video": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/parte5A.mp4",
+   "capa_url": "https://raw.githubusercontent.com/ricardosaback3b-pixel/claude/main/videos/elevador/capa5A.jpg",
+   "duracao": 72.2,
+   "roteiro": "Onze e cinquenta e nove. Eu entrei no elevador. E apertei o menos um.\nMeia-noite. A porta abriu no andar que não existe.\nEra o corredor do meu prédio. E o médico, me esperando.\nNa telinha do interfone, câmera três: minha mãe saindo na portaria.\nPROTAGONISTA: Ela saiu. Dez anos depois, ela saiu.\nMas quem abriu a porta da rua pra ela foi o porteiro. Sorrindo.\nMEDICO: A troca tem preço. À meia-noite e dez, você esquece ela.\nMeia-noite e três. Eu já não lembrava a voz dela.\nO médico me levou até o subsolo. Lá tinha um livro aberto.\nO porteiro entrou aqui em setenta e quatro. E saiu quando ela entrou.\nPROTAGONISTA: Tem que ter um jeito de sair sem trocar!\nMEDICO: Tem. Pelo espelho do elevador. Mas aí ela volta pro seu lugar.\nAí o interfone do subsolo acendeu. Sozinho.\nUma mensagem na telinha. Do único que saiu daqui.\nPORTEIRO: Pode esquecer em paz. Eu cuido da sua mãe aqui em cima.\nMeia-noite e oito. Dois minutos pra eu esquecer ela pra sempre.\nA: fico aqui e esqueço tudo. Ela fica livre... com ele.\nB: subo pelo espelho com o médico. E ela volta pra cá.\nE você, o que faria? Comenta A ou B."
   }
  },
- "problemas": [],
+ "problemas": [
+  "Conferência visual feita nas duas versões (quadros + rostos): 1 boca e 2 olhos em todos, legendas inteiras, sem recortes. Observação leve: na B cena 13 ('Meu reflexo...') o Você aparece meio transparente no elevador (efeito de reflexo do motor) — combina com o tema, mantido.",
+  "A ficha diz fuso 'America/Sao_Paulo'; o pedido do dono fala em horário de Campo Grande. Não mudei (horário travado)."
+ ],
  "criado_em": "2026-11-25T00:47:00Z",
  "em_breve": {
   "postado_em": "2026-11-25T05:19-04:00",
   "imagem": "videos/elevador/embreve5.jpg",
   "media_id": "18103988591391063"
- }
+ },
+ "produzido_em": "2026-11-25T09:20-04:00",
+ "placar_parcial": {
+  "A": 0,
+  "B": 0,
+  "fonte": "Produção 25/11 ~08:55 Campo Grande: Windsor (media 18077993924592764, last_3dT, cache) só mostra o comentário-pergunta da própria @mundoemhistorias. Zero votos e nenhum comentário para responder. Sem votos, vale o padrão B (mais dramática); a legenda não deve citar resultado (o {RESULTADO_SE_HOUVER_VOTOS} some)."
+ },
+ "arquivos": {
+  "padrao": "videos/elevador/parte5.mp4 = parte5B.mp4 (historia.json com a versão B)",
+  "A": "videos/elevador/parte5A.mp4",
+  "B": "videos/elevador/parte5B.mp4"
+ },
+ "regras_virais": [
+  "Pré-roteiro do Planejamento já cumpria as 8 regras nas duas versões: frase 1 com 23:59 e o conflito (B: 'Eu empurrei o porteiro pro elevador'; A: 'Eu entrei no elevador. E apertei o menos um'), sem currículo, todas as cenas com no máximo 15 palavras, relógio na imagem avançando (B 00:00→00:02→00:04→00:05 + 'fecha às 00:06'; A 00:00→00:03→00:06→00:08), celular/carta legíveis, virada de quem sabe mais (B mensagem da MÃE; A mensagem do porteiro no interfone), A/B com custo + 'Comenta A ou B', legenda com gancho na linha 1 e 'Manda pra quem...'.",
+  "A cena 10: 'E saiu no lugar dela' -> 'E saiu quando ela entrou' (coerência com a P4: ela entrou no lugar do Você, não no do porteiro).",
+  "A cena 10: carta 'QUEM ENTROU NO -1' tinha o título escondido pela faixa no zoom -> y=900, câmera 'in'.",
+  "A cena 13: porão quase preto e vazio ('o interfone acendeu sozinho') -> porão com alerta (luz vermelha piscando).",
+  "B cena 12: carta 'NO ESPELHO:' descida (y=900, câmera 'in') para não ficar sob a faixa.",
+  "B cena 19 (opção B): porão vazio -> close do Porteiro bravo (a opção B é sobre ele).",
+  "Cena de capa (cover) não alterada nas duas versões (cartaz EM BREVE já saiu)."
+ ]
 }

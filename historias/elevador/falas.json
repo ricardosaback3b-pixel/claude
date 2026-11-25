@@ -244,6 +244,113 @@
     "personagem": "PROTAGONISTA",
     "texto": "E você, o que faria? Comenta *A ou B*."
    }
+  ],
+  "5": [
+   {
+    "cena": 1,
+    "personagem": "PROTAGONISTA",
+    "texto": "Onze e cinquenta e nove. Eu empurrei o porteiro *pro elevador*."
+   },
+   {
+    "cena": 2,
+    "personagem": "PORTEIRO",
+    "texto": "Garoto, não! Sem mim, *ninguém sai* de lá!"
+   },
+   {
+    "cena": 3,
+    "personagem": "PROTAGONISTA",
+    "texto": "A porta fechou. O visor caiu direto no *menos um*. Meia-noite."
+   },
+   {
+    "cena": 4,
+    "personagem": "PROTAGONISTA",
+    "texto": "Eu fiquei olhando a porta da rua. Esperando a minha mãe *entrar*."
+   },
+   {
+    "cena": 5,
+    "personagem": "PROTAGONISTA",
+    "texto": "Meia-noite e dois. *Ninguém* entrou."
+   },
+   {
+    "cena": 6,
+    "personagem": "PORTEIRO",
+    "texto": "Eu avisei. Quem prende o porteiro, *prende ela também*."
+   },
+   {
+    "cena": 7,
+    "personagem": "PROTAGONISTA",
+    "texto": "Então me fala como *tirar ela*!"
+   },
+   {
+    "cena": 8,
+    "personagem": "PROTAGONISTA",
+    "texto": "O interfone chiou e morreu. E a luz da portaria *apagou*."
+   },
+   {
+    "cena": 9,
+    "personagem": "PROTAGONISTA",
+    "texto": "Aí o elevador voltou. Vazio. E o espelho *batendo de dentro*."
+   },
+   {
+    "cena": 10,
+    "personagem": "MEDICO",
+    "texto": "Ela tá aqui comigo. Do lado de cá do *espelho*."
+   },
+   {
+    "cena": 11,
+    "personagem": "PROTAGONISTA",
+    "texto": "Então puxa ela!"
+   },
+   {
+    "cena": 11,
+    "personagem": "MEDICO",
+    "texto": "O espelho só solta alguém se você der o seu *reflexo*."
+   },
+   {
+    "cena": 12,
+    "personagem": "PROTAGONISTA",
+    "texto": "No vapor, mais um recado. Com hora *marcada*."
+   },
+   {
+    "cena": 13,
+    "personagem": "PROTAGONISTA",
+    "texto": "Meu reflexo. Eu nunca mais ia me ver em espelho *nenhum*."
+   },
+   {
+    "cena": 14,
+    "personagem": "PROTAGONISTA",
+    "texto": "Meia-noite e quatro. Meu celular vibrou. *Número desconhecido*."
+   },
+   {
+    "cena": 15,
+    "personagem": "PROTAGONISTA",
+    "texto": "Dez anos sem notícia. E agora, *uma mensagem dela*."
+   },
+   {
+    "cena": 16,
+    "personagem": "MEDICO",
+    "texto": "É mentira! É o porteiro *escrevendo por ela*!"
+   },
+   {
+    "cena": 17,
+    "personagem": "PROTAGONISTA",
+    "texto": "Meia-noite e cinco. O espelho começou a *embaçar de vez*."
+   },
+   {
+    "cena": 18,
+    "personagem": "PROTAGONISTA",
+    "texto": "A: confio no médico e dou o meu reflexo pra minha mãe *sair*."
+   },
+   {
+    "cena": 19,
+    "personagem": "PROTAGONISTA",
+    "texto": "B: confio na mensagem e solto o porteiro. Mas ele pode *me prender lá*."
+   },
+   {
+    "cena": 20,
+    "personagem": "PROTAGONISTA",
+    "texto": "E você, em quem confiaria? Comenta *A ou B*."
+   }
   ]
  }
 }
